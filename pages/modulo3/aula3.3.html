@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Vigilância em Saúde em tempos de transformação digital</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Montserrat:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- CSS do seu tema -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Required meta tags -->
+    <meta name="robots" content="noindex" />
+    <meta name="author" content="Fiocruz, Campus Virtual" />
+    <meta name="description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="keywords" content="Fiocruz, Curso, Vigilância em Saúde, transformação digital, SUS" />
+
+    <!-- Facebook Open Graph -->
+    <meta property="og:url" content="https://mooc.campusvirtual.fiocruz.br/rea/introducao-analise-dados-sus" />
+    <meta property="og:title"
+        content="Campus Virtual Fiocruz | Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta property="og:description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title"
+        content="Campus Virtual Fiocruz | Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="twitter:image:src" content="" />
+
+    <!-- Favicons and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../media/icons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../../media/icons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../../media/icons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../../media/icons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../../media/icons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../../media/icons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../../media/icons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../../media/icons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="../../media/icons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../../media/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../media/icons/favicon-16x16.png" />
+    <link rel="manifest" href="../../media/icons/manifest.json" />
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="media/icons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#420b3c" />
+
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Barra de Progresso Superior -->
+    <div class="scroll-progress-top" id="scrollProgress"></div>
+
+    <script src="js/aula3.3-config.js"></script>
+    <!-- ================= CABEÇALHO (carregado de partials/header.html) ================= -->
+    <div id="site-header"></div>
+
+    <div class="page-wrapper" id="pageWrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <div id="site-sidebar"></div>
+
+        <!-- Lingueta (Botão) redesenhada: MOVIDA PARA FORA DO ASIDE PARA NÃO SUMIR -->
+        <button class="sidebar-tab" id="btnToggleSidebar" aria-label="Alternar menu" aria-expanded="true"
+            aria-controls="sidebarAula">
+            <i data-lucide="chevron-left" id="toggleIcon" aria-hidden="true"></i>
+        </button>
+
+        <!-- ================= CONTEÚDO ================= -->
+        <main class="content-aula" id="main-content">
+            <div class="main-content-inner">
+
+                <!-- Selo de navegação: flutua por cima do conteúdo -->
+                <nav aria-label="breadcrumb" class="aula-breadcrumb-pill">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../../index.html" class="text-decoration-none">Início</a></li>
+                        <li class="breadcrumb-item"><a href="aula3.1.html" class="text-decoration-none">Módulo 3</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Aula 3</li>
+                    </ol>
+                </nav>
+
+                <!-- Hero com imagem de fundo temática -->
+                <header class="aula-hero">
+                    <h1>Vigilância em Saúde, Intersetorialidade e a Saúde única | Estudo de Caso: Influenza Aviária (H5N1)</h1>
+                </header>
+
+                <div class="main-content-body">
+                    <div class="aula-pages-wrapper" id="aulaPagesWrapper">
+
+                        <section class="aula-page active" data-page="1">
+                            <article class="aula-body">
+                                <h2 class="fw-bold mb-4 text-primary"><i class="bi bi-book-half"></i> Sobre esta aula </h2>
+                                <hr>
+                                <p class="lead text-muted">Nesta aula, você aprofundará a compreensão sobre a Vigilância em Saúde em tempos de transformação digital na perspectiva da Saúde Única através da Influenza Aviária de Alta Patogenicidade (H5N1). A partir desse estudo de caso, serão discutidos os desafios da Vigilância Cooperativa, da atuação intersetorial e da antecipação de riscos sanitários, evidenciando como a articulação entre saúde humana, saúde animal e saúde ambiental fortalece a capacidade de resposta diante de emergências sanitárias.</p>
+                                <p class="lead text-muted">Ao longo da aula, serão apresentados os principais aspectos epidemiológicos da doença, os mecanismos de vigilância e biossegurança, os impactos sobre a biodiversidade, a produção animal e a saúde pública, bem como exemplos concretos de atuação colaborativa no contexto brasileiro.</p>
+
+                                <h3 class="fw-bold text-primary mt-5 mb-4"><i class="bi bi-columns-gap"></i> Objetivos de
+                                    aprendizagem </h3>
+                                <hr>
+                                <p class="lead text-muted">Ao final desta aula, esperamos que você seja capaz de:</p>
+
+                                <ul class="ms-5 lead text-muted">
+                                    <li class="my-3 mt-4">Discutir a vigilância da influenza aviária como um evento de relevância para a saúde pública, a sanidade animal, a conservação da biodiversidade e a economia, evidenciando o papel da vigilância integrada e da preparação para emergências em saúde sob a perspectiva Saúde Única.</li>
+                                </ul>
+
+                                <h3 class="fw-bold mt-5 mb-4 text-primary">Introdução</h3>
+                                <p class="lead text-muted">A emergência e a reemergência de zoonoses evidenciam que os riscos sanitários contemporâneos ultrapassam fronteiras geográficas, institucionais e disciplinares. Nesse contexto, a Influenza Aviária de Alta Patogenicidade (H5N1) representa um exemplo emblemático da necessidade de integração entre diferentes setores para a prevenção, detecção e resposta a eventos de interesse em saúde pública.</p>
+                                <p class="lead text-muted">Nesta aula, o estudo desse caso permitirá compreender como a Vigilância Colaborativa, orientada pela abordagem Saúde Única, contribui para antecipar riscos, integrar informações provenientes da saúde humana, da saúde animal e do meio ambiente e fortalecer a tomada de decisão em diferentes escalas de atuação.</p>
+
+                            </article>
+                        </section>
+
+                        <section class="aula-page" data-page="2">
+                            <div class="main-content-body">
+                                <article class="aula-body mb-0">
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">H5N1: Vigilância Integrada e Antecipação de Riscos</h3>
+                                    <p class="lead text-muted">A emergência e a reemergência de zoonoses de alta patogenicidade têm evidenciado, de forma cada vez mais clara, o caráter transfronteiriço dos riscos sanitários contemporâneos. O vírus <a href="javascript:void(0)" role="button" tabindex="0" class="fw-bold" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-html="true" data-bs-title="Influenza Aviária" data-bs-content="A Influenza Aviária pode ser classificada de duas formas:<br><br><strong>Influenza Aviária de Alta Patogenicidade (IAAP)</strong><br>Alta mortalidade e sinais clínicos severos em aves, associados à ocorrência de H5 e H7.<br><br><strong>Influenza Aviária de Baixa patogenicidade (IABP)</strong><br>Pode ser assintomática ou causar sintomas brandos, sendo compostos por outras combinações de hemaglutininas (H) e neuraminidases (N). Importante: Os vírus classificados como IABP possuem potencial mutagênico para se transformarem em IAAP.">Influenza Aviária</a> de Alta Patogenicidade (IAAP) subtipo H5N1 constitui um exemplo emblemático desse cenário, ao demonstrar como agentes infecciosos podem atravessar fronteiras geográficas, ecológicas e institucionais, conectando saúde animal, saúde ambiental e saúde humana em uma mesma dinâmica de risco (WHO, 2023).</p>
+
+
+                                    <p class="lead text-muted">A Influenza Aviária, também chamada de gripe aviária, é causada pelo vírus da Influenza A, pertencente à família Orthomyxoviridae, sendo classificado em subtipos conforme as proteínas existentes no envelope viral (hemaglutininas - 16 subtipos - e neuraminidases - 9 subtipos). As aves aquáticas silvestres são consideradas os reservatórios naturais do vírus, como as pertencentes à ordem Anseriformes (patos, gansos, cisnes) e Charadriiformes (maçaricos, gaivotas, trinta-réis). Os subtipos H5 e H7 são os mais relevantes no que se refere à saúde animal, e, apesar dos vírus do gênero Influenza A infectarem predominantemente aves, também possuem capacidade de se propagar em mamíferos, incluindo os seres humanos (BRASIL, 2023).</p>
+                                    <p class="lead text-muted mb-5">A circulação global do H5N1, intensificada a partir de 2020, vem sendo associada a rotas migratórias de aves silvestres, à intensificação da produção avícola e à ampliação das interfaces entre sistemas naturais e antrópicos. Nesse contexto, o Brasil passou, nos últimos anos, da condição de país livre da circulação do vírus em aves silvestres para um território que vivencia eventos sucessivos de detecção viral em fauna silvestre, ambientes costeiros, unidades de conservação, sistemas produtivos e instituições de manejo de fauna, como zoológicos (FAO; WOAH; WHO, 2022).</p>
+
+                                    <div class="my-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                        <div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                                A abordagem Saúde Única oferece a estrutura conceitual necessária para compreender essa complexidade, ao reconhecer que o risco sanitário não se restringe a um setor específico, mas emerge das interações entre organismos, ambientes e práticas humanas. A vigilância, nesse contexto, deixa de ser apenas um mecanismo de resposta a eventos consumados e passa a operar como instrumento estratégico de antecipação de riscos.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">O Caráter Transfronteiriço das Zoonoses</h4>
+                                    <p class="lead text-muted">A IAAP ilustra de forma precisa o caráter transfronteiriço das zoonoses. Trata-se de um vírus cuja dinâmica de circulação não respeita limites administrativos ou políticos, sendo fortemente influenciada por fluxos ecológicos, como a migração de aves aquáticas e marinhas. Esses movimentos conectam continentes, oceanos e ecossistemas distintos, permitindo a disseminação viral em escala global (WOAH, 2023).</p>
+                                    <p class="lead text-muted">No Brasil, a detecção do H5N1 em aves silvestres ao longo do litoral e em áreas úmidas reforça essa dimensão transfronteiriça. Um exemplo relevante é a ocorrência de casos associados à região do Estação Ecológica do Taim, área estratégica para aves migratórias no sul do país. A presença do vírus nesse território evidencia como eventos sanitários locais estão inseridos em uma rede ecológica internacional, exigindo vigilância articulada em múltiplas escalas (BRASIL, 2023).</p>
+                                    <p class="lead text-muted">Além das aves, a ocorrência do vírus causador da IAAP em leões-marinhos ao longo da costa do Rio Grande do Sul reforça que o vírus ultrapassa a interface estrita entre aves e humanos, alcançando mamíferos silvestres e ampliando o espectro de preocupação sanitária. Eventos semelhantes já haviam sido registrados em outros países da América do Sul, demonstrando um padrão regional de circulação viral (PAHO, 2023).</p>
+                                    <p class="lead text-muted">Os primeiros focos de IAAP no Brasil foram desafiadores, embora o serviço veterinário oficial estivesse constantemente em alerta realizando vigilância, a ocorrência dos primeiros casos foi a oportunidade de colocar em prática todo o conhecimento adquirido em treinamentos e capacitações ao longo de vários anos. Um dos pontos fortes foi a comunicação institucional, trazendo informações atualizadas, muitas vezes praticamente em tempo real, visando tranquilizar a sociedade e o mercado avícola, considerando os impactos que a ocorrência deste vírus pode trazer para a cadeia produtiva e a segurança alimentar.</p>
+                                    <p class="lead text-muted">Desde maio de 2023, o Ministério da Agricultura, Pecuária e Abastecimento (MAPA) disponibiliza um painel, conforme você pode ver na imagem a seguir, com todas as suspeitas de IAAP em atendimento no país. O painel é atualizado duas vezes por dia e pode ser acessado por qualquer pessoa interessada neste <a href="https://mapa-indicadores.agricultura.gov.br/publico/extensions/SRN/SRN.html" target="_blank" rel="noopener" class="fw-bold">site</a>.</p>
+
+                                    <div class="container-fluid aula-wide-block px-lg-4 my-5">
+                                        <img src="imgs/mapa.jpg"
+                                            alt="Painel de investigações de Síndrome Respiratória e Nervosa das aves investigadas pelo Serviço Veterinário Oficial."
+                                            title="MAPA, 2026 (Acesso em 10/08/2026)" class="img-fluid rounded-4 shadow-sm">
+                                        <p class="mt-3 text-center small text-muted mb-4">Legenda: Painel de investigações de Síndrome Respiratória e Nervosa das aves investigadas pelo Serviço Veterinário Oficial<br>Fonte: MAPA, 2026 (Acesso em 10/08/2026)</p>
+                                    </div>
+                                    
+
+                                    <p class="lead text-muted">Para reforçar a importância da influenza aviária no contexto da Saúde Única trazemos como exemplo o <a href="https://saude.rs.gov.br/upload/arquivos/202306/15125643-comunicado-de-risco-01-cievs-dve-rs-iaap-h5n1.pdf" target="_blank" rel="noopener" class="fw-bold">Comunicado de Risco emitido pelo Centro Estadual de Vigilância em Saúde do Rio Grande do Sul (CEVS-RS)</a> publicado em 30 de maio de 2023 trazendo diversas informações sobre a prevenção do contágio e as estratégias a serem adotadas em humanos, demonstrando o alinhamento entre as Secretarias Estaduais de Agricultura e Saúde.</p>
+
+                                    <div class="my-5 alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light mb-4" role="alert" data-copy-id="box-saiba-mais">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <h4 class="fw-bold text-primary mt-2 mb-2"><i class="bi bi-plus-circle-fill fs-4 text-info me-3 ms-3"></i>Saiba mais</h4>
+                                                <p class="lead text-muted ms-3 mb-2">Se quiser saber mais sobre o caráter transfronteiriço e ocorrência de H5N1 em aves e animais marinhos nas Américas, veja as nossas sugestões de leitura:</p>
+                                                <ul class="lead text-muted mb-3 ms-5">
+                                                    <li class="my-3"><a href="https://anffasindical.org.br/quase-3-500-leoes-marinhos-no-peru-morrem-de-gripe-aviaria-h5n1/" target="_blank" rel="noopener" class="fw-bold">Quase 3.500 leões-marinhos no Peru morrem de gripe aviária H5N1 (2023)</a></li>
+                                                    <li class="my-3"><a href="https://wp.ufpel.edu.br/empauta/mortandade-causada-por-virus-de-gripe-aviaria-aumenta-nas-praias" target="_blank" rel="noopener" class="fw-bold">Mortandade causada por vírus de IAAP aumenta nas praias (2023)</a></li>
+                                                </ul>
+                                                <p class="lead text-muted ms-3 mb-2 mt-4">Se desejar aprofundar seus conhecimentos sobre a circulação da Influenza Aviária de Alta Patogenicidade (H5N1) nas Américas, consulte os materiais produzidos por organismos nacionais e internacionais de referência:</p>
+                                                <ul class="lead text-muted mb-0 ms-5">
+                                                    <li class="my-3"><a href="https://www.paho.org/pt/noticias/6-1-2025-opas-lanca-painel-interativo-para-monitorar-influenza-aviaria-ah5n1-nas-americas" target="_blank" rel="noopener" class="fw-bold">Painel de Síndrome Respiratória e Nervosa das Aves</a> – Ministério da Agricultura e Pecuária (MAPA), com atualização contínua das investigações e focos de Influenza Aviária no Brasil.</li>
+                                                    <li class="my-3">Atualizações Epidemiológicas sobre Influenza Aviária A(H5N1) – Organização Pan-Americana da Saúde (OPAS), com informações sobre a situação epidemiológica nas Américas.</li>
+                                                    <li class="my-3"><a href="https://www.woah.org/en/disease/avian-influenza/" target="_blank" rel="noopener" class="fw-bold">Portal sobre Influenza Aviária de Alta Patogenicidade (HPAI)</a> – Organização Mundial de Saúde Animal (OMSA/WOAH), com dados sobre a ocorrência mundial da doença e medidas de vigilância.</li>
+                                                    <li class="my-3"><a href="https://www.fao.org/animal-health/animal-diseases/avian-influenza/en" target="_blank" rel="noopener" class="fw-bold">Portal sobre Influenza Aviária</a> – Organização das Nações Unidas para Alimentação e Agricultura (FAO), com documentos técnicos, orientações e análises sobre a doença em escala global.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Aves Silvestres, Produção Avícola e Saúde Humana</h4>
+                                    <p class="lead text-muted">A relação entre aves silvestres, produção avícola e saúde humana constitui um dos eixos centrais para a compreensão do risco associado ao H5N1. As aves silvestres, especialmente as aquáticas migratórias, atuam como reservatórios naturais do vírus, frequentemente sem apresentar sinais clínicos evidentes. Ao entrarem em contato com ambientes produtivos, direta ou indiretamente, podem introduzir o vírus em sistemas avícolas comerciais ou de subsistência (FAO, 2023).</p>
+                                    <p class="lead text-muted">Em março de 2023, considerando o cenário epidemiológico da IAAP nos diversos continentes, especialmente nas Américas, a Organização Panamericana da Saúde (OPAS) emitiu um alerta demonstrando preocupação com os crescentes focos em aves selvagens e mamíferos terrestres e aquáticos. Neste contexto salientou que sempre que o vírus acomete aves comerciais (granjas) existe o risco de contaminação esporádica de seres humanos por contato com animais ou ambientes contaminados (OPAS, 2023).</p>
+
+                                    <div class="container-fluid aula-wide-block px-lg-4 my-5">
+                                        <p class="fw-bold text-primary text-center mb-4">Registro de casos de H5N1 em humanos — Período 2003 a 2023</p>
+                                        <div class="h5n1-chart mx-auto">
+                                            <div class="h5n1-chart-axis">
+                                                <span>1000</span><span>800</span><span>600</span><span>400</span><span>200</span><span>0</span>
+                                            </div>
+                                            <div class="h5n1-chart-area">
+                                                <div class="h5n1-chart-gridline h5n1-chart-gridline--0"></div>
+                                                <div class="h5n1-chart-gridline h5n1-chart-gridline--20"></div>
+                                                <div class="h5n1-chart-gridline h5n1-chart-gridline--40"></div>
+                                                <div class="h5n1-chart-gridline h5n1-chart-gridline--60"></div>
+                                                <div class="h5n1-chart-gridline h5n1-chart-gridline--80"></div>
+                                                <div class="h5n1-chart-bars">
+                                                    <div class="h5n1-chart-col" data-color="purple">
+                                                        <div class="h5n1-chart-badge"><i class="bi bi-globe-americas"></i></div>
+                                                        <span class="h5n1-chart-value">21</span>
+                                                        <div class="h5n1-chart-bar" data-height="2.1"></div>
+                                                    </div>
+                                                    <div class="h5n1-chart-col" data-color="blue">
+                                                        <span class="h5n1-chart-value">868</span>
+                                                        <div class="h5n1-chart-bar h5n1-chart-bar--icon-inside" data-height="86.8">
+                                                            <div class="h5n1-chart-badge"><i class="bi bi-people-fill"></i></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="h5n1-chart-col" data-color="green">
+                                                        <span class="h5n1-chart-value">53%</span>
+                                                        <div class="h5n1-chart-bar h5n1-chart-bar--icon-inside" data-height="46">
+                                                            <div class="h5n1-chart-badge"><i class="bi bi-heart-pulse-fill"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h5n1-chart-labels mx-auto">
+                                            <span>Países</span>
+                                            <span>Casos</span>
+                                            <span>Taxa de mortalidade</span>
+                                        </div>
+                                        <p class="text-center small text-muted mt-3 mb-0">Fonte: OPAS, 2023</p>
+                                    </div>
+
+                                    <p class="lead text-muted">No Brasil, esse risco tornou-se concreto com a confirmação de foco de Influenza Aviária de Alta Patogenicidade em uma granja comercial no município de Montenegro, no Rio Grande do Sul. Esse evento marcou um ponto de inflexão na defesa sanitária animal em nível nacional, ao demonstrar que a circulação viral em fauna silvestre pode, em determinadas condições, alcançar o sistema produtivo (BRASIL, 2023).</p>
+                                    <p class="lead text-muted">Do ponto de vista da saúde humana, embora a transmissão do H5N1 para humanos permaneça rara, o vírus é reconhecido por sua alta letalidade nos casos documentados. A preocupação central não se limita aos casos atuais, mas ao potencial de adaptação viral que permita maior transmissibilidade entre humanos, cenário amplamente discutido na literatura científica recente (WHO, 2023; Ke et al., 2024).</p>
+                                    <p class="lead text-muted">Nesse sentido, a vigilância integrada entre saúde animal e saúde humana é fundamental para reduzir riscos ocupacionais, proteger trabalhadores da avicultura, profissionais de manejo de fauna e equipes de vigilância, além de orientar medidas preventivas baseadas em evidências.</p>
+
+                                    <div class="my-5 alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light mb-4" role="alert" data-copy-id="box-saiba-mais">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <h4 class="fw-bold text-primary mt-2 mb-2"><i class="bi bi-plus-circle-fill fs-4 text-info me-3 ms-3"></i>Saiba mais</h4>
+                                                <p class="lead text-muted ms-3 mb-0">Para saber mais sobre surtos de IAAP na América do Sul, leia um artigo produzido pela Embrapa, <a href="https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1153434/1/final10079.pdf" target="_blank" rel="noopener" class="fw-bold">clicando aqui</a>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">O Papel da Vigilância Como Instrumento de Antecipação de Riscos</h4>
+                                    <p class="lead text-muted">Os eventos recentes envolvendo a IAAP no Brasil evidenciam o papel central da Vigilância Integrada como instrumento de antecipação de riscos sanitários em escala nacional, e não restrita ao contexto do Rio Grande do Sul.</p>
+                                    <p class="lead text-muted">Desde a detecção inicial do vírus em aves silvestres migratórias ao longo do litoral brasileiro, em 2023, foram registrados focos em diferentes unidades da Federação, incluindo estados das regiões Sudeste, Nordeste e Sul, o que reforça o caráter transfronteiriço e ecológico da circulação viral. A identificação precoce do vírus H5N1 em aves silvestres, mamíferos marinhos e ambientes naturais permitiu a adoção de medidas preventivas coordenadas visando prevenir a ocorrência de casos em humanos, demonstrando a efetividade da Vigilância Integrada na redução de riscos.</p>
+                                    <p class="lead text-muted">Nesse contexto, a atuação articulada entre a Defesa Sanitária Animal, a Vigilância Ambiental, a Vigilância da Fauna e a Vigilância Epidemiológica humana mostrou-se decisiva para o monitoramento de áreas sensíveis e de interfaces críticas entre fauna silvestre, ambientes produtivos e populações humanas.</p>
+                                    <p class="lead text-muted">No Rio Grande do Sul, destacam-se ações desenvolvidas em territórios estratégicos, como na Estação Ecológica do Taim e no litoral sul do estado, bem como em instituições de manejo de fauna, como por exemplo o Parque Zoológico de Sapucaia do Sul, onde protocolos de biossegurança, monitoramento sanitário e restrição de fluxos foram intensificados diante do risco identificado. Eventos semelhantes foram registrados em outras regiões do país, como no BioParque do Rio de Janeiro e no Jardim Zoológico de Brasília, nos quais a detecção de influenza aviária em aves sob cuidados humanos levou à interdição temporária, ao reforço das medidas de biossegurança e à intensificação da Vigilância, sem registro de casos humanos associados.</p>
+
+                                    <div class="my-5 alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light mb-4" role="alert" data-copy-id="box-saiba-mais">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <h4 class="fw-bold text-primary mt-2 mb-2"><i class="bi bi-plus-circle-fill fs-4 text-info me-3 ms-3"></i>Saiba mais</h4>
+                                                <p class="lead text-muted ms-3">A Estação Ecológica do Taim é uma Unidade de Conservação Federal, gerida pelo Instituto Chico Mendes, tendo sido o local do primeiro foco de IAAP no Rio Grande do Sul. Localizada nos municípios de Rio Grande e Santa Vitória do Palmar, em uma área de 32.806,31 hectares é uma importante área de conservação, com registros de 220 espécies de aves, 61 de répteis e 63 de peixes, entre outros animais.</p>
+                                                <p class="lead text-muted ms-3 mb-0">Se quiser saber mais sobre a Estação Ecológica do Taim e seu plano de manejo, <a href="https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/unidade-de-conservacao/unidades-de-biomas/marinho/lista-de-ucs/esec-do-taim/arquivos/PM_ESEC_Taim_vs.11.pdf" target="_blank" rel="noopener" aria-label="Veja o plano de manejo da Estação Ecológica do Taim" class="fw-bold">clique aqui</a>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted mt-5">Esses episódios, analisados de forma integrada, reforçam que a Vigilância, quando estruturada sob a perspectiva da Saúde Única permite reconhecer precocemente cenários de risco, orientar decisões intersetoriais e proteger a saúde humana, animal e ambiental de forma articulada e preventiva.</p>
+                                    <p class="lead text-muted">Os dados sobre os focos de gripe aviária citados podem ser consultados no painel disponibilizado pelo <a href="https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/unidade-de-conservacao/unidades-de-biomas/marinho/lista-de-ucs/parna-da-lagoa-do-peixe" target="_blank" rel="noopener" class="fw-bold">MAPA</a>.</p>
+                                    <p class="lead text-muted">Em 2025 a Organização Mundial da Saúde publicou uma atualização epidemiológica sobre a Influenza Aviária A (H5) na Região das Américas onde foi possível constatar que, além da infecção de aves, diversas espécies de mamíferos estavam sendo acometidas pelo vírus, inclusive destacando os focos ocorridos em rebanhos leiteiros, que na época da publicação já eram 928 casos em 16 estados, demonstrando a importância desta enfermidade também no contexto da segurança alimentar, visto que o vírus foi detectado no leite de vacas experimentalmente inoculadas (ZANELLA; CIACCI-ZANELLA, 2025), sendo igualmente relevante como doença ocupacional considerando os casos humanos relacionados à exposição a bovinos e aves infectados (OPAS, 2025).</p>
+                                    <p class="lead text-muted">A Vigilância também se mostrou fundamental na gestão da comunicação de risco, ao esclarecer que o consumo de carne de aves e ovos permanece seguro quando oriundo de sistemas fiscalizados, evitando impactos desnecessários sobre a cadeia produtiva e reduzindo a disseminação de informações equivocadas (FAO; WOAH; WHO, 2022).</p>
+                                    <p class="lead text-muted mb-5">Sob a perspectiva da Saúde Única, a Vigilância deixa de ser compreendida como um conjunto de ações setoriais isoladas e passa a operar como um sistema integrado de observação, análise e decisão. A incorporação de dados ambientais, sanitários e produtivos permite não apenas responder a eventos em curso, mas antecipar cenários, orientar políticas públicas e fortalecer a resiliência dos sistemas de saúde frente a ameaças emergentes (PAHO, 2023).</p>
+
+                                    <div class="my-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                        <div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                                A análise da ocorrência do H5N1 no contexto brasileiro evidencia que zoonoses de alta patogenicidade são fenômenos complexos, moldados por fluxos ecológicos globais, práticas produtivas locais e capacidades institucionais de Vigilância. O caráter transfronteiriço do vírus, a interface entre aves silvestres, produção avícola e saúde humana associados ao papel estratégico da Vigilância Colaborativa como instrumento de antecipação de riscos reforçam a centralidade da abordagem Saúde Única na gestão desses eventos.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted">O estudo de caso, que você verá no próximo tópico, aprofundará essa análise a partir de situações concretas vivenciadas no território, permitindo compreender como a Vigilância Colaborativa se materializa na prática e quais desafios emergem na articulação entre setores, escalas e saberes.</p>
+
+
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Estudo de Caso: IAAP (H5N1)</h3>
+                                    <p class="lead text-muted">A introdução do vírus IAAP (H5N1) no território brasileiro representa um marco recente e relevante para a Vigilância em Saúde, ao evidenciar, de forma concreta, como zoonoses emergentes se manifestam a partir da interação entre fluxos ecológicos globais, sistemas produtivos e capacidades institucionais de resposta.</p>
+                                    <p class="lead text-muted">A análise desse evento, organizada de forma narrativa, permite compreender como a Vigilância atua de maneira sequencial e integrada, desde a detecção inicial do vírus em aves silvestres até a comunicação de risco à sociedade.</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Detecção do Vírus em Aves Silvestres</h4>
+                                    <p class="lead text-muted">O ponto de partida da narrativa do H5N1 no Brasil está associado à detecção do vírus em aves silvestres, especialmente espécies migratórias que utilizam áreas costeiras e zonas úmidas como locais de descanso, alimentação e reprodução. Essas aves desempenham papel central na ecologia do vírus, funcionando como reservatórios naturais e vetores de dispersão em escala continental.</p>
+                                    <p class="lead text-muted">A Vigilância da Fauna Silvestre, nesse contexto, assume caráter estratégico. A identificação de aves encontradas mortas ou com sinais clínicos compatíveis com influenza aviária desencadeia a coleta de amostras, realizadas pelo Serviço Veterinário Oficial (SVO), que é o responsável pelo atendimento das suspeitas de ocorrência de influenza em aves e nas outras espécies suscetíveis. Clique em cada etapa abaixo para ver esse fluxo na prática:</p>
+
+                                    <div class="my-5 mx-auto flow-badc-wide-wrap">
+										<div class="text-center mb-2 mt-3">
+											<span class="badge-recurso-interativo">
+												<i class="bi bi-cursor-fill me-1"></i> Recurso Interativo
+											</span>
+											<!--<p class="text-muted mb-0 mt-2">Clique nos cards abaixo para saber mais</p>-->
+										</div>
+                                        <div class="flow-badc flow-badc--clickable">
+                                            <div class="flow-badc-step">
+                                                <button type="button" class="flow-badc-icon" aria-expanded="false" aria-controls="flowBadcText3-1">
+                                                    <i class="bi bi-bell-fill"></i>
+                                                </button>
+                                                <p class="flow-badc-text mb-0" id="flowBadcText3-1">O SVO recebe uma notificação sobre suspeita de ocorrência de influenza.</p>
+                                            </div>
+                                            <div class="flow-badc-arrow" aria-hidden="true">
+                                                <i class="bi bi-arrow-right d-none d-md-block"></i>
+                                                <i class="bi bi-arrow-down d-md-none"></i>
+                                            </div>
+                                            <div class="flow-badc-step">
+                                                <button type="button" class="flow-badc-icon" aria-expanded="false" aria-controls="flowBadcText3-2">
+                                                    <i class="bi bi-truck"></i>
+                                                </button>
+                                                <p class="flow-badc-text mb-0" id="flowBadcText3-2">O SVO se desloca até o local da notificação.</p>
+                                            </div>
+                                            <div class="flow-badc-arrow" aria-hidden="true">
+                                                <i class="bi bi-arrow-right d-none d-md-block"></i>
+                                                <i class="bi bi-arrow-down d-md-none"></i>
+                                            </div>
+                                            <div class="flow-badc-step">
+                                                <button type="button" class="flow-badc-icon" aria-expanded="false" aria-controls="flowBadcText3-3">
+                                                    <i class="bi bi-clipboard2-pulse-fill"></i>
+                                                </button>
+                                                <p class="flow-badc-text mb-0" id="flowBadcText3-3">O SVO realiza a coleta e o envio do material para diagnóstico laboratorial.</p>
+                                            </div>
+                                        </div>
+                                        <!--<p class="text-center small text-muted mt-3 mb-0">Legenda: Fluxo de coleta de amostras suspeitas de influenza pelo SVO<br>Fonte: Campus Virtual Fiocruz</p>-->
+                                    </div>
+
+                                    <div class="my-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                        <div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                                Do ponto de vista didático, é importante destacar que essa etapa antecede qualquer impacto direto sobre sistemas produtivos ou sobre a saúde humana, evidenciando o papel da Vigilância como instrumento de antecipação. A detecção precoce em aves silvestres permite reconhecer a circulação viral ativa no ambiente e sinaliza a necessidade de intensificação das ações de Vigilância em outros níveis. Assim como no caso da febre amarela com os bugios, o H5N1 evidencia que a fauna silvestre funciona como sentinela de riscos sanitários mais amplos, reforçando a lógica da Saúde Única.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Vigilância em Fronteiras e Áreas Costeiras</h4>
+                                    <p class="lead text-muted">Uma vez confirmada a circulação viral em aves silvestres, a <a href="javascript:void(0)" role="button" tabindex="0" class="fw-bold" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-html="true" data-bs-title="Defesa Sanitária Animal" data-bs-content="A Defesa Sanitária Animal é estruturada como um sistema compartilhado entre o governo federal (MAPA) e governos estaduais (Secretarias de Agricultura ou Institutos de Defesa Agropecuária), contando ainda com o apoio do setor privado. Os objetivos incluem a normatização, o planejamento e a execução de ações para prevenção, controle ou erradicação de enfermidades de impacto sanitário, de saúde pública ou econômico, realizados pelo SVO, visando preservar a saúde dos rebanhos nacionais.">Defesa Sanitária Animal</a> através do SVO estabelece maior Vigilância em territórios considerados estratégicos do ponto de vista epidemiológico, com destaque para fronteiras internacionais, áreas costeiras e zonas de intensa circulação de aves migratórias. Ao mesmo tempo há uma intensificação na divulgação das medidas de biosseguridade em granjas de produção de aves e ovos, considerando a presença do vírus e o maior risco de introdução na cadeia produtiva. Essas regiões operam como portas de entrada e de disseminação de agentes infecciosos, exigindo monitoramento contínuo e articulado.</p>
+                                    <p class="lead text-muted">No Brasil, a Vigilância em áreas costeiras ganhou centralidade diante da confirmação de casos em aves e mamíferos marinhos, alertando não somente a Defesa Sanitária Animal, mas também a saúde humana e o meio-ambiente, considerando o risco de perda massiva de indivíduos. A análise integrada dessas informações permite compreender que o risco não se restringe a um único grupo taxonômico, mas se expande conforme o vírus encontra novas oportunidades ecológicas de adaptação.</p>
+                                    <p class="lead text-muted">Do ponto de vista operacional, essa etapa envolve o fortalecimento da Vigilância passiva e ativa, a articulação com instituições de pesquisa e conservação, e o uso de informações territoriais para mapear áreas prioritárias. A Vigilância em fronteiras, por sua vez, destaca o caráter transfronteiriço desse agente, reforçando a necessidade de cooperação internacional e alinhamento com organismos multilaterais de saúde animal e humana.</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Articulação Entre Saúde, Defesa Sanitária Animal e Meio Ambiente</h4>
+                                    <p class="lead text-muted">À medida em que ocorre a identificação da circulação viral em ambientes naturais, torna-se indispensável a articulação entre os setores de Saúde, Defesa Sanitária Animal e Meio Ambiente. Essa articulação constitui um dos pilares da abordagem Saúde Única e se materializa de forma muito concreta no caso do H5N1.</p>
+                                    <p class="lead text-muted">Nesse contexto, <span class="fw-bold">o eixo de produção animal (SVO, produtores, empresas)</span>, em especial a cadeia avícola, passam a ocupar posição estratégica na Vigilância Integrada, sendo envolvidos de forma preventiva e sistemática a partir da confirmação da circulação viral em fauna silvestre. A intensificação das ações de biossegurança e do monitoramento de granjas não tem como objetivo apenas a mitigação de perdas econômicas diretas, mas a proteção do sistema produtivo como um todo, evitando que o vírus encontre condições favoráveis para se estabelecer, amplificar ou se disseminar em ambientes de produção intensiva. Mas não é só na produção de larga escala que existe o risco de contaminação, produções de pequena escala ou de subsistência (visam o consumo próprio de carne e ovos, por exemplo) também podem ser acometidas, necessitando dos mesmos cuidados aplicados nas granjas comerciais.</p>
+                                    <p class="lead text-muted">Um dos primeiros impactos observados diante da confirmação de focos de IAAP em granjas avícolas comerciais é a adoção de restrições sanitárias ao comércio internacional, com a suspensão temporária de exportações de produtos avícolas provenientes das áreas afetadas ou, em determinados casos, do país como um todo. Essas medidas decorrem de acordos sanitários internacionais e são fundamentais para preservar a credibilidade do sistema de Vigilância Agropecuária Nacional, ao demonstrar transparência e capacidade de resposta rápida.</p>
+                                    <p class="lead text-muted">Embora representem um impacto econômico relevante, tais restrições funcionam também como incentivo à adoção rigorosa de protocolos sanitários e à rápida contenção dos focos identificados. Cabe ressaltar que focos de IAAP em aves silvestres (vida livre ou em cativeiro) ou aves de subsistência não desencadeiam repercussões ou barreiras no comércio de produtos avícolas. No plano territorial, a Defesa Sanitária Animal opera por meio da definição de zonas, veja:</p>
+
+                                    <div class="container my-5" data-copy-id="accordion">
+                                        <div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionExemplo1">
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h5 class="accordion-header" id="headingExemplo1-1">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo1-1"
+                                                        aria-expanded="false" aria-controls="collapseExemplo1-1">
+                                                        <span class="fs-5 text-primary fw-bold">Zonas quentes</span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo1-1" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo1-1" data-bs-parent="#accordionExemplo1">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">Áreas onde o foco de IAAP foi confirmado.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0">
+                                                <h5 class="accordion-header" id="headingExemplo1-2">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo1-2"
+                                                        aria-expanded="false" aria-controls="collapseExemplo1-2">
+                                                        <span class="fs-5 text-primary fw-bold">Zonas de Vigilância e Proteção (Perifoco)</span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo1-2" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo1-2" data-bs-parent="#accordionExemplo1">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted">Áreas estabelecidas em um raio determinado a partir do local da detecção. Nesses locais são intensificadas ações como visitas às propriedades, interdição temporária de estabelecimentos, abate sanitário, restrição do trânsito de aves, ovos, ração e veículos, e ampliação da Vigilância Clínica e Laboratorial.</p>                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>                                    
+
+                                    <p class="lead text-muted">Esse zoneamento sanitário permite concentrar esforços onde o risco é maior, reduzindo a probabilidade de disseminação do vírus para outras regiões. Associada a essa medida, a implementação de <a href="javascript:void(0)" role="button" tabindex="0" class="fw-bold" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-html="true" data-bs-title="Vazios sanitários" data-bs-content="O vazio sanitário consiste na interrupção temporária das atividades produtivas em estabelecimentos afetados ou sob risco, com retirada total das aves, desinfecção das instalações e manutenção do local sem animais por um período determinado. Essa medida visa interromper o ciclo de transmissão do vírus, eliminando possíveis reservatórios e reduzindo drasticamente a carga viral no ambiente.">vazios sanitários</a> constitui uma das principais estratégias de biossegurança.</p>
+                                    <p class="lead text-muted mb-2">Outros mecanismos de biossegurança são igualmente reforçados nesse contexto, incluindo:</p>
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Controle rigoroso de acesso às granjas.</li>
+                                        <li class="my-3">Obrigatoriedade do uso de equipamentos de proteção individual (EPI) por trabalhadores.</li>
+                                        <li class="my-3">Adoção de barreiras físicas e sanitárias.</li>
+                                        <li class="my-3">Manejo adequado de resíduos e carcaças.</li>
+                                        <li class="my-3">Rastreabilidade de animais, insumos e produtos.</li>
+                                    </ul>
+                                    <p class="lead text-muted mt-4">A orientação técnica aos produtores rurais e às empresas do setor é parte essencial desse processo, uma vez que a eficácia das medidas depende diretamente da adesão e da compreensão dos riscos envolvidos.</p>
+                                    <p class="lead text-muted">Do ponto de vista da abordagem Saúde Única, essas ações evidenciam que a biossegurança na produção avícola não se restringe à proteção econômica ou à sanidade animal, mas integra uma estratégia mais ampla de proteção da saúde humana e ambiental. Ao impedir que o H5N1 se estabeleça em sistemas produtivos intensivos, reduz-se não apenas o risco de disseminação entre aves, mas também a probabilidade de exposição humana e de eventuais eventos de adaptação viral. Assim, a articulação entre Defesa Sanitária Animal, setor produtivo e políticas públicas se consolida como um dos pilares centrais da resposta preventiva ao vírus no território.</p>
+                                    <p class="lead text-muted">Paralelamente, o <span class="fw-bold">setor ambiental</span> contribui com a leitura ecológica do território, identificando áreas sensíveis, rotas migratórias e interfaces críticas entre fauna silvestre e atividades humanas. Já o <span class="fw-bold">setor saúde</span> atua na avaliação do risco à população, na proteção de trabalhadores expostos e na preparação dos serviços de saúde para eventual atendimento de casos suspeitos.</p>
+                                    <p class="lead text-muted mb-0">Essa articulação intersetorial não ocorre de forma automática. Ela depende de fluxos institucionais claros, protocolos previamente estabelecidos e capacidade de comunicação entre áreas que historicamente operaram de forma setorializada. O H5N1, nesse sentido, funciona como um <span class="fw-bold">evento disparador que evidencia tanto as potencialidades quanto os desafios da governança integrada</span>.</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Medidas de Biossegurança</h4>
+                                    <p class="lead text-muted">Com a confirmação da circulação do H5N1 no território, as medidas de biossegurança assumem papel central na contenção do risco. Essas medidas se aplicam tanto a sistemas produtivos quanto a instituições de manejo de fauna, como zoológicos, criadouros conservacionistas e centros de reabilitação.</p>
+                                    <p class="lead text-muted mb-2">Do ponto de vista narrativo, este é o momento em que a vigilância se traduz em ações concretas no território. Entre as medidas adotadas estão:</p>
+                                    <ul class="ms-4 lead text-muted">
+                                        <li class="my-3 mt-4">Controle de acesso a áreas sensíveis.</li>
+                                        <li class="my-3">Suspensão temporária de atividades com potencial de exposição.</li>
+                                        <li class="my-3">Uso de EPI por trabalhadores.</li>
+                                        <li class="my-3">Revisão de protocolos de manejo animal.</li>
+                                    </ul>
+                                    <p class="lead text-muted mt-4">A adoção dessas medidas antes da ocorrência de casos humanos reforça o caráter preventivo da Vigilância Integrada. Mais do que reagir a um dano já instalado, busca-se reduzir a probabilidade de que o vírus atravesse barreiras ecológicas e institucionais, alcançando a população humana.</p>
+                                    <p class="lead text-muted">Além disso, as medidas de biossegurança também cumprem função pedagógica, ao sensibilizar gestores, trabalhadores e a sociedade sobre a importância da prevenção e do cumprimento de normas sanitárias em contextos de risco emergente.</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Comunicação de Risco à Sociedade</h4>
+                                    <p class="lead text-muted">A etapa final desse processo diz respeito à comunicação de risco à sociedade, componente essencial da Vigilância em Saúde e frequentemente subestimado. No caso do H5N1, a comunicação adequada é fundamental para evitar pânico, desinformação e comportamentos que possam agravar o risco sanitário.</p>
+                                    <p class="lead text-muted">A comunicação de risco envolve esclarecer que a circulação do vírus em aves silvestres não implica, automaticamente, risco imediato à população humana. Ao mesmo tempo, é necessário informar de forma transparente sobre as medidas adotadas, as recomendações de biossegurança e os cuidados específicos para grupos mais expostos, como trabalhadores da avicultura e do manejo de fauna.</p>
+                                    <p class="lead text-muted">Um aspecto central dessa comunicação é reforçar que o consumo de carne de aves e ovos provenientes de sistemas fiscalizados permanece seguro, evitando impactos econômicos desnecessários e protegendo a cadeia produtiva. A clareza das mensagens contribui para fortalecer a confiança da sociedade nas instituições responsáveis pela Vigilância.</p>
+                                    <p class="lead text-muted">Sob a perspectiva da Saúde Única, a comunicação de risco não se limita à transmissão de informações técnicas, mas busca promover compreensão sobre a interdependência entre saúde humana, saúde animal e saúde ambiental. Ao explicitar essa interconexão, a Vigilância amplia sua capacidade de engajamento social e de prevenção de riscos futuros.</p>
+                                    <p class="lead text-muted">A narrativa da IAAP evidencia que a Vigilância Colaborativa em Saúde opera como um processo contínuo e integrado, e cada etapa se conecta à seguinte, formando uma cadeia de ações que tem como objetivo central a antecipação de riscos e a proteção da saúde coletiva. Veja:</p>
+
+                                    <div class="container my-5" data-copy-id="slider">
+                                        <div id="carouselComunicacaoIAAP" class="carousel slide shadow-md rounded-4 overflow-hidden border-0 max-w-4xl mx-auto max-w-content">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <div class="position-relative carousel-slide-media">
+                                                        <img src="imgs/20.jpg" class="w-100 h-100 object-fit-cover opacity-15" alt="Botão tridimensional em formato de triângulo azul-escuro com um ponto de exclamação amarelo brilhante no centro, sobre fundo verde-azulado." title="Gerada por IA (Gemini)">
+                                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselComunicacaoIAAP" data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                        </button>
+                                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselComunicacaoIAAP" data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="p-4 bg-white carousel-caption-box">
+                                                        <p class="lead text-muted">Detecção de sinais da IAAP no ambiente.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="position-relative carousel-slide-media">
+                                                        <img src="imgs/21.jpg" class="w-100 h-100 object-fit-cover opacity-15" alt="Operadores de uniforme azul trabalhando em um centro de controle diante de vários monitores e painéis gigantes exibindo mapas digitais e gráficos de dados." title="Gerada por IA (Gemini)">
+                                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselComunicacaoIAAP" data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                        </button>
+                                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselComunicacaoIAAP" data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="p-4 bg-white carousel-caption-box">
+                                                        <p class="lead text-muted">Monitoramento de territórios estratégicos.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="position-relative carousel-slide-media">
+                                                        <img src="imgs/22.jpg" class="w-100 h-100 object-fit-cover opacity-15" alt="Notebook com a tela branca em destaque sobre a mesa de uma sala de reuniões, com silhuetas de pessoas conversando ao fundo em ambiente iluminado." title="Gerada por IA (Gemini)">
+                                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselComunicacaoIAAP" data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                        </button>
+                                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselComunicacaoIAAP" data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="p-4 bg-white carousel-caption-box">
+                                                        <p class="lead text-muted">Articulação entre setores distintos e implementação de medidas de biossegurança.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="position-relative carousel-slide-media">
+                                                        <img src="imgs/23.jpg" class="w-100 h-100 object-fit-cover opacity-15" alt="Mão erguida segurando um megafone cinza em direção ao céu azul com nuvens brancas." title="Gerada por IA (Gemini)">
+                                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselComunicacaoIAAP" data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                        </button>
+                                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselComunicacaoIAAP" data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="p-4 bg-white carousel-caption-box">
+                                                        <p class="lead text-muted">Comunicação responsável à sociedade.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="text-center small text-muted mt-3 mb-0">Legenda: Processo de comunicação de riscos em caso de IAAP<br>Fonte: Campus Virtual Fiocruz</p>
+                                    </div>
+
+                                    <p class="lead text-muted mt-5">A influenza aviária não é somente "uma doença de aves" cuja responsabilidade de ações se limita à defesa agropecuária: a sua magnitude, o potencial para acometer outras espécies (inclusive humanos), o risco à segurança alimentar e as significativas perdas econômicas em granjas e demais estabelecimentos relacionados à cadeia avícola tornam essa enfermidade emblemática para a abordagem de Saúde Única pois transcende a área animal, englobando a saúde humana e o meio-ambiente nas ações de vigilância, prevenção e redução de riscos.</p>
+                                    <p class="lead text-muted">Assim como no caso da febre amarela, o H5N1 demonstra que a abordagem Saúde Única não é apenas um referencial teórico, mas uma prática concreta de gestão de riscos em contextos de elevada complexidade socioambiental.</p>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Análise do Caso Sob a Perspectiva da Saúde Única</h3>
+                                    <p class="lead text-muted">A análise da IAAP à luz da abordagem Saúde Única permite compreender, de forma integrada, como a circulação de um agente infeccioso de alta patogenicidade resulta da interação entre saúde animal, saúde ambiental, saúde humana e dinâmicas socioeconômicas. Diferentemente de agravos restritos a um único setor, esta zoonose exige respostas coordenadas, baseadas em vigilância contínua, leitura territorial e governança intersetorial.</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Saúde animal: vigilância em aves silvestres e domésticas</h4>
+                                    <p class="lead text-muted mb-2">A saúde animal constitui o eixo inicial da vigilância do H5N1. Como você viu anteriormente, a detecção do vírus em aves silvestres, sobretudo migratórias, funciona como sinal sentinela da circulação viral no ambiente, e é nesse momento que a Vigilância começa se apoiando em:</p>
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Notificações de mortalidade.</li>
+                                        <li class="my-3">Monitoramento ativo em áreas estratégicas.</li>
+                                        <li class="my-3">Diagnóstico laboratorial.</li>
+                                    </ul>
+                                    <p class="lead text-muted mt-4">Essas ações permitem reconhecer precocemente cenários de risco, e em paralelo, a Vigilância em aves domésticas, especialmente em sistemas de produção avícola, atua de forma preventiva para evitar a introdução e a amplificação do vírus em ambientes de alta densidade animal. A integração entre esses dois níveis é fundamental, pois a circulação viral na fauna silvestre pode anteceder e condicionar riscos ao sistema produtivo, exigindo medidas rápidas de biossegurança e contenção.</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Saúde Ambiental: Rotas Migratórias e Ecossistemas</h4>
+                                    <p class="lead text-muted">A dimensão ambiental do caso evidencia que o H5N1 está fortemente associado a rotas migratórias de aves aquáticas e marinhas, que conectam ecossistemas distantes em escala continental e global.</p>
+                                    <p class="lead text-muted">Áreas úmidas, zonas costeiras e unidades de conservação funcionam como pontos de concentração dessas espécies, tornando-se territórios prioritários para a vigilância. Alterações nos ecossistemas, como degradação de habitats, mudanças climáticas e pressão antrópica podem modificar padrões migratórios e ampliar interfaces entre fauna silvestre, animais domésticos e áreas urbanizadas.</p>
+                                    <p class="lead text-muted">A abordagem Saúde Única reforça que a Vigilância Ambiental não é acessória, mas essencial para compreender a dinâmica ecológica do vírus e orientar ações preventivas baseadas no território.</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Saúde Humana: Prevenção de Transmissão e Preparação do Sistema de Saúde</h4>
+                                    <p class="lead text-muted">Como já mencionado nesta aula, embora a transmissão do H5N1 para humanos seja rara, o histórico global do vírus demonstra elevada letalidade nos casos registrados, o que justifica uma postura preventiva robusta.</p>
+                                    <p class="lead text-muted">A Vigilância Integrada permite que a saúde humana atue de forma antecipatória, protegendo trabalhadores expostos, orientando serviços de saúde para identificação precoce de casos suspeitos e garantindo a notificação oportuna. A preparação do sistema de saúde inclui protocolos clínicos, capacitação de equipes e articulação com a Vigilância Sanitária Animal, reduzindo a probabilidade de respostas tardias. Outra estratégia é o acompanhamento das pessoas (equipes do SVO, produtores rurais, tratadores etc.) que tiveram contato com aves que estão com suspeita de infecção pelo vírus H5N1, especialmente aquelas que venham a apresentar sintomas respiratórios. Nesse sentido, a integração com as diretrizes internacionais de organismos como a Organização Mundial da Saúde (OMS) e a Organização Mundial de Saúde Animal (OMSA) fortalece a consistência técnica e embasa as ações nacionais.</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Impactos Socioeconômicos e Sanitários</h4>
+                                    <p class="lead text-muted">Os impactos do H5N1 extrapolam o campo sanitário, alcançando dimensões socioeconômicas relevantes. Restrições temporárias às exportações de produtos avícolas, implementação de zonas com acesso restrito, vazios sanitários e interdições preventivas geram efeitos econômicos significativos, especialmente em regiões fortemente dependentes da avicultura. Neste momento, também é importante salientar o papel da saúde mental no apoio às pessoas que participam do enfrentamento dessa crise, sejam produtores rurais, médicos veterinários, gestores e demais envolvidos, considerando os impactos das ações e das perdas econômicas que venham a ocorrer.</p>
+                                    <p class="lead text-muted">Apesar dos efeitos econômicos, essas medidas preventivas são essenciais para preservar a credibilidade sanitária do país e evitar danos ainda maiores decorrentes da disseminação viral. Do ponto de vista sanitário, a antecipação de riscos reduz a probabilidade de casos humanos, evita consequências em saúde pública e reforça a confiança da sociedade nas instituições. Assim, a abordagem Saúde Única evidencia que proteger a saúde animal e ambiental é também uma estratégia de proteção econômica e social ao promover respostas equilibradas, baseadas em evidências e cooperação intersetorial.</p>
+                                    <p class="lead text-muted">Em síntese, o caso do H5N1 demonstra que a Vigilância Colaborativa em Saúde, quando orientada pela abordagem Saúde Única amplia sua capacidade de antecipação, qualifica a tomada de decisão e fortalece a resiliência dos sistemas sanitários frente a ameaças emergentes.</p>
+
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary"><i class="bi bi-pencil-square"></i> Atividade</h3>
+                                    <!-- VARIAÇÃO 1: QUIZ MÚLTIPLA ESCOLHA INTERATIVO (MULTI-QUESTÕES COM NAVEGAÇÃO E JS) -->
+                                    <div class="my-4" id="eduflexQuizContainer">
+                                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-bold"
+                                                    id="quizQuestionCounter">Questão 01 de 03</span>
+                                                <span class="badge bg-light text-dark border fw-bold" id="quizScoreBadge">
+                                                    <i class="bi bi-trophy-fill text-warning me-1"></i>Acertos: <span
+                                                        id="quizScoreCount">0</span>
+                                                </span>
+                                            </div>
+                                            <div class="progress mb-4 progress-thin">
+                                                <div class="progress-bar bg-primary" id="quizProgressBar" role="progressbar"></div>
+                                            </div>
+                                            <h4 class="fw-bold lead text-muted mb-4" id="quizQuestionText"></h4>
+                                            <div class="d-grid gap-2 mb-3" id="quizOptionsContainer"></div>
+                                            <div class="p-3 rounded-3 small mb-3 d-none" id="quizFeedbackBox"></div>
+                                            <small class="text-muted d-block mb-3">
+                                                <i class="bi bi-info-circle me-1"></i>Selecione uma opção para confirmar sua
+                                                resposta.
+                                            </small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <button class="btn bg-primary text-white rounded-pill px-4 fw-bold" id="quizNextBtn"
+                                                    disabled>
+                                                    Próxima Questão <i class="bi bi-arrow-right ms-1"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Resumo da aula</h3>
+                                    <p class="lead text-muted">Nesta aula, você analisou a Influenza Aviária de Alta Patogenicidade (H5N1) como um estudo de caso para compreender a Vigilância em Saúde na perspectiva da Saúde Única. Foram discutidos o caráter transfronteiriço das zoonoses, a importância da vigilância integrada entre saúde humana, saúde animal e meio ambiente, bem como o papel da biossegurança, da comunicação de risco e da articulação intersetorial na prevenção e no enfrentamento de emergências sanitárias.</p>
+                                    <p class="lead text-muted">Ao longo do conteúdo, foi possível compreender que a vigilância vai além da resposta aos eventos já instalados, constituindo um instrumento estratégico para a antecipação de riscos, a proteção da biodiversidade, da saúde pública e dos sistemas produtivos.</p>
+                                    <p class="lead text-muted fw-bold">Você concluiu esta aula, continue se empenhando nos seus estudos. Siga para a avaliação final do curso!</p>
+                                </article>
+                            </div>
+                        </section>
+
+                    </div> <!-- Fim .aula-pages-wrapper -->
+                    <!-- ================= PAGINAÇÃO INTERNA DA AULA ================= -->
+                    <div class="aula-pagination-nav d-flex justify-content-between align-items-center mt-5 pt-4 border-top"
+                        id="aulaPaginationNav">
+                        <button type="button" class="btn btn-outline-primary rounded-pill px-4" id="aulaPagPrev" disabled>
+                            <i class="bi bi-arrow-left me-1"></i> Anterior
+                        </button>
+                        <span class="small text-muted fw-semibold" id="aulaPagIndicator">Página 1 de 2</span>
+                        <button type="button" class="btn btn-primary rounded-pill px-4" id="aulaPagNext">
+                            Próximo <i class="bi bi-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+
+                    <!-- ================= NAVEGAÇÃO ENTRE AULAS (exibida somente na última página) ================= -->
+                    <div class="aula-lesson-nav d-none justify-content-center align-items-center mt-5 pt-4 border-top"
+                        id="aulaLessonNav" data-next-lesson="../encerramento/index.html">
+                        <a href="../encerramento.html" class="btn bg-primary rounded-pill px-4 text-white" id="aulaLessonNext">Encerramento</a>
+                    </div>
+
+                    <!-- ================= RODAPÉ DE LOGOS ================= -->
+                    <!-- ================= RODAPÉ (carregado de partials/footer.html) ================= -->
+                    <div id="site-footer"></div>
+
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <!-- ================= MODAIS (carregados de partials/modals.html) ================= -->
+    <div id="site-modals"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Seu arquivo JS unificado -->
+    <script src="js/partials-loader.js"></script>
+    <script src="js/aula3.3.js"></script>
+    <script src="js/main.js"></script>
+
+    <button type="button" class="back-to-top" id="btnBackToTop" aria-label="Voltar ao topo">
+        <i data-lucide="arrow-up" aria-hidden="true"></i>
+    </button>
+</body>
+
+</html>

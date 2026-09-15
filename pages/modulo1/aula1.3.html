@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Vigilância em Saúde em tempos de transformação digital</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- CSS do seu tema -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <meta name="robots" content="noindex" />
+    <meta name="author" content="Fiocruz, Campus Virtual" />
+    <meta name="description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="keywords" content="Fiocruz, Curso, Vigilância em Saúde, transformação digital, SUS" />
+
+    <!-- Facebook Open Graph -->
+    <meta property="og:url" content="https://mooc.campusvirtual.fiocruz.br/rea/introducao-analise-dados-sus" />
+    <meta property="og:title"
+        content="Campus Virtual Fiocruz | Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta property="og:description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title"
+        content="Campus Virtual Fiocruz | Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="twitter:image:src" content="" />
+
+    <!-- Favicons and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../media/icons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../../media/icons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../../media/icons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../../media/icons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../../media/icons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../../media/icons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../../media/icons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../../media/icons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="../../media/icons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../../media/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../media/icons/favicon-16x16.png" />
+    <link rel="manifest" href="../../media/icons/manifest.json" />
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="media/icons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#420b3c" />
+
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Barra de Progresso Superior -->
+    <div class="scroll-progress-top" id="scrollProgress"></div>
+
+    <script src="js/aula1.3-config.js"></script>
+    <!-- ================= CABEÇALHO (carregado de partials/header.html) ================= -->
+    <div id="site-header"></div>
+
+    <div class="page-wrapper" id="pageWrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <div id="site-sidebar"></div>
+
+        <!-- Lingueta (Botão) redesenhada: MOVIDA PARA FORA DO ASIDE PARA NÃO SUMIR -->
+        <button class="sidebar-tab" id="btnToggleSidebar" aria-label="Alternar menu" aria-expanded="true"
+            aria-controls="sidebarAula">
+            <i data-lucide="chevron-left" id="toggleIcon" aria-hidden="true"></i>
+        </button>
+
+        <!-- ================= CONTEÚDO ================= -->
+        <main class="content-aula" id="main-content">
+            <div class="main-content-inner">
+
+                <!-- Selo de navegação: flutua por cima do conteúdo -->
+                <nav aria-label="breadcrumb" class="aula-breadcrumb-pill">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../../index.html" class="text-decoration-none">Início</a></li>
+                        <li class="breadcrumb-item"><a href="aula1.1.html" class="text-decoration-none">Módulo 1</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Aula 3</li>
+                    </ol>
+                </nav>
+
+                <!-- Hero com imagem de fundo temática -->
+                <header class="aula-hero">
+                    <h1>Participação Comunitária e Vigilância Popular: valor e uso das informações do território ao
+                        genoma </h1>
+                </header>
+
+                <div class="main-content-body">
+                    <div class="aula-pages-wrapper" id="aulaPagesWrapper">
+
+                        <section class="aula-page active" data-page="1">
+                    <article class="aula-body ">
+                        <h2 class="fw-bold mb-4 text-primary"><i class="bi bi-book-half"></i> Sobre esta aula </h2>
+                        <hr>
+                        <p class="lead text-muted spacer-top-lead">O conteúdo desta aula foi desenvolvido para conectar as políticas de
+                            Vigilância em Saúde do SUS a conceitos ampliados de território, epidemiologia, participação
+                            popular e vigilância genômica, deixando você apto a identificar oportunidades de
+                            participação popular na efetivação do ciclo de vigilância à saúde nos territórios.</p>
+
+                        <h3 class="fw-bold text-primary mt-5 mb-4"><i class="bi bi-columns-gap"></i> Objetivos de
+                            aprendizagem </h3>
+                        <hr>
+                        <p class="lead text-muted">Ao final desta aula, esperamos que você seja capaz de:</p>
+
+                        <ul class="ms-5 lead text-muted">
+                            <li class="my-3 mt-4">Compreender o conceito ampliado de Vigilância em Saúde e suas
+                                dimensões: vigilância popular, sanitária, epidemiológica, ambiental e do trabalho. </li>
+                            <li class="my-3">Reconhecer a potencialidade da participação comunitária: valor e uso das
+                                informações do território. </li>
+                        </ul>
+
+                        <h3 class="fw-bold mt-5 mb-4 text-primary">Introdução</h3>
+                        <p class="lead text-muted">Conforme você viu ao longo deste módulo, a Vigilância em Saúde pode
+                            ser entendida como um conjunto integrado de métodos, ferramentas e ações voltadas para
+                            compreender como se distribuem os processos de saúde e doença nas populações. </p>
+                        <p class="lead text-muted">Esse campo busca não apenas identificar os problemas existentes, mas
+                            também analisar os fatores que os determinam e condicionam, como aspectos sociais,
+                            ambientais e econômicos.</p>
+
+                    </article>
+                        </section>
+
+                        <section class="aula-page" data-page="2">
+                    <div class="main-content-body">
+                    <article class="aula-body mb-0">
+
+                        <h3 class="fw-bold mt-5 mb-4 text-primary">Vigilância em Saúde, Territórios e Participação
+                            Comunitária </h3>
+                        <p class="lead text-muted">Graças à Vigilância em Saúde, é possível reconhecer os principais
+                            desafios que afetam comunidades e, a partir disso, propor estratégias e soluções adequadas.
+                            Sua atuação se estende desde os territórios locais até níveis mais amplos (estados, países e
+                            até mesmo o cenário global), contribuindo para a promoção da saúde e a prevenção de doenças
+                            em diferentes contextos.</p>
+
+
+                        <h4 class="fw-bold mt-5 mb-4 text-primary">A Política Nacional de Vigilância em Saúde</h4>
+                        <p class="lead text-muted">No Brasil, a Política Nacional de Vigilância em Saúde (PNVS),
+                            instituída pela Resolução nº 588 do Conselho Nacional de Saúde, em 12 de julho de 2018,
+                            define a Vigilância em Saúde como:</p>
+
+                        <!-- VARIAÇÃO : PULL-QUOTE CENTRALIZADA EM DESTAQUE ESCURO (HERO QUOTE) -->
+                        <div class="container my-5">
+                            <div
+                                class="p-5 rounded-4 text-white text-center shadow-lg position-relative overflow-hidden hero-quote-bg">
+                                <i class="bi bi-quote display-3 text-white-50 mb-2 d-block"></i>
+                                <blockquote class="blockquote mb-4">
+                                    <p class="fs-4 italic font-serif leading-relaxed text-light max-w-2xl mx-auto">
+                                        "<em>um processo contínuo e sistemático que envolve a coleta, consolidação,
+                                            análise e disseminação de informações sobre eventos relacionados à saúde.
+                                            Esse processo tem como objetivo orientar o planejamento e a execução de
+                                            medidas de saúde pública, abrangendo desde a regulação e intervenção até a
+                                            atuação sobre os determinantes e condicionantes da saúde. Dessa forma,
+                                            busca-se proteger e promover a saúde da população, além de prevenir e
+                                            controlar riscos, agravos e doenças.</em>"
+                                    </p>
+                                </blockquote>
+                                <!--<div class="text-warning text-uppercase tracking-wider fw-bold small">
+                                    René Descartes — Discurso sobre o Método (1637)
+                                </div>-->
+                            </div>
+                        </div>
+
+                        <h4 class="fw-bold mt-5 mb-4 text-primary">Democracia e Controle Social no SUS</h4>
+                        <p class="lead text-muted">Desde sua criação, o Sistema Único de Saúde (SUS) tem como pilares os
+                            processos democráticos e o controle social, elementos indispensáveis para sua efetividade.
+                            Essa característica foi consolidada em marcos históricos e legais, veja:</p>
+
+                        <!-- LINHA DO TEMPO HORIZONTAL -->
+                        <div class="container my-5">
+                            <div class="timeline-horizontal max-w-4xl mx-auto">
+
+                                <!-- Datas clicáveis (nós da timeline) -->
+                                <ul class="nav timeline-horizontal-nav justify-content-between mb-4" id="timelineMarcosTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="timelineMarco1986-tab" data-bs-toggle="pill"
+                                            data-bs-target="#timelineMarco1986" type="button" role="tab"
+                                            aria-controls="timelineMarco1986" aria-selected="true">1986</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="timelineMarco1988-tab" data-bs-toggle="pill"
+                                            data-bs-target="#timelineMarco1988" type="button" role="tab"
+                                            aria-controls="timelineMarco1988" aria-selected="false">1988</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="timelineMarco1990-tab" data-bs-toggle="pill"
+                                            data-bs-target="#timelineMarco1990" type="button" role="tab"
+                                            aria-controls="timelineMarco1990" aria-selected="false">1990</button>
+                                    </li>
+                                </ul>
+
+                                <!-- Texto de cada marco, troca ao clicar na data -->
+                                <div class="tab-content" id="timelineMarcosTabContent">
+                                    <div class="tab-pane fade show active card border-0 shadow-sm rounded-4 p-4 bg-white"
+                                        id="timelineMarco1986" role="tabpanel" aria-labelledby="timelineMarco1986-tab">
+                                        <p class="text-muted leading-relaxed mb-0">8ª Conferência Nacional de Saúde.</p>
+                                    </div>
+                                    <div class="tab-pane fade card border-0 shadow-sm rounded-4 p-4 bg-white"
+                                        id="timelineMarco1988" role="tabpanel" aria-labelledby="timelineMarco1988-tab">
+                                        <p class="text-muted leading-relaxed mb-0">Constituição Federal de 1988,
+                                            conhecida como Constituição Cidadã. </p>
+                                    </div>
+                                    <div class="tab-pane fade card border-0 shadow-sm rounded-4 p-4 bg-white"
+                                        id="timelineMarco1990" role="tabpanel" aria-labelledby="timelineMarco1990-tab">
+                                        <p class="text-muted leading-relaxed mb-0">Lei 8.142/1990, que institui o
+                                            controle social por meio de Conselhos e Conferências de Saúde. </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <h4 class="fw-bold mt-5 mb-4 text-primary">A participação Comunitária na Vigilância em Saúde
+                        </h4>
+                        <p class="lead text-muted">Ao relacionar o conceito e a finalidade da Vigilância em Saúde com o
+                            SUS, é essencial destacar o papel central da participação comunitária, visto que as
+                            comunidades de territórios são, ao mesmo tempo, fontes de dados em saúde e os beneficiários
+                            das ações para promoção da saúde e prevenção de doenças. </p>
+
+                    </article>
+                </div>
+
+                <!-- Bootstrap 5: Parallax / Banner Full-Width 100% Largura (Destaque de Alta Ênfase) -->
+                <!-- NOTA: O container-fluid px-0 garante que o fundo ocupe 100% das laterais da tela -->
+                <div class="container-fluid px-0 my-5 aula-full-bleed">
+                    <div class="position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+
+                        <!-- Dark overlay suave para contraste de leitura -->
+                        <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+
+                        <!-- Parágrafo Secundário -->
+                        <p
+                            class="fs-5 lead fw-bold text-muted1 aula-body main-content-body text-white mb-0 leading-relaxed max-w-content">
+                            Por meio das comunidades, a Vigilância em Saúde consegue se efetivar, atingindo plenamente
+                            seus objetivos, especialmente no que diz respeito à intervenção sobre os condicionantes e
+                            determinantes da saúde, visando a melhoria das condições de vida das populações.
+                        </p>
+                        <p
+                            class="fs-5 lead fw-bold text-muted1 aula-body main-content-body text-white mb-0 leading-relaxed mb-4 max-w-content">
+                            Os dados coletados em diferentes territórios (bairros, municípios ou estados) transformam-se
+                            em informações valiosas justamente para essas comunidades, permitindo que as ações de saúde
+                            sejam mais adequadas às realidades de cada território.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="main-content-body">
+                    <article class="aula-body mb-0">
+
+                        <h4 class="fw-bold mt-5 mb-4 text-primary">O Território</h4>
+                        <p class="lead text-muted spacer-top-lead">Para uma melhor compreensão dos conteúdos desta aula, é importante
+                            recordar as contribuições de Milton Santos (1926–2001) na Geografia Crítica, destacando o
+                            seu entendimento de territórios, não apenas com espaços físicos delimitados, mas como
+                            lugares vívidos, apropriados e transformados pelas práticas sociais, inseparáveis das
+                            relações sociais, políticas e econômicas que neles se desenvolvem. </p>
+                        <p class="lead text-muted">Segundo essa visão, o território é dinâmico e histórico, fundamental,
+                            portanto, para pensar a Vigilância em Saúde como prática enraizada na vida cotidiana das
+                            populações.</p>
+
+                        <h4 class="fw-bold mt-5 mb-4 text-primary">Vigilância em Saúde como prática transformadora</h4>
+                        <p class="lead text-muted">Embora as equipes técnicas de Vigilância sejam capazes de produzir
+                            mapas e análises de situação de saúde referentes a determinados períodos, a plena realização
+                            da Vigilância em Saúde, especialmente a vigilância em tempo real, depende do engajamento
+                            popular.</p>
+                        <p class="lead text-muted">Afinal, são as próprias populações, humanas e não humanas, que
+                            compõem o território e participam de suas dinâmicas, influenciando diretamente os movimentos
+                            de expansão ou retração, que impactam a saúde coletiva.</p>
+                        <p class="lead text-muted">Além disso, a experiência acumulada pelas comunidades faz com que,
+                            muitas vezes, sejam seus membros aqueles que melhor conhecem estratégias e soluções para
+                            enfrentar problemas coletivos, incluindo os relacionados à saúde. Esse conhecimento local é
+                            fundamental para orientar ações mais eficazes e ajustadas às realidades específicas de cada
+                            território.</p>
+                        <p class="lead text-muted">Sob essa perspectiva, pode-se afirmar que, enquanto os gestores do
+                            SUS trabalham com panoramas, mapas e análises que refletem recortes temporais, as populações
+                            que habitam e vivenciam o espaço são, de fato, a expressão viva do território. Elas carregam
+                            em sua dinâmica social, cultural e ambiental os elementos que dão sentido às políticas de
+                            saúde e tornam possível uma vigilância mais próxima, participativa e transformadora.</p>
+
+                        <!-- VARIAÇÃO 1: LADO A LADO (IMAGEM E TEXTO EM COLUNAS) -->
+                        <div class="my-4">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <p class="lead text-muted">
+                                        Nesse sentido, vale destacar a contribuição da Epidemiologia Crítica,
+                                        desenvolvida pelo equatoriano Jaime Breilh. Diferente da epidemiologia
+                                        tradicional, que muitas vezes se limita a quantificar doenças e agravos, ela
+                                        busca compreender os processos sociais, econômicos, políticos e ambientais que
+                                        produzem desigualdades em saúde. Enfatiza que os determinantes da saúde não
+                                        podem ser vistos isoladamente, mas como parte de um sistema complexo de
+                                        opressões e vulnerabilidades.
+                                    </p>
+                                </div>
+								<div class="col-lg-6">
+                                    <div class="position-relative overflow-hidden rounded-3 shadow">
+                                        <img src="imgs/00.jpg" class="img-fluid w-100 object-fit-cover"
+                                            alt="Homem idoso de óculos e paletó escuro sorrindo em frente a um vitral colorido." title="Wikimedia Commons">
+                                    </div>
+                                    <p class="text-center small text-muted mt-2 mb-0">Legenda: Jaime Breilh<br>
+                                        Fonte: Wikimedia Commons</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <p class="lead text-muted">Ao dialogar com a Vigilância em Saúde, essa abordagem amplia a
+                            capacidade de intervenção, pois permite enxergar os problemas não apenas como eventos
+                            biológicos, mas como expressões de modelos de desenvolvimento, formas de exploração do
+                            trabalho e dinâmicas territoriais. Isso fortalece a ideia de uma vigilância transformadora,
+                            comprometida com a justiça social e com a construção de sociedades mais saudáveis e
+                            equitativas.</p>
+
+                        <h3 class="fw-bold mt-5 mb-4 text-primary">Vigilância em Saúde e a Vigilância Genômica</h3>
+                        <h4 class="fw-bold mb-4 text-primary">Vigilância em Saúde no Brasil</h4>
+                        <p class="lead text-muted">Conforme você viu na Aula 2 deste Módulo, sob a perspectiva da PNVS,
+                            a Vigilância em Saúde organiza-se em quatro áreas estratégicas e complementares, articuladas
+                            com as demais políticas do SUS, são elas:</p>
+
+                        <!-- Accordion Acadêmico -->
+                        <div class="container my-5">
+                            <div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionId">
+                                <div class="accordion-item border-0 border-bottom">
+                                    <h4 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                                            aria-controls="collapseOne">
+                                            <span class="fs-5 text-primary fw-bold">Vigilância Epidemiológica</span>
+                                        </button>
+                                    </h4>
+                                    <div id="collapseOne" class="accordion-collapse collapse" role="region"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionId">
+                                        <div class="accordion-body text-secondary small leading-relaxed">
+                                            <p class="lead text-muted spacer-top-lead">Voltada para o monitoramento de doenças e
+                                                agravos, permitindo identificar tendências e orientar ações de prevenção
+                                                e controle. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item border-0 border-bottom">
+                                    <h4 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            <span class="fs-5 text-primary fw-bold">Vigilância em Saúde Ambiental
+                                            </span>
+                                        </button>
+                                    </h4>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" role="region"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionId">
+                                        <div class="accordion-body text-secondary small leading-relaxed">
+                                            <p class="lead text-muted spacer-top-lead">Dedicada à análise dos fatores ambientais que
+                                                influenciam a saúde, como qualidade da água, do ar e exposição a
+                                                contaminantes. Com alguma frequência, essa vigilância se relaciona com
+                                                núcleos de zoonoses, identificando e monitorando adoecimento e morte de
+                                                animais, que possam impactar na saúde humana. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item border-0 border-bottom">
+                                    <h4 class="accordion-header" id="headingtre">
+                                        <button class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapsetre"
+                                            aria-expanded="false" aria-controls="collapsetre">
+                                            <span class="fs-5 text-primary fw-bold">Vigilância em Saúde do Trabalhador
+                                            </span>
+                                        </button>
+                                    </h4>
+                                    <div id="collapsetre" class="accordion-collapse collapse" role="region"
+                                        aria-labelledby="headingtre" data-bs-parent="#accordionId">
+                                        <div class="accordion-body text-secondary small leading-relaxed">
+                                            <p class="lead text-muted spacer-top-lead">Focada na proteção e promoção da saúde dos
+                                                trabalhadores, prevenindo acidentes e doenças ocupacionais. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item border-0 border-bottom">
+                                    <h4 class="accordion-header" id="headingfor">
+                                        <button class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapsefor"
+                                            aria-expanded="false" aria-controls="collapsefor">
+                                            <span class="fs-5 text-primary fw-bold">Vigilância Sanitária </span>
+                                        </button>
+                                    </h4>
+                                    <div id="collapsefor" class="accordion-collapse collapse" role="region"
+                                        aria-labelledby="headingfor" data-bs-parent="#accordionId">
+                                        <div class="accordion-body text-secondary small leading-relaxed">
+                                            <p class="lead text-muted spacer-top-lead">Responsável por regular e fiscalizar produtos,
+                                                serviços e ambientes que possam impactar a saúde da população.</p>
+                                            <p class="lead text-muted">Todas essas áreas atuam de forma transversal,
+                                                apoiando análises de situação de saúde e contando com ações
+                                                laboratoriais específicas. Em síntese, compartilham a mesma finalidade:
+                                                proteger e promover a saúde da população, diferenciando-se pelos seus
+                                                eixos temáticos, que tornam a Vigilância em Saúde mais completa e
+                                                eficaz. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Accordion Acadêmico -->
+
+                        <p class="lead text-muted">Todas essas áreas atuam de forma transversal, apoiando análises de
+                            situação de saúde e contando com ações laboratoriais específicas. Em síntese, compartilham a
+                            mesma finalidade: proteger e promover a saúde da população, diferenciando-se pelos seus
+                            eixos temáticos, que tornam a Vigilância em Saúde mais completa e eficaz.</p>
+
+                        <!-- Box Você sabia -->
+                        <div class="alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light my-5"
+                            role="alert">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <h4 class="fw-bold text-primary mt-2 mb-2"><i
+                                            class="bi-lightbulb-fill fs-4 text-info me-3 ms-3"></i>Você sabia?</h4>
+                                    <p class="lead text-muted ms-3 mb-0 spacer-top-lead">Você sabia que além dessas quatro áreas, existem
+                                        outros eixos temáticos que não integram diretamente a PNVS, mas que têm impacto
+                                        na saúde humana e vêm sendo integrados a análises de situação de saúde das
+                                        populações?</p>
+                                    <p class="lead text-muted ms-3">Um exemplo é a Vigilância da Segurança Alimentar e
+                                        Nutricional, realizada por meio do Sistema de Vigilância em Segurança Alimentar
+                                        e Nutricional (SISVAN), atualmente monitorado pela Secretaria de Atenção
+                                        Primária à Saúde do Ministério da Saúde e pelo Ministério do Desenvolvimento
+                                        Social (MDS). </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Box Você sabia -->
+
+                        <p class="lead text-muted">Embora diversos estudos e centros de pesquisa de big data (grandes
+                            bancos de dados) busquem conectar informações sociodemográficas desses outros bancos aos da
+                            saúde, para aumentar a precisão das análises, poucos se dedicam a incluir aspectos da
+                            Vigilância Popular em Saúde para aprimorá-las, como faz a <a target="_blank" class="fw-bold" href="https://agora.fiocruz.br/picaps">Plataforma de Inteligência
+                            Cooperativa com a Atenção Primária em Saúde (PICAPS)</a> da Fiocruz Brasília.</p>
+
+                        <h4 class="fw-bold mt-5 mb-4 text-primary">Vigilância Genômica</h4>
+                        <p class="lead text-muted">Em anos recentes, a Vigilância Genômica passou a se estruturar e
+                            consolidar em escala global como componente estratégico da Vigilância em Saúde. </p>
+                        <p class="lead text-muted">Em maio de 2021, durante a pandemia da COVID-19, a 74ª Assembleia
+                            Mundial da Saúde adotou a Resolução 74.7, que reforçou a prontidão da Organização Mundial da
+                            Saúde (OMS) para responder a emergências sanitárias. Essa resolução incentivou os
+                            Estados-membros a ampliar sua capacidade de detectar novas ameaças, incluindo o uso de
+                            técnicas laboratoriais como o sequenciamento genômico.</p>
+                        <p class="lead text-muted">Nesse sentido, a Vigilância Genômica pode ser definida como:</p>
+
+                        <!-- VARIAÇÃO : PULL-QUOTE CENTRALIZADA EM DESTAQUE ESCURO (HERO QUOTE) -->
+                        <div class="container my-5">
+                            <div
+                                class="p-5 rounded-4 text-white text-center shadow-lg position-relative overflow-hidden hero-quote-bg">
+                                <i class="bi bi-quote display-3 text-white-50 mb-2 d-block"></i>
+                                <blockquote class="blockquote mb-4">
+                                    <p class="fs-4 italic font-serif leading-relaxed text-light max-w-2xl mx-auto">
+                                        "<em>... o monitoramento constante e o estudo das alterações e variações
+                                            genéticas em organismos causadores de doenças, como vírus e bactérias,
+                                            utilizando métodos de sequenciamento de nova geração (Next Generation
+                                            Sequencing – NGS) para sequenciar e analisar, de maneira ágil e precisa,
+                                            todo o genoma de um patógeno. </em>"
+                                    </p>
+                                </blockquote>
+                                <div class="text-warning text-uppercase tracking-wider fw-bold small">
+                                    (Struelens et al, 2024)
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="lead text-muted">Atualmente, já é possível reconhecer alguns potenciais da Vigilância
+                            Genômica para a Vigilância em Saúde: </p>
+
+                        <!-- INFOGRÁFICO INTERATIVO EM TRILHA (POTENCIAIS DA VIGILÂNCIA GENÔMICA) -->
+                        <div class="ig-genomica my-5" data-infographic="potenciaisGenomica">
+							<div class="text-center mb-2 mt-5">
+								<span class="badge-recurso-interativo">
+									<i class="bi bi-cursor-fill me-1"></i> Recurso Interativo
+								</span>
+								<!--<p class="text-muted mb-0 mt-2">Clique nos cards abaixo para saber mais</p>-->
+							</div>
+                            <div class="ig-hotspot-card">
+                                <div class="ig-hotspot-wrapper">
+                                    <img src="imgs/infografico.png"
+                                        alt="Diagrama com cinco círculos numerados de 1 a 5, conectados entre si, representando os potenciais da Vigilância Genômica"
+                                        class="ig-hotspot-img">
+                                    <button class="ig-dot active" type="button" data-idx="0" aria-label="Ver Potencial 1"
+                                        data-left="23.54" data-top="28.91"></button>
+                                    <button class="ig-dot" type="button" data-idx="1" aria-label="Ver Potencial 2"
+                                        data-left="36.73" data-top="71.82"></button>
+                                    <button class="ig-dot" type="button" data-idx="2" aria-label="Ver Potencial 3"
+                                        data-left="49.91" data-top="28.81"></button>
+                                    <button class="ig-dot" type="button" data-idx="3" aria-label="Ver Potencial 4"
+                                        data-left="63.23" data-top="71.89"></button>
+                                    <button class="ig-dot" type="button" data-idx="4" aria-label="Ver Potencial 5"
+                                        data-left="76.39" data-top="28.85"></button>
+                                </div>
+
+                                <div class="ig-panel" id="igPanel3">
+                                    <div class="ig-panel-header">
+                                        <div class="ig-panel-icon" id="igPanelIcon3"><i class="bi bi-search" id="igPanelIconI3"></i></div>
+                                        <h4 class="ig-panel-title" id="igPanelTitle3"></h4>
+                                    </div>
+                                    <p class="ig-panel-desc" id="igPanelDesc3"></p>
+                                    <p class="ig-actions-label">Ações estratégicas</p>
+                                    <ul class="ig-actions-list mb-0" id="igActionsList3"></ul>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- INFOGRÁFICO INTERATIVO EM TRILHA (POTENCIAIS DA VIGILÂNCIA GENÔMICA) -->
+
+                        <!-- Box Curiosidade -->
+                        <div class="alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light my-5"
+                            role="alert">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <h4 class="fw-bold text-primary mt-2 mb-2 ms-3"><i
+                                            class="bi-search"></i> Curiosidade</h4>
+                                    <p class="lead text-muted ms-3 mb-0 spacer-top-lead">Durante a pandemia da COVID-19, diversos países,
+                                        incluindo o Brasil, fortaleceram suas capacidades laboratoriais com equipamentos
+                                        automatizados de sequenciamento genômico completo. Embora tenham sido amplamente
+                                        utilizados para detectar variantes do SARS-CoV-2, esses equipamentos também
+                                        podem ser aplicados a outros patógenos de interesse em Saúde Pública. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Box Curiosidade -->
+
+                        <p class="lead text-muted">A Vigilância Genômica é, portanto, um instrumento de alta densidade
+                            tecnológica, com grande potencial de apoiar a prevenção e redução de riscos à saúde. A
+                            ampliação do uso dos equipamentos, já disponíveis no SUS, pode contribuir para a melhoria da
+                            qualidade da Vigilância em Saúde.</p>
+
+                        <h5 class="fw-bold mt-5 mb-4 text-primary">Estratégia Global de Vigilância Genômica da OMS </h5>
+                        <p class="lead text-muted">No cenário internacional, a OMS coordenou o desenvolvimento da
+                            <a href="https://www.who.int/pt/publications/i/item/9789240046979" target="_blank"
+                                class="fw-bold">Estratégia Global de Vigilância Genômica para Patógenos com Potencial
+                                Pandêmico e Epidêmico
+                                2022–2032</a>. Essa iniciativa busca unir, informar e fortalecer os esforços de
+                            Vigilância
+                            Genômica nos níveis nacional, regional e global.
+                        </p>
+                        <p class="lead text-muted">Os públicos-alvo incluem autoridades de saúde humana, animal e
+                            ambiental, parceiros institucionais, doadores, agentes de saúde pública, meio acadêmico,
+                            setor privado e especialistas laboratoriais.</p>
+                        <p class="lead text-muted">A meta é que a Vigilância Genômica seja fortalecida e escalada para
+                            ações de qualidade, oportunas e apropriadas, integrando-se aos sistemas de vigilância locais
+                            e globais. Para isso, foram definidos cinco objetivos estratégicos, vamos conhecê-los?</p>
+
+                        <div class="ig-genomica my-5" data-infographic="genomica">
+							<div class="text-center mb-2 mt-5">
+											<span class="badge-recurso-interativo">
+												<i class="bi bi-cursor-fill me-1"></i> Recurso Interativo
+											</span>
+											<!--<p class="text-muted mb-0 mt-2">Clique nos cards abaixo para saber mais</p>-->
+										</div>
+                            <div class="ig-hotspot-card">
+                                <div class="ig-hotspot-wrapper">
+                                    <img src="imgs/infografico-objetivos-genomica.png"
+                                        alt="Diagrama circular com os 5 objetivos estratégicos da Vigilância Genômica"
+                                        class="ig-hotspot-img" title="Magnific.com">
+                                    <button class="ig-dot ig-dot--1 active" type="button" data-idx="0" aria-label="Ver Objetivo 1"
+                                        data-left="34.26" data-top="61.14"></button>
+                                    <button class="ig-dot ig-dot--2" type="button" data-idx="1" aria-label="Ver Objetivo 2"
+                                        data-left="37.29" data-top="37.35"></button>
+                                    <button class="ig-dot ig-dot--3" type="button" data-idx="2" aria-label="Ver Objetivo 3"
+                                        data-left="49.79" data-top="25.52"></button>
+                                    <button class="ig-dot ig-dot--4" type="button" data-idx="3" aria-label="Ver Objetivo 4"
+                                        data-left="63.06" data-top="36.80"></button>
+                                    <button class="ig-dot ig-dot--5" type="button" data-idx="4" aria-label="Ver Objetivo 5"
+                                        data-left="65.59" data-top="61.42"></button>
+                                </div>
+
+                                <div class="ig-panel" id="igPanel">
+                                    <div class="ig-panel-header">
+                                        <div class="ig-panel-icon" id="igPanelIcon"><i class="bi bi-geo-alt-fill" id="igPanelIconI"></i></div>
+                                        <h4 class="ig-panel-title" id="igPanelTitle"></h4>
+                                    </div>
+                                    <p class="ig-panel-desc" id="igPanelDesc"></p>
+                                    <p class="ig-actions-label">Ações estratégicas</p>
+                                    <ul class="ig-actions-list mb-0" id="igActionsList"></ul>
+                                </div>
+                            </div>
+
+                            <p class="ig-caption">Legenda: Objetivos e ações estratégicas da Vigilância Genômica<br>
+                                Fonte: Campus Virtual Fiocruz adaptado de OMS</p>
+                        </div>
+
+                        <h5 class="fw-bold mt-5 mb-4 text-primary">Vigilância Genômica no Brasil</h5>
+
+                        <p class="lead text-muted">No Brasil, diversos municípios e estados vêm ampliando a Vigilância
+                            Genômica de patógenos, conforme suas doenças prioritárias e emergências. No nível federal,
+                            os esforços para organizar as redes de Vigilância Genômica estão concentrados no <a
+                                href="https://www.gov.br/saude/pt-br/composicao/svsa/cnie" target="_blank"
+                                class="fw-bold">Centro Nacional de Inteligência Epidemiológica e Vigilância
+                                Genômica</a>, vinculado à Secretaria de
+                            Vigilância em Saúde e Ambiente (SVSA) do Ministério da Saúde.</p>
+                        <p class="lead text-muted">Vale destacar que o Brasil ainda não conta com um sistema de
+                            vigilância genômica para patógenos de relevância nacional, mas considerando os elevados
+                            custos de iniciativas isoladas, a depender da prioridade que seja dada à prevenção de novas
+                            epidemias, é possível que algo seja idealizado enquanto política de Estado. </p>
+
+                        <h3 class="fw-bold mt-5 mb-4 text-primary">Participação comunitária no ciclo da Vigilância em
+                            Saúde</h3>
+                        <p class="lead text-muted">De modo geral, todos os Sistemas de Vigilância em Saúde seguem um
+                            ciclo contínuo, no qual cada etapa deve incluir a participação comunitária. Resumidamente, o
+                            ciclo contém sete etapas, vamos ver quais são? </p>
+
+                        <div class="ig-genomica my-5" data-infographic="ciclo7etapas">
+							<div class="text-center mb-2 mt-5">
+								<span class="badge-recurso-interativo">
+									<i class="bi bi-cursor-fill me-1"></i> Recurso Interativo
+								</span>
+								<!--<p class="text-muted mb-0 mt-2">Clique nos cards abaixo para saber mais</p>-->
+							</div>
+                            <div class="ig-hotspot-card">
+                                <div class="ig-hotspot-wrapper">
+                                    <img src="imgs/infografico-ciclo-vigilancia.png"
+                                        alt="Diagrama circular com as 7 etapas do ciclo de vigilância em saúde"
+                                        class="ig-hotspot-img" title="Magnific.com">
+                                    <button class="ig-dot active" type="button" data-idx="0" aria-label="Ver Etapa 1: Detecção e comunicação"
+                                        data-left="55.1" data-top="14.5"></button>
+                                    <button class="ig-dot" type="button" data-idx="1" aria-label="Ver Etapa 2: Investigação"
+                                        data-left="70.7" data-top="34.5"></button>
+                                    <button class="ig-dot" type="button" data-idx="2" aria-label="Ver Etapa 3: Análise"
+                                        data-left="70.5" data-top="66.2"></button>
+                                    <button class="ig-dot" type="button" data-idx="3" aria-label="Ver Etapa 4: Divulgação"
+                                        data-left="54.9" data-top="85.2"></button>
+                                    <button class="ig-dot" type="button" data-idx="4" aria-label="Ver Etapa 5: Planejamento"
+                                        data-left="35.5" data-top="78.1"></button>
+                                    <button class="ig-dot" type="button" data-idx="5" aria-label="Ver Etapa 6: Implementação"
+                                        data-left="27.3" data-top="49.5"></button>
+                                    <button class="ig-dot" type="button" data-idx="6" aria-label="Ver Etapa 7: Avaliação e monitoramento"
+                                        data-left="36.2" data-top="20.8"></button>
+                                </div>
+
+                                <div class="ig-panel" id="igPanel2">
+                                    <div class="ig-panel-header">
+                                        <div class="ig-panel-icon" id="igPanelIcon2"><i class="bi bi-geo-alt-fill" id="igPanelIconI2"></i></div>
+                                        <h4 class="ig-panel-title" id="igPanelTitle2"></h4>
+                                    </div>
+                                    <p class="ig-panel-desc" id="igPanelDesc2"></p>
+                                    <p class="ig-actions-label">Ações estratégicas</p>
+                                    <ul class="ig-actions-list mb-0" id="igActionsList2"></ul>
+                                </div>
+                            </div>
+
+                            <p class="ig-caption">Legenda: Etapas e atividades básicas do sistema de vigilância<br>
+                                Fonte: Campus Virtual Fiocruz <em>adaptado</em> da OPAS (2010), Módulo de Princípios de
+                                Epidemiologia para o Controle de Enfermidades (MOPECE) – Módulo 4: Vigilância em
+                                Saúde Pública</p>
+                        </div>
+
+                        <p class="lead text-muted">Em síntese, mais do que identificar problemas, a Vigilância em Saúde
+                            atua para propor soluções, promover saúde e prevenir doenças em diferentes escalas, do
+                            território local ao cenário global. </p>
+                        <p class="lead text-muted">Apesar dos avanços, há desafios, sobretudo no que diz respeito ao
+                            engajamento comunitário para a efetivação de uma Vigilância em Saúde democrática e
+                            participativa, mas há oportunidades de maior inserção da população em todas as etapas do
+                            ciclo de Vigilância em Saúde.</p>
+
+                    </article>
+                </div>
+
+                <!-- Bootstrap 5: Parallax / Banner Full-Width 100% Largura (Destaque de Alta Ênfase) -->
+                <!-- NOTA: O container-fluid px-0 garante que o fundo ocupe 100% das laterais da tela -->
+                <div class="container-fluid px-0 my-5 aula-full-bleed">
+                    <div class="position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+
+                        <!-- Dark overlay suave para contraste de leitura -->
+                        <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+
+                        <!-- Parágrafo Secundário -->
+                        <p
+                            class="fs-5 lead fw-bold text-muted1 aula-body main-content-body text-white mb-0 leading-relaxed max-w-content">
+                            A participação comunitária é central para a efetividade da Vigilância em Saúde, pois
+                            aproxima o olhar técnico das realidades vivenciadas pelas populações, aprofundando o sentido
+                            dos objetivos da Vigilância em si.</p>
+                        <p
+                            class="fs-5 lead fw-bold text-muted1 aula-body main-content-body text-white mb-0 leading-relaxed mb-4 max-w-content">
+                            Comunidades não devem apenas fornecer dados (incluindo os genômicos), mas têm o direito de
+                            contribuir com conhecimento local, fortalecendo análises, decisões e ações. Dados e genomas
+                            pertencem aos componentes do território e nada mais justo do que a participação da população
+                            para que se faça bom uso das informações a partir deles originadas.</p>
+                    </div>
+                </div>
+
+                <div class="main-content-body">
+                    <article class="aula-body mb-0">
+
+                        <h3 class="fw-bold mt-5 mb-4 text-primary"><i class="bi bi-pencil-square"></i> Atividade</h3>
+                        <!-- VARIAÇÃO 1: QUIZ MÚLTIPLA ESCOLHA INTERATIVO (MULTI-QUESTÕES COM NAVEGAÇÃO E JS) -->
+                        <div class="my-4" id="eduflexQuizContainer">
+                            <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                                <!-- Contador de Questões e Pontuação -->
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-bold"
+                                        id="quizQuestionCounter">Questão 01 de 02</span>
+                                    <span class="badge bg-light text-dark border fw-bold" id="quizScoreBadge">
+                                        <i class="bi bi-trophy-fill text-warning me-1"></i>Acertos: <span
+                                            id="quizScoreCount">0</span>
+                                    </span>
+                                </div>
+
+                                <!-- Barra de Progresso da Avaliação -->
+                                <div class="progress mb-4 progress-thin">
+                                    <div class="progress-bar bg-primary" id="quizProgressBar" role="progressbar"></div>
+                                </div>
+
+                                <!--  AQUI ESTAVA FALTANDO! ELEMENTO ONDE O JS INJETA O TEXTO DA PERGUNTA  -->
+                                <h4 class="fw-bold lead text-muted mb-4" id="quizQuestionText"></h4>
+
+                                <!-- Opções de Resposta Totalmente Neutras (Estado Inicial Limpo) -->
+                                <div class="d-grid gap-2 mb-3" id="quizOptionsContainer"></div>
+
+                                <!-- Caixa de Feedback Pedagógico (Inicia Oculta) -->
+                                <div class="p-3 rounded-3 small mb-3 d-none" id="quizFeedbackBox"></div>
+
+                                <small class="text-muted d-block mb-3">
+                                    <i class="bi bi-info-circle me-1"></i>Selecione uma opção para confirmar sua
+                                    resposta.
+                                </small>
+
+                                <!-- Ações de Navegação -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button class="btn bg-primary text-white rounded-pill px-4 fw-bold" id="quizNextBtn"
+                                        disabled>
+                                        Próxima Questão <i class="bi bi-arrow-right ms-1"></i>
+                                    </button>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+						<h3 class="fw-bold mt-5 mb-4 text-primary">Resumo da aula</h3>
+                <p class="lead text-muted">Nesta aula, você aprendeu sobre a história da democratização da saúde
+                    no Brasil, territórios vivos, epidemiologia crítica, vigilância popular em saúde, o ciclo da
+                    vigilância em saúde e vigilância genômica no âmbito do SUS e da saúde global.</p>
+                <p class="lead text-muted fw-bold">Você concluiu esta aula, continue se empenhando nos seus estudos. Siga para o próximo módulo!</p>
+
+                    </article>
+                </div>
+
+                        </section>
+
+                    </div> <!-- Fim .aula-pages-wrapper -->
+                    <!-- ================= PAGINAÇÃO INTERNA DA AULA ================= -->
+                    <div class="aula-pagination-nav d-flex justify-content-between align-items-center mt-5 pt-4 border-top"
+                        id="aulaPaginationNav">
+                        <button type="button" class="btn btn-outline-primary rounded-pill px-4" id="aulaPagPrev" disabled>
+                            <i class="bi bi-arrow-left me-1"></i> Anterior
+                        </button>
+                        <span class="small text-muted fw-semibold" id="aulaPagIndicator">Página 1 de 3</span>
+                        <button type="button" class="btn btn-primary rounded-pill px-4" id="aulaPagNext">
+                            Próximo <i class="bi bi-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+
+                    <!-- ================= NAVEGAÇÃO ENTRE AULAS (exibida somente na última página) ================= -->
+                    <div class="aula-lesson-nav d-none justify-content-between align-items-center mt-5 pt-4 border-top"
+                        id="aulaLessonNav" data-prev-lesson="aula1.2.html" data-next-lesson="../modulo2/aula2.1.html">
+                        <a href="#" class="btn btn-outline-primary rounded-pill px-4" id="aulaLessonPrev">
+                            <i class="bi bi-arrow-left me-1"></i> Aula Anterior
+                        </a>
+                        <a href="#" class="btn btn-primary rounded-pill px-4" id="aulaLessonNext">
+                            Próximo Módulo <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- ================= RODAPÉ DE LOGOS ================= -->
+                    <!-- ================= RODAPÉ (carregado de partials/footer.html) ================= -->
+                    <div id="site-footer"></div>
+
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <!-- ================= MODAIS (carregados de partials/modals.html) ================= -->
+    <div id="site-modals"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Seu arquivo JS unificado -->
+    <script src="js/partials-loader.js"></script>
+    <script src="js/aula1.3.js"></script>
+    <script src="js/main.js"></script>
+
+    <button type="button" class="back-to-top" id="btnBackToTop" aria-label="Voltar ao topo">
+        <i data-lucide="arrow-up" aria-hidden="true"></i>
+    </button>
+</body>
+
+</html>

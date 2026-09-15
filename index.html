@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="robots" content="noindex" />
+        <meta name="author" content="Fiocruz, Campus Virtual" />
+        <meta name="description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+        <meta name="keywords" content="Fiocruz, Curso, Vigilância em Saúde, transformação digital, SUS" />
+
+        <!-- Facebook Open Graph -->
+        <meta property="og:url" content="https://mooc.campusvirtual.fiocruz.br/rea/introducao-analise-dados-sus" />
+        <meta property="og:title" content="Campus Virtual Fiocruz | Curso Vigilância em Saúde em tempos de transformação digital" />
+        <meta property="og:description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+        <meta property="og:image" content="" />
+        <meta property="og:image:width" content="1080" />
+        <meta property="og:image:height" content="1080" />
+        <meta property="og:type" content="website" />
+
+        <!-- Twitter Cards -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Campus Virtual Fiocruz | Curso Vigilância em Saúde em tempos de transformação digital" />
+        <meta name="twitter:url" content="" />
+        <meta name="twitter:description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+        <meta name="twitter:image:src" content="" />
+
+        <!-- Favicons and Touch Icons -->
+        <link rel="apple-touch-icon" sizes="57x57" href="media/icons/apple-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="media/icons/apple-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="media/icons/apple-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="media/icons/apple-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="media/icons/apple-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="media/icons/apple-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="media/icons/apple-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="media/icons/apple-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="media/icons/apple-icon-180x180.png" />
+
+        <link rel="icon" type="image/png" sizes="192x192" href="media/icons/android-icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="media/icons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="media/icons/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="media/icons/favicon-16x16.png" />
+        <link rel="manifest" href="media/icons/manifest.json" />
+
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="media/icons/ms-icon-144x144.png" />
+        <meta name="theme-color" content="#420b3c" />
+
+        <title>Curso Vigilância em Saúde em tempos de transformação digital</title>
+
+        <!-- Bootstrap 5 CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- Lucide Icons -->
+        <script src="https://unpkg.com/lucide@latest"></script>
+
+        <!-- Project CSS Base -->
+		<link rel="stylesheet" href="css/style.css" />
+
+        <noscript><style>.reveal-on-scroll { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+    </head>
+
+    <body id="curso2">
+
+        <!-- Skip Links para Acessibilidade (eMAG "fornecer âncoras para ir
+             direto a um bloco de conteúdo"). O de menu aponta para #mainHeader,
+             o id que o header.html injetado (via partials-loader.js) carrega —
+             como o cabeçalho só existe no DOM depois do JS rodar, esse link só
+             funciona de fato depois que os parciais terminam de carregar
+             (igual ao próprio menu). Não afeta quem navega sem JS, que já não
+             teria menu nenhum pra pular. -->
+        <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+        <a href="#mainHeader" class="skip-link">Pular para o menu</a>
+
+        <!-- Barra de Progresso Superior -->
+        <div class="scroll-progress-top" id="scrollProgress"></div>
+
+        <!-- Configuração desta página para o partials-loader.js (antes era
+             um script inline aqui mesmo — eMAG "objetos programáveis
+             acessíveis"). Mesmos valores, só que agora em js/site-config.js. -->
+        <script src="js/site-config.js"></script>
+        <!-- ================= CABEÇALHO (carregado de partials/header.html) ================= -->
+        <div id="site-header"></div>
+
+        <!-- Landmark de conteúdo principal (eMAG "dividir as áreas de
+             informação"/"organizar o código HTML de forma lógica e
+             semântica") — antes a página não tinha nenhum main, só
+             seções soltas direto no body. -->
+        <main>
+
+        <!-- Seção de Capa -->
+        <section class="cover-section position-relative">
+            <img src="media/imgs/capa.jpg" class="cover-bg-image" alt="Vigilância em Saúde em tempos de transformação digital">
+            <div class="cover-overlay"></div>
+
+            <div class="container cover-content py-5">
+                <div class="row">
+                    <div class="col-lg-6 py-4">
+                        <div class="mb-4">
+                            <span class="badge-course">Curso</span>
+                        </div>
+
+                        <div class="mb-4">
+                            <h1 class="cover-title mb-2">
+                                Vigilância em Saúde
+                            </h1>
+                            <div class="cover-subtitle">
+                                em tempos de transformação digital
+                            </div>
+                        </div>
+
+                        <div class="mt-5">
+                            <a href="#main-content" class="btn btn-cover-custom">
+                                Conheça o Curso &darr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SVG Onda de Transição -->
+            <div class="wave-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <defs>
+                        <linearGradient id="gradient-line" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#31052a" />
+                            <stop offset="30%" stop-color="#55124e" />
+                            <stop offset="65%" stop-color="#77206d" />
+                            <stop offset="85%" stop-color="#ab399e" />
+                            <stop offset="100%" stop-color="#d45eb7" />
+                        </linearGradient>
+                    </defs>
+                    <path class="shape-fill" d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,120L1320,120C1200,120,960,120,720,120C480,120,240,120,120,120L0,120Z"></path>
+                    <path fill="none" stroke="url(#gradient-line)" stroke-width="6" d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- Apresentação (Ancorado para Skip Link) -->
+        <section id="main-content" class="py-5 bg-white">
+            <div class="container py-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="row justify-content-center text-center mb-5 reveal-on-scroll">
+                            <div class="col-lg-8">
+                                <div class="d-inline-flex align-items-center justify-content-center text-primary rounded-3 p-3 mb-3">
+                                    <i data-lucide="activity" class="icon-32" aria-hidden="true"></i>
+                                </div>
+                                <h2 class=" fw-bold ">Apresentação</h2>
+                            </div>
+                        </div>
+                        <p class="lead text-muted reveal-on-scroll">Olá, seja bem-vindo(a) ao curso <span class=" fw-bold text-primary">Vigilância em Saúde em Tempos de Transformação Digital</span>.</p>
+                        <p class="lead text-muted">A vigilância em saúde constitui um dos pilares do Sistema Único de Saúde (SUS), desempenhando papel estratégico na promoção da saúde, na prevenção de doenças e no monitoramento de riscos que afetam a população. Em um contexto marcado pela transformação digital, novas tecnologias, sistemas de informação e múltiplas fontes de dados ampliam as possibilidades de compreensão dos problemas de saúde e qualificam os processos de tomada de decisão em saúde pública.</p>
+                        <p class="lead text-muted">Este é um curso autoinstrucional destinado a profissionais que atuam ou têm interesse no tema vigilância em saúde, além de estudantes de graduação e pós-graduação da área da saúde e correlatas e demais interessados no tema.</p>
+                        <p class="lead text-muted">Esperamos que este curso contribua para ampliar seu olhar sobre a vigilância em saúde e fortalecer práticas comprometidas com a promoção da saúde, a prevenção de agravos e a melhoria das condições de vida e do bem-estar das pessoas. </p>
+
+                        <div class="d-flex align-items-center text-center gap-2 mb-3 text-primary mt-4">
+                            <p class="fw-bold m-0 fs-5">Bom curso!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DO VÍDEO DE APRESENTAÇÃO + TRANSCRIÇÃO -->
+        <section class="py-5 video-section-wrapper position-relative overflow-hidden">
+
+            <img src="media/imgs/bg_video.jpg" alt="" class="video-bg-image">
+            <div class="video-overlay"></div>
+
+            <div class="container position-relative z-3">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+
+                        <div class="video-player-container shadow-lg mb-4 reveal-on-scroll">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://educare.fiocruz.br/file-storage/ZXI8Juvg" width="1090" height="1025" frameborder="0" allowfullscreen="allowfullscreen" title="Vídeo de Apresentação"></iframe>                                
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end mb-3">
+                            <button class="btn btn-transcricao d-inline-flex align-items-center gap-2" type="button" data-bs-toggle="collapse" data-bs-target="#transcricaoCollapse" aria-expanded="false" aria-controls="transcricaoCollapse">
+                                <span>Transcrição do Vídeo</span>
+                                <i data-lucide="chevron-down" class="icon-arrow-toggle" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div class="collapse" id="transcricaoCollapse">
+                            <div class="card card-body transcricao-body shadow-sm border-0 p-4 p-md-5">
+                                <h3 class="fw-bold text-dark mb-4">Transcrição do Vídeo</h3>
+                                <p class="lead text-muted"><strong>Música suave ao fundo.</strong></p>
+                                <p class="lead text-muted">A saúde pública vive um momento de profundas transformações. Novas tecnologias, sistemas de informação e grandes volumes de dados estão mudando a forma como compreendemos e enfrentamos os desafios em saúde.</p>
+                                <p class="lead text-muted">Nesse cenário, a vigilância em saúde desempenha um papel essencial. Ela reúne ações voltadas à promoção da saúde, prevenção de doenças e monitoramento de riscos que afetam a população. </p>
+                                <p class="lead text-muted">Com o avanço da transformação digital, novas fontes de informação e tecnologias ampliam a capacidade de monitorar territórios, identificar riscos e apoiar a tomada de decisões em saúde pública. </p>
+                                <p class="lead text-muted">Pensando nesse contexto, apresentamos o curso <span class="fw-bold">Vigilância em Saúde em Tempos de Transformação Digital</span>. </p>
+                                <p class="lead text-muted">Ao longo do curso, você irá conhecer os fundamentos da vigilância em saúde e sua relação com os princípios do SUS. Explorar sistemas de informação, diferentes fontes de dados e a integração entre informações ambientais, sociais e territoriais. E compreender a abordagem One Health (Saúde Única), que integra saúde humana, animal e ambiental.</p>
+                                <p class="lead text-muted">Ao integrar conhecimento em saúde pública, dados e tecnologias digitais, este curso busca fortalecer ações de vigilância e contribuir para a melhoria das condições de vida da população.</p>
+                                <p class="lead text-muted">Música suave ao fundo.</p>
+                            </div>
+                        </div>
+
+                        <!-- ORGANIZAÇÃO: título + cards de metadados, dentro do fundo do vídeo -->
+                        <div class="row justify-content-center text-center mt-5 mb-4 reveal-on-scroll">
+                            <div class="col-lg-8">
+                                <div class="d-inline-flex align-items-center justify-content-center text-white rounded-3 p-3 mb-3">
+                                    <i data-lucide="map" class="icon-32" aria-hidden="true"></i>
+                                </div>
+                                <h2 class="fw-bold text-white">Organização</h2>
+                            </div>
+                        </div>
+
+                        <!-- CARDS DE METADADOS DO CURSO (Formato / Duração / Conteúdo) -->
+                        <div class="row g-4 justify-content-center info-cards-section">
+
+                            <!-- Card 1: Formato -->
+                            <div class="col-md-4">
+                                <div class="card h-100 info-card reveal-on-scroll">
+                                    <div class="info-card-img-wrap">
+                                        <img src="media/imgs/img_1.png" alt="">
+                                    </div>
+                                    <div class="card-body info-card-body text-center">
+                                        <span class="info-card-label">Curso</span>
+                                        <p class="info-card-value mb-0">Autoinstrucional</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Duração -->
+                            <div class="col-md-4">
+                                <div class="card h-100 info-card reveal-on-scroll reveal-delay-1">
+                                    <div class="info-card-img-wrap">
+                                        <img src="media/imgs/img_2.png" alt="">
+                                    </div>
+                                    <div class="card-body info-card-body text-center">
+                                        <span class="info-card-label">Carga Horária</span>
+                                        <p class="info-card-value mb-0">45 Horas</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: Conteúdo -->
+                            <div class="col-md-4">
+                                <div class="card h-100 info-card reveal-on-scroll reveal-delay-2">
+                                    <div class="info-card-img-wrap">
+                                        <img src="media/imgs/img_3.png" alt="">
+                                    </div>
+                                    <div class="card-body info-card-body text-center">
+                                        <span class="info-card-label">Contém</span>
+                                        <p class="info-card-value mb-0">3 Módulos</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESTRUTURA CURRICULAR -->
+        <section class="py-5 bg-light-section" id="ementa-curso">
+            <div class="container py-4">
+
+                <div class="row justify-content-center text-center mb-5 reveal-on-scroll">
+                    <div class="col-lg-8">
+                        <div class="d-inline-flex align-items-center justify-content-center text-primary rounded-3 p-3 mb-3">
+                            <i data-lucide="layers" class="icon-32" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="fw-bold">Estrutura Curricular</h2>
+                    </div>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+
+                    <!-- CARD DO MÓDULO 1 -->
+                    <div class="col-xl-4 col-md-6">
+                        <div class="card h-100 modulo-dash-card shadow-sm reveal-on-scroll">
+                            <i data-lucide="file-text" class="modulo-watermark-icon" aria-hidden="true"></i>
+                            <div class="modulo-dash-img">
+                                <span class="modulo-badge-top"><i data-lucide="file-text" class="modulo-badge-icon" aria-hidden="true"></i> Módulo 1</span>
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <h3 class="card-title fw-bold text-dark mb-4">Fundamentos da Vigilância em Saúde</h3>
+
+                                <div class="aula-timeline-wrapper mb-4">
+                                    <a href="pages/modulo1/aula1.1.html" class="aula-timeline-item">
+                                        <div class="timeline-indicator"></div>
+                                        <div class="timeline-content">
+                                            <span class="aula-numero">Aula 1</span>
+                                            <p class="aula-titulo">Vigilância em Saúde e Princípios do SUS</p>
+                                        </div>
+                                        <i data-lucide="chevron-right" class="timeline-arrow" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="pages/modulo1/aula1.2.html" class="aula-timeline-item">
+                                        <div class="timeline-indicator"></div>
+                                        <div class="timeline-content">
+                                            <span class="aula-numero">Aula 2</span>
+                                            <p class="aula-titulo">Vigilância Epidemiológica, Sanitária, Ambiental e do Trabalho</p>
+                                        </div>
+                                        <i data-lucide="chevron-right" class="timeline-arrow" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="pages/modulo1/aula1.3.html" class="aula-timeline-item">
+                                        <div class="timeline-indicator"></div>
+                                        <div class="timeline-content">
+                                            <span class="aula-numero">Aula 3</span>
+                                            <p class="aula-titulo">Participação Comunitária e Vigilância Popular: valor e uso das informações do território ao genoma</p>
+                                        </div>
+                                        <i data-lucide="chevron-right" class="timeline-arrow" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+
+                                <div class="mt-auto pt-3 border-top text-center">
+                                    <a href="pages/modulo1/aula1.1.html" class="btn btn-entrar-modulo w-100">
+                                        Iniciar Módulo 1
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD DO MÓDULO 2 -->
+                    <div class="col-xl-4 col-md-6">
+                        <div class="card h-100 modulo-dash-card shadow-sm reveal-on-scroll reveal-delay-1">
+                            <i data-lucide="trending-up" class="modulo-watermark-icon" aria-hidden="true"></i>
+                            <div class="modulo-dash-img">
+                                <span class="modulo-badge-top"><i data-lucide="trending-up" class="modulo-badge-icon" aria-hidden="true"></i> Módulo 2</span>
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <h3 class="card-title fw-bold text-dark mb-4">Fontes de Dados e Integração Intersetorial na Vigilância em Saúde</h3>
+
+                                <div class="aula-timeline-wrapper mb-4">
+                                    <a href="pages/modulo2/aula2.1.html" class="aula-timeline-item">
+                                        <div class="timeline-indicator"></div>
+                                        <div class="timeline-content">
+                                            <span class="aula-numero">Aula 1</span>
+                                            <p class="aula-titulo">Sistemas de Informação da Vigilância em Saúde</p>
+                                        </div>
+                                        <i data-lucide="chevron-right" class="timeline-arrow" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="pages/modulo2/aula2.2.html" class="aula-timeline-item">
+                                        <div class="timeline-indicator"></div>
+                                        <div class="timeline-content">
+                                            <span class="aula-numero">Aula 2</span>
+                                            <p class="aula-titulo"><em>Linkage</em> das bases climáticas e ambientais, educacionais e sociais para Vigilância em Saúde</p>
+                                        </div>
+                                        <i data-lucide="chevron-right" class="timeline-arrow" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="pages/modulo2/aula2.3.html" class="aula-timeline-item">
+                                        <div class="timeline-indicator"></div>
+                                        <div class="timeline-content">
+                                            <span class="aula-numero">Aula 3</span>
+                                            <p class="aula-titulo">Introdução ao sensoriamento remoto e dados geoespaciais</p>
+                                        </div>
+                                        <i data-lucide="chevron-right" class="timeline-arrow" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="pages/modulo2/aula2.4.html" class="aula-timeline-item">
+                                        <div class="timeline-indicator"></div>
+                                        <div class="timeline-content">
+                                            <span class="aula-numero">Aula 4</span>
+                                            <p class="aula-titulo">Ética e Bioética em Vigilância Digital em Saúde</p>
+                                        </div>
+                                        <i data-lucide="chevron-right" class="timeline-arrow" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+
+                                <div class="mt-auto pt-3 border-top text-center">
+                                    <a href="pages/modulo2/aula2.1.html" class="btn btn-entrar-modulo w-100">
+                                        Iniciar Módulo 2
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD DO MÓDULO 3 -->
+                    <div class="col-xl-4 col-md-6">
+                        <div class="card h-100 modulo-dash-card shadow-sm reveal-on-scroll reveal-delay-2">
+                            <i data-lucide="search" class="modulo-watermark-icon" aria-hidden="true"></i>
+                            <div class="modulo-dash-img">
+                                <span class="modulo-badge-top"><i data-lucide="search" class="modulo-badge-icon" aria-hidden="true"></i> Módulo 3</span>
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <h3 class="card-title fw-bold text-dark mb-4">Vigilância em Saúde e a Abordagem Saúde Única</h3>
+
+                                <div class="aula-timeline-wrapper mb-4">
+                                    <a href="pages/modulo3/aula3.1.html" class="aula-timeline-item">
+                                        <div class="timeline-indicator"></div>
+                                        <div class="timeline-content">
+                                            <span class="aula-numero">Aula 1</span>
+                                            <p class="aula-titulo">Vigilância Cooperativa na Perspectiva da Saúde Única </p>
+                                        </div>
+                                        <i data-lucide="chevron-right" class="timeline-arrow" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="pages/modulo3/aula3.2.html" class="aula-timeline-item">
+                                        <div class="timeline-indicator"></div>
+                                        <div class="timeline-content">
+                                            <span class="aula-numero">Aula 2</span>
+                                            <p class="aula-titulo">Febre Amarela, Biodiversidade e Território</p>
+                                        </div>
+                                        <i data-lucide="chevron-right" class="timeline-arrow" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="pages/modulo3/aula3.3.html" class="aula-timeline-item">
+                                        <div class="timeline-indicator"></div>
+                                        <div class="timeline-content">
+                                            <span class="aula-numero">Aula 3</span>
+                                            <p class="aula-titulo">Vigilância em Saúde, Intersetorialidade e a Saúde única | Estudo de Caso: Influenza Aviária (H5N1)</p>
+                                        </div>
+                                        <i data-lucide="chevron-right" class="timeline-arrow" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+
+                                <div class="mt-auto pt-3 border-top text-center">
+                                    <a href="pages/modulo3/aula3.1.html" class="btn btn-entrar-modulo w-100">
+                                        Iniciar Módulo 3
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        </main>
+
+        <!-- RODAPÉ INSTITUCIONAL -->
+        <footer class="footer-logos-section">
+            <div class="container footer-logos-container">
+                <div class="row align-items-center justify-content-center g-4 g-md-5">
+
+                    <div class="col-6 col-md-2 d-flex justify-content-center">
+                        <div class="footer-logo-placeholder">
+                            <img src="media/logos/logo-icict.png" alt="ICICT" class="img-fluid logo-gray-scale">
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-2 d-flex justify-content-center">
+                        <div class="footer-logo-placeholder">
+                            <img src="media/logos/header-fiocruz-campus-virtual.png" alt="Campus Virtual Fiocruz" class="img-fluid logo-gray-scale">
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-2 d-flex justify-content-center">
+                        <div class="footer-logo-placeholder">
+                            <img src="media/logos/logo-fiocruz.png" alt="Fiocruz" class="img-fluid logo-gray-scale">
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-2 d-flex justify-content-center">
+                        <div class="footer-logo-placeholder">
+                            <img src="media/logos/logo-sus.png" alt="SUS" class="img-fluid logo-gray-scale">
+                        </div>
+                    </div>
+
+                     <div class="col-6 col-md-3 d-flex justify-content-center">
+                        <div class="footer-logo-placeholder">
+                            <img src="media/logos/logo-ministerio-saude.jpg" alt="Ministério da Saúde" class="img-fluid logo-gray-scale">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+        <!-- Botão Voltar ao Topo -->
+        <button id="btnBackToTop" class="btn-back-to-top" title="Voltar ao topo" aria-label="Voltar ao topo">
+            <i data-lucide="arrow-up" aria-hidden="true"></i>
+        </button>
+
+
+        <!-- ================= MODAIS (carregados de partials/modals.html) ================= -->
+        <div id="site-modals"></div>
+
+        <!-- Bootstrap 5 JS Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Scripts de Interatividade -->
+        <script src="js/partials-loader.js"></script>
+        <script src="js/inter.js"></script>
+
+    </body>
+</html>

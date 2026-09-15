@@ -1,0 +1,2801 @@
+/* =========================================================
+   TEMA "VIGILÂNCIA EM SAÚDE" — Campus Virtual Fiocruz
+   CSS COMPLETO (VERSÃO INTEGRAL ATUALIZADA)
+   ========================================================= */
+
+/* --- Variáveis de Tema --- */
+:root {
+    --primary-color: #31052a;   
+    --sidebar-top:   #3d0a35;   
+    --sidebar-bottom:#26011f;   
+    --primary-deep:  #1f0219;   
+    --accent-color:  #77206d;   
+    --accent-light:  #9c3f8e; 
+    --accent-bright: #d45eb7;   
+    --highlight:     #c94ea1;   
+    --bg-light:      #fefafe;   
+    --bg-content:    #f3edf3;   
+    --text-dark:     #2b2230;
+    --text-color:    #334155;
+    --text-muted:    #6d6270;
+    --text-muted1:   #ffffff;
+    --border-soft:   rgba(255, 255, 255, 0.12);    
+    --radius-lg: 16px;
+    --radius-md: 10px;
+}
+
+
+/* --- Reset Básico cor accordion --- */
+* { box-sizing: border-box; }
+
+/* O bloco antigo baseado no seletor #pills-tab foi removido: era um
+   sistema de estilo anterior (por ID, com !important) que sobrescrevia
+   silenciosamente o redesign feito via classes .aula-tabs-* mais abaixo
+   neste arquivo. Toda a aparência das abas agora vive só em .aula-tabs-*. */
+
+/* 1. Cor de fundo e do texto quando o Accordion estiver ABERTO (Expandido) */
+.accordion-button:not(.collapsed) {
+    background-color: #791d85; /* Troque pela cor desejada (ex: #ffffff para branco) */
+    color: #7b1485;            /* Cor do texto */
+}
+
+/* 2. Remove ou altera a borda/sombra azul ao CLICAR (Foco) */
+.accordion-button:focus {
+    box-shadow: none; /* Remove o brilho de foco */
+    border-color: rgba(116, 21, 153, 0.125); /* Opcional: ajusta a borda */
+}
+
+.accordion-button:focus-visible {
+    box-shadow: 0 0 0 0.25rem rgba(119, 32, 109, 0.45);
+}
+
+/* --- Reset Básico cor accordion --- */
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-content);
+}
+
+.skip-link {
+    position: absolute; top: -40px; left: 0;
+    background: var(--accent-color); color: white;
+    padding: 8px; z-index: 9999; text-decoration: none;
+}
+.skip-link:focus { top: 0; }
+
+/* =========================================================
+   BARRA DE PROGRESSO SUPERIOR
+   ========================================================= */
+.scroll-progress-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-light), var(--accent-bright));
+    z-index: 1060 !important;
+    width: 0%;
+    transition: width 0.1s ease-out;
+}
+
+/* =========================================================
+   CABEÇALHO E NAVEGAÇÃO PRINCIPAL (COR SÓLIDA)
+   ========================================================= */
+#mainHeader {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050 !important;
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+    transition: padding 0.4s ease, box-shadow 0.4s ease !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#mainHeader.header-scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header .brand {
+    display: flex;
+    align-items: center;
+    padding-right: 1.5rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    height: 45px;
+}
+
+.header .brand img {
+    max-height: 45px;
+    width: auto;
+    filter: brightness(0) invert(1); 
+}
+
+.header .title {
+    padding-left: 1.5rem;
+    flex-grow: 1;
+}
+
+.header .title .site-brand-title {
+    font-size: 0.75rem;
+    color: #ffffff;
+    margin: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.header .navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-weight: 700;
+
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    background: transparent;
+    padding: 0.5rem 1rem;
+    opacity: 0.9; 
+    transition: all 0.2s ease;
+    white-space: nowrap !important;
+}
+
+.header .navbar-nav .nav-link:hover { opacity: 1; }
+
+.header .navbar-nav .nav-link-button {
+    background-color: var(--accent-bright) !important;
+    border: 1px solid var(--accent-bright);
+    border-radius: 30px;
+    padding: 0.6rem 1.4rem;
+    color: #ffffff !important;
+    font-weight: 800;
+    opacity: 1 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header .navbar-nav .nav-link-button:hover {
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+    color: var(--primary-color) !important;
+}
+
+/* --- Botão Hamburger Mobile Animado --- */
+.c-hamburger {
+    border: none !important; 
+    background: transparent !important;
+    padding: 0 !important;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; 
+    cursor: pointer;
+    box-shadow: none !important;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.c-hamburger:hover { background-color: rgba(255, 255, 255, 0.08) !important; }
+
+.c-hamburger:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+.hamburger-line {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease, width 0.3s ease;
+}
+
+.c-hamburger[aria-expanded="true"] .hamburger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.c-hamburger[aria-expanded="true"] .hamburger-line:nth-child(2) { opacity: 0; width: 0; }
+.c-hamburger[aria-expanded="true"] .hamburger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* =========================================================
+   LAYOUT PRINCIPAL
+   ========================================================= */
+.page-wrapper {
+    display: flex;
+    min-height: 100vh;
+    padding-top: 0; 
+    background-color: var(--bg-content);
+}
+
+.content-aula {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    transition: padding 0.3s ease;
+}
+
+.main-content-inner { width: 100%; min-height: calc(100vh - 80px); }
+.main-content-body { width: 100%; max-width: 1120px; margin: 0 auto; padding: 40px 48px 0 48px; }
+.main-content-body .aula-body { max-width: 800px; margin: 0 auto; }
+
+/* =========================================================
+   SIDEBAR E LINGUETA
+   ========================================================= */
+.sidebar-aula {
+    width: 300px;
+    padding-top: 85px;
+    background: linear-gradient(190deg, var(--sidebar-top) 0%, var(--sidebar-bottom) 100%);
+    color: white;
+    transition: margin-left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
+    z-index: 100;
+    /* AJUSTE: Fixa menu, mas limita altura para não descer até o rodapé */
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    will-change: margin-left;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+.sidebar-tab {
+    position: fixed;
+    left: 295px; 
+    top: 100px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--accent-color);
+    border: 2px solid var(--bg-content);
+    border-radius: var(--radius-md);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(49, 5, 42, 0.35);
+    /* AJUSTE: z-index elevado para 1045 para ficar sempre sobre a sidebar (mesmo no mobile) */
+    z-index: 1045;
+    transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease, transform 0.2s ease;
+    /* Evita a piscada e o anel de foco padrão */
+    will-change: left, transform;
+    backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.sidebar-tab:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+.sidebar-tab:hover { 
+    background-color: var(--highlight); 
+    transform: translateY(-1px); 
+}
+
+/* Captura tanto o i original quanto o svg que o Lucide injeta */
+.sidebar-tab i, 
+.sidebar-tab svg { 
+    width: 18px; 
+    height: 18px; 
+    transition: transform 0.3s ease; 
+}
+
+.sidebar-tab.is-collapsed { left: 15px; }
+
+.sidebar-tab.is-collapsed i, 
+.sidebar-tab.is-collapsed svg { 
+    transform: rotate(180deg); 
+}
+
+.sidebar-header { padding: 24px 20px 18px 20px; border-bottom: 1px solid var(--border-soft); }
+.sidebar-header h6 { letter-spacing: 0.4px; font-weight: 700; }
+.sidebar-header .sidebar-subtitle { color: rgba(255,255,255,0.55); font-size: 0.78rem; margin-top: 4px; }
+.sidebar-aula.collapsed { margin-left: -300px; }
+
+/* --- Acordeão da Sidebar --- */
+.sidebar-aula .accordion-item { background-color: transparent; border: none; border-bottom: 1px solid var(--border-soft); }
+.sidebar-aula .accordion-button { background-color: transparent; color: white; font-weight: 600; font-size: 0.92rem; padding: 16px 20px; box-shadow: none; display: flex; align-items: center; gap: 12px; }
+.sidebar-aula .accordion-button:focus { box-shadow: none; }
+.sidebar-aula .accordion-button:focus-visible { box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.55); }
+
+.module-index {
+    flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
+    background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.85); font-size: 0.75rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.sidebar-aula .accordion-button:not(.collapsed) .module-index { background: var(--highlight); color: white; }
+.sidebar-aula .accordion-button::after { filter: brightness(0) invert(1); transition: transform 0.3s ease-in-out; margin-left: auto; }
+.sidebar-aula .accordion-button:not(.collapsed)::after { transform: rotate(180deg); }
+.sidebar-aula .accordion-button:not(.collapsed) { background-color: rgba(255,255,255,0.06); color: #fff; }
+.sidebar-aula .accordion-body { background-color: rgba(0,0,0,0.12); padding: 4px 0; }
+
+.sidebar-aula .nav-link {
+    color: rgba(255, 255, 255, 0.75); padding: 12px 20px 12px 58px; display: flex; align-items: center; gap: 10px; transition: 0.2s; font-size: 0.88rem; border-left: 3px solid transparent;
+}
+.sidebar-aula .nav-link i,
+.sidebar-aula .nav-link svg { width: 16px; height: 16px; flex-shrink: 0; }
+.sidebar-aula .nav-link:hover { background-color: rgba(255,255,255,0.06); color: #fff; }
+.sidebar-aula .nav-link.active { background-color: rgba(201, 78, 161, 0.16); color: #fff; border-left: 3px solid var(--highlight); font-weight: 600; }
+
+/* --- Item de link único na sidebar (sem accordion), ex: "Encerramento do Curso" ---
+   Reaproveita a classe .accordion-button (mesma base visual de 01/02/03,
+   garantindo alinhamento idêntico), só removendo a seta/chevron — já que
+   este item não expande nada, apenas leva para outra página. A classe
+   .nav-link continua presente só para o partials-loader.js reconhecer e
+   marcar "active" quando esta for a página atual. */
+#sidebarAula a.sidebar-standalone-link.accordion-button::after {
+    display: none;
+}
+
+#sidebarAula a.sidebar-standalone-link.accordion-button {
+    padding: 16px 20px;
+    gap: 12px;
+    border-left: none;
+}
+
+#sidebarAula a.sidebar-standalone-link.accordion-button.active,
+#sidebarAula a.sidebar-standalone-link.accordion-button.active:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+    color: #fff;
+}
+
+#sidebarAula a.sidebar-standalone-link.accordion-button.active .module-index {
+    background: var(--highlight);
+    color: #fff;
+}
+
+/* =========================================================
+   HERO DA AULA E BREADCRUMB
+   ========================================================= */
+.aula-hero {
+    position: relative; z-index: 1; min-height: 46vh; display: flex; flex-direction: column; justify-content: flex-start; padding: 110px 48px 40px 48px; width: 100%;
+    background-image: linear-gradient(to bottom, rgba(243, 237, 243, 0) 40%, var(--bg-content) 100%), linear-gradient(160deg, rgba(31,2,25,0.7) 0%, rgba(119,32,109,0.4) 55%, rgba(119,32,109,0.2) 100%), url('../imgs/01.jpg');
+    background-size: cover; background-position: center; color: #fff;
+}
+.aula-hero h1 { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 2.8rem; line-height: 1.25; max-width: 800px; margin: 0 auto; width: 100%; }
+
+.aula-breadcrumb-pill {
+    position: sticky; top: 100px; z-index: 90; display: inline-flex; width: fit-content; align-items: center; gap: 8px;
+    background: rgba(31, 2, 25, 0.6); backdrop-filter: blur(4px); padding: 9px 18px; border-radius: 50px; 
+    margin: 0 0 20px 70px; /* AJUSTE: Margem maior na esquerda para afastar da lingueta */
+    max-width: 800px;
+}
+.aula-breadcrumb-pill .breadcrumb { margin: 0; font-size: 0.85rem; }
+.aula-breadcrumb-pill .breadcrumb-item a { color: rgba(255,255,255,0.7); text-decoration: none;}
+.aula-breadcrumb-pill .breadcrumb-item a:hover { color: #fff; }
+.aula-breadcrumb-pill .breadcrumb-item.active { color: #fff; font-weight: 600; }
+.aula-breadcrumb-pill .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,0.4); }
+
+/* =========================================================
+   CONTEÚDO DA AULA E FOOTER
+   ========================================================= */
+.aula-body { line-height: 1.7; color: var(--text-dark); font-size: 1.08rem; }
+.breadcrumb-item a { color: var(--accent-color); }
+.breadcrumb-item.active { color: var(--text-dark); }
+
+.logo-gray-scale { filter: grayscale(100%); opacity: 0.6; transition: 0.3s; max-height: 40px; width: auto; }
+.logo-gray-scale:hover { filter: grayscale(0%); opacity: 1; }
+
+/* ==========================================================================
+   ESTILIZAÇÃO DOS MODAIS CUSTOMIZADOS (C-MODAL) - IDÊNTICO AO INDEX
+   ========================================================================== */
+/* Efeito de desfoque de fundo no backdrop do modal */
+.modal-backdrop.show {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background-color: rgba(49, 5, 42, 0.4); 
+}
+
+/* Estrutura Principal da Janela */
+.c-modal .modal-content {
+    border: none !important;
+    border-radius: 24px !important;
+    box-shadow: 0 20px 50px rgba(49, 5, 42, 0.25) !important;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+/* Cabeçalho do Modal */
+.c-modal .modal-header {
+    background-color: #f6e8f4 !important; 
+    border-bottom: 1px solid rgba(119, 32, 109, 0.08);
+    padding: 1.25rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.c-modal .modal-title {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+/* Botão Fechar Minimalista */
+.btn-close-custom {
+    background: transparent;
+    border: none;
+    color: var(--accent-color);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.2s ease;
+}
+
+.btn-close-custom:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.btn-close-custom svg { width: 24px; height: 24px; }
+
+/* Corpo do Modal */
+.c-modal .modal-body {
+    padding: 2.5rem 2rem;
+    max-height: 75vh;
+    overflow-y: auto;
+}
+
+/* --- DESIGN ATUALIZADO: ACORDEÕES DO MODAL DE BIBLIOGRAFIA --- */
+.modal-modulo-section.accordion-item {
+    border: 1px solid rgba(119, 32, 109, 0.08) !important;
+    background-color: #ffffff;
+    border-radius: 18px !important;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(49, 5, 42, 0.02);
+}
+
+.modal-modulo-section.accordion-item:last-child { margin-bottom: 0; }
+
+/* Botão do Módulo (Nível 1) - Integrado */
+.custom-bib-modulo-btn {
+    background-color: #ffffff !important;
+    color: var(--primary-color) !important;
+    font-weight: 700 !important;
+    border: 1px solid #e2d6e0 !important;
+    border-radius: 12px !important;
+    transition: all 0.25s ease;
+    padding: 1.3rem 1.5rem !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.custom-bib-modulo-btn:not(.collapsed) {
+    background-color: #f7f0f6 !important;
+    color: var(--primary-color) !important;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.125) !important;
+}
+
+.custom-bib-modulo-btn .badge {
+    background-color: var(--primary-color) !important;
+    color: #ffffff !important;
+    padding: 6px 12px !important;
+    font-weight: 600 !important;
+    font-size: 0.8rem !important;
+    border-radius: 6px !important;
+}
+
+.custom-bib-modulo-btn:not(.collapsed) .badge {
+    background-color: var(--accent-color) !important;
+}
+
+/* Customiza a seta padrão */
+.custom-bib-modulo-btn::after {
+    filter: sepia(100%) saturate(2000%) hue-rotate(275deg) brightness(60%);
+}
+
+/* Título do módulo dentro do accordion (era style="color: #420b3c" inline) */
+.modulo-title-text {
+    color: #420b3c;
+}
+
+/* Variante do badge de número do módulo com tom mais escuro que --primary-color
+   (era style="background-color: #420b3c !important" inline) */
+.badge-modulo-bib {
+    background-color: #420b3c !important;
+}
+
+/* --- SUB-ACORDEÃO DE AULAS (Nível 2) - TEMA ATUALIZADO --- */
+.custom-bib-aula-btn {
+    background-color: #ffffff !important;
+    color: var(--text-color) !important;
+    font-weight: 600 !important;
+    border: 1px solid #e2d6e0 !important;
+    border-radius: 8px !important;
+    font-size: 0.95rem !important;
+    padding: 12px 16px !important;
+    box-shadow: none !important;
+    transition: all 0.2s ease;
+}
+
+.custom-bib-aula-btn:not(.collapsed) {
+    background-color: #f6e8f4 !important;
+    color: var(--primary-color) !important;
+    border-color: #d1b5ce !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.custom-bib-aula-btn::after {
+    filter: invert(10%) sepia(80%) saturate(2000%) hue-rotate(270deg) brightness(80%);
+}
+
+/* --- LISTAGEM DE BIBLIOGRAFIA REFINADA --- */
+.bibliografia-lista-refined {
+    list-style-type: none !important;
+    padding-left: 0;
+    margin-bottom: 0;
+    background-color: #ffffff;
+    padding: 1rem 1.25rem;
+    border: 1px solid #f2e6f1;
+    border-top: none;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.bibliografia-lista-refined li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: #495057;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.85rem;
+}
+
+.bibliografia-lista-refined li::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 4px !important;
+    top: 8px !important; 
+    width: 6px !important;
+    height: 6px !important;
+    border-top: 2px solid var(--accent-color) !important;
+    border-right: 2px solid var(--accent-color) !important;
+    transform: rotate(45deg) !important;
+}
+
+.bibliografia-lista-refined li a {
+    color: var(--accent-color);
+    text-decoration: underline;
+    word-break: break-word;
+}
+
+.bibliografia-lista-refined li a:hover,
+.bibliografia-lista-refined li a:focus {
+    color: var(--primary-color);
+}
+
+/* ==========================================================================
+   NOVA REESTRUTURAÇÃO: CONTEÚDO DOS MÓDULOS DE NAVEGAÇÃO NO MODAL
+   ========================================================================== */
+.modal-modulo-container {
+    background-color: #ffffff;
+    border: 1px solid rgba(119, 32, 109, 0.1);
+    border-radius: 16px;
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(49, 5, 42, 0.02);
+}
+
+.modal-modulo-container:last-child { margin-bottom: 0; }
+
+.modal-modulo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #f6e8f4;
+}
+
+.modal-modulo-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.btn-modal-ver-modulo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid var(--accent-color) !important;
+    color: var(--accent-color) !important;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-modal-ver-modulo:hover {
+    background-color: var(--accent-color);
+    color: #ffffff !important;
+    box-shadow: 0 4px 10px rgba(119, 32, 109, 0.15);
+}
+
+.modal-modulo-aulas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.modal-aula-nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--bg-light);
+    border: 1px solid rgba(119, 32, 109, 0.05);
+    border-radius: 10px;
+    padding: 0.8rem 1.2rem;
+    color: var(--text-color);
+    text-decoration: none !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-aula-nav-btn:hover {
+    background-color: #fdf6fc;
+    border-color: var(--accent-light);
+    color: var(--primary-color);
+    transform: translateX(4px);
+}
+
+.modal-aula-nav-btn span { font-size: 0.9rem; font-weight: 500; line-height: 1.4; }
+.modal-aula-nav-btn span strong { color: var(--accent-color); font-weight: 700; }
+.modal-aula-nav-btn:hover span strong { color: var(--accent-bright); }
+
+.modal-aula-nav-btn svg { color: var(--accent-color); flex-shrink: 0; margin-left: 1rem; transition: transform 0.2s ease; }
+.modal-aula-nav-btn:hover svg { transform: translateX(2px); color: var(--accent-bright); }
+
+/* --- CONTEÚDO DE CRÉDITOS --- */
+.creditos-bloco { margin-bottom: 2rem; }
+.creditos-bloco:last-child { margin-bottom: 0; }
+.creditos-bloco h3 { font-size: 1.25rem; color: var(--accent-color); margin-bottom: 1rem; font-weight: 700; }
+.creditos-bloco h4 { font-size: 1.05rem; color: var(--text-color); margin-bottom: 0.1rem; font-weight: 600; margin-top: 1rem; }
+.creditos-bloco p { font-size: 0.9rem; color: #64748b; font-style: italic; margin-bottom: 0.5rem; }
+
+/* =========================================================
+   AJUSTES DE ACESSIBILIDADE - SUBSTITUIÇÃO DE CSS INLINE
+   ========================================================= */
+.badge-modulo-custom {
+    background-color: var(--primary-color) !important; 
+    color: #ffffff !important;
+}
+
+.texto-modulo-custom {
+    color: var(--primary-color) !important;
+}
+
+.icon-aula-custom {
+    width: 16px;
+    height: 16px;
+    color: var(--accent-color) !important;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE GERAL E MEDIA QUERIES
+   ========================================================= */
+@media (max-width: 575.98px) {
+    .modal-modulo-header { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+    .btn-modal-ver-modulo { width: 100%; text-align: center; }
+}
+
+@media (max-width: 767.98px) {
+    .modal-modulo-section.accordion-item { padding: 0px; }
+    .c-modal .modal-body { padding: 1.5rem 1rem; }
+    .custom-bib-modulo-btn { padding: 1.1rem 1rem !important; }
+    .modulo-title-text { font-size: 0.95rem; }
+    
+    .page-wrapper { flex-direction: column; }
+    
+    /* CORREÇÃO DA SIDEBAR MOBILE */
+    .sidebar-aula { position: fixed; height: 100%; top: 0; left: 0; z-index: 1040; margin-left: 0; }
+    .sidebar-aula.collapsed { margin-left: -300px; }
+    
+    /* AJUSTE: Lingueta movida um pouco mais para baixo para não cobrir o breadcrumb */
+    .sidebar-tab { top: 130px; left: 260px; z-index: 1045; } /* Garantindo o z-index no mobile também */
+    .sidebar-tab.is-collapsed { left: 10px; }
+
+    .main-content-body { padding: 24px 20px 0 20px; }
+    .aula-hero { min-height: auto; padding: 120px 20px 40px 20px; }
+    .aula-hero h1 { font-size: 1.7rem; }
+    
+    .aula-hero { 
+        min-height: 45vh; /* Adicionamos uma altura mínima para dar presença no mobile */
+        padding: 120px 20px 60px 20px; /* Aumentado padding inferior de 40px para 60px */
+    }
+    
+    /* AJUSTE: Breadcrumb ganhou margem na esquerda para desviar da lingueta */
+    .aula-breadcrumb-pill { margin: 0 15px 20px 60px; }
+}
+
+@media (max-width: 991.98px) {
+    #mainHeader { height: auto !important; padding: 0.8rem 1.5rem; background-color: var(--primary-color) !important; }
+    #mainHeader .container-fluid { display: flex !important; }
+    .brand-wrapper { flex: 1; }
+    
+    #mainHeader .navbar-collapse {
+        background-color: var(--primary-color); padding: 10px 20px 20px 20px; margin-top: 12px; width: calc(100% + 3rem); margin-left: -1.5rem; margin-right: -1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .title-mobile-menu h1, .h1-mobile-style {
+        font-family: 'Montserrat', sans-serif; font-size: 0.8rem; color: rgba(255, 255, 255, 0.85); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.4; padding: 0 10px;
+    }
+    
+    .header .brand { border-right: none; height: 38px; }
+    .header .brand img { max-height: 38px; }
+    .header .navbar-nav { flex-direction: column; width: 100%; align-items: stretch !important; gap: 0.25rem; }
+    .header .navbar-nav .nav-link { 
+        text-align: center; font-size: 0.85rem; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); letter-spacing: 0.08em; white-space: nowrap !important; opacity: 0.85;
+    }
+    .header .navbar-nav .nav-link:hover { background-color: rgba(255, 255, 255, 0.08); color: #ffffff !important; border-radius: 8px; opacity: 1; }
+    .header .navbar-nav .nav-link-button {
+        background-color: var(--accent-bright) !important; border: none; border-radius: 50px; padding: 0.75rem 1.4rem; color: #ffffff !important; margin-top: 0.5rem; box-shadow: 0 4px 15px rgba(212, 94, 183, 0.3);
+    }
+}
+
+/* ==========================================================================
+   CORREÇÃO DE TEMA: REMOÇÃO DE CORES PADRÃO (AZUL BOOTSTRAP)
+   ========================================================================== */
+
+/* 1. Sobrescrevendo links de texto dentro do conteúdo da aula */
+.aula-body a:not(.btn) {
+    color: var(--accent-light);
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(156, 63, 142, 0.4);
+    transition: all 0.2s ease;
+}
+
+.aula-body a:not(.btn):hover {
+    color: var(--accent-bright);
+    border-bottom-color: var(--accent-bright);
+}
+
+/* 2. Forçando ícones e textos que usam classes primárias do Bootstrap a ficarem roxos */
+.text-primary, .text-info,
+.aula-body .text-primary i,
+.aula-body .text-primary svg {
+    color: var(--accent-color) !important;
+}
+
+/* 3. Sobrescrevendo fundos azuis do Bootstrap (se houver badges ou alertas primários) */
+.bg-primary {
+    background-color: var(--accent-color) !important;
+}
+
+/* 4. Corrigindo botões com borda azul (btn-outline-primary) */
+.btn-outline-primary, .border-primary {
+    color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    background-color: var(--accent-color) !important;
+    color: #ffffff !important;
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 0 0.25rem rgba(119, 32, 109, 0.25) !important; /* Glow roxo ao invés de azul */
+}
+
+/* 5. Corrigindo caixas de informação ou destaque (alert-info ou alert-primary) */
+.alert-primary {
+    color: var(--primary-deep);
+    background-color: rgba(119, 32, 109, 0.1); /* Fundo roxo bem claro */
+    border-color: rgba(119, 32, 109, 0.2);
+}
+
+.alert-info {
+    color: var(--primary-deep);
+    background-color: #f6e8f4; /* Usando o roxo claro do cabeçalho dos modais */
+    border-color: #e2d6e0;
+}
+
+/* 6. Garantindo que qualquer ícone solto sem cor definida puxe a cor do texto/tema */
+.aula-body i, 
+.aula-body svg {
+    color: inherit;
+}
+
+/* 7. Ícones que abrem os títulos de seção (h3/h4) — maiores e levemente
+      deslocados para a esquerda, criando respiro entre o ícone e o texto */
+.aula-body h3 > i:first-child,
+.aula-body h3 > svg:first-child,
+.aula-body h4 > i:first-child,
+.aula-body h4 > svg:first-child {
+    display: inline-block;
+    font-size: 1.2em;
+    margin-left: -0.4rem;
+    margin-right: 0.55rem;
+    vertical-align: -0.08em;
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DO RODAPÉ DE LOGOS (BASEADO NO INDEX)
+   ========================================================================== */
+.footer-institucional {
+    border-top: 1px solid rgba(119, 32, 109, 0.1);
+    margin-top: 40px;
+    width: 100%;
+}
+
+.footer-logo {
+    max-height: 85px; 
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Efeito suave ao passar o mouse */
+.footer-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Comportamento em telas menores (celulares) - CORRIGIDO PARA GRID 2x2 MAIOR */
+@media (max-width: 767.98px) {
+    /* Força o container flexível (como div com d-flex ou gap-4) a virar Grid de 2 colunas */
+    .footer-institucional [class*="d-flex"], 
+    .footer-institucional .gap-4 {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important; 
+        justify-items: center;
+        align-items: center;
+    }
+
+    .footer-logo {
+        max-height: 85px; /* AJUSTE: Mantida maior para destacar as logos no mobile */
+        max-width: 100%;
+    }
+}
+
+/* --- Botão Voltar ao Topo --- */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(49, 5, 42, 0.3);
+    z-index: 1050;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    text-decoration: none !important;
+    border: none;
+    padding: 0;
+    font: inherit;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: var(--highlight);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(49, 5, 42, 0.4);
+}
+
+.back-to-top svg {
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 767.98px) {
+    .back-to-top { bottom: 20px; right: 20px; width: 45px; height: 45px; }
+}
+
+/* Correção de sobreposição do Breadcrumb Pill sobre o Hero */
+.aula-breadcrumb-pill {
+    margin-bottom: -46px !important;
+}
+
+/* ==========================================================================
+   COMPONENTES REUTILIZÁVEIS — SUBSTITUEM ESTILOS INLINE REPETIDOS
+   (Extraídos do HTML para permitir manutenção centralizada e reduzir peso do markup)
+   ========================================================================== */
+
+/* --- Banner Parallax Full-Width (usado 8x no conteúdo da aula) --- */
+.banner-parallax {
+    background: var(--primary-color) url('../imgs/02.jpg') center/cover no-repeat;
+    clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+}
+
+/* Camada de overlay escuro para contraste de leitura sobre o banner */
+.overlay-fill {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Largura máxima de leitura para textos em destaque (banners e carrosséis) */
+.max-w-content {
+    max-width: 900px;
+}
+
+/* Texto em destaque dentro dos banners full-bleed: precisa ficar centralizado
+   na mesma largura/posição da coluna de leitura (800px), mesmo que o banner
+   ao fundo agora ocupe toda a área de conteúdo (.aula-full-bleed). */
+.aula-banner-lead {
+    max-width: 800px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Variante mais estreita (usada no carrossel de texto da Aula 1.2) */
+.max-w-content-sm {
+    max-width: 800px;
+}
+
+/* --- Carrossel de Galeria (slides com imagem + legenda em gradiente) --- */
+.carousel-slide-media {
+    position: relative;
+    background: linear-gradient(160deg, var(--sidebar-top) 0%, var(--primary-deep) 100%);
+    height: 280px;
+}
+
+.carousel-caption-gradient {
+    background: linear-gradient(to top, rgba(61, 2, 48, 0.95), transparent);
+}
+
+/* --- Cards de Carrossel "Apenas Texto" (síntese conceitual) --- */
+.principle-card {
+    min-height: 200px; /* fallback antes do JS calcular a altura exata (maior slide) */
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* seguranca: só entra em ação se o JS não rodar por algum motivo */
+}
+
+/* Barra de rolagem discreta, caso algum texto ultrapasse a altura fixa */
+.principle-card::-webkit-scrollbar {
+    width: 6px;
+}
+.principle-card::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+}
+
+.principle-card hr {
+    flex-shrink: 0;
+}
+
+.principle-card--a {
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-deep) 60%, var(--primary-color) 100%);
+}
+
+.principle-card--b {
+    background: linear-gradient(135deg, var(--accent-light) 0%, var(--sidebar-bottom) 55%, var(--primary-deep) 100%);
+}
+
+/* --- Botão "Assistir vídeo" dentro dos cards do carrossel de texto
+   (era um link de texto simples) --- */
+/* --- Link usado como gatilho de popover DENTRO de um parágrafo (texto corrido)
+   Usamos <a> em vez de <button> de propósito: o Bootstrap (e os navegadores,
+   por regra da própria especificação de CSS) força qualquer <button> a se
+   comportar como inline-block mesmo com display:inline !important — o que
+   quebra linha de forma estranha no meio de um parágrafo (a pontuação
+   seguinte pode ser empurrada sozinha pra linha de baixo). Um <a> não tem
+   essa trava e flui como texto normal. */
+.aula-body a[data-bs-toggle="popover"] {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.aula-body a[data-bs-toggle="popover"]:hover,
+.aula-body a[data-bs-toggle="popover"]:focus {
+    text-decoration: underline;
+}
+
+.btn-watch-video {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 10px 22px;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-watch-video i {
+    font-size: 1.05rem;
+}
+
+.btn-watch-video:hover {
+    color: var(--primary-color);
+    background: #fdf4fb;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -6px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Setas do carrossel: zona de clique mais estreita, encostada na borda,
+   e um "respiro" lateral no card de texto para o conteúdo nunca ficar embaixo da seta --- */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 44px;
+    opacity: 1;
+}
+
+.carousel-control-prev { left: 6px; }
+.carousel-control-next { right: 6px; }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.5));
+}
+
+.principle-card {
+    padding-left: 52px !important;
+    padding-right: 52px !important;
+}
+
+@media (max-width: 575.98px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 36px;
+    }
+    .principle-card {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+}
+
+/* --- Thumbnails de cards com imagem (grade "Cards com Imagem") --- */
+.img-cover-200 {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* --- Ícone colorido no lugar da imagem (variação de card "Cards com Imagem")
+   5 tons diferentes da própria paleta do tema, pra dar uma variada visual
+   sem sair do esquema de cores do site. --- */
+.icon-card-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+}
+
+.icon-card-box i {
+    font-size: 26px;
+}
+
+.icon-card-box--1 { background: rgba(49, 5, 42, 0.08); color: var(--primary-color); }
+.icon-card-box--2 { background: rgba(119, 32, 109, 0.10); color: var(--accent-color); }
+.icon-card-box--3 { background: rgba(156, 63, 142, 0.14); color: var(--accent-light); }
+.icon-card-box--4 { background: rgba(212, 94, 183, 0.16); color: var(--accent-bright); }
+.icon-card-box--5 { background: rgba(201, 78, 161, 0.14); color: var(--highlight); }
+
+/* =========================================================
+   INFOGRÁFICO INTERATIVO EM TRILHA (5 objetivos numerados)
+   Reaproveita as mesmas 5 cores dos ícones de card acima, pra
+   manter tudo coerente com o resto do site.
+   ========================================================= */
+.ig-track-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.ig-track-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 19px;
+    left: 10%;
+    right: 10%;
+    height: 3px;
+    background: rgba(49, 5, 42, 0.15);
+    z-index: 0;
+}
+
+.ig-track {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+    z-index: 1;
+}
+
+.ig-dot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    font-weight: bold;
+    font-size: 0.9rem;
+    background: #fff;
+    color: var(--text-muted);
+    box-shadow: 0 0 0 2px rgba(49, 5, 42, 0.15);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.ig-dot.active,
+.ig-dot:hover {
+    color: #fff;
+}
+
+.ig-dot--1.active, .ig-dot--1:hover { background: var(--primary-color); box-shadow: 0 0 0 2px var(--primary-color); }
+.ig-dot--2.active, .ig-dot--2:hover { background: var(--accent-color); box-shadow: 0 0 0 2px var(--accent-color); }
+.ig-dot--3.active, .ig-dot--3:hover { background: var(--accent-light); box-shadow: 0 0 0 2px var(--accent-light); }
+.ig-dot--4.active, .ig-dot--4:hover { background: var(--accent-bright); box-shadow: 0 0 0 2px var(--accent-bright); }
+.ig-dot--5.active, .ig-dot--5:hover { background: var(--highlight); box-shadow: 0 0 0 2px var(--highlight); }
+
+.ig-panel {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.75rem;
+    box-shadow: 0 6px 24px -10px rgba(49, 5, 42, 0.25);
+    transition: opacity 0.25s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.ig-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.ig-panel-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.3rem;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.ig-panel-title {
+    margin: 0;
+    font-weight: bold;
+    transition: color 0.25s ease;
+    /* Era <h5> por padrão (sem font-size próprio, herdava o tamanho padrão do
+       navegador para h5). Virou <h4> para não pular nível de cabeçalho depois
+       do heading que vem antes dele (eMAG/HTML5) -- este font-size mantém o
+       tamanho visual igual ao de antes da troca de tag. */
+    font-size: 1.05rem;
+}
+
+.ig-panel-desc {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.ig-actions-label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 0.6rem;
+}
+
+.ig-actions-list {
+    list-style: none;
+    margin: 0 0 1.25rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.ig-actions-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.ig-actions-list i {
+    margin-top: 3px;
+    flex-shrink: 0;
+    font-size: 0.85rem;
+    transition: color 0.25s ease;
+}
+
+.ig-panel-nav {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--bg-content);
+    padding-top: 1rem;
+    margin-top: auto; /* empurra a navegação sempre pro rodapé do painel, mesmo com pouco conteúdo acima */
+}
+
+.ig-panel-nav button:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.ig-caption {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.75rem;
+}
+
+@media (max-width: 575.98px) {
+    .ig-track-wrapper::before {
+        left: 5%;
+        right: 5%;
+    }
+    .ig-dot {
+        width: 34px;
+        height: 34px;
+        font-size: 0.8rem;
+    }
+    .ig-panel {
+        padding: 1.25rem;
+    }
+}
+
+/* =========================================================
+   TIMELINE HISTÓRICA EM TRILHA (aula 1.1)
+   Mesmo padrão de navegação do infográfico interativo (.ig-*),
+   com um número grande semitransparente no fundo do painel.
+   ========================================================= */
+.tl-track-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.tl-track-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 19px;
+    left: 10%;
+    right: 10%;
+    height: 3px;
+    background: rgba(49, 5, 42, 0.15);
+    z-index: 0;
+}
+
+.tl-track {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+    z-index: 1;
+}
+
+.tl-dot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    font-weight: bold;
+    font-size: 0.9rem;
+    background: #fff;
+    color: var(--text-muted);
+    box-shadow: 0 0 0 2px rgba(49, 5, 42, 0.15);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.tl-dot.active,
+.tl-dot:hover {
+    background: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.tl-panel {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.75rem;
+    box-shadow: 0 6px 24px -10px rgba(49, 5, 42, 0.25);
+    position: relative;
+    overflow: hidden;
+    transition: opacity 0.25s ease;
+}
+
+.tl-panel-bignum {
+    position: absolute;
+    top: -0.5rem;
+    right: 1rem;
+    font-size: 5.5rem;
+    font-weight: 900;
+    color: rgba(49, 5, 42, 0.06);
+    line-height: 1;
+    pointer-events: none;
+}
+
+.tl-panel-era {
+    margin: 0 0 0.25rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    position: relative;
+}
+
+.tl-panel-title {
+    margin: 0 0 0.75rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    position: relative;
+    /* Mesmo motivo do .ig-panel-title acima: preserva o tamanho visual caso
+       esta classe também seja promovida de h5 para h4 em alguma aula. */
+    font-size: 1.05rem;
+}
+
+.tl-panel-desc {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.7;
+    position: relative;
+    max-width: 90%;
+}
+
+@media (max-width: 575.98px) {
+    .tl-track-wrapper::before {
+        left: 5%;
+        right: 5%;
+    }
+    .tl-dot {
+        width: 34px;
+        height: 34px;
+        font-size: 0.8rem;
+    }
+    .tl-panel {
+        padding: 1.25rem;
+    }
+    .tl-panel-bignum {
+        font-size: 4rem;
+    }
+    .tl-panel-desc {
+        max-width: 100%;
+    }
+}
+
+/* =========================================================
+   FLUXOGRAMA INTERATIVO (caixa raiz -> níveis clicáveis -> modal)
+   ========================================================= */
+.fc-flowchart {
+    display: block;
+}
+
+/* Trilha horizontal: origem -> nível 1 -> nível 2 -> nível 3 -> nível 4,
+   ligados por setas de sequência (não mais ramificações de árvore). Em
+   telas largas, tudo numa linha só; abaixo de 767px vira uma coluna com
+   as setas apontando para baixo.
+
+   As 5 caixas usam "flex: 1 1 0" (mesma largura, dividindo igualmente o
+   espaço) COM "min-width: 0" — sem isso, o flexbox usa o texto mais longo
+   de cada caixa como largura mínima e elas ficam com tamanhos diferentes
+   mesmo com o mesmo flex-basis. */
+.fc-flow-track {
+    display: flex;
+    align-items: stretch;
+    gap: 0.65rem;
+    width: 100%;
+}
+
+.fc-origin,
+.fc-level-btn {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 136px;
+    border-radius: 14px;
+    padding: 1.1rem 1.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    box-shadow: 0 10px 22px -12px rgba(49, 5, 42, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fc-origin {
+    background: linear-gradient(150deg, var(--accent-color), var(--primary-color));
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 800;
+    font-size: 0.85rem;
+    line-height: 1.3;
+}
+
+.fc-origin i {
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.14);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fc-arrow {
+    flex: 0 0 auto;
+    align-self: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(119, 32, 109, 0.08);
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.fc-level-btn {
+    background: linear-gradient(150deg, var(--highlight), var(--accent-light));
+    color: #fff;
+    border: none;
+    text-align: left;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.fc-level-btn:hover,
+.fc-level-btn:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 28px -12px rgba(49, 5, 42, 0.55);
+}
+
+.fc-level-icon-badge {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.fc-level-icon {
+    font-size: 1rem;
+    opacity: 0.95;
+}
+
+.fc-level-title {
+    display: block;
+    font-size: 0.86rem;
+    font-weight: 700;
+}
+
+.fc-level-btn small {
+    display: block;
+    font-weight: 400;
+    opacity: 0.92;
+    line-height: 1.4;
+}
+
+.fc-modal-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    line-height: 1.9;
+}
+
+.fc-modal-list a {
+    color: var(--accent-color);
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Faixa colorida no topo do modal, com ícone grande e discreto de fundo
+   (diferente por nível, ligado ao assunto tratado) */
+.fc-modal-header-band {
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    border-radius: 1rem 1rem 0 0;
+    padding: 1.25rem 3rem 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    position: relative;
+}
+
+.fc-modal-header-icon-badge {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fc-modal-header-icon {
+    font-size: 1.3rem;
+    color: #fff;
+    line-height: 1;
+}
+
+.fc-modal-header-band .modal-title {
+    color: #fff;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.fc-modal-header-band .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    z-index: 2;
+}
+
+@media (max-width: 767.98px) {
+    .fc-flow-track {
+        flex-direction: column;
+    }
+    .fc-origin,
+    .fc-level-btn {
+        flex: 1 1 auto;
+        min-height: auto;
+    }
+    .fc-origin {
+        flex-direction: row;
+        font-size: 0.85rem;
+    }
+    .fc-arrow {
+        transform: rotate(90deg);
+    }
+}
+
+/* =========================================================
+   MOCKUP DE COMPUTADOR COM ÁREAS CLICÁVEIS (hotspots + popover)
+   ========================================================= */
+.dt-mockup {
+    max-width: 560px;
+    margin: 2rem auto;
+}
+
+.dt-mockup-bezel {
+    background: #1a1a1a;
+    border-radius: 14px;
+    padding: 10px;
+}
+
+.dt-mockup-titlebar {
+    background: var(--primary-deep);
+    border-radius: 8px 8px 0 0;
+    padding: 0.6rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.dt-mockup-titlebar span.dt-url {
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: bold;
+    opacity: 0.85;
+}
+
+.dt-mockup-screen {
+    background: #fff;
+    padding: 1.75rem 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.9rem;
+    border-radius: 0 0 6px 6px;
+}
+
+.dt-hotspot {
+    background: var(--bg-content);
+    border: none;
+    border-radius: 12px;
+    padding: 1.5rem 0.75rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.dt-hotspot:hover,
+.dt-hotspot:focus {
+    background: #e8dce6;
+    transform: translateY(-3px);
+}
+
+.dt-hotspot i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    display: block;
+    margin-bottom: 0.6rem;
+}
+
+.dt-hotspot span {
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.dt-mockup-stand-neck {
+    background: #c9ccd1;
+    height: 14px;
+    border-radius: 0 0 4px 4px;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.dt-mockup-stand-base {
+    background: #9a9ea5;
+    height: 8px;
+    width: 35%;
+    margin: 0 auto;
+    border-radius: 0 0 6px 6px;
+}
+
+@media (max-width: 575.98px) {
+    .dt-mockup-screen {
+        padding: 1.25rem 0.85rem;
+        gap: 0.6rem;
+    }
+    .dt-hotspot {
+        padding: 1.1rem 0.5rem;
+    }
+    .dt-hotspot i {
+        font-size: 1.6rem;
+    }
+}
+
+/* --- Barra de progresso fina (usada no Quiz interativo) --- */
+.progress-thin {
+    height: 6px;
+}
+
+/* --- Linha "espinha dorsal" central da timeline histórica --- */
+.timeline-spine {
+    width: 4px;
+    background: linear-gradient(180deg, var(--accent-color) 0%, var(--primary-color) 100%);
+}
+
+/* --- Marcador numerado de cada marco da timeline (era .badge.bg-primary)
+   Nome prefixado com "tl-hist-" para não colidir com .timeline-marker /
+   .timeline-item do componente "Linha do Tempo Premium" (usado em outra
+   aula, mais abaixo neste mesmo arquivo) --- */
+.tl-hist-marker {
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    box-shadow: 0 0 0 6px var(--bg-content), 0 6px 14px -6px rgba(49, 5, 42, 0.45);
+    transition: transform 0.25s ease;
+}
+
+.tl-hist-item:hover .tl-hist-marker {
+    transform: scale(1.08);
+}
+
+/* --- Card de cada marco: eleva suavemente no hover (classe já existia no HTML, sem efeito) --- */
+.hover-shadow {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hover-shadow:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 30px -14px rgba(49, 5, 42, 0.3) !important;
+}
+
+/* --- Pull-quote centralizada em destaque escuro (Hero Quote) --- */
+.hero-quote-bg {
+    background: linear-gradient(135deg, #4b1b45 0%, #812e7d 50%, #290f2a 100%);
+}
+
+/* --- Ícone pequeno (16x16) usado nos itens do accordion de leituras --- */
+.icon-16 {
+    width: 16px;
+    height: 16px;
+}
+
+/* ==========================================================================
+   LINHA DO TEMPO CRONOLÓGICA PREMIUM
+   ========================================================================== */
+
+:root {
+  --tl-line-color: #3b0630; /* Cor base alinhada com as suas alterações */
+  --tl-line-hover: #550b4b;
+  --tl-circle-bg: #ffffff;
+}
+
+.timeline-premium {
+  position: relative;
+  padding-left: 2rem;
+  max-width: 800px; /* Antes era style inline no HTML */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+/* LINHA VERTICAL — desenhada por item (não pelo container inteiro), ligando
+   o marcador deste item ao marcador do próximo. Como cada item pode ter uma
+   altura diferente (cards com textos de tamanhos variados), calcular uma
+   única linha fixa para o container inteiro (como era antes) causava a linha
+   ultrapassando o último marcador. Ligando item a item, ela sempre para
+   exatamente no marcador seguinte — e o :not(:last-child) garante que o
+   último item nunca ganha essa continuação. */
+.timeline-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 33px; /* centro do marcador deste item */
+  bottom: calc(-1.5rem - 33px); /* desce até o centro do marcador do próximo item (1.5rem = margin-bottom mb-4) */
+  left: -17px; /* alinhado com o centro real da bolinha (medido: 32px à esquerda do valor antigo) */
+  width: 4px;
+  background: var(--tl-line-color);
+  border-radius: 4px;
+  z-index: 1; /* fica atrás do marcador, que tem z-index: 2 */
+}
+
+/* Marcador (Bolinha) Alinhado Perfeitamente no Centro da Linha */
+.timeline-marker {
+  position: absolute;
+  left: -2rem;
+  top: 9px; /* 33px (centro da linha) - 24px (metade dos 48px do marcador) */
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--tl-line-color);
+  border: 3px solid var(--tl-circle-bg);
+  box-shadow: 0 0 0 3px rgba(253, 13, 201, 0.25);
+  z-index: 2;
+  transform: translateX(-7px);
+  transition: all 0.3s ease;
+}
+
+/* Ícone dentro do marcador */
+.timeline-marker i {
+  font-size: 20px;
+  color: var(--tl-circle-bg);
+  line-height: 1;
+}
+
+/* Efeito Hover nos Cards */
+.timeline-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.timeline-item:hover .timeline-card {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.08) !important;
+}
+
+.timeline-item:hover .timeline-marker {
+  background-color: var(--tl-line-hover);
+  scale: 1.25;
+  box-shadow: 0 0 0 5px rgba(253, 13, 233, 0.35);
+}
+/* =========================================================
+   PAGINAÇÃO DE CONTEÚDO DA AULA (avançar/retroceder + navegação entre aulas)
+   ========================================================= */
+
+/* Cada "página" de conteúdo fica oculta até ser ativada via JS */
+.aula-page {
+    display: none;
+}
+
+.aula-page.active {
+    display: block;
+    animation: aulaPageFadeIn 0.35s ease;
+}
+
+@keyframes aulaPageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Barra de paginação interna */
+.aula-pagination-nav .btn:disabled,
+.aula-lesson-nav .btn.disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.aula-pagination-nav .btn-primary,
+.aula-lesson-nav .btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.aula-pagination-nav .btn-primary:hover,
+.aula-lesson-nav .btn-primary:hover {
+    background-color: var(--accent-light);
+    border-color: var(--accent-light);
+}
+
+.aula-pagination-nav .btn-outline-primary,
+.aula-lesson-nav .btn-outline-primary {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.aula-pagination-nav .btn-outline-primary:hover,
+.aula-lesson-nav .btn-outline-primary:not(.disabled):hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #fff;
+}
+
+.aula-lesson-nav:not(.d-none) {
+    display: flex;
+}
+
+@media (max-width: 575.98px) {
+    .aula-pagination-nav,
+    .aula-lesson-nav {
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center !important;
+        text-align: center;
+    }
+
+    .aula-pagination-nav #aulaPagIndicator {
+        order: 3;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* --- Thumbnails maiores para os cards com imagem (grade "Cards com Imagem") --- */
+.img-cover-260 {
+    height: 260px;
+    object-fit: cover;
+}
+
+/* =========================================================
+   BLOCOS "LARGOS" QUE ESCAPAM DA COLUNA DE LEITURA (800px)
+   =========================================================
+   .aula-full-bleed  -> ocupa toda a largura da área de conteúdo (banners
+                         com imagem de fundo), de ponta a ponta.
+   .aula-wide-block   -> ocupa uma largura intermediária, um pouco maior
+                         que o texto, mas ainda com respiro nas laterais
+                         (grades de cards, abas).
+   O alinhamento exato é calculado via JS (ver main.js), pois a largura
+   real da coluna de leitura depende do estado da sidebar e do breakpoint.
+   Os valores abaixo servem apenas de base/fallback antes do JS calcular. */
+.aula-full-bleed,
+.aula-wide-block {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; /* protege contra vazamento das margens negativas do
+                          grid do Bootstrap (ex.: .row com gutter g-lg-5 maior
+                          que o padding do container), já que a largura deste
+                          bloco é fixada em px exatos via JS (alignWideBlocks) */
+}
+
+.aula-full-bleed {
+    max-width: none;
+}
+
+/* Modificador para os banners "puxados" pra cima, encostando no elemento
+   anterior (usado em vários pontos das aulas do Módulo 2). Antes era um
+   style="margin-top: -3.5rem; margin-bottom: 4rem;" repetido inline em cada
+   banner -- CSS inline não é permitido pelo eMAG (2.2), então virou esta
+   classe. !important porque o banner também carrega uma utilidade de
+   espaçamento do Bootstrap (my-5/mt-5) que, do contrário, teria prioridade
+   por vir depois na cascata dependendo da ordem das classes no HTML. */
+.aula-full-bleed--tight {
+    margin-top: -3.5rem !important;
+    margin-bottom: 4rem !important;
+}
+
+@media (max-width: 991.98px) {
+    .aula-full-bleed,
+    .aula-wide-block {
+        margin-left: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+    }
+}
+
+/* =========================================================
+   ABAS INTERATIVAS (TERRITÓRIO / TERRITORIALIZAÇÃO) — REDESIGN
+   Estilo "aba de pasta": a aba ativa funde visualmente com o
+   conteúdo abaixo (mesmo fundo branco); as inativas ficam
+   recuadas, com um pequeno respiro entre elas revelando o fundo
+   da página — igual ao modelo de referência, só que nas cores
+   do tema (roxo) em vez de cinza/preto.
+   ========================================================= */
+.aula-tabs-card {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+}
+
+.aula-tabs-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    gap: 4px;
+    padding: 0 0 6px;
+    margin: 0;
+    background: transparent;
+}
+
+.aula-tabs-nav::-webkit-scrollbar {
+    height: 4px;
+}
+
+.aula-tabs-nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.aula-tabs-nav::-webkit-scrollbar-thumb {
+    background: rgba(49, 5, 42, 0.25);
+    border-radius: 4px;
+}
+
+.aula-tabs-nav .nav-item {
+    flex: 0 0 auto;
+}
+
+.aula-tabs-nav .nav-link {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    border-radius: 0.7rem 0.7rem 0 0;
+    padding: 12px 22px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.85);
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    opacity: 0.55;
+    transition: opacity 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.aula-tabs-nav .nav-link i {
+    font-size: 1.05rem;
+}
+
+.aula-tabs-nav .nav-link:hover:not(.active) {
+    opacity: 0.8;
+}
+
+.aula-tabs-nav .nav-link.active {
+    color: var(--primary-color);
+    background: #fff;
+    opacity: 1;
+    box-shadow: 0 -6px 14px -8px rgba(49, 5, 42, 0.25);
+}
+
+.aula-tabs-content {
+    padding: 2.25rem;
+    background: #fff;
+    border-radius: 0 0.9rem 0.9rem 0.9rem;
+    box-shadow: 0 20px 30px -20px rgba(49, 5, 42, 0.4);
+    border: 1px solid rgba(49, 5, 42, 0.06);
+}
+
+@media (max-width: 575.98px) {
+    .aula-tabs-nav .nav-link {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+    .aula-tabs-content {
+        padding: 1.5rem;
+    }
+}
+
+/* ==========================================================================
+   CARDS EXPANSÍVEIS (clique na imagem para revelar o texto), badge
+   "Recurso Interativo" e caption dos carrosséis de galeria (.slider)
+   -- Regras restauradas: existiam só em style_biblioteca.css e faltavam
+   aqui, por isso o recurso "cards" e as legendas dos carrosséis não
+   ficavam estilizados nas aulas (ver aula2.2). --
+   ========================================================================== */
+.badge-recurso-interativo {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    background: #f5e6f2;
+    color: #55124e;
+    font-weight: 700;
+    font-size: .85rem;
+    padding: .5rem 1rem;
+    border-radius: 50rem;
+}
+.card-expandable {
+    cursor: pointer;
+    transition: box-shadow .25s ease, transform .25s ease;
+}
+.card-expandable:hover {
+    box-shadow: 0 12px 24px rgba(66, 11, 60, .15) !important;
+    transform: translateY(-2px);
+}
+.card-expand-icon-wrap {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
+}
+.card-expand-icon {
+    width: 20px;
+    height: 20px;
+    color: #77206d;
+    transition: transform .3s ease;
+}
+.card-expandable:not(.collapsed) .card-expand-icon {
+    transform: rotate(135deg);
+}
+.info-card-collapse-body {
+    display: flex;
+    align-items: center;
+    min-height: 195px;
+}
+.info-card-collapse-body-lg {
+    display: flex;
+    align-items: center;
+    min-height: 230px;
+}
+.info-card-collapse-body-icon {
+    display: flex;
+    align-items: center;
+    min-height: 260px;
+}
+.carousel-caption-box {
+    border-top: 1px solid rgba(66, 11, 60, .08);
+}
+.carousel-caption-box h6,
+.carousel-caption-box p {
+    font-size: 1.25rem;
+}
+
+
+/* ==========================================================================
+   FLUXO "ANTES / DURANTE / DEPOIS" (3 marcos com ícone, usado na aula 2.2
+   para trajetórias de linkage). Estático, sem clique -- o texto de cada
+   marco já é curto o bastante para ficar visível o tempo todo.
+   ========================================================================== */
+.flow-badc {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+}
+.flow-badc-step {
+    flex: 1 1 0;
+    background: #fff;
+    border-radius: var(--radius-lg);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(66, 11, 60, .08);
+}
+.flow-badc-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 1rem;
+    border-radius: var(--radius-md);
+    background: rgba(119, 32, 109, .12);
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+.flow-badc-title {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: .5rem;
+    font-size: 1.15rem;
+}
+.flow-badc-text {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+.flow-badc-arrow {
+    flex: 0 0 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    font-size: 1.4rem;
+}
+@media (max-width: 767.98px) {
+    .flow-badc {
+        flex-direction: column;
+    }
+    .flow-badc-arrow {
+        flex: 0 0 auto;
+        padding: .5rem 0;
+    }
+}
+
+/* Variante clicável: ícone maior, funciona como botão, e o texto de cada
+   etapa só aparece depois que o usuário clica (ver main.js). */
+.flow-badc--clickable .flow-badc-icon {
+    width: 76px;
+    height: 76px;
+    font-size: 2rem;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform .2s ease, background-color .2s ease;
+}
+.flow-badc--clickable .flow-badc-icon:hover,
+.flow-badc--clickable .flow-badc-icon:focus-visible {
+    background: rgba(119, 32, 109, .2);
+    transform: translateY(-2px);
+}
+.flow-badc--clickable .flow-badc-text {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-top: 0;
+    transition: max-height .3s ease, opacity .25s ease, margin-top .25s ease;
+}
+.flow-badc--clickable .flow-badc-step.is-open .flow-badc-text {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 1rem;
+}
+
+
+/* ==========================================================================
+   INFOGRÁFICO HOTSPOT (imagem com pontos clicáveis por cima) -- regras
+   restauradas: existiam só em style_biblioteca.css e faltavam aqui, então
+   o recurso ficava sem estilo nas aulas reais (ver aula1.3 e aula2.2).
+   ========================================================================== */
+.ig-hotspot-card {
+    background: #fff;
+    border-radius: 1.25rem;
+    padding: 2rem;
+    box-shadow: 0 6px 24px -10px rgba(49, 5, 42, 0.25);
+}
+.ig-hotspot-card .ig-panel {
+    background: transparent;
+    border-radius: 0;
+    padding: 1.5rem 0 0;
+    box-shadow: none;
+    border-top: 1px solid var(--bg-content);
+}
+
+/* Painel escondido até o primeiro clique -- usado junto com o atributo
+   data-start-closed="true" no container do infográfico (ver main.js). */
+.ig-panel.ig-panel-hidden {
+    display: none;
+}
+
+.ig-hotspot-wrapper {
+    position: relative;
+    max-width: 640px;
+    margin: 0 auto;
+}
+.ig-hotspot-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.ig-hotspot-wrapper .ig-dot {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+}
+.ig-hotspot-wrapper .ig-dot::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    transition: border-color .25s ease;
+}
+.ig-hotspot-wrapper .ig-dot::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 3px solid rgba(119, 32, 109, 0.55);
+    animation: ig-hotspot-pulse 2.2s ease-out infinite;
+}
+.ig-hotspot-wrapper .ig-dot:hover::before {
+    border-color: rgba(119, 32, 109, 0.55);
+}
+.ig-hotspot-wrapper .ig-dot.active::before {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(49, 5, 42, 0.2);
+}
+.ig-hotspot-wrapper .ig-dot.active::after {
+    animation: none;
+    border: none;
+}
+.ig-hotspot-wrapper .ig-dot:focus-visible::before {
+    border-color: var(--accent-color, #77206d);
+}
+@keyframes ig-hotspot-pulse {
+    0% { transform: scale(0.85); opacity: 1; }
+    100% { transform: scale(1.55); opacity: 0; }
+}
+@media (max-width: 575.98px) {
+    .ig-hotspot-card {
+        padding: 1.25rem;
+    }
+    .ig-hotspot-wrapper .ig-dot {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* ============================================================
+   Aula 2.2 – Flip cards "Erros comuns" (.flip-erros-*)
+   Movido de dentro do HTML (aula2.2.html) para cá, conforme
+   padrão do site: toda a estilização vive em style.css.
+   Efeito de flip 3D 100% CSS via input[type=checkbox] + label,
+   sem necessidade de JavaScript.
+   ============================================================ */
+.flip-erros-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+@media (max-width: 767.98px) { .flip-erros-grid { grid-template-columns: 1fr; } }
+.flip-erros-card { position: relative; perspective: 1500px; height: 300px; }
+.flip-erros-checkbox { position: absolute; opacity: 0; pointer-events: none; }
+/* Antes, o próprio <label class="flip-erros-inner"> continha os <div>/<h4>/<p> do
+   card e ainda carregava aria-label -- inválido em HTML (label associado a um
+   controle só pode conter conteúdo de fraseado, e nenhum aria-* de nome/estado
+   pode ser colocado nele, isso inclui aria-label E aria-hidden). Agora o <label>
+   vira só uma "área de clique" que cobre o card inteiro (.flip-erros-hitbox),
+   com seu texto acessível dentro dele mesmo via <span class="visually-hidden">
+   (conteúdo de fraseado, permitido dentro de label), e o visual (.flip-erros-inner,
+   com os rostos do flip) passa a ser uma <div> normal, irmã do checkbox -- o
+   seletor "~" abaixo continua funcionando do mesmo jeito. */
+.flip-erros-hitbox { position: absolute; inset: 0; z-index: 3; margin: 0; cursor: pointer; }
+.flip-erros-inner { position: relative; display: block; width: 100%; height: 100%; cursor: pointer; transition: transform .6s; transform-style: preserve-3d; border-radius: 1.25rem; box-shadow: 0 6px 24px -10px rgba(49, 5, 42, .25); }
+.flip-erros-checkbox:checked ~ .flip-erros-inner { transform: rotateY(180deg); }
+.flip-erros-checkbox:focus-visible ~ .flip-erros-inner { outline: 3px solid var(--accent-color, #77206d); outline-offset: 3px; }
+.flip-erros-face { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 1.25rem; display: flex; align-items: center; justify-content: center; padding: 2rem; text-align: center; }
+.flip-erros-front { background: linear-gradient(rgba(255,255,255,.72), rgba(255,255,255,.72)), url('imgs/13.jpg') center/cover; }
+.flip-erros-badge { width: 60px; height: 60px; border-radius: 50%; background: var(--accent-color, #77206d); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; font-weight: bold; margin: 0 auto 1rem; }
+.flip-erros-hint { font-size: .85rem; color: #6d6270; margin-top: .75rem; }
+.flip-erros-back { background: var(--accent-color, #77206d); color: #fff; transform: rotateY(180deg); }
+.flip-erros-back p { font-size: 1.05rem; line-height: 1.55; margin: 0; }
+
+/* ============================================================
+   Aula 2.3 – Interruptor "Fixos ⇄ Fluxos" (.aula-toggle-*)
+   Alterna entre os dois conceitos 100% via CSS, usando um par
+   de input[type=radio] ocultos + labels estilizados como botões
+   (mesmo princípio dos .flip-erros-* acima: sem JavaScript).
+   A área visual troca de um grid estático (fixos) para pontos
+   animados percorrendo uma linha tracejada (fluxos), reforçando
+   o conceito de cada estado.
+   ============================================================ */
+.aula-toggle-card {
+    position: relative;
+    background: #fff;
+    border-radius: var(--radius-lg, 16px);
+    box-shadow: 0 6px 24px -10px rgba(49, 5, 42, .25);
+    padding: 2.5rem 2rem;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.aula-toggle-radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.aula-toggle-switch {
+    display: inline-flex;
+    background: var(--bg-content, #f3edf3);
+    border-radius: 999px;
+    padding: 4px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.aula-toggle-btn {
+    border: none;
+    background: transparent;
+    padding: .6rem 1.6rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    color: var(--text-muted, #6d6270);
+    transition: color .3s ease;
+    min-width: 130px;
+    display: inline-block;
+    user-select: none;
+}
+.aula-toggle-indicator {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc(50% - 4px);
+    height: calc(100% - 8px);
+    background: var(--accent-color, #77206d);
+    border-radius: 999px;
+    transition: transform .35s cubic-bezier(.65,0,.35,1);
+    z-index: 1;
+}
+.aula-toggle-radio-fixos:checked ~ .aula-toggle-switch .aula-toggle-btn-fixos,
+.aula-toggle-radio-fluxos:checked ~ .aula-toggle-switch .aula-toggle-btn-fluxos {
+    color: #fff;
+}
+.aula-toggle-radio-fluxos:checked ~ .aula-toggle-switch .aula-toggle-indicator {
+    transform: translateX(100%);
+}
+.aula-toggle-radio:focus-visible ~ .aula-toggle-switch {
+    outline: 3px solid var(--accent-color, #77206d);
+    outline-offset: 3px;
+}
+
+.aula-toggle-visual {
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+.aula-toggle-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+}
+.aula-toggle-grid span {
+    width: 16px;
+    height: 16px;
+    background: var(--accent-color, #77206d);
+    border-radius: 3px;
+    opacity: .85;
+}
+.aula-toggle-flow {
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+    height: 70px;
+    display: none;
+}
+.aula-toggle-flow-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, var(--accent-color, #77206d) 0 8px, transparent 8px 16px);
+    opacity: .35;
+    transform: translateY(-50%);
+}
+.aula-toggle-dot {
+    position: absolute;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent-color, #77206d);
+    transform: translateY(-50%);
+    animation: aula-toggle-move 2.4s linear infinite;
+}
+.aula-toggle-dot:nth-child(2) { animation-delay: -0.8s; }
+.aula-toggle-dot:nth-child(3) { animation-delay: -1.6s; }
+@keyframes aula-toggle-move {
+    0% { left: 0; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { left: calc(100% - 14px); opacity: 0; }
+}
+.aula-toggle-radio-fluxos:checked ~ .aula-toggle-visual .aula-toggle-grid { display: none; }
+.aula-toggle-radio-fluxos:checked ~ .aula-toggle-visual .aula-toggle-flow { display: block; }
+
+.aula-toggle-panel { display: none; }
+.aula-toggle-radio-fixos:checked ~ .aula-toggle-panel-fixos { display: block; }
+.aula-toggle-radio-fluxos:checked ~ .aula-toggle-panel-fluxos { display: block; }
+
+.aula-toggle-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(119, 32, 109, .1);
+    color: var(--accent-color, #77206d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+}
+.aula-toggle-title {
+    color: var(--accent-color, #77206d);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: .75rem;
+}
+.aula-toggle-desc {
+    /* Tipografia herdada de .lead.text-muted (mesma classe usada nos
+       parágrafos normais da aula) -- não sobrescrever cor/tamanho aqui. */
+    margin: 0;
+    text-align: left;
+}
+@media (max-width: 575.98px) {
+    .aula-toggle-card { padding: 1.75rem 1.25rem; }
+    .aula-toggle-btn { min-width: 100px; padding: .55rem 1rem; font-size: .95rem; }
+}
+
+
+/* ============================================================
+   Aula 2.4 – "Machine Learning / Deep Learning" (.aula-venn-*)
+   Dois círculos aninhados (DL dentro de ML) para reforçar
+   visualmente que Deep Learning é um subtipo de Machine Learning.
+   100% CSS via input[type=radio] + label (mesmo princípio dos
+   componentes das aulas 2.2 e 2.3), sem necessidade de JavaScript.
+   ============================================================ */
+.aula-venn-card {
+    position: relative;
+    background: #fff;
+    border-radius: var(--radius-lg, 16px);
+    box-shadow: 0 6px 24px -10px rgba(49, 5, 42, .25);
+    padding: 2.5rem 2rem;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.aula-venn-radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.aula-venn-stage {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 2rem;
+}
+.aula-venn-circle {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+    transition: transform .25s ease, box-shadow .25s ease;
+    padding: 1rem;
+}
+.aula-venn-outer {
+    width: 300px;
+    height: 300px;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at 50% 30%, var(--accent-light, #9c3f8e), var(--accent-color, #77206d) 70%);
+    z-index: 1;
+    align-items: flex-start;
+    padding-top: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.15;
+}
+.aula-venn-inner {
+    width: 130px;
+    height: 130px;
+    top: 112px;
+    left: 85px;
+    background: var(--primary-deep, #1f0219);
+    z-index: 2;
+    font-size: 1rem;
+    box-shadow: 0 0 0 6px #fff;
+}
+.aula-venn-circle:hover,
+.aula-venn-circle:focus-visible {
+    transform: scale(1.035);
+}
+.aula-venn-radio-ml:checked ~ .aula-venn-stage .aula-venn-outer {
+    box-shadow: 0 0 0 4px var(--accent-color, #77206d), 0 10px 24px -8px rgba(49, 5, 42, .4);
+}
+.aula-venn-radio-dl:checked ~ .aula-venn-stage .aula-venn-inner {
+    box-shadow: 0 0 0 4px #fff, 0 0 0 8px var(--primary-deep, #1f0219);
+}
+.aula-venn-radio:focus-visible ~ .aula-venn-stage {
+    outline: 3px solid var(--accent-color, #77206d);
+    outline-offset: 4px;
+    border-radius: 50%;
+}
+
+.aula-venn-panel {
+    display: none;
+    text-align: left;
+    background: var(--bg-content, #f3edf3);
+    border-radius: 1rem;
+    padding: 1.5rem 1.75rem;
+    min-height: 130px;
+}
+.aula-venn-radio-ml:checked ~ .aula-venn-panel-ml,
+.aula-venn-radio-dl:checked ~ .aula-venn-panel-dl {
+    display: block;
+}
+.aula-venn-panel-header {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: .6rem;
+}
+.aula-venn-panel-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(119, 32, 109, .12);
+    color: var(--accent-color, #77206d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex: 0 0 auto;
+}
+.aula-venn-panel-icon-dl {
+    background: rgba(31, 2, 25, .1);
+    color: var(--primary-deep, #1f0219);
+}
+.aula-venn-panel-title {
+    margin: 0;
+    font-weight: 700;
+    color: var(--accent-color, #77206d);
+    font-size: 1.1rem;
+}
+.aula-venn-panel-dl .aula-venn-panel-title {
+    color: var(--primary-deep, #1f0219);
+}
+.aula-venn-panel-desc {
+    /* Tipografia herdada de .text-muted (mesma classe usada nas legendas
+       normais da aula) -- não sobrescrever cor/tamanho aqui. */
+    margin: 0;
+}
+.aula-venn-hint {
+    font-size: .85rem;
+    color: var(--text-muted, #6d6270);
+    margin-top: 1rem;
+}
+@media (max-width: 575.98px) {
+    .aula-venn-card { padding: 1.75rem 1.25rem; }
+    .aula-venn-stage { width: 230px; height: 230px; }
+    .aula-venn-outer { width: 230px; height: 230px; font-size: .95rem; padding-top: 1.2rem; }
+    .aula-venn-inner { width: 100px; height: 100px; top: 86px; left: 65px; font-size: .85rem; }
+}
+
+/* ============================================================
+   Aula 2.4 – Caso ético RSE (.aula-story-*)
+   Substitui o carrossel de 3 slides por uma linha do tempo
+   clicável: o leitor avança passo a passo pela história (dados
+   coletados -> proposta da startup -> decisão do hospital),
+   no mesmo princípio 100% CSS dos demais componentes acima.
+   ============================================================ */
+.aula-story-card {
+    position: relative;
+    background: #fff;
+    border-radius: var(--radius-lg, 16px);
+    box-shadow: 0 6px 24px -10px rgba(49, 5, 42, .25);
+    padding: 2.5rem 2rem;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+.aula-story-radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.aula-story-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin-bottom: 2rem;
+}
+.aula-story-node {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-content, #f3edf3);
+    color: var(--text-muted, #6d6270);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    cursor: pointer;
+    flex: 0 0 auto;
+    transition: background-color .25s ease, color .25s ease;
+}
+.aula-story-line {
+    width: 48px;
+    height: 3px;
+    background: var(--bg-content, #f3edf3);
+    transition: background-color .25s ease;
+}
+.aula-story-radio-1:checked ~ .aula-story-track .aula-story-node-1,
+.aula-story-radio-2:checked ~ .aula-story-track .aula-story-node-2,
+.aula-story-radio-3:checked ~ .aula-story-track .aula-story-node-3 {
+    background: var(--accent-color, #77206d);
+    color: #fff;
+}
+.aula-story-radio-2:checked ~ .aula-story-track .aula-story-node-1,
+.aula-story-radio-3:checked ~ .aula-story-track .aula-story-node-1,
+.aula-story-radio-3:checked ~ .aula-story-track .aula-story-node-2 {
+    background: var(--accent-light, #9c3f8e);
+    color: #fff;
+}
+.aula-story-radio-2:checked ~ .aula-story-track .aula-story-line-a,
+.aula-story-radio-3:checked ~ .aula-story-track .aula-story-line-a,
+.aula-story-radio-3:checked ~ .aula-story-track .aula-story-line-b {
+    background: var(--accent-light, #9c3f8e);
+}
+.aula-story-radio:focus-visible ~ .aula-story-track {
+    outline: 3px solid var(--accent-color, #77206d);
+    outline-offset: 4px;
+    border-radius: 999px;
+}
+
+.aula-story-panel { display: none; }
+.aula-story-radio-1:checked ~ .aula-story-panel-1,
+.aula-story-radio-2:checked ~ .aula-story-panel-2,
+.aula-story-radio-3:checked ~ .aula-story-panel-3 {
+    display: block;
+}
+.aula-story-media {
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    height: 280px;
+}
+.aula-story-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.aula-story-text {
+    /* Tipografia herdada de .lead.text-muted (mesma classe usada nas
+       legendas normais da aula) -- não sobrescrever cor/tamanho aqui. */
+    text-align: left;
+    margin: 0 0 1.75rem;
+}
+.aula-story-nav {
+    display: flex;
+    justify-content: center;
+}
+.aula-story-nav-split {
+    justify-content: space-between;
+}
+.aula-story-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .6rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .2s ease, color .2s ease;
+}
+.aula-story-btn-next {
+    background: var(--accent-color, #77206d);
+    color: #fff;
+}
+.aula-story-btn-next:hover,
+.aula-story-btn-next:focus-visible {
+    background: var(--primary-deep, #1f0219);
+}
+.aula-story-btn-prev {
+    background: var(--bg-content, #f3edf3);
+    color: var(--text-muted, #6d6270);
+}
+.aula-story-btn-prev:hover,
+.aula-story-btn-prev:focus-visible {
+    background: #e6dde6;
+}
+@media (max-width: 575.98px) {
+    .aula-story-card { padding: 1.75rem 1.25rem; }
+    .aula-story-media { height: 180px; }
+    .aula-story-node { width: 34px; height: 34px; font-size: .9rem; }
+    .aula-story-line { width: 28px; }
+    .aula-story-nav,
+    .aula-story-nav-split {
+        flex-direction: column;
+        align-items: stretch;
+        gap: .75rem;
+    }
+    .aula-story-btn {
+        width: 100%;
+        justify-content: center;
+        padding: .65rem 1rem;
+        font-size: .95rem;
+        white-space: nowrap;
+    }
+}

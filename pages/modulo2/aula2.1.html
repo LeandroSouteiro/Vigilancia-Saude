@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Vigilância em Saúde em tempos de transformação digital</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- CSS do seu tema -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Required meta tags -->
+    <meta name="robots" content="noindex" />
+    <meta name="author" content="Fiocruz, Campus Virtual" />
+    <meta name="description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="keywords" content="Fiocruz, Curso, Vigilância em Saúde, transformação digital, SUS" />
+
+    <!-- Facebook Open Graph -->
+    <meta property="og:url" content="https://mooc.campusvirtual.fiocruz.br/rea/introducao-analise-dados-sus" />
+    <meta property="og:title"
+        content="Campus Virtual Fiocruz | Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta property="og:description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title"
+        content="Campus Virtual Fiocruz | Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="twitter:image:src" content="" />
+
+    <!-- Favicons and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../media/icons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../../media/icons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../../media/icons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../../media/icons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../../media/icons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../../media/icons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../../media/icons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../../media/icons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="../../media/icons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../../media/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../media/icons/favicon-16x16.png" />
+    <link rel="manifest" href="../../media/icons/manifest.json" />
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="media/icons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#420b3c" />
+
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Barra de Progresso Superior -->
+    <div class="scroll-progress-top" id="scrollProgress"></div>
+
+    <script src="js/aula2.1-config.js"></script>
+    <!-- ================= CABEÇALHO (carregado de partials/header.html) ================= -->
+    <div id="site-header"></div>
+
+    <div class="page-wrapper" id="pageWrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <div id="site-sidebar"></div>
+
+        <!-- Lingueta (Botão) redesenhada: MOVIDA PARA FORA DO ASIDE PARA NÃO SUMIR -->
+        <button class="sidebar-tab" id="btnToggleSidebar" aria-label="Alternar menu" aria-expanded="true"
+            aria-controls="sidebarAula">
+            <i data-lucide="chevron-left" id="toggleIcon" aria-hidden="true"></i>
+        </button>
+
+        <!-- ================= CONTEÚDO ================= -->
+        <main class="content-aula" id="main-content">
+            <div class="main-content-inner">
+
+                <!-- Selo de navegação: flutua por cima do conteúdo -->
+                <nav aria-label="breadcrumb" class="aula-breadcrumb-pill">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../../index.html" class="text-decoration-none">Início</a></li>
+                        <li class="breadcrumb-item"><a href="aula2.1.html" class="text-decoration-none">Módulo 2</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Aula 1</li>
+                    </ol>
+                </nav>
+
+                <!-- Hero com imagem de fundo temática -->
+                <header class="aula-hero">
+                    <h1>Sistemas de Informação da Vigilância em Saúde</h1>
+                </header>
+
+                <div class="main-content-body">
+                    <div class="aula-pages-wrapper" id="aulaPagesWrapper">
+
+                        <section class="aula-page active" data-page="1">
+                            <article class="aula-body">
+                                <h2 class="fw-bold mb-4 text-primary mt-2"><i class="bi bi-bookmark-check-fill"></i>
+                                    Apresentação do módulo</h2>
+                                <hr>
+                                <p class="lead text-muted">Neste módulo, você conhecerá as principais fontes de dados
+                                    utilizadas pela Vigilância em Saúde e compreenderá como essas informações são
+                                    produzidas, organizadas e integradas para subsidiar o planejamento, o monitoramento
+                                    e a tomada de decisão no Sistema Único de Saúde (SUS). Também serão discutidos os
+                                    desafios relacionados à qualidade da informação, à ética no uso dos dados e às
+                                    oportunidades proporcionadas pela transformação digital para fortalecer as ações de
+                                    vigilância e promover uma gestão baseada em evidências.</p>
+
+                                <h3 class="fw-bold mt-5 mb-4 text-primary"><i class="bi bi-bullseye"></i> Objetivos do
+                                    módulo
+                                </h3>
+                                <hr>
+                                <p class="lead text-muted">Ao final deste módulo, esperamos que você seja capaz de:</p>
+
+                                <ul class="ms-5 lead text-muted">
+                                    <li class="my-3 mt-4">Conhecer os Sistemas de Informação em Saúde. </li>
+                                    <li class="my-3">Identificar as fontes de dados de interesse da Vigilância em Saúde.
+                                    </li>
+                                    <li class="my-3">Reconhecer a importância da Ética e Bioética para as ações em
+                                        Vigilância em Saúde no contexto da transformação digital.</li>
+                                </ul>
+
+                                <div class="text-center mt-5">
+                                    <a href="#" class="btn bg-primary rounded-pill px-4 text-white" id="aulaPagStart">Iniciar
+                                        Aula 1</a>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section class="aula-page" data-page="2">
+                            <div class="main-content-body">
+                                <article class="aula-body mb-0">
+
+                                    <h3 class="fw-bold mb-4 text-primary"><i class="bi bi-book-half"></i> Sobre esta
+                                        aula
+                                    </h3>
+                                    <hr>
+                                    <p class="lead text-muted">Nesta aula, você irá percorrer o ecossistema de produção
+                                        e gestão de informações em saúde no Brasil, vamos detalhar as principais fontes,
+                                        seu fluxo de produção, seus desafios e seu potencial para a tomada de decisão
+                                        baseada em evidências.</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Objetivos de aprendizagem</h4>
+                                    <p class="lead text-muted">Ao final desta aula, esperamos que você seja capaz de:
+                                    </p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Identificar e descrever as principais fontes de dados em
+                                            saúde pública no Brasil.</li>
+                                        <li class="my-3">Compreender a estrutura hierárquica e descentralizada do
+                                            sistema de informação do SUS.</li>
+                                        <li class="my-3">Analisar criticamente a qualidade dos dados, reconhecendo
+                                            limites como subnotificação e incompletude.</li>
+                                        <li class="my-3">Aplicar os conhecimentos na localização, interpretação e uso de
+                                            bases de dados para pesquisa e gestão em saúde.</li>
+                                    </ul>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Introdução ao Sistema de Informação em
+                                        Saúde no Brasil</h3>
+                                    <p class="lead text-muted">Os Sistemas de Informação em Saúde constituem a base
+                                        fundamental para a vigilância epidemiológica, o planejamento e a gestão do
+                                        Sistema Único de Saúde (SUS). Conhecer suas características, potencialidades e
+                                        limitações é essencial para todo profissional de saúde pública. A qualidade da
+                                        informação depende do comprometimento de todos os atores envolvidos, desde o
+                                        profissional que preenche o primeiro registro até os analistas que produzem
+                                        informação estratégica para a tomada de decisão. Em tempos de transformação
+                                        digital, o desafio é integrar novas tecnologias mantendo os princípios de
+                                        universalidade, equidade e participação social que orientam o SUS. A informação
+                                        em saúde é um bem público que deve estar a serviço da vida e da redução das
+                                        iniquidades.</p>
+                                    <p class="lead text-muted">A produção e gestão de informações em saúde no Brasil
+                                        constituem um ecossistema complexo e fundamental para o planejamento,
+                                        monitoramento e avaliação das políticas públicas de saúde. Este sistema é
+                                        estruturado de forma descentralizada e hierárquica, refletindo a própria
+                                        organização do Sistema Único de Saúde (SUS).</p>
+                                    <p class="lead text-muted">A espinha dorsal desse ecossistema é o Departamento de
+                                        Informática do SUS (DATASUS), órgão do Ministério da Saúde responsável pela
+                                        coordenação, consolidação e disseminação nacional dos dados. No entanto, o
+                                        panorama informacional é ampliado por contribuições essenciais de outras
+                                        instituições, como o Instituto Brasileiro de Geografia e Estatística (IBGE), a
+                                        Agência Nacional de Saúde Suplementar (ANS), a Agência Nacional de Vigilância
+                                        Sanitária (ANVISA) e a Fundação Oswaldo Cruz (Fiocruz).</p>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">O DATASUS e seus Principais Sistemas de
+                                        Informação </h3>
+                                    <p class="lead text-muted">O DATASUS gerencia um conjunto de sistemas nacionais que
+                                        são a principal fonte de dados administrativos e epidemiológicos do país. Cada
+                                        sistema é dedicado a um tipo específico de evento ou atendimento, utilizando
+                                        fichas e variáveis padronizadas em todo o território nacional, o que garante a
+                                        comparabilidade dos dados.</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Sistema de Informações sobre Mortalidade
+                                    </h4>
+                                    <p class="lead text-muted">O Sistema de Informações sobre Mortalidade (SIM) foi
+                                        criado em 1975 pelo Ministério da Saúde (MS), e representa um dos mais antigos e
+                                        consolidados sistemas de informação em saúde do Brasil. Seu objetivo principal é
+                                        captar dados sobre todos os óbitos ocorridos no território nacional e fornecer
+                                        informações sobre mortalidade para todas as esferas de gestão do SUS. O SIM,
+                                        unificou alguns modelos, e criou um documento base: a Declaração de Óbito (DO).
+                                    </p>
+                                    <p class="lead text-muted">A DO é o documento padrão utilizado em todo o país, e é
+                                        emitida gratuitamente pelos estabelecimentos de saúde e secretarias municipais
+                                        de saúde. Trata-se de um formulário de três vias, numerado sequencialmente, que
+                                        deve ser preenchido por um médico ou, em algumas situações específicas, por
+                                        outros profissionais legalmente habilitados. Vamos ver mais algumas informações
+                                        sobre este documento?</p>
+
+                                    <div class="container my-5" data-copy-id="accordion">
+                                        <div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionExemplo">
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h5 class="accordion-header" id="headingExemplo1">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
+                                                        <span class="fs-5 text-primary fw-bold">Estrutura e variáveis principais</span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo1" class="accordion-collapse collapse" role="region" aria-labelledby="headingExemplo1" data-bs-parent="#accordionExemplo">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">A DO contém informações divididas em blocos:</p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Identificação da pessoa falecida: nome, data de nascimento, sexo, raça/cor, estado civil, escolaridade, ocupação habitual e endereço de residência.</li>
+                                                            <li class="my-3">Informações sobre o óbito: data, hora, local da ocorrência (hospital, domicílio, via pública etc.), tipo de óbito (fetal, não fetal). </li>
+                                                            <li class="my-3">Causas da morte:   este é o campo mais crítico do sistema. Segue a metodologia da Classificação Internacional de Doenças (CID-10), onde são registradas as causas que levaram à morte, organizadas em uma cadeia causal. A causa básica (a doença ou condição que iniciou a cadeia de eventos que levou diretamente à morte) é fundamental para as estatísticas de mortalidade.</li>
+                                                            <li class="my-3">Informações complementares: sobre gestação (para mulheres em idade fértil), violência, acidente de trabalho.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h5 class="accordion-header" id="headingExemplo2">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo2" aria-expanded="false" aria-controls="collapseExemplo2">
+                                                        <span class="fs-5 text-primary fw-bold">Fluxo de processamento </span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo2" class="accordion-collapse collapse" role="region" aria-labelledby="headingExemplo2" data-bs-parent="#accordionExemplo">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">Após o preenchimento pelo médico, a DO segue para o cartório de registro civil (para emissão da certidão de óbito) e para a Secretaria Municipal de Saúde (SMS). O município é responsável pela digitação no SIM e pelo envio dos dados à Secretaria Estadual de Saúde (SES), que consolida e encaminha ao DATASUS nacional.</p>
+                                                    </div>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted">Agora, vamos falar sobre aplicações e indicadores desse
+                                        ecossistema de informações. Você sabia que o SIM alimenta o cálculo de diversos
+                                        indicadores essenciais? Veja quais são:</p>
+
+                                    <ul class="ms-5 lead text-muted mb-5">
+                                        <li class="my-3 mt-4">Taxa de mortalidade geral e específica (por idade, sexo,
+                                            causa). </li>
+                                        <li class="my-3">Taxa de mortalidade infantil (menores de 1 ano). </li>
+                                        <li class="my-3">Taxa de mortalidade materna. </li>
+                                        <li class="my-3">Anos Potenciais de Vida Perdidos (APVP).</li>
+                                        <li class="my-3">Perfil de mortalidade por causas externas (acidentes,
+                                            homicídios, suicídios).
+                                    </ul>
+                                   
+
+                                    <div class="mt-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                        <div class="position-relative text-white mt-5 py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                                Esse ecossistema possui alguns desafios específicos: a principal limitação do SIM é a qualidade do preenchimento da causa básica. Em regiões com menor acesso a serviços de saúde, há maior proporção de causas mal definidas (códigos R do CID-10). Outro desafio é a subnotificação em áreas remotas, onde óbitos podem não ser registrados adequadamente.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Sistema de Informações sobre Nascidos
+                                        Vivos (SINASC)</h4>
+
+                                    <div class="my-4">
+                                        <div class="row align-items-center">
+                                            <div class="col-lg-6">                                    
+                                                <p class="lead text-muted">
+                                                   Implantado oficialmente em 1990, o SINASC revolucionou a obtenção de dados sobre nascimentos no Brasil, substituindo informações indiretas provenientes de censos demográficos e proporcionando dados em tempo quase real. 
+                                                </p>
+                                                
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="position-relative overflow-hidden rounded-3 shadow">
+                                                    <img src="imgs/03.jpg" class="img-fluid w-100 object-fit-cover"
+                                                        alt="Bebê recém-nascido dormindo pacificamente com roupa de tricô azul-claro sobre fundo branco." title="Magnific.com">                                       
+                                                </div>
+                                                <p class="text-center small text-muted mt-2 mb-0">Fonte: Magnific.com</p>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted">
+                                        Atualmente, o documento base para obter essas informações é a Declaração de Nascido Vivo (DNV), um formulário pré-numerado, distribuído gratuitamente pelo MS. O DNV é o documento oficial, padronizado nacionalmente, que deve ser preenchido para todo nascimento ocorrido no território brasileiro, seja em estabelecimento de saúde ou em domicílio. Vamos ver mais algumas informações sobre este documento? 
+                                    </p>
+                                    
+                                    <div class="container my-5" data-copy-id="accordion">
+                                        <div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionExemplo2">
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h5 class="accordion-header" id="headingExemplo2-3">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo2-3"
+                                                        aria-expanded="false" aria-controls="collapseExemplo2-3">
+                                                        <span class="fs-5 text-primary fw-bold">Estrutura e variáveis principais </span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo2-3" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo2-3" data-bs-parent="#accordionExemplo2">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">A DNV contém um conjunto rico de informações organizadas em blocos:</p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Dados do recém-nascido: data e hora do nascimento, sexo, peso ao nascer, estatura, perímetro cefálico, Apgar no 1º e 5º minuto, presença de anomalias congênitas, tipo de parto (vaginal ou cesáreo). </li>
+                                                            <li class="my-3">Dados da mãe: nome, idade, escolaridade, raça/cor, estado civil, ocupação, número de filhos vivos e mortos, endereço de residência. </li>
+                                                            <li class="my-3">Dados da gestação e parto: duração da gestação (em semanas), número de consultas pré-natal, local do parto, tipo de gravidez (única, dupla etc.).</li>
+                                                            <li class="my-3">Dados do estabelecimento e profissional: onde ocorreu o parto, nome do responsável pelo parto.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h5 class="accordion-header" id="headingExemplo2-4">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo2-4"
+                                                        aria-expanded="false" aria-controls="collapseExemplo2-4">
+                                                        <span class="fs-5 text-primary fw-bold">Fluxo de processamento</span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo2-4" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo2-4" data-bs-parent="#accordionExemplo2">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">Em geral, o hospital ou maternidade preenche a DNV. Uma via fica com a família para registro em cartório (obtenção da certidão de nascimento), e outra via é encaminhada à SMS para digitação no sistema. Os dados seguem o seguinte fluxo:</p>
+                                                        <img src="imgs/04.png" alt="Fluxograma das esferas governamentais brasileiras: Municipal, Estadual e Federal, conectados por setas da esquerda para a direita." title="Gerada por IA (Gemini)" class="img-fluid rounded mt-3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+
+                                    <p class="lead text-muted">Agora, vamos falar sobre aplicações e indicadores? O
+                                        SINASC é fonte primária para:</p>
+
+                                    <ul class="ms-5 lead text-muted mb-5">
+                                        <li class="my-3 mt-4">Taxa de natalidade. </li>
+                                        <li class="my-3">Proporção de nascidos vivos de baixo peso ao nascer (&lt;
+                                            2.500g).</li>
+                                        <li class="my-3">Proporção de nascidos vivos prematuros. </li>
+                                        <li class="my-3">Cobertura de consultas pré-natal. </li>
+                                        <li class="my-3">Taxa de cesárea. </li>
+                                        <li class="my-3">Perfil demográfico das mães (idade, escolaridade). </li>
+                                        <li class="my-3">Identificação de áreas de risco para saúde materno-infantil.
+                                        </li>
+                                    </ul>
+
+                                    <div class="mt-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                        <div class=" position-relative text-white mt-5 py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                                A qualidade dos dados do SINASC vem melhorando consistentemente, mas ainda existem desafios. Campos como raça/cor e escolaridade da mãe podem apresentar incompletude. A subnotificação é menor do que no SIM, mas ainda ocorre em partos domiciliares em áreas rurais remotas. 
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Sistema de Informação de Agravos de
+                                        Notificação </h4>
+                                    <p class="lead text-muted">O Sistema de Informação de Agravos de Notificação (SINAN)
+                                        é o principal instrumento de coleta e processamento dos dados sobre doenças e
+                                        agravos de notificação compulsória no Brasil. Foi desenvolvido no início dos
+                                        anos 1990 e tem papel central na vigilância epidemiológica. Veja a seguir mais
+                                        algumas informações importantes sobre esse sistema.</p>
+
+                                    <div class="container my-5" data-copy-id="accordion">
+                                        <div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionExemplo3">
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h5 class="accordion-header" id="headingExemplo3-1">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo3-1"
+                                                        aria-expanded="false" aria-controls="collapseExemplo3-1">
+                                                        <span class="fs-5 text-primary fw-bold">Base legal</span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo3-1" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo3-1" data-bs-parent="#accordionExemplo3">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">A notificação compulsória é uma obrigação legal estabelecida pela Portaria de Consolidação nº 4/2017 do MS e legislações complementares. Todo profissional de saúde e estabelecimentos de saúde (públicos e privados) são obrigados a notificar os casos suspeitos ou confirmados das doenças listadas.</p>                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h5 class="accordion-header" id="headingExemplo3-2">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo3-2"
+                                                        aria-expanded="false" aria-controls="collapseExemplo3-2">
+                                                        <span class="fs-5 text-primary fw-bold">Lista de doenças e agravos de notificação compulsória </span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo3-2" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo3-2" data-bs-parent="#accordionExemplo3">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">O SINAN monitora mais de 50 doenças e agravos, incluindo: </p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Doenças transmissíveis: dengue, chikungunya, zika, febre amarela, tuberculose, hanseníase, HIV/AIDS, hepatites virais, meningites, sarampo, coqueluche, difteria, raiva humana, leptospirose, malária, leishmanioses. </li>
+                                                            <li class="my-3">Doenças imunopreveníveis: varicela em surtos, rubéola, tétano. </li>
+                                                            <li class="my-3">Agravos relacionados ao trabalho: acidentes de trabalho graves e com material biológico, intoxicações exógenas. </li>
+                                                            <li class="my-3">Violências e acidentes: violência doméstica/sexual, tentativa de suicídio, acidentes por animais peçonhentos.</li>
+                                                            <li class="my-3">Outros agravos: câncer relacionado ao trabalho, febre maculosa, botulismo. </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h5 class="accordion-header" id="headingExemplo3-3">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo3-3"
+                                                        aria-expanded="false" aria-controls="collapseExemplo3-3">
+                                                        <span class="fs-5 text-primary fw-bold">Fichas de notificação e investigação </span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo3-3" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo3-3" data-bs-parent="#accordionExemplo3">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">O SINAN trabalha com dois tipos de formulários:</p>
+                                                        <ol class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Ficha de Notificação Individual (FNI): preenchida quando há suspeita da doença. Contém dados básicos do paciente, sinais e sintomas, dados laboratoriais iniciais. </li>
+                                                            <li class="my-3">Ficha de Investigação: específica para cada doença/agravo. É preenchida após investigação epidemiológica mais detalhada. Contém informações sobre histórico de exposição, evolução clínica, resultados laboratoriais conclusivos, condições ambientais, medidas de controle adotadas. </li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0">
+                                                <h5 class="accordion-header" id="headingExemplo3-4">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo3-4"
+                                                        aria-expanded="false" aria-controls="collapseExemplo3-4">
+                                                        <span class="fs-5 text-primary fw-bold">Fluxo de notificação</span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo3-4" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo3-4" data-bs-parent="#accordionExemplo3">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">A notificação se inicia no serviço de saúde que identificou o caso (hospital, UBS, laboratório). A ficha é enviada à vigilância epidemiológica municipal, que tem até 24 horas para notificar doenças de notificação imediata (como febre amarela, sarampo, meningite meningocócica). Para outras doenças, o prazo é semanal. A vigilância municipal investiga o caso, preenche a ficha de investigação e alimenta o sistema. Os dados seguem para o nível estadual e federal.</p>                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted">Agora, vamos falar sobre aplicações e indicadores? O
+                                        SINAN permite:</p>
+
+                                    <ul class="ms-5 lead text-muted mb-5">
+                                        <li class="my-3 mt-4">Monitoramento em tempo real de surtos e epidemias. </li>
+                                        <li class="my-3">Cálculo de taxas de incidência e prevalência de doenças. </li>
+                                        <li class="my-3">Identificação de áreas de risco e grupos vulneráveis. </li>
+                                        <li class="my-3">Avaliação da efetividade de medidas de controle e programas de
+                                            saúde. </li>
+                                        <li class="my-3">Orientação da investigação epidemiológica de campo. </li>
+                                        <li class="my-3">Suporte à decisão para alocação de recursos. </li>
+                                    </ul>
+
+                                    <div class="mt-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                        <div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                                A subnotificação é um problema significativo no SINAN, especialmente para doenças menos graves ou em locais com difícil acesso aos serviços. A qualidade do preenchimento é variável, com campos importantes frequentemente incompletos. A duplicidade de registros pode ocorrer quando o mesmo caso é notificado por diferentes serviços. 
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Sistema de Informações Hospitalares do
+                                        SUS</h4>
+                                    <p class="lead text-muted">Criado em 1991, o Sistema de Informações Hospitalares do
+                                        SUS (SIH/SUS) registra todas as internações hospitalares financiadas pelo SUS em
+                                        estabelecimentos públicos e privados conveniados. Embora tenha origem
+                                        administrativa (para pagamento de procedimentos), tornou-se uma importante fonte
+                                        de dados epidemiológicos.</p>
+                                    <p class="lead text-muted">O documento base do SIH/SUS é a Autorização de Internação
+                                        Hospitalar (AIH), este é o documento que autoriza a internação e o pagamento ao
+                                        hospital. Cada AIH corresponde a uma internação e contém um conjunto padronizado
+                                        de informações. Vamos ver mais algumas informações sobre este documento?</p>
+
+                                    <div class="container my-5" data-copy-id="accordion">
+                                        <div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionExemplo4">
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h5 class="accordion-header" id="headingExemplo4-1">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo4-1"
+                                                        aria-expanded="false" aria-controls="collapseExemplo4-1">
+                                                        <span class="fs-5 text-primary fw-bold">Estrutura e variáveis principais </span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo4-1" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo4-1" data-bs-parent="#accordionExemplo4">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">A AIH registra: </p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Dados do paciente: nome, data de nascimento, sexo, município de residência, raça/cor. </li>
+                                                            <li class="my-3">Dados da internação: data de entrada e saída, dias de permanência, motivo da saída (alta, transferência, óbito), caráter da internação (eletiva, urgência/emergência).</li>
+                                                            <li class="my-3">Dados clínicos: diagnóstico principal (codificado pela CID-10), diagnóstico secundário, procedimentos realizados (codificados pela Tabela de Procedimentos do SUS).</li>
+                                                            <li class="my-3">Dados do estabelecimento: CNES do hospital, município de localização.</li>
+                                                            <li class="my-3">Dados financeiros:   valor total da internação, valor de serviços profissionais, diárias, exames. </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0">
+                                                <h5 class="accordion-header" id="headingExemplo4-2">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo4-2"
+                                                        aria-expanded="false" aria-controls="collapseExemplo4-2">
+                                                        <span class="fs-5 text-primary fw-bold">Fluxo de Processamento </span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo4-2" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo4-2" data-bs-parent="#accordionExemplo4">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">O hospital preenche a AIH no momento da internação e envia mensalmente um arquivo eletrônico com todas as internações para a SES. O estado processa, critica e encaminha os dados ao DATASUS, que efetua o pagamento e disponibiliza os dados para consulta. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted">Agora, vamos falar sobre aplicações e indicadores? O
+                                        SIH/SUS permite calcular:</p>
+
+                                    <ul class="ms-5 lead text-muted mb-5">
+                                        <li class="my-3 mt-4">Taxa de internação hospitalar. </li>
+                                        <li class="my-3">Tempo médio de permanência. </li>
+                                        <li class="my-3">Taxa de mortalidade hospitalar.</li>
+                                        <li class="my-3">Perfil de morbidade hospitalar (principais causas de
+                                            internação). </li>
+                                        <li class="my-3">Custos com internações. </li>
+                                        <li class="my-3">Identificação de procedimentos de alto custo. </li>
+                                        <li class="my-3">Distribuição geográfica da oferta de leitos. </li>
+                                    </ul>
+
+                                    <div class="mt-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                        <div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                                O SIH/SUS   não   cobre internações pagas por planos de saúde privados, convênios empresariais ou particulares. Portanto, os dados são representativos apenas da população usuária do SUS. Além disso, há incentivo econômico para codificação de procedimentos mais complexos (<em>upcoding</em>), o que pode distorcer o perfil de morbidade. 
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Sistema de Informações Ambulatoriais do
+                                        SUS </h4>
+                                    <p class="lead text-muted">O Sistema de Informações Ambulatoriais do SUS (SIA/SUS)
+                                        foi implantado em 1994. Ele registra todos os atendimentos ambulatoriais
+                                        realizados no SUS, desde consultas básicas em Unidades de Saúde da Família até
+                                        procedimentos de alta complexidade. </p>
+                                    <p class="lead text-muted">O documento base do SIA/SUS é o Boletim de Produção
+                                        Ambulatorial (BPA), o principal instrumento de registro desse sistema. Cada
+                                        procedimento realizado é codificado de acordo com a Tabela de Procedimentos do
+                                        SUS e registrado no BPA do estabelecimento. </p>
+                                    <p class="lead text-muted">Agora, vamos ver mais algumas informações sobre o SIA?
+                                    </p>
+
+                                    <div class="my-5 container" data-copy-id="accordion">
+                                        <div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionExemplo5">
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h5 class="accordion-header" id="headingExemplo5-1">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo5-1"
+                                                        aria-expanded="false" aria-controls="collapseExemplo5-1">
+                                                        <span class="fs-5 text-primary fw-bold">Estrutura e variáveis principais </span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo5-1" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo5-1" data-bs-parent="#accordionExemplo5">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">O SIA registra: </p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Quantidade de procedimentos realizados por tipo. </li>
+                                                            <li class="my-3">Município e estabelecimento de saúde onde foram realizados. </li>
+                                                            <li class="my-3">Competência (mês/ano) do atendimento. </li>
+                                                            <li class="my-3">Profissional responsável (em alguns casos). </li>
+                                                            <li class="my-3">Idade e sexo do paciente (informação agregada). </li>
+                                                            <li class="my-3">Valor pago pelo procedimento. </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h5 class="accordion-header" id="headingExemplo5-2">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo5-2"
+                                                        aria-expanded="false" aria-controls="collapseExemplo5-2">
+                                                        <span class="fs-5 text-primary fw-bold">Tipos de atendimento registrados </span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo5-2" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo5-2" data-bs-parent="#accordionExemplo5">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Consultas médicas (clínica geral, especialidades). </li>
+                                                            <li class="my-3">Consultas de enfermagem, nutrição, psicologia. </li>
+                                                            <li class="my-3">Procedimentos diagnósticos (exames laboratoriais, radiológicos). </li>
+                                                            <li class="my-3">Procedimentos terapêuticos (fisioterapia, curativos, pequenas cirurgias ambulatoriais). </li>
+                                                            <li class="my-3">Atendimentos odontológicos. </li>
+                                                            <li class="my-3">Vacinação. </li>
+                                                            <li class="my-3">Dispensação de medicamentos de alto custo. </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0">
+                                                <h5 class="accordion-header" id="headingExemplo5-3">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo5-3"
+                                                        aria-expanded="false" aria-controls="collapseExemplo5-3">
+                                                        <span class="fs-5 text-primary fw-bold">Fluxo de processamento </span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo5-3" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo5-3" data-bs-parent="#accordionExemplo5">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">Os estabelecimentos de saúde consolidam mensalmente seus BPA e enviam à SMS. O município valida, envia ao estado, que processa e envia ao DATASUS para pagamento e disponibilização.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted">Agora, vamos falar sobre aplicações e indicadores? O
+                                        SIA/SUS permite:</p>
+
+                                    <ul class="ms-5 lead text-muted mb-5">
+                                        <li class="my-3 mt-4">Monitorar a produção ambulatorial do SUS. </li>
+                                        <li class="my-3">Calcular a cobertura de ações programáticas (pré-natal,
+                                            hipertensão, diabetes).</li>
+                                        <li class="my-3">Avaliar a capacidade instalada de serviços especializados.
+                                        </li>
+                                        <li class="my-3">Identificar vazios assistenciais. </li>
+                                        <li class="my-3">Estimar custos com atenção ambulatorial. </li>
+                                        <li class="my-3">Avaliar a oferta de procedimentos diagnósticos.</li>
+                                    </ul>
+
+                                    <div class="container-fluid px-0 aula-full-bleed aula-full-bleed--tight mt-5" data-copy-id="banner">
+                                    <div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                        <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+
+                                        <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                            O SIA tem alguns desafios específicos, como por exemplo:
+                                        </p>
+
+                                        <div class="aula-body mt-4">
+                                            <ul class="ms-5 lead text-muted mb-0">
+                                                <li class="my-3 mt-4 text-white fw-bold">Trabalhar com dados agregados, sem identificação individual do paciente na maioria dos procedimentos. Isso limita análises mais detalhadas.</li>
+                                                <li class="my-3 text-white fw-bold">Sub-registro de alguns procedimentos.</li>
+                                                <li class="my-3 text-white fw-bold">Complexidade da Tabela de Procedimentos (com milhares de códigos) dificulta a codificação correta.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Sistema de Vigilância Alimentar e
+                                        Nutricional</h4>
+                                    <p class="lead text-muted">O Sistema de Vigilância Alimentar e Nutricional (SISVAN)
+                                        foi criado em 1990, com o objetivo de realizar o diagnóstico descritivo e
+                                        analítico da situação alimentar e nutricional da população brasileira. É uma
+                                        ferramenta essencial para identificar grupos em risco nutricional. Vamos ver
+                                        mais algumas informações sobre o SISVAN?</p>
+
+                                    <div class="container my-5" data-copy-id="accordion">
+                                        <div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionExemplo6">
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h5 class="accordion-header" id="headingExemplo6-1">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo6-1"
+                                                        aria-expanded="false" aria-controls="collapseExemplo6-1">
+                                                        <span class="fs-5 text-primary fw-bold">Informações coletadas </span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo6-1" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo6-1" data-bs-parent="#accordionExemplo6">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">O SISVAN Web (versão online desde 2008) coleta:</p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Dados antropométricos: peso, altura/comprimento, perímetro cefálico (para crianças menores de 2 anos), circunferência da cintura.</li>
+                                                            <li class="my-3">Marcadores de consumo alimentar: questionário qualitativo sobre consumo de alimentos saudáveis (frutas, verduras, feijão) e não saudáveis (bebidas açucaradas, alimentos ultraprocessados, embutidos).</li>
+                                                            <li class="my-3">Dados do cidadão: idade, sexo, fase da vida (criança, adolescente, adulto, idoso, gestante).</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h5 class="accordion-header" id="headingExemplo6-2">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo6-2"
+                                                        aria-expanded="false" aria-controls="collapseExemplo6-2">
+                                                        <span class="fs-5 text-primary fw-bold">Classificação do estado nutricional </span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo6-2" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo6-2" data-bs-parent="#accordionExemplo6">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">O sistema calcula automaticamente índices antropométricos e classifica o estado nutricional de acordo com as curvas de referência da OMS. As classificações incluem categorias como magreza, eutrofia, sobrepeso, obesidade. Veja os índices calculados por público-alvo:</p>
+                                                        <div class="table-responsive mt-3">
+                                                            <table class="table table-bordered table-striped mb-0">
+                                                                <thead class="table-light">
+                                                                    <tr>
+                                                                        <th scope="col">Público-alvo</th>
+                                                                        <th scope="col">Índices antropométricos</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Crianças (&#60; 10 anos)</td>
+                                                                        <td>Peso/idade, estatura/idade, peso/estatura, Índice de Massa Corporal (IMC)/idade.</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Adolescentes</td>
+                                                                        <td>IMC/idade. </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Adultos</td>
+                                                                        <td>IMC.</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Pessoas idosas</td>
+                                                                        <td>IMC específico para faixa etária. </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Gestantes </td>
+                                                                        <td>IMC por semana gestacional. </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h5 class="accordion-header" id="headingExemplo6-3">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo6-3"
+                                                        aria-expanded="false" aria-controls="collapseExemplo6-3">
+                                                        <span class="fs-5 text-primary fw-bold">Público-alvo prioritário </span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo6-3" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo6-3" data-bs-parent="#accordionExemplo6">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">Embora o sistema seja aberto a toda a população, há foco em grupos vulneráveis atendidos em programas governamentais:</p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Crianças beneficiárias do Programa Bolsa Família.</li>
+                                                            <li class="my-3">Gestantes em acompanhamento pré-natal.</li>
+                                                            <li class="my-3">Crianças em creches públicas.</li>
+                                                            <li class="my-3">Pessoas idosas.</li>
+                                                            <li class="my-3">Indivíduos atendidos na Atenção Primária.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0">
+                                                <h5 class="accordion-header" id="headingExemplo6-4">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo6-4"
+                                                        aria-expanded="false" aria-controls="collapseExemplo6-4">
+                                                        <span class="fs-5 text-primary fw-bold">Fluxo de Coleta </span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo6-4" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo6-4" data-bs-parent="#accordionExemplo6">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">As informações são coletadas e os dados são inseridos diretamente no sistema online. A coleta é realizada principalmente nas Unidades Básicas de Saúde (UBS), durante as consultas de rotina (puericultura, pré-natal, acompanhamento de hipertensão/diabetes). Além disso, os Agentes Comunitários de Saúde (ACSs) também podem realizar medições domiciliares.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>                                    
+
+                                    <p class="lead text-muted">Agora, vamos falar sobre aplicações e indicadores? O
+                                        SISVAN permite:</p>
+
+                                    <ul class="ms-5 lead text-muted mb-5">
+                                        <li class="my-3 mt-4">Monitorar tendências temporais de obesidade e desnutrição.
+                                        </li>
+                                        <li class="my-3">Identificar territórios com alta prevalência de problemas
+                                            nutricionais. </li>
+                                        <li class="my-3">Orientar políticas de segurança alimentar e nutricional. </li>
+                                        <li class="my-3">Avaliar programas de combate à fome e promoção da alimentação
+                                            saudável. </li>
+                                        <li class="my-3">Condicionalidades do Programa Bolsa Família (acompanhamento
+                                            nutricional). </li>
+                                    </ul>
+
+                                    <div class="mt-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                        <div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                               O SISVAN tem alguns desafios específicos, como por exemplo:  
+                                            </p>
+                                            <div class="aula-body mt-4">
+                                                <ul class="ms-5 lead text-muted mb-0">
+                                                    <li class="my-3 mt-4 text-white fw-bold">Cobertura baixa em relação ao total da população.</li>
+                                                    <li class="my-3 text-white fw-bold">Concentração de registros em grupos específicos (beneficiários de programas sociais).</li>
+                                                    <li class="my-3 text-white fw-bold">A qualidade das medidas antropométricas depende de equipamentos calibrados e técnica adequada dos profissionais.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Cadastro Nacional de Estabelecimentos de
+                                        Saúde </h4>
+                                    <p class="lead text-muted">O Cadastro Nacional de Estabelecimentos de Saúde (CNES),
+                                        implantado em 2000, é o cadastro oficial de todos os estabelecimentos de saúde
+                                        do país, sejam públicos, privados ou filantrópicos. É um sistema cadastral
+                                        fundamental para o conhecimento da capacidade instalada da rede de saúde. Vamos
+                                        conhecer melhor o CNES?</p>
+
+                                    <div class="container my-5" data-copy-id="accordion">
+                                        <div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionExemplo7">
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h5 class="accordion-header" id="headingExemplo7-1">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo7-1"
+                                                        aria-expanded="false" aria-controls="collapseExemplo7-1">
+                                                        <span class="fs-5 text-primary fw-bold">O que é cadastrado?  </span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo7-1" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo7-1" data-bs-parent="#accordionExemplo7">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">Todos os estabelecimentos que realizam ações e serviços de saúde devem estar cadastrados no CNES:</p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Hospitais gerais e especializados. </li>
+                                                            <li class="my-3">UBSs. </li>
+                                                            <li class="my-3">Unidades de Pronto Atendimento (UPA). </li>
+                                                            <li class="my-3">Policlínicas. </li>
+                                                            <li class="my-3">Laboratórios de análises clínicas. </li>
+                                                            <li class="my-3">Serviços de diagnóstico por imagem. </li>
+                                                            <li class="my-3">Consultórios isolados. </li>
+                                                            <li class="my-3">Clínicas especializadas. </li>
+                                                            <li class="my-3">Unidades de apoio (centrais de ambulâncias, bancos de sangue). </li>
+                                                            <li class="my-3">Estabelecimentos de ensino e pesquisa em saúde. </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0">
+                                                <h5 class="accordion-header" id="headingExemplo7-2">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo7-2"
+                                                        aria-expanded="false" aria-controls="collapseExemplo7-2">
+                                                        <span class="fs-5 text-primary fw-bold">Informações registradas </span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo7-2" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo7-2" data-bs-parent="#accordionExemplo7">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">O CNES contém dados extremamente detalhados: </p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Identificação: nome fantasia, razão social, CNPJ, endereço completo, telefone. </li>
+                                                            <li class="my-3">Tipo e natureza jurídica: se é público (federal, estadual, municipal), privado com fins lucrativos, privado sem fins lucrativos (filantrópico). </li>
+                                                            <li class="my-3">Vínculo com o SUS: se atende exclusivamente SUS, parcialmente, ou não atende SUS. </li>
+                                                            <li class="my-3">Estrutura física: número total de leitos (gerais, especializados, UTI, pediátricos, obstétricos, psiquiátricos), número de consultórios, salas de cirurgia, leitos de observação. </li>
+                                                            <li class="my-3">Equipamentos: lista detalhada de equipamentos disponíveis (aparelhos de raio-X, tomógrafos, ressonância magnética, mamógrafos, eletrocardiógrafos, ventiladores pulmonares etc.), com informação sobre se estão em uso ou não.</li>
+                                                            <li class="my-3">Recursos humanos: profissionais vinculados ao estabelecimento (médicos por especialidade, enfermeiros, técnicos, fisioterapeutas, nutricionistas, etc.), com carga horária e tipo de vínculo (estatutário, CLT, autônomo).</li>
+                                                            <li class="my-3">Serviços disponibilizados: lista completa dos serviços oferecidos (classificação de especialidades, procedimentos diagnósticos e terapêuticos).</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted">O CNES deve estar permanentemente atualizado, pois é
+                                        utilizado para habilitações de serviços e repasse de recursos federais, e essa
+                                        atualização é de responsabilidade das SMSs. Por isso, estabelecimentos que
+                                        sofrem alterações (mudança de endereço, aquisição de equipamentos, alteração de
+                                        profissionais) devem comunicar a SMS para atualização cadastral.</p>
+                                    <p class="lead text-muted">O CNES é essencial para:</p>
+
+                                    <ul class="ms-5 lead text-muted mb-5">
+                                        <li class="my-3 mt-4">Planejamento da rede de atenção à saúde. </li>
+                                        <li class="my-3">Identificação de vazios assistenciais (regiões sem determinados
+                                            serviços). </li>
+                                        <li class="my-3">Regulação do acesso (centrais de regulação utilizam o CNES).
+                                        </li>
+                                        <li class="my-3">Pesquisas sobre capacidade instalada.</li>
+                                        <li class="my-3">Georreferenciamento de serviços de saúde.</li>
+                                        <li class="my-3">Dimensionamento de recursos humanos.</li>
+                                        <li class="my-3">Cálculo de indicadores de oferta de serviços (leitos por 1.000
+                                            habitantes, médicos por habitante).</li>
+                                    </ul>
+
+                                    <div class="mt-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                        <div class="mt-5  position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                                A principal limitação do CNES é a desatualização: estabelecimentos fecham, mudam de endereço, adquirem ou desativam equipamentos, e essas mudanças nem sempre são prontamente registradas. Além disso, as informações sobre recursos humanos podem ser defasadas. 
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Sistema de Informação do Programa
+                                        Nacional de Imunizações</h4>
+                                    <p class="lead text-muted">O Programa Nacional de Imunizações (PNI) é reconhecido
+                                        internacionalmente como um dos mais bem-sucedidos programas de vacinação em
+                                        massa do mundo. Criado em 1973, o Sistema de Informação do Programa Nacional de
+                                        Imunizações (SI-PNI) é o sistema que registra as doses aplicadas. Vamos conhecer
+                                        melhor esse sistema?</p>
+
+                                    <div class="my-5 container" data-copy-id="accordion">
+                                        <div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionExemplo9">
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h5 class="accordion-header" id="headingExemplo9-1">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo9-1"
+                                                        aria-expanded="false" aria-controls="collapseExemplo9-1">
+                                                        <span class="fs-5 text-primary fw-bold">O que é registrado?</span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo9-1" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo9-1" data-bs-parent="#accordionExemplo9">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">Toda vacina aplicada na rede pública (e, mais recentemente, também na rede privada através de integração) deve ser registrada no sistema: </p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Tipo de vacina aplicada (BCG, hepatite B, tríplice viral etc.).</li>
+                                                            <li class="my-3">Dose aplicada (1ª dose, 2ª dose, reforço, dose única). </li>
+                                                            <li class="my-3">Data da aplicação. </li>
+                                                            <li class="my-3">Idade do vacinado. </li>
+                                                            <li class="my-3">Município de residência. </li>
+                                                            <li class="my-3">Estabelecimento de saúde que aplicou. </li>
+                                                            <li class="my-3">Lote e fabricante da vacina (para rastreabilidade).</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h5 class="accordion-header" id="headingExemplo9-2">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo9-2"
+                                                        aria-expanded="false" aria-controls="collapseExemplo9-2">
+                                                        <span class="fs-5 text-primary fw-bold">Calendário Nacional de Vacinação  </span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo9-2" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo9-2" data-bs-parent="#accordionExemplo9">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">O SI-PNI acompanha o cumprimento do calendário oficial, que define quais vacinas devem ser aplicadas em cada faixa etária: </p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Crianças: BCG, hepatite B, tríplice bacteriana, Haemophilus influenzae b, poliomielite, rotavírus, pneumocócica 10-valente, meningocócica C, tríplice viral (sarampo, caxumba, rubéola), varicela, hepatite A, febre amarela.</li>
+                                                            <li class="my-3">Adolescentes: HPV, meningocócica C, hepatite B (para não vacinados), febre amarela.</li>
+                                                            <li class="my-3">Adultos: Dupla adulto (difteria e tétano), febre amarela, hepatite B (grupos de risco).</li>
+                                                            <li class="my-3">Idosos: Influenza (anual), pneumocócica 23-valente. </li>
+                                                            <li class="my-3">Gestantes: dTpa (coqueluche), hepatite B, influenza. </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h5 class="accordion-header" id="headingExemplo9-3">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo9-3"
+                                                        aria-expanded="false" aria-controls="collapseExemplo9-3">
+                                                        <span class="fs-5 text-primary fw-bold">Campanhas de Vacinação</span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo9-3" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo9-3" data-bs-parent="#accordionExemplo9">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">O sistema também registra campanhas específicas:</p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Campanha anual de vacinação contra influenza. </li>
+                                                            <li class="my-3">Campanhas de seguimento contra sarampo e poliomielite. </li>
+                                                            <li class="my-3">Vacinação de bloqueio em casos de surtos. </li>
+                                                            <li class="my-3">Campanhas de atualização da caderneta vacinal. </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0">
+                                                <h5 class="accordion-header" id="headingExemplo9-4">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo9-4"
+                                                        aria-expanded="false" aria-controls="collapseExemplo9-4">
+                                                        <span class="fs-5 text-primary fw-bold">Fluxo de Registro</span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo9-4" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo9-4" data-bs-parent="#accordionExemplo9">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">Tradicionalmente, as salas de vacinação preenchiam boletins manuais que eram posteriormente digitados. Com a transformação digital, muitos municípios já possuem sistemas informatizados nas próprias salas de vacinação (uso de tablets ou computadores), permitindo registro em tempo real.</p>                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted">Agora, vamos falar sobre aplicações e indicadores? O
+                                        SI-PNI permite:</p>
+
+                                    <ul class="ms-5 lead text-muted mb-5">
+                                        <li class="my-3 mt-4">Calcular cobertura vacinal (percentual da população-alvo
+                                            vacinada). </li>
+                                        <li class="my-3">Monitorar homogeneidade da cobertura (identificar bolsões de
+                                            não vacinados). </li>
+                                        <li class="my-3">Identificar municípios com baixa cobertura para ações de
+                                            intensificação. </li>
+                                        <li class="my-3">Avaliar risco de reintrodução de doenças erradicadas. </li>
+                                        <li class="my-3">Planejar aquisição e distribuição de vacinas. </li>
+                                        <li class="my-3">Monitorar eventos adversos pós-vacinação. </li>
+                                    </ul>
+
+                                    <div class="mt-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                        <div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                                A meta de cobertura vacinal preconizada pela OMS é de 95% para a maioria das vacinas. Nos últimos anos, o Brasil tem enfrentado queda nas coberturas, o que aumenta o risco de surtos de doenças imunopreveníveis. O sub-registro, especialmente em áreas rurais, e a hesitação vacinal são desafios importantes. 
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Sistema de Informação em Saúde para a
+                                        Atenção Básica</h4>
+                                    <p class="lead text-muted">O Sistema de Informação em Saúde para a Atenção Básica
+                                        (SISAB) foi desenvolvido pelo DATASUS para coletar e organizar os dados das
+                                        equipes de Saúde da Família e ACSs em todo o Brasil. Implantado nacionalmente a
+                                        partir de 2013, substituiu gradualmente o antigo Sistema de Informação da
+                                        Atenção Básica (SIAB). Vamos conhecer melhor o SISAB?</p>
+
+                                    <div class="my-5 container" data-copy-id="accordion">
+                                        <div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionExemplo10">
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h5 class="accordion-header" id="headingExemplo10-1">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo10-1"
+                                                        aria-expanded="false" aria-controls="collapseExemplo10-1">
+                                                        <span class="fs-5 text-primary fw-bold">Estratégia e-SUS Atenção Básica</span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo10-1" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo10-1" data-bs-parent="#accordionExemplo10">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">O SISAB faz parte da estratégia e-SUS AB, que visa informatizar e qualificar a informação na Atenção Primária. A estratégia possui dois sistemas de <em>software</em>:</p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Sistema com Coleta de Dados Simplificada (CDS): para municípios sem informatização, com digitação posterior das fichas.</li>
+                                                            <li class="my-3">Sistema com Prontuário Eletrônico do Cidadão (PEC): para municípios informatizados, com registro direto no prontuário eletrônico.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h5 class="accordion-header" id="headingExemplo10-2">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo10-2"
+                                                        aria-expanded="false" aria-controls="collapseExemplo10-2">
+                                                        <span class="fs-5 text-primary fw-bold">Informações Coletadas</span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo10-2" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo10-2" data-bs-parent="#accordionExemplo10">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">O SISAB coleta dados sobre:</p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Cadastro individual e domiciliar: informações socioeconômicas das famílias acompanhadas (composição familiar, renda, condições de moradia, saneamento). </li>
+                                                            <li class="my-3">Atendimentos: consultas médicas e de enfermagem, procedimentos, encaminhamentos. </li>
+                                                            <li class="my-3">Visitas domiciliares: realizadas por ACSs, com motivo e desfecho da visita. </li>
+                                                            <li class="my-3">Atividades coletivas: grupos educativos, reuniões de equipe, ações de promoção da saúde. </li>
+                                                            <li class="my-3">Marcadores para Atenção Domiciliar: identificação de pessoas acamadas, com deficiência, em uso de sonda ou ostomia. </li>
+                                                            <li class="my-3">Condições de saúde: problemas e condições avaliadas (hipertensão, diabetes, gestação, aleitamento materno). </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0">
+                                                <h5 class="accordion-header" id="headingExemplo10-3">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo10-3"
+                                                        aria-expanded="false" aria-controls="collapseExemplo10-3">
+                                                        <span class="fs-5 text-primary fw-bold">Indicadores de Desempenho</span>
+                                                    </button>
+                                                </h5>
+                                                <div id="collapseExemplo10-3" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo10-3" data-bs-parent="#accordionExemplo10">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">O SISAB alimenta o Previne Brasil, novo modelo de financiamento federal da Atenção Primária. São calculados indicadores de desempenho que determinam parte do repasse financeiro, são eles: </p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Proporção de gestantes com pelo menos 6 consultas pré-natal. </li>
+                                                            <li class="my-3">Proporção de gestantes com exames de sífilis e HIV. </li>
+                                                            <li class="my-3">Cobertura de exame citopatológico (preventivo de câncer de colo de útero). </li>
+                                                            <li class="my-3">Cobertura vacinal de poliomielite e pentavalente. </li>
+                                                            <li class="my-3">Percentual de pessoas hipertensas com pressão arterial aferida.</li>
+                                                            <li class="my-3">Percentual de diabéticos com solicitação de hemoglobina glicada. </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted">O SISAB é fundamental para:</p>
+
+                                    <ul class="ms-5 lead text-muted mb-5">
+                                        <li class="my-3 mt-4">Monitoramento da cobertura populacional das equipes de
+                                            Saúde da Família. </li>
+                                        <li class="my-3">Planejamento e organização dos serviços da Atenção Primária.
+                                        </li>
+                                        <li class="my-3">Avaliação do desempenho das equipes. </li>
+                                        <li class="my-3">Identificação de populações vulneráveis. </li>
+                                        <li class="my-3">Cálculo do financiamento federal (Previne Brasil). </li>
+                                        <li class="my-3">Gestão do cuidado individual e coletivo. </li>
+                                    </ul>
+
+                                    <div class="mt-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                        <div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                               A transição do SIAB para o SISAB trouxe dificuldades operacionais em alguns municípios, e a qualidade do registro também é um grande desafio, pois depende da adesão dos profissionais e da disponibilidade de infraestrutura tecnológica (computadores, internet) nas unidades de saúde. 
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">A Contribuição Fundamental do IBGE: Dados
+                                        Demográficos e Determinantes Sociais da Saúde </h3>
+                                    <p class="lead text-muted">Enquanto o DATASUS foca em eventos e atendimentos em
+                                        saúde, o IBGE fornece o pano de fundo populacional e social necessário para
+                                        contextualizar e analisar esses dados. Sem informações precisas sobre a
+                                        população, não é possível calcular taxas e indicadores válidos.</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Censo Demográfico</h4>
+                                    <p class="lead text-muted">Realizado a cada dez anos (anos terminados em 0), o Censo
+                                        é a pesquisa mais completa sobre a população brasileira. Trata-se de uma
+                                        investigação domiciliar que visa visitar todos os domicílios do país.</p>
+
+                                    <div class="container my-5" data-copy-id="carrossel-texto">
+                                        <div id="carouselTextoExemplo" class="carousel slide shadow-md rounded-4 overflow-hidden border-0 max-w-4xl mx-auto max-w-content">
+
+                                            <div class="carousel-indicators mb-3">
+                                                <button type="button" data-bs-target="#carouselTextoExemplo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                                <button type="button" data-bs-target="#carouselTextoExemplo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            </div>
+
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <div class="p-4 p-md-5 text-white position-relative principle-card principle-card--a">
+                                                        <h5 class="lead text-muted-white mb-3 fw-bold">Informações Coletadas</h5>
+                                                        <hr class="my-2 border-light border-opacity-25">
+                                                        <p class="lead text-muted-white leading-relaxed mb-0 pe-2">O Censo coleta dados sobre:</p>
+                                                        <ul class="ms-5 lead text-muted-white">
+                                                            <li class="my-3 mt-4">Demografia básica: número de moradores, idade, sexo, cor/raça, relação de parentesco.</li>
+                                                            <li class="my-3">Condições de moradia: tipo de domicílio, material de construção, número de cômodos, abastecimento de água, esgotamento sanitário, destino do lixo, energia elétrica.</li>
+                                                            <li class="my-3">Educação: alfabetização, anos de estudo, frequência escolar.</li>
+                                                            <li class="my-3">Trabalho e renda: ocupação, rendimentos, atividade econômica.</li>
+                                                            <li class="my-3">Migração: local de nascimento, tempo de residência no município.</li>
+                                                            <li class="my-3">Fecundidade: número de filhos nascidos vivos.</li>
+                                                            <li class="my-3">Pessoas com deficiência: tipos de deficiência, grau de dificuldade.</li>
+                                                            <li class="my-3">Características étnicas e culturais: povos indígenas, quilombolas.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="carousel-item">
+                                                    <div class="p-4 p-md-5 text-white position-relative principle-card principle-card--b">
+                                                        <h5 class="lead text-muted-white mb-3 fw-bold">Importância para a Saúde</h5>
+                                                        <hr class="my-2 border-light border-opacity-25">
+                                                        <p class="lead text-muted-white leading-relaxed mb-0 pe-2">
+                                                            O Censo fornece o denominador populacional para o cálculo de todas as taxas epidemiológicas. Além disso, as informações sobre Determinantes Sociais da Saúde (DSS) permitem:
+                                                        </p>
+                                                        <ul class="ms-5 lead text-muted-white">
+                                                            <li class="my-3 mt-4">Análise de iniquidades em saúde por raça/cor, renda, escolaridade.</li>
+                                                            <li class="my-3">Identificação de áreas com piores condições de saneamento (fator de risco para doenças infecciosas).</li>
+                                                            <li class="my-3">Planejamento de ações intersetoriais (saúde, educação, habitação).</li>
+                                                            <li class="my-3">Delimitação de territórios de atuação das equipes de saúde.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTextoExemplo" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselTextoExemplo" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Pesquisa Nacional por Amostra de
+                                        Domicílios Contínua</h4>
+                                    <p class="lead text-muted">Iniciada em 2012, a Pesquisa Nacional por Amostra de
+                                        Domicílios Contínua (PNAD Contínua) substitui as antigas pesquisas anuais do
+                                        IBGE. É uma pesquisa amostral que investiga continuamente características
+                                        socioeconômicas da população.</p>
+                                    <p class="lead text-muted">Na PNAD Contínua, alguns temas são permanentes, por
+                                        exemplo, trabalho, rendimento, habitação, educação. Mas, também há módulos
+                                        especiais relacionados à saúde, são eles:</p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Módulo de Acesso a Serviços de Saúde: investiga cobertura
+                                            de plano de saúde, procura por atendimento, tipo de serviço utilizado (SUS
+                                            ou privado), barreiras de acesso (falta de vagas, distância, custo).</li>
+                                        <li class="my-3">Outros módulos: segurança alimentar, cuidados de pessoas
+                                            (idosos, crianças), tecnologia da informação.</li>
+                                    </ul>
+
+                                    <p class="lead text-muted">A PNAD Contínua fornece dados atualizados anualmente
+                                        sobre acesso aos serviços de saúde, complementando informações do DATASUS.</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Pesquisa Nacional de Saúde</h4>
+                                    <p class="lead text-muted">Realizada em parceria entre IBGE e MS, a Pesquisa
+                                        Nacional de Saúde (PNS) é a pesquisa mais abrangente sobre as condições de saúde
+                                        da população brasileira. Foi realizada em 2013 e 2019, com nova edição prevista
+                                        periodicamente. A PNS investiga:</p>
+
+                                    <div class="my-5" data-infographic="pesquisaSaude">
+										<div class="text-center mb-2 mt-5">
+											<span class="badge-recurso-interativo">
+												<i class="bi bi-cursor-fill me-1"></i> Recurso Interativo
+											</span>
+											<!--<p class="text-muted mb-0 mt-2">Clique nos cards abaixo para saber mais</p>-->
+										</div>
+                                        <div class="ig-hotspot-card mb-5">
+                                            <div class="ig-hotspot-wrapper">
+                                                <img src="imgs/infografico.png"
+                                                    alt="Trilha com 8 marcadores numerados de 1 a 8, representando os temas investigados pela Pesquisa Nacional de Saúde"
+                                                    class="ig-hotspot-img">
+                                                <button class="ig-dot active" type="button" data-idx="0" aria-label="Ver item 1"
+                                                    data-left="49.21" data-top="21.78"></button>
+                                                <button class="ig-dot" type="button" data-idx="1" aria-label="Ver item 2"
+                                                    data-left="60.84" data-top="29.07"></button>
+                                                <button class="ig-dot" type="button" data-idx="2" aria-label="Ver item 3"
+                                                    data-left="66.55" data-top="45.98"></button>
+                                                <button class="ig-dot" type="button" data-idx="3" aria-label="Ver item 4"
+                                                    data-left="62.88" data-top="66.41"></button>
+                                                <button class="ig-dot" type="button" data-idx="4" aria-label="Ver item 5"
+                                                    data-left="52.75" data-top="78.69"></button>
+                                                <button class="ig-dot" type="button" data-idx="5" aria-label="Ver item 6"
+                                                    data-left="39.64" data-top="72.19"></button>
+                                                <button class="ig-dot" type="button" data-idx="6" aria-label="Ver item 7"
+                                                    data-left="33.65" data-top="53.27"></button>
+                                                <button class="ig-dot" type="button" data-idx="7" aria-label="Ver item 8"
+                                                    data-left="36.01" data-top="33.97"></button>
+                                            </div>
+
+                                            <div class="ig-panel" id="igPanel">
+                                                <div class="ig-panel-header">
+                                                    <div class="ig-panel-icon" id="igPanelIcon"><i class="bi bi-heart-pulse-fill" id="igPanelIconI"></i></div>
+                                                    <h4 class="ig-panel-title" id="igPanelTitle"></h4>
+                                                </div>
+                                                <p class="ig-panel-desc" id="igPanelDesc"></p>
+                                                <p class="ig-actions-label">Ações estratégicas</p>
+                                                <ul class="ig-actions-list mb-0" id="igActionsList"></ul>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="mt-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                        <div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                               A PNS capta informações sobre morbidade que muitas vezes não chegam aos sistemas de notificação ou atendimento. É essencial para conhecer o "iceberg" da doença (casos não diagnosticados ou não tratados no sistema de saúde). 
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Outras Fontes Especializadas no
+                                        Ecossistema de Dados</h3>
+                                    <p class="lead text-muted">Existem outras fontes especializadas em ecossistemas de
+                                        dados relacionados à saúde. Vamos conhecê-las?</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Agência Nacional de Saúde Suplementar
+                                    </h4>
+                                    <p class="lead text-muted">A Agência Nacional de Saúde Suplementar (ANS) regula o
+                                        setor de planos privados de assistência à saúde no Brasil. Suas bases de dados
+                                        são públicas e complementam os dados do SUS, permitindo análises comparativas
+                                        entre SUS e saúde suplementar, identificação da cobertura duplicada e estudos
+                                        sobre iniquidades no acesso.</p>
+                                    <p class="lead text-muted">A ANS disponibiliza as seguintes informações:</p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Número de beneficiários de planos de saúde (por município,
+                                            faixa etária, tipo de contratação).</li>
+                                        <li class="my-3">Operadoras ativas no mercado.</li>
+                                        <li class="my-3">Índice de Desempenho da Saúde Suplementar (IDSS).</li>
+                                        <li class="my-3">Taxa de cobertura de planos de saúde por município.</li>
+                                        <li class="my-3">Reclamações registradas contra operadoras.</li>
+                                        <li class="my-3">Indicadores de qualidade assistencial (taxa de cesárea,
+                                            internações por condições sensíveis à atenção primária).</li>
+                                    </ul>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Agência Nacional de Vigilância Sanitária
+                                    </h4>
+                                    <p class="lead text-muted">A Agência Nacional de Vigilância Sanitária (ANVISA) é
+                                        responsável pela regulação e fiscalização de produtos e serviços que envolvem
+                                        risco sanitário. Por isso, ela é essencial para a segurança do paciente,
+                                        vigilância pós-comercialização, investigações de surtos. Sua base de dados é
+                                        composta por:</p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Registro de medicamentos: lista de medicamentos aprovados,
+                                            composição, indicações.</li>
+                                        <li class="my-3">Farmacovigilância: notificações de eventos adversos a
+                                            medicamentos e vacinas.</li>
+                                        <li class="my-3">Tecnovigilância: eventos adversos relacionados a produtos para
+                                            saúde (equipamentos, materiais).</li>
+                                        <li class="my-3">Hemovigilância: eventos adversos relacionados à transfusão de
+                                            sangue.</li>
+                                        <li class="my-3">Vigilância de alimentos: surtos de doenças transmitidas por
+                                            alimentos, monitoramento de contaminantes.</li>
+                                        <li class="my-3">Inspeções sanitárias: relatórios de inspeção em
+                                            estabelecimentos de saúde, indústrias farmacêuticas, portos e aeroportos.
+                                        </li>
+                                    </ul>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Fundação Oswaldo Cruz</h4>
+                                    <p class="lead text-muted">A Fundação Oswaldo Cruz (Fiocruz) é a principal
+                                        instituição de pesquisa em saúde pública do Brasil. Além de pesquisa, desenvolve
+                                        sistemas de monitoramento. Veja a seguir exemplos de alguns desses sistemas:</p>
+
+                                    <!-- CARROSSEL APENAS TEXTO (CARDS DE ESTUDO & SÍNTESE CONCEITUAL)   -->
+                                    <div class="container my-5">
+                                        <div id="carouselTextoEduFlex"
+                                            class="carousel slide shadow-md rounded-4 overflow-hidden border-0 max-w-4xl mx-auto max-w-content">
+
+                                            <div class="carousel-indicators mb-3">
+                                                <button type="button" data-bs-target="#carouselTextoEduFlex"
+                                                    data-bs-slide-to="0" class="active" aria-current="true"
+                                                    aria-label="Slide 1"></button>
+                                                <button type="button" data-bs-target="#carouselTextoEduFlex"
+                                                    data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                                <button type="button" data-bs-target="#carouselTextoEduFlex"
+                                                    data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                            </div>
+
+                                            <div class="carousel-inner">
+
+                                                <!-- SLIDE 1 (APENAS TEXTO) -->
+                                                <div class="carousel-item active">
+                                                    <div
+                                                        class="p-4 p-md-5 text-white position-relative principle-card principle-card--a">
+                                                        <h5 class="lead text-muted-white mb-3 fw-bold">
+                                                            InfoGripe 
+                                                        </h5>
+                                                        <hr class="my-2 border-light border-opacity-25">
+
+                                                        <p class="lead text-muted-white leading-relaxed mb-0 pe-2">
+                                                            Monitora casos de Síndrome Respiratória Aguda Grave (SRAG), integrando dados do SINAN e SIVEP-Gripe. Este sistema foi fundamental durante a pandemia de COVID-19. 
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <!-- SLIDE 2 (APENAS TEXTO) -->
+                                                <div class="carousel-item">
+                                                    <div
+                                                        class="p-4 p-md-5 text-white position-relative principle-card principle-card--a">
+
+                                                        <h5 class="lead text-muted-white mb-3 fw-bold">
+                                                            Observatórios 
+                                                        </h5>
+                                                        <hr class="my-2 border-light border-opacity-25">
+
+                                                        <p class="lead text-muted-white leading-relaxed mb-0 pe-2">
+                                                            Observatório de Clima e Saúde (correlação entre eventos climáticos e doenças) e Observatório da Criminalidade e Violência. 
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <!-- SLIDE 3 (APENAS TEXTO) -->
+                                                <div class="carousel-item">
+                                                    <div
+                                                        class="p-4 p-md-5 text-white position-relative principle-card principle-card--b">
+
+                                                        <h5 class="lead text-muted-white mb-3 fw-bold">
+                                                            Plataformas de vigilância genômica
+                                                        </h5>
+                                                        <hr class="my-2 border-light border-opacity-25">
+
+                                                        <p class="lead text-muted-white leading-relaxed mb-0 pe-2">
+                                                            Sequenciamento de patógenos (vírus, bactérias) para identificação de variantes e surtos. 
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselTextoEduFlex" data-bs-slide="prev">
+                                                <span
+                                                    class="carousel-control-prev-icon p-3 bg-dark bg-opacity-50 rounded-circle"
+                                                    aria-hidden="true"></span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselTextoEduFlex" data-bs-slide="next">
+                                                <span
+                                                    class="carousel-control-next-icon p-3 bg-dark bg-opacity-50 rounded-circle"
+                                                    aria-hidden="true"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- CARROSSEL APENAS TEXTO (CARDS DE ESTUDO & SÍNTESE CONCEITUAL)   -->
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">O Fluxo Descentralizado: da Unidade de
+                                        Saúde ao DATASUS Nacional</h3>
+                                    <p class="lead text-muted">A coleta de dados no SUS percorre uma cadeia
+                                        descentralizada de consolidação e validação, na qual cada esfera de governo
+                                        tem responsabilidades específicas até chegar ao DATASUS. Vamos entender
+                                        melhor como isso funciona?</p>
+
+                                    <div class="fc-flowchart aula-wide-block my-5" data-flowchart="coletaDados">
+										<div class="text-center mb-4">
+											<span class="badge-recurso-interativo">
+												<i class="bi bi-cursor-fill me-1"></i> Recurso Interativo
+											</span>
+											<!--<p class="text-muted mb-0 mt-2">Clique nos cards abaixo para saber mais</p>-->
+										</div>
+                                        <div class="fc-flow-track">
+                                            <!--<div class="fc-origin">
+                                                <i class="bi bi-database-fill"></i>
+                                                <span>Coleta de dados no SUS</span>
+                                            </div>
+                                            <div class="fc-arrow"><i class="bi bi-chevron-right"></i></div>-->
+                                            <button class="fc-level-btn" type="button" data-idx="0">
+                                                <span class="fc-level-icon-badge"><i class="bi bi-hospital-fill fc-level-icon"></i></span>
+                                                <span class="fc-level-title">Nível local</span>
+                                                <small>Ponta do sistema</small>
+                                            </button>
+                                            <div class="fc-arrow"><i class="bi bi-chevron-right"></i></div>
+                                            <button class="fc-level-btn" type="button" data-idx="1">
+                                                <span class="fc-level-icon-badge"><i class="bi bi-building-fill fc-level-icon"></i></span>
+                                                <span class="fc-level-title">Nível municipal</span>
+                                                <small>Coleta e validação inicial</small>
+                                            </button>
+                                            <div class="fc-arrow"><i class="bi bi-chevron-right"></i></div>
+                                            <button class="fc-level-btn" type="button" data-idx="2">
+                                                <span class="fc-level-icon-badge"><i class="bi bi-bar-chart-fill fc-level-icon"></i></span>
+                                                <span class="fc-level-title">Nível estadual</span>
+                                                <small>Consolidação e validação avançada</small>
+                                            </button>
+                                            <div class="fc-arrow"><i class="bi bi-chevron-right"></i></div>
+                                            <button class="fc-level-btn" type="button" data-idx="3">
+                                                <span class="fc-level-icon-badge"><i class="bi bi-database-fill fc-level-icon"></i></span>
+                                                <span class="fc-level-title">Nível federal</span>
+                                                <small>DATASUS</small>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Desafios Críticos: Subnotificação e
+                                        Qualidade dos Dados</h3>
+                                    <p class="lead text-muted">Um usuário crítico dos dados em saúde deve sempre
+                                        questionar sua qualidade. Dois problemas principais introduzem viés nas
+                                        análises:</p>
+
+                                    <div class="container my-5" data-copy-id="accordion">
+                                        <div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionExemplo11">
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h4 class="accordion-header" id="headingExemplo11-1">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo11-1"
+                                                        aria-expanded="false" aria-controls="collapseExemplo11-1">
+                                                        <span class="fs-5 text-primary fw-bold">Subnotificação de Eventos </span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapseExemplo11-1" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo11-1" data-bs-parent="#accordionExemplo11">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0 fw-bold">Definição:  </p>
+                                                        <p class="lead text-muted mb-0">Ocorre quando o evento de saúde simplesmente não é registrado no sistema.</p>
+                                                        <p class="lead text-muted mb-0 fw-bold mt-4">Causas:   </p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Óbitos em áreas remotas ou domiciliares sem assistência médica. </li>
+                                                            <li class="my-3">Falhas na articulação entre serviços (caso atendido não é notificado). </li>
+                                                            <li class="my-3">Doenças estigmatizadas (relutância em registrar HIV, suicídio). </li>
+                                                            <li class="my-3">Falta de conhecimento sobre a obrigatoriedade de notificação. </li>
+                                                            <li class="my-3">Sobrecarga de trabalho dos profissionais. </li>
+                                                        </ul>
+                                                        <p class="lead text-muted mb-0 fw-bold mt-4">Consequências:</p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Subestimação das taxas de mortalidade ou incidência. </li>
+                                                            <li class="my-3">Distorção do perfil epidemiológico. </li>
+                                                            <li class="my-3">Prejuízo ao planejamento e alocação de recursos. </li>
+                                                            <li class="my-3">Falha na detecção precoce de surtos. </li>
+                                                        </ul>
+                                                        <p class="lead text-muted mb-0 fw-bold mt-4">Exemplo:    </p>
+                                                        <p class="lead text-muted mb-0">A subnotificação de dengue pode chegar a 80% em algumas localidades, pois muitos casos leves não procuram atendimento ou não são notificados.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0">
+                                                <h4 class="accordion-header" id="headingExemplo11-2">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseExemplo11-2"
+                                                        aria-expanded="false" aria-controls="collapseExemplo11-2">
+                                                        <span class="fs-5 text-primary fw-bold">Dados Omissos ou Imprecisos </span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapseExemplo11-2" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo11-2" data-bs-parent="#accordionExemplo11">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0 fw-bold">Definição: </p>
+                                                        <p class="lead text-muted mb-0">O evento é registrado, mas informações importantes estão faltando ou incorretas. </p>
+                                                        <p class="lead text-muted mb-0 fw-bold mt-4">Campos comumente afetados:   </p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Raça/cor. </li>
+                                                            <li class="my-3">Escolaridade. </li>
+                                                            <li class="my-3">Ocupação. </li>
+                                                            <li class="my-3">Causa básica da morte (causas mal definidas). </li>
+                                                            <li class="my-3">Idade (em populações sem documentação). </li>
+                                                        </ul>
+                                                        <p class="lead text-muted mb-0 fw-bold mt-4">Consequências:   </p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Viés nas análises sobre iniquidades em saúde. </li>
+                                                            <li class="my-3">Impossibilidade de calcular indicadores específicos. </li>
+                                                            <li class="my-3">Comprometimento da vigilância epidemiológica. </li>
+                                                            <li class="my-3">Dificuldade de identificar grupos de risco.</li>
+                                                        </ul>                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Estratégias do SUS para Melhorar a
+                                        Qualidade da Informação </h3>
+                                    <p class="lead text-muted">O SUS possui algumas estratégias para melhorar a
+                                        qualidade das informações de saúde. Vamos conhecê-las?</p>
+
+
+                                    <!-- ACCORDION (ESTRATÉGIAS DO SUS PARA MELHORAR A QUALIDADE DA INFORMAÇÃO) -->
+                                    <div class="container my-5" data-copy-id="accordion">
+                                        <div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionEstrategias">
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h4 class="accordion-header" id="headingEstrategias-1">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseEstrategias-1"
+                                                        aria-expanded="false" aria-controls="collapseEstrategias-1">
+                                                        <span class="fs-5 text-primary fw-bold">Busca ativa</span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapseEstrategias-1" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingEstrategias-1" data-bs-parent="#accordionEstrategias">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">Vigilância epidemiológica procura ativamente por eventos não registrados, cruzando dados de cemitérios, cartórios e serviços de saúde.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h4 class="accordion-header" id="headingEstrategias-2">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseEstrategias-2"
+                                                        aria-expanded="false" aria-controls="collapseEstrategias-2">
+                                                        <span class="fs-5 text-primary fw-bold">Investigações de óbitos e casos</span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapseEstrategias-2" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingEstrategias-2" data-bs-parent="#accordionEstrategias">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Investigação de óbitos infantis e maternos: todos os óbitos de menores de 1 ano e de mulheres em idade fértil devem ser investigados.</li>
+                                                            <li class="my-3">Investigação de óbitos por causas mal definidas: para esclarecer a causa real.</li>
+                                                            <li class="my-3">Investigação de casos graves: aprofundamento da investigação de casos suspeitos ou confirmados de doenças prioritárias.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h4 class="accordion-header" id="headingEstrategias-3">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseEstrategias-3"
+                                                        aria-expanded="false" aria-controls="collapseEstrategias-3">
+                                                        <span class="fs-5 text-primary fw-bold">Capacitação e educação permanente</span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapseEstrategias-3" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingEstrategias-3" data-bs-parent="#accordionEstrategias">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">Treinamentos constantes para profissionais sobre:</p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Correta declaração de causa da morte.</li>
+                                                            <li class="my-3">Preenchimento de fichas de notificação.</li>
+                                                            <li class="my-3">Importância epidemiológica dos dados.</li>
+                                                            <li class="my-3">Uso ético da informação.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h4 class="accordion-header" id="headingEstrategias-4">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseEstrategias-4"
+                                                        aria-expanded="false" aria-controls="collapseEstrategias-4">
+                                                        <span class="fs-5 text-primary fw-bold">Validação e crítica técnica</span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapseEstrategias-4" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingEstrategias-4" data-bs-parent="#accordionEstrategias">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">Sistemas automatizados emitem alertas para:</p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Inconsistências (idade incompatível com causa, sexo incompatível com diagnóstico).</li>
+                                                            <li class="my-3">Campos obrigatórios não preenchidos.</li>
+                                                            <li class="my-3">Duplicidades.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h4 class="accordion-header" id="headingEstrategias-5">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseEstrategias-5"
+                                                        aria-expanded="false" aria-controls="collapseEstrategias-5">
+                                                        <span class="fs-5 text-primary fw-bold">Linkage entre bases de dados</span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapseEstrategias-5" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingEstrategias-5" data-bs-parent="#accordionEstrategias">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">Técnica de relacionamento probabilístico entre diferentes bases:</p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Cruzar SIM com SINAN (verificar se óbito tem notificação)</li>
+                                                            <li class="my-3">Cruzar SINASC com SIM infantil (verificar completude)</li>
+                                                            <li class="my-3">Cruzar SIH com SIM (investigar óbitos hospitalares)</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0">
+                                                <h4 class="accordion-header" id="headingEstrategias-6">
+                                                    <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseEstrategias-6"
+                                                        aria-expanded="false" aria-controls="collapseEstrategias-6">
+                                                        <span class="fs-5 text-primary fw-bold">Ajustes estatísticos</span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapseEstrategias-6" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingEstrategias-6" data-bs-parent="#accordionEstrategias">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">Pesquisadores utilizam métodos para estimar e corrigir subnotificação:</p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Técnicas de captura-recaptura.</li>
+                                                            <li class="my-3">Modelagem estatística.</li>
+                                                            <li class="my-3">Redistribuição de causas mal definidas.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- ACCORDION (ESTRATÉGIAS DO SUS PARA MELHORAR A QUALIDADE DA INFORMAÇÃO) -->
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Acesso e Uso dos Dados: Transparência e
+                                        Democracia Sanitária </h3>
+                                    <p class="lead text-muted">O DATASUS disponibiliza os dados por diversos meios de
+                                        acesso público, vamos conhecê-los?</p>
+
+                                    <div class="dt-mockup">
+										<div class="text-center mb-2 mt-5">
+											<span class="badge-recurso-interativo">
+												<i class="bi bi-cursor-fill me-1"></i> Recurso Interativo
+											</span>
+											<!--<p class="text-muted mb-0 mt-2">Clique nos cards abaixo para saber mais</p>-->
+										</div>
+                                        <div class="dt-mockup-bezel">
+                                            <div class="dt-mockup-titlebar">
+                                                <span class="dt-url">DATASUS — tabnet.datasus.gov.br</span>
+                                            </div>
+                                            <div class="dt-mockup-screen">
+                                                <button type="button" class="dt-hotspot" data-bs-toggle="popover"
+                                                    data-bs-trigger="focus" data-bs-placement="right"
+                                                    data-bs-title="Tabnet"
+                                                    data-bs-content="Interface web que permite tabulação online dos dados. O usuário seleciona linhas, colunas e conteúdo, gerando tabelas personalizadas. Disponível em: http://tabnet.datasus.gov.br.">
+                                                    <i class="bi bi-grid-3x3-gap-fill"></i>
+                                                    <span>Tabnet</span>
+                                                </button>
+                                                <button type="button" class="dt-hotspot" data-bs-toggle="popover"
+                                                    data-bs-trigger="focus" data-bs-placement="left"
+                                                    data-bs-title="Painel de Monitoramento"
+                                                    data-bs-content="Painéis interativos para acompanhamento de indicadores prioritários (mortalidade infantil, cobertura vacinal etc.).">
+                                                    <i class="bi bi-speedometer2"></i>
+                                                    <span>Painel de Monitoramento</span>
+                                                </button>
+                                                <button type="button" class="dt-hotspot" data-bs-toggle="popover"
+                                                    data-bs-trigger="focus" data-bs-placement="right"
+                                                    data-bs-html="true"
+                                                    data-bs-title="Download de arquivos"
+                                                    data-bs-content="Bases de dados completas podem ser baixadas para análises mais complexas em <em>softwares</em> estatísticos.">
+                                                    <i class="bi bi-cloud-download-fill"></i>
+                                                    <span>Download de arquivos</span>
+                                                </button>
+                                                <button type="button" class="dt-hotspot" data-bs-toggle="popover"
+                                                    data-bs-trigger="focus" data-bs-placement="left"
+                                                    data-bs-title="APIs"
+                                                    data-bs-content="Interfaces de programação que permitem integração automatizada dos dados com outros sistemas.">
+                                                    <i class="bi bi-braces"></i>
+                                                    <span>APIs</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="dt-mockup-stand-neck"></div>
+                                        <div class="dt-mockup-stand-base"></div>
+                                    </div>
+
+                                    <p class="lead text-muted">A disponibilização dos dados segue os seguintes
+                                        princípios:</p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Acesso universal: qualquer cidadão pode acessar. </li>
+                                        <li class="my-3">Gratuidade: não há cobrança. </li>
+                                        <li class="my-3">Formato aberto: dados em formatos que podem ser processados por
+                                            diferentes <em>softwares</em>. </li>
+                                        <li class="my-3">Atualização regular: bases são atualizadas periodicamente.
+                                        </li>
+                                    </ul>
+
+                                    <p class="lead text-muted mt-4">Vale lembrar que embora os dados sejam públicos, há
+                                        proteção da privacidade, veja: </p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Dados individualizados são anonimizados.</li>
+                                        <li class="my-3">Não há divulgação de nomes ou documentos.</li>
+                                        <li class="my-3">Municípios pequenos podem ter dados agregados para evitar
+                                            identificação.</li>
+                                    </ul>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Perspectivas Futuras: Transformação
+                                        Digital e Big Data em Saúde </h3>
+                                    <p class="lead text-muted">Agora, vamos ver o que a transformação digital e Big Data
+                                        podem trazer de benefícios na área da Saúde:</p>
+
+                                    <div class="container my-5" data-copy-id="accordion">
+                                    <div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionExemplo12">
+
+                                        <div class="accordion-item border-0 border-bottom">
+                                            <h4 class="accordion-header" id="headingExemplo12-1">
+                                                <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseExemplo12-1"
+                                                    aria-expanded="false" aria-controls="collapseExemplo12-1">
+                                                    <span class="fs-5 text-primary fw-bold">Prontuário Eletrônico e Interoperabilidade </span>
+                                                </button>
+                                            </h4>
+                                            <div id="collapseExemplo12-1" class="accordion-collapse collapse" role="region"
+                                                aria-labelledby="headingExemplo12-1" data-bs-parent="#accordionExemplo12">
+                                                <div class="accordion-body text-secondary small leading-relaxed">
+                                                    <p class="lead text-muted mb-0">A implementação de prontuários eletrônicos padronizados e interoperáveis permitirá:</p>
+                                                    <ul class="ms-5 lead text-muted">
+                                                        <li class="my-3 mt-4">Registro mais preciso e completo. </li>
+                                                        <li class="my-3">Integração automática entre sistemas. </li>
+                                                        <li class="my-3">Acompanhamento longitudinal do cidadão. </li>
+                                                        <li class="my-3">Redução de duplicidades. </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item border-0 border-bottom">
+                                            <h4 class="accordion-header" id="headingExemplo12-2">
+                                                <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseExemplo12-2"
+                                                    aria-expanded="false" aria-controls="collapseExemplo12-2">
+                                                    <span class="fs-5 text-primary fw-bold">Inteligência Artificial e Análise Preditiva </span>
+                                                </button>
+                                            </h4>
+                                            <div id="collapseExemplo12-2" class="accordion-collapse collapse" role="region"
+                                                aria-labelledby="headingExemplo12-2" data-bs-parent="#accordionExemplo12">
+                                                <div class="accordion-body text-secondary small leading-relaxed">
+                                                    <p class="lead text-muted mb-0">O uso de IA permite: </p>
+                                                    <ul class="ms-5 lead text-muted">
+                                                        <li class="my-3 mt-4">Predição de surtos e epidemias. </li>
+                                                        <li class="my-3">Identificação de padrões ocultos nos dados. </li>
+                                                        <li class="my-3">Otimização da alocação de recursos. </li>
+                                                        <li class="my-3">Apoio à decisão clínica. </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item border-0">
+                                            <h4 class="accordion-header" id="headingExemplo12-3">
+                                                <button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseExemplo12-3"
+                                                    aria-expanded="false" aria-controls="collapseExemplo12-3">
+                                                    <span class="fs-5 text-primary fw-bold">Dados em tempo real </span>
+                                                </button>
+                                            </h4>
+                                            <div id="collapseExemplo12-3" class="accordion-collapse collapse" role="region"
+                                                aria-labelledby="headingExemplo12-3" data-bs-parent="#accordionExemplo12">
+                                                <div class="accordion-body text-secondary small leading-relaxed">
+                                                    <p class="lead text-muted mb-0">Sistemas móveis e conectividade permitem:</p>
+                                                    <ul class="ms-5 lead text-muted">
+                                                        <li class="my-3 mt-4">Notificação imediata de eventos. </li>
+                                                        <li class="my-3">Monitoramento em tempo real. </li>
+                                                        <li class="my-3">Resposta mais rápida a emergências. </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary"><i class="bi bi-pencil-square"></i>
+                                        Atividade</h3>
+                                    <!-- VARIAÇÃO 1: QUIZ MÚLTIPLA ESCOLHA INTERATIVO (MULTI-QUESTÕES COM NAVEGAÇÃO E JS) -->
+                                    <div class="my-4" id="eduflexQuizContainer">
+                                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <span
+                                                    class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-bold"
+                                                    id="quizQuestionCounter">Questão 01 de 01</span>
+                                                <span class="badge bg-light text-dark border fw-bold"
+                                                    id="quizScoreBadge">
+                                                    <i class="bi bi-trophy-fill text-warning me-1"></i>Acertos: <span
+                                                        id="quizScoreCount">0</span>
+                                                </span>
+                                            </div>
+                                            <div class="progress mb-4 progress-thin">
+                                                <div class="progress-bar bg-primary" id="quizProgressBar"
+                                                    role="progressbar"></div>
+                                            </div>
+                                            <h4 class="fw-bold lead text-muted mb-4" id="quizQuestionText"></h4>
+                                            <div class="d-grid gap-2 mb-3" id="quizOptionsContainer"></div>
+                                            <div class="p-3 rounded-3 small mb-3 d-none" id="quizFeedbackBox"></div>
+                                            <small class="text-muted d-block mb-3">
+                                                <i class="bi bi-info-circle me-1"></i>Selecione uma opção para confirmar
+                                                sua
+                                                resposta.
+                                            </small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <button class="btn bg-primary text-white rounded-pill px-4 fw-bold"
+                                                    id="quizNextBtn" disabled>
+                                                    Próxima Questão <i class="bi bi-arrow-right ms-1"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Resumo da aula</h3>
+                                    <p class="lead text-muted">Nesta aula, você conheceu os principais Sistemas de
+                                        Informação em Saúde utilizados no SUS e compreendeu como eles contribuem para a
+                                        vigilância, o planejamento, a gestão e a avaliação das políticas públicas.
+                                        Também identificou as principais fontes de dados produzidas por instituições
+                                        como DATASUS, IBGE, ANS, ANVISA e Fiocruz, além de entender o fluxo de produção
+                                        das informações, desde os serviços de saúde até a consolidação nacional. Por
+                                        fim, refletiu sobre os desafios relacionados à qualidade dos dados, à
+                                        subnotificação, à transparência e às perspectivas da transformação digital para
+                                        o fortalecimento da Vigilância em Saúde.</p>
+                                    <p class="lead text-muted fw-bold">Você concluiu esta aula, continue se empenhando
+                                        nos seus estudos. Siga para a próxima aula! </p>
+
+
+
+
+
+                                </article>
+                            </div>
+                        </section>
+
+                    </div> <!-- Fim .aula-pages-wrapper -->
+
+                    <!-- Modal reutilizado pelo fluxograma interativo "Coleta de Dados no SUS" -->
+                    <div class="modal fade" id="fcLevelModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content rounded-4 border-0 overflow-hidden">
+                                <div class="modal-header border-0 fc-modal-header-band">
+                                    <span class="fc-modal-header-icon-badge"><i class="bi fc-modal-header-icon"></i></span>
+                                    <h4 class="modal-title fw-bold"></h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-muted fc-modal-intro"></p>
+                                    <ul class="fc-modal-list text-muted"></ul>
+                                    <p class="text-muted fc-modal-note mt-3 mb-0"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ================= PAGINAÇÃO INTERNA DA AULA ================= -->
+                    <div class="aula-pagination-nav d-flex justify-content-between align-items-center mt-5 pt-4 border-top"
+                        id="aulaPaginationNav">
+                        <button type="button" class="btn btn-outline-primary rounded-pill px-4" id="aulaPagPrev"
+                            disabled>
+                            <i class="bi bi-arrow-left me-1"></i> Anterior
+                        </button>
+                        <span class="small text-muted fw-semibold" id="aulaPagIndicator">Página 1 de 2</span>
+                        <button type="button" class="btn btn-primary rounded-pill px-4" id="aulaPagNext">
+                            Próximo <i class="bi bi-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+
+                    <!-- ================= NAVEGAÇÃO ENTRE AULAS (exibida somente na última página) ================= -->
+                    <div class="aula-lesson-nav d-none justify-content-between align-items-center mt-5 pt-4 border-top"
+                        id="aulaLessonNav" data-prev-lesson="../modulo1/aula1.3.html" data-next-lesson="aula2.2.html">
+                        <a href="#" class="btn btn-outline-primary rounded-pill px-4" id="aulaLessonPrev">
+                            <i class="bi bi-arrow-left me-1"></i> Aula Anterior
+                        </a>
+                        <a href="#" class="btn btn-primary rounded-pill px-4" id="aulaLessonNext">
+                            Próxima Aula <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- ================= RODAPÉ DE LOGOS ================= -->
+                    <!-- ================= RODAPÉ (carregado de partials/footer.html) ================= -->
+                    <div id="site-footer"></div>
+
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <!-- ================= MODAIS (carregados de partials/modals.html) ================= -->
+    <div id="site-modals"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Seu arquivo JS unificado -->
+    <script src="js/partials-loader.js"></script>
+    <script src="js/aula2.1.js"></script>
+    <script src="js/main.js"></script>
+
+    <button type="button" class="back-to-top" id="btnBackToTop" aria-label="Voltar ao topo">
+        <i data-lucide="arrow-up" aria-hidden="true"></i>
+    </button>
+</body>
+
+</html>

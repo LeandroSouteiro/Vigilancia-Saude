@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Vigilância em Saúde em tempos de transformação digital</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Montserrat:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- CSS do seu tema -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Required meta tags -->
+    <meta name="robots" content="noindex" />
+    <meta name="author" content="Fiocruz, Campus Virtual" />
+    <meta name="description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="keywords" content="Fiocruz, Curso, Vigilância em Saúde, transformação digital, SUS" />
+
+    <!-- Facebook Open Graph -->
+    <meta property="og:url" content="https://mooc.campusvirtual.fiocruz.br/rea/introducao-analise-dados-sus" />
+    <meta property="og:title"
+        content="Campus Virtual Fiocruz | Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta property="og:description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title"
+        content="Campus Virtual Fiocruz | Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="twitter:image:src" content="" />
+
+    <!-- Favicons and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../media/icons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../../media/icons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../../media/icons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../../media/icons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../../media/icons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../../media/icons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../../media/icons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../../media/icons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="../../media/icons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../../media/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../media/icons/favicon-16x16.png" />
+    <link rel="manifest" href="../../media/icons/manifest.json" />
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="media/icons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#420b3c" />
+
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Barra de Progresso Superior -->
+    <div class="scroll-progress-top" id="scrollProgress"></div>
+
+    <script src="js/aula3.1-config.js"></script>
+    <!-- ================= CABEÇALHO (carregado de partials/header.html) ================= -->
+    <div id="site-header"></div>
+
+    <div class="page-wrapper" id="pageWrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <div id="site-sidebar"></div>
+
+        <!-- Lingueta (Botão) redesenhada: MOVIDA PARA FORA DO ASIDE PARA NÃO SUMIR -->
+        <button class="sidebar-tab" id="btnToggleSidebar" aria-label="Alternar menu" aria-expanded="true"
+            aria-controls="sidebarAula">
+            <i data-lucide="chevron-left" id="toggleIcon" aria-hidden="true"></i>
+        </button>
+
+        <!-- ================= CONTEÚDO ================= -->
+        <main class="content-aula" id="main-content">
+            <div class="main-content-inner">
+
+                <!-- Selo de navegação: flutua por cima do conteúdo -->
+                <nav aria-label="breadcrumb" class="aula-breadcrumb-pill">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../../index.html" class="text-decoration-none">Início</a></li>
+                        <li class="breadcrumb-item"><a href="aula3.1.html" class="text-decoration-none">Módulo 3</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Aula 1</li>
+                    </ol>
+                </nav>
+
+                <!-- Hero com imagem de fundo temática -->
+                <header class="aula-hero">
+                    <h1>Vigilância Cooperativa na Perspectiva da Saúde Única </h1>
+                </header>
+
+                <div class="main-content-body">
+                    <div class="aula-pages-wrapper" id="aulaPagesWrapper">
+
+                        <section class="aula-page active" data-page="1">
+                            <article class="aula-body">
+                                <h2 class="fw-bold mb-4 text-primary mt-2"><i class="bi bi-bookmark-check-fill"></i>
+                                    Apresentação do módulo</h2>
+                                <hr>
+                                <p class="lead text-muted">Antes de iniciarmos este módulo, que tal uma reflexão? Inicie
+                                    esta jornada pensando sobre uma pergunta simples, mas profunda: É possível proteger
+                                    a saúde das pessoas sem considerar a saúde dos animais e do ambiente onde vivemos?
+                                </p>
+                                <p class="lead text-muted">Essa questão, que há alguns anos poderia soar como uma
+                                    ampliação conceitual, hoje se impõe como uma necessidade prática diante das
+                                    emergências sanitárias, das mudanças climáticas, da intensificação da produção
+                                    agropecuária, da urbanização acelerada e da circulação global de pessoas,
+                                    mercadorias e microrganismos. </p>
+                                <p class="lead text-muted">Neste módulo, vamos dialogar sobre a Vigilância Cooperativa
+                                    na perspectiva da Saúde Única (One Health), compreendendo como essa abordagem amplia
+                                    e qualifica a Vigilância em Saúde no SUS, ao reconhecer que os riscos e agravos à
+                                    saúde não respeitam fronteiras institucionais, setoriais ou disciplinares.</p>
+
+                                <h3 class="fw-bold mt-5 mb-4 text-primary"><i class="bi bi-bullseye"></i> Objetivos do
+                                    módulo</h3>
+                                <hr>
+                                <p class="lead text-muted">Ao final deste módulo, esperamos que você seja capaz de: </p>
+
+                                <ul class="ms-5 lead text-muted">
+                                    <li class="my-3 mt-4">Compreender os fundamentos da abordagem Saúde Única e sua
+                                        relação com a Vigilância em Saúde. </li>
+                                    <li class="my-3">Identificar os princípios e características da Vigilância
+                                        Cooperativa como estratégia de integração entre saúde humana, animal, ambiental
+                                        e vegetal. </li>
+                                    <li class="my-3">Reconhecer a importância do território, da intersetorialidade e da
+                                        governança colaborativa na análise e enfrentamento de riscos e agravos à saúde.
+                                    </li>
+                                    <li class="my-3">Analisar o marco legal e normativo brasileiro que sustenta práticas
+                                        integradas de vigilância na perspectiva da Saúde Única. </li>
+                                    <li class="my-3">Refletir sobre a aplicação da Vigilância Cooperativa no cotidiano
+                                        dos serviços, considerando a articulação entre diferentes setores, instituições
+                                        e saberes.</li>
+                                    <li class="my-3">Aplicar os conceitos discutidos na identificação de situações
+                                        territoriais que demandam ações integradas de prevenção, monitoramento e
+                                        resposta em saúde. </li>
+                                </ul>
+
+                                <div class="text-center mt-5">
+                                    <a href="#" class="btn bg-primary rounded-pill px-4 text-white" id="aulaPagStart">Iniciar
+                                        Aula 1</a>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section class="aula-page" data-page="2">
+                            <div class="main-content-body">
+                                <article class="aula-body mb-0">
+                                    <h3 class="fw-bold mb-4 text-primary"><i class="bi bi-book-half"></i> Sobre esta
+                                        aula
+                                    </h3>
+                                    <hr>
+                                    <p class="lead text-muted">Esta aula aborda a Vigilância Cooperativa na perspectiva
+                                        da Saúde Única (One Health), uma abordagem que reconhece a interdependência
+                                        entre a saúde humana, animal, ambiental e vegetal. Diante da crescente
+                                        ocorrência de emergências sanitárias, eventos climáticos extremos, zoonoses,
+                                        insegurança alimentar e processos de degradação ambiental, torna-se cada vez
+                                        mais necessário ampliar a forma como compreendemos e enfrentamos os problemas de
+                                        saúde, considerando os múltiplos fatores que influenciam sua produção nos
+                                        territórios. </p>
+                                    <p class="lead text-muted">Ao longo desta aula, você conhecerá os fundamentos da
+                                        Vigilância Cooperativa e compreenderá como a integração entre setores,
+                                        instituições e áreas do conhecimento pode fortalecer e qualificar a Vigilância
+                                        em Saúde. Serão abordados conceitos relacionados à intersetorialidade,
+                                        governança, atuação em rede, território e marcos legais brasileiros, além de
+                                        situações práticas que evidenciam como a cooperação entre diferentes atores
+                                        contribui para a prevenção, detecção e resposta a riscos e agravos complexos, em
+                                        consonância com os princípios da Saúde Única.</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Objetivos de aprendizagem</h4>
+                                    <p class="lead text-muted">Ao final desta aula, esperamos que você seja capaz de:
+                                    </p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Compreender os fundamentos da Saúde Única. </li>
+                                        <li class="my-3">Entender o que caracteriza a Vigilância Cooperativa. </li>
+                                        <li class="my-3">Reconhecer o papel do território, da intersetorialidade e da
+                                            governança. </li>
+                                        <li class="my-3">Identificar o marco legal que sustenta essa prática no Brasil.
+                                        </li>
+                                        <li class="my-3">Refletir sobre como essa abordagem se materializa no cotidiano
+                                            do trabalho em saúde. </li>
+                                    </ul>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Introdução</h3>
+                                    <p class="lead text-muted">A Vigilância em Saúde enfrenta, cada vez mais, desafios
+                                        que ultrapassam os limites tradicionais dos serviços de saúde. Problemas como
+                                        zoonoses, arboviroses, enchentes, contaminação da água, resistência
+                                        antimicrobiana e eventos relacionados às mudanças climáticas demonstram que a
+                                        saúde das populações está profundamente conectada às condições ambientais, à
+                                        saúde animal, às formas de produção e à organização dos territórios. Diante
+                                        dessa realidade, torna-se fundamental adotar abordagens capazes de integrar
+                                        diferentes saberes, setores e fontes de informação para compreender e enfrentar
+                                        esses desafios de forma mais efetiva.</p>
+                                    <p class="lead text-muted">A proposta da Vigilância Cooperativa surge como uma
+                                        estratégia de organização do trabalho baseada na cooperação, na
+                                        corresponsabilidade e na análise compartilhada dos territórios. Fundamentada nos
+                                        princípios da Saúde Única, essa abordagem busca fortalecer a articulação entre
+                                        saúde humana, saúde animal e saúde ambiental, promovendo processos de vigilância
+                                        mais integrados, preventivos e orientados para a tomada de decisão coletiva. Ao
+                                        longo desta aula, serão apresentados os conceitos, fundamentos e aplicações
+                                        dessa perspectiva, evidenciando seu potencial para qualificar as ações de
+                                        vigilância e fortalecer a resposta aos problemas de saúde contemporâneos. </p>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Conceito e fundamentos da Saúde Única
+                                    </h3>
+                                    <p class="lead text-muted">A Saúde Única não surge como uma nova área da saúde, mas
+                                        como uma nova forma de olhar para a saúde. A Organização Mundial da Saúde (OMS),
+                                        a Organização das Nações Unidas para Alimentação e Agricultura (FAO) e a
+                                        Organização Mundial de Saúde Animal (WOAH) definem Saúde Única como uma
+                                        abordagem integrada que reconhece a interdependência entre a saúde humana,
+                                        animal e ambiental (WHO; FAO; WOAH, 2022). </p>
+                                    <p class="lead text-muted">Essa concepção dialoga fortemente com a tradição da Saúde
+                                        Coletiva brasileira, especialmente quando autores como Milton Santos (2006)
+                                        destacam o território como espaço vivo, onde se expressam as relações sociais,
+                                        ambientais e econômicas que produzem saúde e doença.</p>
+                                    <p class="lead text-muted">A Saúde Única ganha centralidade no cenário contemporâneo
+                                        porque:</p>
+
+                                    <div class="container my-5" data-copy-id="slider">
+                                        <div id="carouselFatoresZoonoticos" class="carousel slide shadow-md rounded-4 overflow-hidden border-0 max-w-4xl mx-auto max-w-content">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <div class="position-relative carousel-slide-media">
+                                                        <img src="imgs/04.jpg" class="w-100 h-100 object-fit-cover opacity-15" alt="Composição digital mostrando quatro animais em um ambiente natural: um macaco sentado à direita, um rato no chão à esquerda, um morcego voando acima do rato e um mosquito no centro." title="Gerada por IA (Chat GPT)">
+                                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFatoresZoonoticos" data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                        </button>
+                                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselFatoresZoonoticos" data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="p-4 bg-white carousel-caption-box">
+                                                        <p class="lead text-muted">Estima-se que cerca de 60% das doenças infecciosas humanas conhecidas sejam zoonóticas, e a maioria das doenças emergentes tem origem zoonótica, representando aproximadamente 75% dos casos.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="position-relative carousel-slide-media">
+                                                        <img src="imgs/05.jpg" class="w-100 h-100 object-fit-cover opacity-15" alt="Imagem dividida mostrando, à esquerda, uma paisagem verde vibrante com árvores frondosas e flores roxas sob céu azul; à direita, o mesmo local transformado em um ambiente estéril com árvores mortas em pé na água, sob um céu nublado." title="Magnific.com">
+                                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFatoresZoonoticos" data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                        </button>
+                                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselFatoresZoonoticos" data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="p-4 bg-white carousel-caption-box">
+                                                        <p class="lead text-muted">As mudanças climáticas alteram ecossistemas e vetores.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="position-relative carousel-slide-media">
+                                                        <img src="imgs/06.jpg" class="w-100 h-100 object-fit-cover opacity-15" alt="Plano aproximado de vegetais frescos dispostos sobre um tecido de juta: pimentões alaranjados e amarelos, um repolho verde ao fundo, uma abobrinha clara, um tomate vermelho e ervas aromáticas." title="Magnific.com">
+                                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFatoresZoonoticos" data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                        </button>
+                                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselFatoresZoonoticos" data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="p-4 bg-white carousel-caption-box">
+                                                        <p class="lead text-muted">A produção de alimentos e a ocupação do solo impactam diretamente os ciclos de transmissão de doenças.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted">Perceba como essa abordagem nos convida a ampliar o
+                                        olhar: não basta vigiar a doença quando ela já se manifesta nas pessoas; é
+                                        preciso compreender os processos que a produzem no ambiente, nos vegetais e nos
+                                        animais. </p>
+
+                                    <div class="container my-5" data-copy-id="quote">
+                                        <div class="p-5 rounded-4 text-white text-center shadow-lg position-relative overflow-hidden hero-quote-bg">
+                                            <i class="bi bi-quote display-3 text-white-50 mb-2 d-block"></i>
+                                            <blockquote class="blockquote mb-4">
+                                                <p class="fs-4 italic font-serif leading-relaxed text-light max-w-2xl mx-auto">
+                                                    "A saúde é produzida no território, nas relações sociais e ambientais que nele se estabelecem"
+                                                </p>
+                                            </blockquote>
+                                            <div class="text-warning text-uppercase tracking-wider fw-bold small">
+
+                                                (SANTOS, 2006).
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted">Antes de avançarmos para a compreensão sobre uma
+                                        Vigilância Cooperativa, é fundamental aprofundarmos o entendimento sobre o que
+                                        sustenta conceitualmente a Saúde Única. Mais do que um conceito emergente, a
+                                        Saúde Única representa uma mudança paradigmática na forma de compreender os
+                                        processos de produção da saúde e da doença no mundo contemporâneo. </p>
+                                    <p class="lead text-muted">A abordagem Saúde Única parte do reconhecimento de que a
+                                        saúde humana, a saúde animal e a saúde dos ecossistemas são interdependentes e
+                                        indissociáveis. Essa formulação é resultado de um acúmulo histórico que envolve
+                                        a medicina veterinária, a saúde pública, a ecologia e, mais recentemente, os
+                                        debates sobre mudanças climáticas, segurança alimentar e sustentabilidade
+                                        (ZINSSTAG et al., 2011; WHO; FAO; WOAH, 2022). </p>
+                                    <p class="lead text-muted">Conforme mencionamos neste tópico, uma grande parte das
+                                        doenças infecciosas humanas e das doenças emergentes conhecidas são zoonóticas.
+                                        Esses dados não apenas justificam, mas exigem uma abordagem integrada. Epidemias
+                                        recentes, como Ebola, Influenza Aviária, COVID-19 e Monkeypox evidenciam como a
+                                        interface entre humanos, animais e ambiente tem sido o ponto crítico de
+                                        emergência sanitária global.</p>
+                                    <p class="lead text-muted">Além disso, as mudanças climáticas vêm alterando a
+                                        dinâmica dos vetores, dos reservatórios naturais e dos padrões de transmissão de
+                                        doenças. A expansão de áreas urbanas sobre ambientes silvestres, o desmatamento,
+                                        a intensificação da produção agropecuária e a mobilidade global intensificam os
+                                        pontos de contato entre espécies e ampliam os riscos sanitários (IPBES, 2020).
+                                    </p>
+                                    <p class="lead text-muted">A perda de biodiversidade altera cadeias ecológicas,
+                                        modifica padrões de abundância de vetores e hospedeiros e amplia a probabilidade
+                                        de transmissão de patógenos. Ecossistemas simplificados tendem a apresentar
+                                        menor estabilidade ecológica e maior vulnerabilidade a processos de amplificação
+                                        de doenças.</p>
+                                    <p class="lead text-muted">Nesse contexto, a conservação da biodiversidade deve ser
+                                        compreendida como estratégia estruturante de prevenção sanitária, e não apenas
+                                        como política ambiental. Tal entendimento encontra respaldo no Marco Global de
+                                        Kunming-Montreal para a Biodiversidade e na Estratégia e Plano de Ação Nacionais
+                                        para a Biodiversidade (EPANB), que reconhecem a integridade ecossistêmica como
+                                        condição para a saúde e o bem-estar humano.</p>
+                                    <p class="lead text-muted">A Saúde Única, portanto, não surge apenas da preocupação
+                                        com zoonoses, mas da compreensão de que os determinantes da saúde são
+                                        ecológicos, sociais, econômicos e territoriais. Essa leitura dialoga
+                                        profundamente com a tradição da Saúde Coletiva brasileira, especialmente com
+                                        autores que enfatizam o território como espaço de produção da vida. </p>
+                                    <p class="lead text-muted">Nessa mesma linha, a WOAH (2026) reforça que Saúde Única
+                                        é uma abordagem integradora que visa um balanço sustentável entre os seres
+                                        humanos, os animais e os ecossistemas, otimizando a saúde de todos. Dentre as
+                                        diversas frentes de ação desta abordagem, uma das mais relevantes envolve
+                                        esforços de prevenção, preparação e resposta no combate às doenças zoonóticas,
+                                        considerando aquelas que os animais transmitem aos humanos (<em>spillover</em>)
+                                        e as transmitidas por humanos para os animais (<em>spillback</em>). </p>
+
+                                     <div class="container-fluid aula-wide-block px-lg-4 my-5">
+                                        <img src="imgs/03.jpg"
+                                            alt="Infográfico comparativo sobre transmissão de doenças em tons de roxo sobre fundo claro, dividido em duas etapas: à esquerda, SPILLOVER (Do animal para o humano), mostrando a passagem do reservatório animal para humanos através de meios de transmissão; à direita, SPILLBACK (Do humano para o animal), ilustrando o processo inverso, de humanos infectados transmitindo para animais."
+                                            title="Gerada por IA (Gemini)" class="img-fluid rounded-4 shadow-sm">
+										<!--<p class="text-center small text-muted mt-2 mb-0">Legenda: Espectro eletromagnético e bandas do sensoriamento<br/>Fonte: Campus Virtual Fiocruz criado com IA</p>-->
+                                    </div>
+
+                                    <p class="lead text-muted">A biodiversidade não deve ser compreendida apenas como
+                                        patrimônio natural ou ativo ecológico, mas como componente estruturante da saúde
+                                        coletiva. Ecossistemas íntegros exercem funções reguladoras fundamentais, como:
+                                    </p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Controle biológico de vetores. </li>
+                                        <li class="my-3">Diluição de patógenos em comunidades diversas. </li>
+                                        <li class="my-3">Regulação hídrica e estabilidade climática local. </li>
+                                    </ul>
+
+                                    <p class="lead text-muted mt-4">A simplificação de habitats, a fragmentação
+                                        florestal e a conversão de áreas naturais para usos produtivos reduzem essa
+                                        capacidade regulatória e aumentam a probabilidade de desequilíbrios sanitários.
+                                        Assim, a manutenção da diversidade biológica se torna uma estratégia preventiva
+                                        de saúde pública, ao reduzir riscos sistêmicos associados à emergência e
+                                        reemergência de doenças infecciosas. </p>
+                                    <p class="lead text-muted">Segundo a perspectiva de Milton Santos (2006) sobre
+                                        território, os riscos à saúde não se distribuem ao acaso, mas acompanham a forma
+                                        como a sociedade organiza o uso do solo, a produção de alimentos, o saneamento,
+                                        a moradia e a relação com a natureza. </p>
+                                    <p class="lead text-muted">Da mesma forma, Buss e Pellegrini Filho (2007) reforçam
+                                        que os determinantes sociais da saúde (DSS) incluem as condições ambientais e
+                                        produtivas que moldam a exposição das populações a riscos. A Saúde Única amplia
+                                        esse entendimento ao incorporar explicitamente a saúde animal, a saúde vegetal e
+                                        a ambiental como dimensões estruturantes da saúde humana. </p>
+                                    <p class="lead text-muted">Organismos internacionais vêm consolidando essa abordagem
+                                        como diretriz estratégica. O Plano de Ação Conjunto One Health (2022–2026),
+                                        elaborado por OMS, FAO, WOAH e PNUMA, estabelece como prioridade global a
+                                        integração de sistemas de vigilância, laboratórios, políticas públicas e
+                                        governança intersetorial para enfrentar riscos sanitários complexos (WHO; FAO;
+                                        WOAH; UNEP, 2022). </p>
+                                    <p class="lead text-muted">Para efetivar esse olhar ampliado, a Quadripartite,
+                                        composta pela OMS, FAO, Programa das Nações Unidas para o Meio Ambiente
+                                        (PNUMA/UNEP) e WOAH, elaborou um plano de ação conjunto de cinco anos
+                                        (2022–2026) chamado One Health Joint Plan of Action (OH JPA), que está
+                                        disponível na íntegra em português e outras línguas neste <a href="https://www.woah.org/app/uploads/2022/04/one-health-joint-plan-of-action-final.pdf" target="_blank" class="fw-bold">site</a>.</p>
+                                    <p class="lead text-muted">Esse plano não é apenas uma declaração de princípios, mas
+                                        uma estrutura operacional baseada em <span class="fw-bold">seis eixos prioritários interdependentes,
+                                        orientados por evidências científicas e práticas recomendadas para enfrentar
+                                        ameaças contemporâneas à saúde</span>. Vamos conhecê-los? </p>
+
+                                    <div class="container my-5" data-copy-id="accordion">
+										<div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionExemplo1">
+
+											<div class="accordion-item border-0 border-bottom">
+												<h4 class="accordion-header" id="headingExemplo1-1">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo1-1"
+														aria-expanded="false" aria-controls="collapseExemplo1-1">
+														<span class="fs-5 text-primary fw-bold">Reforçar as capacidades da Saúde Única para fortalecer sistemas de saúde</span>
+													</button>
+												</h4>
+												<div id="collapseExemplo1-1" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo1-1" data-bs-parent="#accordionExemplo1">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted mb-0">Construir habilidades e capacidades humanas, institucionais e sistêmicas para integrar a abordagem Saúde Única em políticas e práticas nacionais.</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-item border-0 border-bottom">
+												<h4 class="accordion-header" id="headingExemplo1-2">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo1-2"
+														aria-expanded="false" aria-controls="collapseExemplo1-2">
+														<span class="fs-5 text-primary fw-bold">Reduzir os riscos de epidemias e pandemias zoonóticas emergentes e reemergentes</span>
+													</button>
+												</h4>
+												<div id="collapseExemplo1-2" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo1-2" data-bs-parent="#accordionExemplo1">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted mb-0">Aprimorar a preparação, predição e resposta antecipada a ameaças que emergem na interface entre humanos, animais e ambiente.</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-item border-0 border-bottom">
+												<h4 class="accordion-header" id="headingExemplo1-3">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo1-3"
+														aria-expanded="false" aria-controls="collapseExemplo1-3">
+														<span class="fs-5 text-primary fw-bold">Controlar e eliminar zoonoses endêmicas, doenças tropicais negligenciadas e transmitidas por vetores</span>
+													</button>
+												</h4>
+												<div id="collapseExemplo1-3" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo1-3" data-bs-parent="#accordionExemplo1">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted mb-0">Consolidar ações preventivas, diagnósticas e de controle que integrem todos os setores envolvidos.</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-item border-0 border-bottom">
+												<h4 class="accordion-header" id="headingExemplo1-4">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo1-4"
+														aria-expanded="false" aria-controls="collapseExemplo1-4">
+														<span class="fs-5 text-primary fw-bold">Fortalecer a avaliação, gestão e comunicação dos riscos à segurança dos alimentos</span>
+													</button>
+												</h4>
+												<div id="collapseExemplo1-4" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo1-4" data-bs-parent="#accordionExemplo1">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted mb-0">Assegurar sistemas integrados que reduzam riscos alimentares desde a produção até o consumo.</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-item border-0 border-bottom">
+												<h4 class="accordion-header" id="headingExemplo1-5">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo1-5"
+														aria-expanded="false" aria-controls="collapseExemplo1-5">
+														<span class="fs-5 text-primary fw-bold">Conter a pandemia silenciosa da resistência antimicrobiana (AMR)</span>
+													</button>
+												</h4>
+												<div id="collapseExemplo1-5" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo1-5" data-bs-parent="#accordionExemplo1">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted mb-0">Integrar ações entre a saúde humana, animal e ambiental para enfrentar um dos maiores desafios atuais em saúde global, que ameaça a efetividade de tratamentos essenciais.</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-item border-0">
+												<h4 class="accordion-header" id="headingExemplo1-6">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo1-6"
+														aria-expanded="false" aria-controls="collapseExemplo1-6">
+														<span class="fs-5 text-primary fw-bold">Integrar o meio ambiente na abordagem Saúde Única</span>
+													</button>
+												</h4>
+												<div id="collapseExemplo1-6" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo1-6" data-bs-parent="#accordionExemplo1">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted mb-0">Incluir de forma explícita determinantes ambientais, como poluição, degradação de ecossistemas e mudanças climáticas, no planejamento e implementação de ações de saúde.</p>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+                                    <p class="lead text-muted">Esses eixos, por sua vez, são sustentados por três
+                                        caminhos estratégicos (<em>pathways</em>) para promover mudanças:</p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Governança eficaz e inclusiva.</li>
+                                        <li class="my-3">Desenvolvimento organizacional e capacitação de recursos.</li>
+                                        <li class="my-3">Sistemas de dados e evidências coordenadas que facilitem a
+                                            análise conjunta de riscos e respostas.</li>
+                                    </ul>
+
+                                    <p class="lead text-muted mt-4">Em sua essência, o OH JPA busca criar um arcabouço
+                                        coletivo de ação multissetorial, multiescalar e interdisciplinar, promovendo não
+                                        apenas respostas a crises, mas uma mudança sistêmica de como os Estados e suas
+                                        instituições percebem e organizam políticas de saúde que reconheçam a
+                                        interdependência de processos naturais e sociais (WHO; FAO; WOAH; UNEP, 2022). O
+                                        plano também orienta a construção ou fortalecimento de planos nacionais de Saúde
+                                        Única, capazes de adaptar essas diretrizes internacionais ao contexto local,
+                                        respeitando as especificidades territoriais, socioambientais e de governança.
+                                    </p>
+                                    <p class="lead text-muted">Com o intuito de estabelecer uma melhor governança sobre
+                                        o tema, o governo brasileiro instituiu o <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/u/uma-so-saude/comite-tecnico-interinstitucional" target="_blank" class="fw-bold">Comitê Técnico Interinstitucional de
+                                        Saúde Única</a>, por meio do Decreto Presidencial nº 12.007, de 25 de abril de 2024,
+                                        composto por 20 instituições, sendo oito ministérios, sete entidades vinculadas
+                                        e cinco conselhos profissionais. Os objetivos do Comitê são:</p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Elaborar e revisar o Plano de Ação Nacional de Saúde
+                                            Única. </li>
+                                        <li class="my-3">Apoiar, monitorar e propor ajustes à implementação do Plano de
+                                            Ação Nacional de Saúde Única.</li>
+                                        <li class="my-3">Articular com Estados e Municípios para orientar medidas
+                                            interfederativas e multissetoriais para a implementação do Plano de Ação
+                                            Nacional de Saúde Única.</li>
+                                        <li class="my-3">Assessorar tecnicamente o Governo brasileiro em agendas
+                                            domésticas e internacionais sobre o tema.</li>
+                                        <li class="my-3">Apoiar o desenvolvimento de estudos e pesquisas sobre o tema.
+                                        </li>
+                                    </ul>
+
+                                    <p class="lead text-muted mt-4">Perceba que a Saúde Única não propõe a criação de
+                                        novas estruturas paralelas, mas sim uma nova lente para interpretar e organizar
+                                        as ações já existentes, especialmente no campo da vigilância. </p>
+
+                                    <div class="my-5 alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light mb-4"
+                                        role="alert" data-copy-id="box-reflexao">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <h4 class="fw-bold text-primary mt-2 mb-2"><i class="bi bi-chat-right-dots-fill fs-4 text-info me-3 ms-3"></i>Reflexão</h4>
+                                                <p class="lead text-muted ms-3 mb-0">No território em que você atua,
+                                                    quais problemas de saúde poderiam ser mais bem compreendidos se
+                                                    observados também a partir das dimensões ambiental e animal?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted mt-5">Essa pergunta nos conduz à compreensão de que a Saúde
+                                        Única é, essencialmente, uma abordagem territorial, intersetorial e
+                                        interdisciplinar, profundamente alinhada aos princípios do SUS e à concepção
+                                        ampliada de saúde prevista na Lei 8.080/90, que reconhece o meio ambiente como
+                                        determinante da saúde (BRASIL, 1990).</p>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">O que propõe a Vigilância Cooperativa na
+                                        perspectiva da Saúde Única</h3>
+                                    <p class="lead text-muted">Agora que você já aprendeu sobre os fundamentos da Saúde
+                                        Única, conheça agora um conceito central deste módulo: Vigilância Cooperativa.
+                                        Para iniciar esta reflexão, vale retomar uma pergunta:</p>
+                                    <p class="lead text-muted fw-bold text-center my-5">É possível vigiar riscos e agravos à
+                                        saúde considerando apenas uma parte da realidade que os produz? </p>
+                                    <p class="lead text-muted">A experiência prática no SUS mostra que não. Muitas
+                                        vezes, a vigilância identifica o agravo quando ele já está instalado na
+                                        população, mas os sinais anteriores (ambientais, territoriais, produtivos,
+                                        animais) não foram incorporados à análise.</p>
+                                    <p class="lead text-muted mb-5">A proposta de uma Vigilância Cooperativa surge exatamente
+                                        da necessidade de superar essa fragmentação, é um arranjo técnico-político
+                                        intersetorial e territorializado de produção, compartilhamento e análise de
+                                        informações, bem como de tomada de decisão articulada, voltada à prevenção,
+                                        detecção e resposta a riscos sanitários complexos, fundamentado na
+                                        interdependência entre saúde humana, animal e ambiental.</p>
+
+                                    <div class="my-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                        <div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                               Atuar de forma cooperativa significa organizar ações, decisões e responsabilidades de maneira compartilhada, com objetivos comuns, corresponsabilidade entre os atores envolvidos e produção conjunta de soluções. 
+                                            </p><br/>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                               Não é apenas “ajudar” ou “colaborar pontualmente”. Cooperação implica interdependência estruturada: ninguém atua isoladamente, e o resultado depende da ação articulada entre todos. 
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted">Do ponto de vista crítico-epidemiológico, Jaime Breilh
+                                        argumenta que os processos saúde-doença são produzidos por determinações
+                                        estruturais socioambientais, exigindo respostas intersetoriais e sistêmicas
+                                        (BREILH, 2006). A vigilância compartilhada, assim, emerge como expressão prática
+                                        da determinação social da saúde.</p>
+                                    <p class="lead text-muted">A Política Nacional de Vigilância em Saúde (PNVS) já
+                                        aponta que a vigilância deve considerar os determinantes e condicionantes do
+                                        processo saúde-doença e ser organizada de forma integrada entre suas diferentes
+                                        áreas (BRASIL, 2018). No entanto, na prática institucional, Vigilância
+                                        Epidemiológica, Sanitária, Ambiental e Saúde do Trabalhador ainda operam com
+                                        fluxos próprios, sistemas próprios e análises pouco articuladas.</p>
+                                    <p class="lead text-muted">A Vigilância Cooperativa, na perspectiva da Saúde Única,
+                                        amplia essa integração para além das áreas internas da saúde, incorporando
+                                        também a Vigilância da Saúde Animal, a Vigilância Agropecuária, a Vigilância
+                                        Ambiental e a Gestão Territorial como partes constitutivas da análise sanitária.
+                                    </p>
+                                    <p class="lead text-muted">Não se trata apenas de trocar informações. Trata-se de
+                                        compartilhar a leitura do território, o planejamento das ações e a tomada de
+                                        decisão.</p>
+                                    <p class="lead text-muted">Monken e Barcellos (2005) destacam que a Vigilância em
+                                        Saúde precisa partir do território utilizado, ou seja, do espaço onde se
+                                        concretizam as relações sociais, ambientais e econômicas. Isso significa que os
+                                        eventos de saúde não podem ser compreendidos isoladamente do contexto em que
+                                        ocorrem. A Vigilância Cooperativa opera exatamente nesse ponto: ela parte do
+                                        território como unidade de análise comum entre diferentes setores.</p>
+                                    <p class="lead text-muted">Buss e Pellegrini Filho (2007) reforçam que os
+                                        determinantes sociais da saúde incluem condições ambientais, produtivas e
+                                        sociais que expõem populações a riscos diferenciados. Quando a vigilância se
+                                        limita ao evento humano, ela perde a capacidade de atuar sobre esses
+                                        determinantes.</p>
+                                    <p class="lead text-muted">A abordagem Saúde Única, conforme descrita no plano
+                                        conjunto da OMS, FAO, WOAH e PNUMA (2022), recomenda explicitamente a integração
+                                        de sistemas de vigilância entre saúde humana, animal, vegetal e ambiental como
+                                        estratégia prioritária para a antecipação de riscos. Isso significa que a
+                                        vigilância cooperativa não é apenas uma proposta conceitual brasileira, mas uma
+                                        diretriz global baseada em evidências. Na prática, a Vigilância Cooperativa
+                                        pressupõe que:</p>
+
+                                    <div data-copy-id="cards my-5">
+										<div class="text-center mb-4">
+											<span class="badge-recurso-interativo">
+												<i class="bi bi-cursor-fill me-1"></i> Recurso Interativo
+											</span>
+											<p class="text-muted mb-0 mt-2">Clique nos cards abaixo para saber mais</p>
+										</div>
+										<div class="container-fluid aula-wide-block px-lg-4 my-5">
+											<div class="row g-4 g-lg-5 justify-content-center align-items-start">
+												<div class="col-md-6">
+													<div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden card-expandable collapsed" role="button" tabindex="0" data-bs-toggle="collapse" data-bs-target="#cardExemplo1" aria-expanded="false" aria-controls="cardExemplo1">
+														<div class="position-relative">
+															<img src="imgs/07.jpg" class="card-img-top img-cover-260" alt="Uma mão segurando uma lupa com cabo de madeira focada sobre um placa triangular amarela com ponto de exclamação preto, simbolizando atenção ou alerta, sobre fundo claro." title="Gerada por IA (Gemini)">
+															<span class="card-expand-icon-wrap">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus card-expand-icon"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+															</span>
+														</div>
+														<div class="collapse" id="cardExemplo1">
+															<div class="card-body bg-light p-4 info-card-collapse-body-lg">
+																<p class="card-text lead text-muted mb-0">A análise de risco seja realizada de forma intersetorial.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden card-expandable collapsed" role="button" tabindex="0" data-bs-toggle="collapse" data-bs-target="#cardExemplo2" aria-expanded="false" aria-controls="cardExemplo2">
+														<div class="position-relative">
+															<img src="imgs/08.jpg" class="card-img-top img-cover-260" alt="Dois notebooks abertos sobre uma mesa de escritório com gráficos digitais flutuando entre as telas, representando transferência de dados e sincronização de arquivos em tempo real." title="Gerada por IA (Gemini)">
+															<span class="card-expand-icon-wrap">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus card-expand-icon"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+															</span>
+														</div>
+														<div class="collapse" id="cardExemplo2">
+															<div class="card-body bg-light p-4 info-card-collapse-body-lg">
+																<p class="card-text lead text-muted mb-0">Os dados de diferentes sistemas sejam compartilhados e considerados de maneira conjunta.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden card-expandable collapsed" role="button" tabindex="0" data-bs-toggle="collapse" data-bs-target="#cardExemplo3" aria-expanded="false" aria-controls="cardExemplo3">
+														<div class="position-relative">
+															<img src="imgs/09.jpg" class="card-img-top img-cover-260" alt="A imagem mostra quatro mãos sobrepostas, representando união e diversidade. O fundo da imagem é branco, destacando as mãos." title="Gerada por IA (Gemini)">
+															<span class="card-expand-icon-wrap">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus card-expand-icon"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+															</span>
+														</div>
+														<div class="collapse" id="cardExemplo3">
+															<div class="card-body bg-light p-4 info-card-collapse-body-lg">
+																<p class="card-text lead text-muted mb-0">As decisões sobre intervenção envolvam diferentes instituições.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden card-expandable collapsed" role="button" tabindex="0" data-bs-toggle="collapse" data-bs-target="#cardExemplo4" aria-expanded="false" aria-controls="cardExemplo4">
+														<div class="position-relative">
+															<img src="imgs/10.jpg" class="card-img-top img-cover-260" alt="Mapa de satélite da América do Sul destacando o território do Brasil, coberto por uma malha geométrica de pontos interconectados por linhas escuras, representando cobertura." title="Gerada por IA (Gemini)">
+															<span class="card-expand-icon-wrap">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus card-expand-icon"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+															</span>
+														</div>
+														<div class="collapse" id="cardExemplo4">
+															<div class="card-body bg-light p-4 info-card-collapse-body-lg">
+																<p class="card-text lead text-muted mb-0">O planejamento das ações é territorial e não setorial.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+                                    <div class="my-5 alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light mb-4"
+                                        role="alert" data-copy-id="box-reflexao">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <h4 class="fw-bold text-primary mt-2 mb-2"><i class="bi bi-chat-right-dots-fill fs-4 text-info me-3 ms-3"></i>Reflexão</h4>
+                                                <p class="lead text-muted ms-3 mb-0">No seu município, quem conversa com quem quando surge um problema de saúde relacionado a enchentes, animais, resíduos, água ou produção de alimentos? </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted mt-5">Essa pergunta revela um ponto crucial: a Vigilância Cooperativa depende menos de novas normativas e mais de novas formas de organização do trabalho. A Lei 8.080/90 já reconhece o meio ambiente como determinante da saúde (BRASIL, 1990). A Constituição Federal estabelece que a saúde deve ser garantida por políticas sociais e econômicas (BRASIL, 1988). A PNVS orienta a integração das vigilâncias (BRASIL, 2018). O marco legal existe. O desafio está na prática institucional fragmentada. </p>
+
+                                    <div class="container-fluid aula-wide-block px-lg-4 my-5" data-copy-id="cards-comparativos">
+                                        <div class="position-relative">
+                                            <div class="row g-4 justify-content-center">
+                                                <div class="col-md-6">
+                                                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                        <div class="card-header bg-secondary text-white text-center py-3 border-0">
+                                                            <h5 class="fw-bold mb-0"><i class="bi bi-clock-history me-2"></i>Vigilância Tradicional</h5>
+                                                        </div>
+                                                        <div class="card-body p-4">
+                                                            <ul class="list-unstyled mb-0">
+                                                                <li class="d-flex align-items-start gap-2 py-2 border-bottom"><i class="bi bi-dash-circle-fill text-secondary mt-1"></i><span class="text-muted">Foco no agravo humano</span></li>
+                                                                <li class="d-flex align-items-start gap-2 py-2 border-bottom"><i class="bi bi-dash-circle-fill text-secondary mt-1"></i><span class="text-muted">Análise setorial</span></li>
+                                                                <li class="d-flex align-items-start gap-2 py-2 border-bottom"><i class="bi bi-dash-circle-fill text-secondary mt-1"></i><span class="text-muted">Resposta reativa</span></li>
+                                                                <li class="d-flex align-items-start gap-2 py-2 border-bottom"><i class="bi bi-dash-circle-fill text-secondary mt-1"></i><span class="text-muted">Fluxos internos da saúde</span></li>
+                                                                <li class="d-flex align-items-start gap-2 py-2"><i class="bi bi-dash-circle-fill text-secondary mt-1"></i><span class="text-muted">Dados isolados</span></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                        <div class="card-header bg-primary text-white text-center py-3 border-0">
+                                                            <h5 class="fw-bold mb-0"><i class="bi bi-diagram-3-fill me-2"></i>Vigilância Cooperativa</h5>
+                                                        </div>
+                                                        <div class="card-body p-4">
+                                                            <ul class="list-unstyled mb-0">
+                                                                <li class="d-flex align-items-start gap-2 py-2 border-bottom"><i class="bi bi-check-circle-fill text-primary mt-1"></i><span class="text-muted">Foco nos processos que produzem o agravo</span></li>
+                                                                <li class="d-flex align-items-start gap-2 py-2 border-bottom"><i class="bi bi-check-circle-fill text-primary mt-1"></i><span class="text-muted">Análise territorial</span></li>
+                                                                <li class="d-flex align-items-start gap-2 py-2 border-bottom"><i class="bi bi-check-circle-fill text-primary mt-1"></i><span class="text-muted">Ação preventiva e antecipatória</span></li>
+                                                                <li class="d-flex align-items-start gap-2 py-2 border-bottom"><i class="bi bi-check-circle-fill text-primary mt-1"></i><span class="text-muted">Articulação intersetorial</span></li>
+                                                                <li class="d-flex align-items-start gap-2 py-2"><i class="bi bi-check-circle-fill text-primary mt-1"></i><span class="text-muted">Dados integrados</span></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="position-absolute top-50 start-50 translate-middle d-none d-md-flex align-items-center justify-content-center rounded-circle bg-white shadow comparativo-x-badge">
+                                                <span class="fw-bold fs-4 text-secondary">X</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted">Perceba como essa mudança é essencial para lidar com
+                                        problemas complexos como leptospirose, leishmaniose, arboviroses, contaminação
+                                        da água, intoxicações por agrotóxicos, resistência antimicrobiana, entre outros
+                                        eventos que têm origem na interface entre ambiente, animais, produção e vida
+                                        humana.</p>
+                                    <p class="lead text-muted mb-5">Zinsstag et al. (2011) já apontavam que a integração
+                                        entre saúde humana e animal permite respostas mais eficazes e econômicas na
+                                        prevenção de doenças. Essa integração, quando ampliada para o ambiente e o
+                                        território, ganha ainda mais potência.</p>
+
+                                    <div class="my-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                        <div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                                A proposta de uma Vigilância Cooperativa pode ser entendida como a operacionalização prática da Saúde Única dentro da Vigilância em Saúde, transformando a forma como analisamos, planejamos e intervimos nos territórios. Ela não cria atribuições, mas reorganiza as existentes sob uma lógica de cooperação, corresponsabilidade e leitura ampliada da realidade. 
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="container my-5" data-copy-id="tabela">
+                                        <p class="fw-bold text-primary text-center mb-3">Comparativo entre referenciais teóricos</p>
+                                        <div class="table-responsive rounded-4 shadow-sm border-0">
+                                            <table class="table table-aula mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Referencial</th>
+                                                        <th scope="col">Autores/<br>Instituições</th>
+                                                        <th scope="col">Contribuição<br>para Vigilância Compartilhada</th>
+                                                        <th scope="col">Ênfase<br>principal</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="fw-semibold text-dark">Saúde Coletiva Brasileira</td>
+                                                        <td>Jairnilson Paim</td>
+                                                        <td>Integração das práticas sanitárias</td>
+                                                        <td><span class="table-aula-tag">Integralidade e território</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="fw-semibold text-dark">Redes e governança</td>
+                                                        <td>Eugênio Vilaça Mendes</td>
+                                                        <td>Coordenação interfederativa</td>
+                                                        <td><span class="table-aula-tag">Organização em rede</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="fw-semibold text-dark">Epidemiologia crítica</td>
+                                                        <td>Jaime Breilh</td>
+                                                        <td>Determinação social da saúde</td>
+                                                        <td><span class="table-aula-tag">Complexidade socioambiental</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="fw-semibold text-dark">Governança colaborativa</td>
+                                                        <td>Ansell &amp; Gash</td>
+                                                        <td>Tomada de decisão compartilhada</td>
+                                                        <td><span class="table-aula-tag">Cooperação institucional</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="fw-semibold text-dark">Saúde Única</td>
+                                                        <td>WHO, FAO e WOAH</td>
+                                                        <td>Integração humano-animal-ambiente</td>
+                                                        <td><span class="table-aula-tag">Vigilância integrada</span></td>
+
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="my-5 alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light mb-4"
+                                        role="alert" data-copy-id="box-reflexao">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <h4 class="fw-bold text-primary mt-2 mb-2"><i class="bi bi-chat-right-dots-fill fs-4 text-info me-3 ms-3"></i>Reflexão</h4>
+                                                <p class="lead text-muted ms-3 mb-0">O que mudaria na sua prática se, ao
+                                                    investigar um agravo, você automaticamente acionasse outros setores
+                                                    para analisar junto o território?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Intersetorialidade, Governança e Atuação
+                                        em Rede no Território</h3>
+                                    <p class="lead text-muted">Ao falarmos em Vigilância Cooperativa na perspectiva da
+                                        Saúde Única, inevitavelmente chegamos a três palavras-chave que sustentam sua
+                                        viabilidade prática: <span class="fw-bold">intersetorialidade, governança e território</span>. Esses
+                                        elementos não são acessórios. Eles são a condição de possibilidade para que a
+                                        Vigilância Cooperativa aconteça. Saiba mais sobre eles: </p>
+
+                                    <div class="container my-5" data-copy-id="accordion">
+										<div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionExemplo2">
+
+											<div class="accordion-item border-0 border-bottom">
+												<h4 class="accordion-header" id="headingExemplo2-1">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo2-1"
+														aria-expanded="false" aria-controls="collapseExemplo2-1">
+														<span class="fs-5 text-primary fw-bold">Intersetorialidade</span>
+													</button>
+												</h4>
+												<div id="collapseExemplo2-1" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo2-1" data-bs-parent="#accordionExemplo2">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted mb-0">A intersetorialidade, conforme discutida na Saúde Coletiva brasileira, não significa apenas a presença de diferentes setores em uma reunião. Ela implica compartilhamento de responsabilidades, construção conjunta de diagnósticos e planejamento integrado de intervenções (BUSS; PELLEGRINI FILHO, 2007). Ou seja, é um modo de organizar a ação pública diante de problemas complexos que não cabem em estruturas administrativas isoladas.</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-item border-0 border-bottom">
+												<h4 class="accordion-header" id="headingExemplo2-2">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo2-2"
+														aria-expanded="false" aria-controls="collapseExemplo2-2">
+														<span class="fs-5 text-primary fw-bold">Território</span>
+													</button>
+												</h4>
+												<div id="collapseExemplo2-2" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo2-2" data-bs-parent="#accordionExemplo2">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted">Conforme já mencionamos nessa aula, Milton Santos (2006) traz um olhar diferenciado sobre este tema, no qual o território é o espaço onde se materializam as relações sociais, econômicas e ambientais. Portanto, é também onde se produzem os riscos e agravos à saúde. As vigilâncias, quando organizadas apenas por setores, fragmentam a leitura desse território. A Vigilância Cooperativa propõe o inverso: o território como ponto de encontro entre os setores.</p>
+														<p class="lead text-muted">Problemas como enchentes, contaminação da água, aumento de vetores, zoonoses, intoxicações por agrotóxicos, insegurança alimentar, não são "problemas da saúde". São problemas do território, que se manifestam na saúde.</p>
+														<p class="lead text-muted mb-0">Monken e Barcellos (2005) reforçam que a Vigilância em Saúde precisa partir do território utilizado, reconhecendo que é nele que os eventos ganham significado. Isso exige que diferentes setores, saúde, meio ambiente, agricultura, defesa civil, educação e planejamento urbano, olhem para o mesmo espaço com lentes complementares.</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-item border-0">
+												<h4 class="accordion-header" id="headingExemplo2-3">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo2-3"
+														aria-expanded="false" aria-controls="collapseExemplo2-3">
+														<span class="fs-5 text-primary fw-bold">Governança</span>
+													</button>
+												</h4>
+												<div id="collapseExemplo2-3" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo2-3" data-bs-parent="#accordionExemplo2">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted">Nesse contexto, refere-se à capacidade de articular atores, instituições e saberes em torno de objetivos comuns, estabelecendo fluxos de comunicação, pactuações e corresponsabilidades (WHO; FAO; WOAH; UNEP, 2022). Não se trata de hierarquia, mas de coordenação.</p>
+														<p class="lead text-muted mb-0">O One Health Joint Plan of Action (2022–2026) coloca a governança inclusiva como um dos três caminhos estratégicos para operacionalizar a Saúde Única, destacando a necessidade de estruturas que facilitem a cooperação entre setores e níveis de governo. Isso significa criar espaços formais e informais onde essa articulação possa acontecer de maneira contínua, e não apenas em momentos de crise.</p>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+                                    <div class="my-5 alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light mb-4"
+                                        role="alert" data-copy-id="box-reflexao">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <h4 class="fw-bold text-primary mt-2 mb-2"><i class="bi bi-chat-right-dots-fill fs-4 text-info me-3 ms-3"></i>Reflexão</h4>
+                                                <p class="lead text-muted ms-3 mb-0">No seu território, existe algum
+                                                    espaço permanente onde saúde, meio ambiente e agricultura discutem
+                                                    juntos os problemas locais?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted mt-5">Se a sua resposta foi não, já identificamos um dos
+                                        principais gargalos para a Vigilância Cooperativa. A atuação em rede é a
+                                        materialização da governança no cotidiano. Redes não são apenas listas de
+                                        contatos. Elas são relações de confiança, fluxos de informação e práticas
+                                        colaborativas consolidadas. Na prática, isso significa que: </p>
+
+                                    <ul class="ms-5 lead text-muted mb-5">
+                                        <li class="my-3 mt-4">A Vigilância Ambiental informa a vigilância epidemiológica
+                                            sobre alterações no território. </li>
+                                        <li class="my-3">A defesa sanitária animal (agricultura) comunica a saúde quando
+                                            ocorrem enfermidades que demandam investigação de casos em humanos.</li>
+                                        <li class="my-3">A defesa civil compartilha informações sobre áreas de risco.
+                                        </li>
+                                        <li class="my-3">A educação participa de estratégias preventivas. </li>
+                                        <li class="my-3">A gestão municipal articula esses atores.</li>
+                                    </ul>
+
+                                    <div class="my-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                        <div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                              Essa lógica dialoga diretamente com o que a PNVS propõe ao afirmar que a vigilância deve atuar sobre riscos, danos e determinantes de forma integrada (BRASIL, 2018). 
+                                            </p><br/>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                              A Vigilância Cooperativa exige uma mudança importante: sair da lógica da competência institucional e entrar na lógica da corresponsabilidade territorial. 
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted">Zinsstag et al. (2011) demonstram que abordagens
+                                        integradas entre setores geram respostas mais eficazes e custo-efetivas na
+                                        prevenção de doenças. Quando ampliamos essa integração para o território e o
+                                        ambiente, potencializamos ainda mais os resultados. </p>
+                                    <p class="lead text-muted">Isso ocorre porque os eventos no território são, por
+                                        natureza, intersetoriais. Um foco de leishmaniose envolve ambiente, animais,
+                                        moradia e pessoas. Uma enchente envolve saneamento, resíduos, ocupação do solo,
+                                        saúde, agricultura, defesa civil. A Vigilância Cooperativa apenas reconhece essa
+                                        realidade e organiza a resposta de forma coerente com ela. Assim, podemos
+                                        compreender que:</p>
+
+                                    <div data-copy-id="boxes-termos my-5">
+										<div class="container-fluid aula-wide-block px-lg-4 my-5">
+											<div class="row g-4 g-lg-5 justify-content-center align-items-start">
+												<div class="col-md-6 col-lg-4">
+													<div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+														<div class="position-relative text-center py-5 px-3 text-white bg-primary">
+															<h4 class="fw-bold mb-0">Intersetorialidade</h4>
+														</div>
+														<div class="card-body bg-light p-4 text-center info-card-collapse-body">
+															<p class="card-text lead text-muted mb-0">Modo de organizar a ação.</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-lg-4">
+													<div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+														<div class="position-relative text-center py-5 px-3 text-white bg-primary">
+															<h4 class="fw-bold mb-0">Território</h4>
+														</div>
+														<div class="card-body bg-light p-4 text-center info-card-collapse-body">
+															<p class="card-text lead text-muted mb-0">Ponto de convergência onde as vigilâncias acontecem.</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-lg-4">
+													<div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+														<div class="position-relative text-center py-5 px-3 text-white bg-primary">
+															<h4 class="fw-bold mb-0">Governança</h4>
+														</div>
+														<div class="card-body bg-light p-4 text-center info-card-collapse-body">
+															<p class="card-text lead text-muted mb-0">Modo de coordenar os atores.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+                                    <p class="lead text-muted">Sem esses três elementos articulados, a Vigilância
+                                        Cooperativa se torna apenas uma intenção conceitual. Com eles, ela se transforma
+                                        em prática concreta capaz de antecipar riscos, qualificar respostas e promover
+                                        territórios mais saudáveis. Veja agora a representação esquemática do modelo:
+                                    </p>
+
+                                    <div class="flow-snake mx-auto my-5">
+                                        <div class="flow-snake-box fs-1">
+                                            <i class="bi bi-globe-americas"></i>
+                                            <span>SAÚDE ÚNICA (PARADIGMA)</span>
+                                        </div>
+                                        <div class="flow-snake-arrow fs-a1" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
+                                        <div class="flow-snake-box fs-2">
+                                            <i class="bi bi-diagram-3-fill"></i>
+                                            <span>GOVERNANÇA COLABORATIVA</span>
+                                        </div>
+                                        <div class="flow-snake-arrow fs-a2" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
+                                        <div class="flow-snake-box fs-3">
+                                            <i class="bi bi-link-45deg"></i>
+                                            <span>INTEGRAÇÃO DE SISTEMAS DE VIGILÂNCIA</span>
+                                        </div>
+                                        <div class="flow-snake-arrow fs-a3" aria-hidden="true"><i class="bi bi-arrow-down"></i></div>
+                                        <div class="flow-snake-box fs-4">
+                                            <i class="bi bi-geo-alt-fill"></i>
+                                            <span>TERRITÓRIO COMO EIXO</span>
+                                        </div>
+                                        <div class="flow-snake-arrow fs-a4" aria-hidden="true"><i class="bi bi-arrow-left"></i></div>
+                                        <div class="flow-snake-box fs-5">
+                                            <i class="bi bi-shield-check"></i>
+                                            <span>RESPOSTA COORDENADA A RISCOS</span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="my-5 alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light mb-4"
+                                        role="alert" data-copy-id="box-reflexao">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <h4 class="fw-bold text-primary mt-2 mb-2"><i class="bi bi-chat-right-dots-fill fs-4 text-info me-3 ms-3"></i>Reflexão</h4>
+                                                <p class="lead text-muted ms-3 mb-0">Como podemos transformar os espaços
+                                                    já existentes de gestão (comissões, comitês, reuniões) em espaços
+                                                    reais de governança para a vigilância cooperativa?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Marco Legal e Normativo Brasileiro</h3>
+                                    <p class="lead text-muted">Até aqui, você viu que a Vigilância Cooperativa é uma
+                                        necessidade prática diante da complexidade dos problemas de saúde
+                                        contemporâneos. Neste momento, é importante responder a uma dúvida recorrente
+                                        nos serviços: existe base legal para essa forma integrada de atuação?</p>
+                                    <p class="lead text-muted fw-bold text-center my-5">A resposta é objetiva: sim, e ela é
+                                        robusta. </p>
+                                    <p class="lead text-muted">O que muitas vezes falta não é amparo normativo, mas a
+                                        leitura articulada dessa estrutura legal. Vamos ver alguns marcos legais
+                                        importantes?</p>
+
+                                    <div class="tl-historico my-5" data-timeline="marcoLegal" data-timeline-modal="tlModalMarcoLegal">
+										<div class="text-center mb-2 mt-3">
+											<span class="badge-recurso-interativo">
+												<i class="bi bi-cursor-fill me-1"></i> Recurso Interativo
+											</span>
+											<!--<p class="text-muted mb-0 mt-2">Clique nos cards abaixo para saber mais</p>-->
+										</div>
+                                        <div class="tl-track-wrapper">
+                                            <div class="tl-track">
+                                                <button class="tl-dot active" type="button" data-idx="0" aria-label="Ver marco 1988" aria-haspopup="dialog">1988</button>
+                                                <button class="tl-dot" type="button" data-idx="1" aria-label="Ver marco 1990" aria-haspopup="dialog">1990</button>
+                                                <button class="tl-dot" type="button" data-idx="2" aria-label="Ver marco 2000" aria-haspopup="dialog">2000</button>
+                                                <button class="tl-dot" type="button" data-idx="3" aria-label="Ver marco 2012" aria-haspopup="dialog">2012</button>
+                                                <button class="tl-dot" type="button" data-idx="4" aria-label="Ver marco 2013" aria-haspopup="dialog">2013</button>
+                                                <button class="tl-dot" type="button" data-idx="5" aria-label="Ver marco 2017" aria-haspopup="dialog">2017</button>
+                                                <button class="tl-dot" type="button" data-idx="6" aria-label="Ver marco 2018" aria-haspopup="dialog">2018</button>
+                                            </div>
+                                        </div>
+                                        <p class="tl-hint text-center text-muted small mb-0">Clique em uma data para ver o marco completo.</p>
+                                    </div>
+
+                                    <div class="modal fade tl-modal" id="tlModalMarcoLegal" tabindex="-1" role="dialog" aria-labelledby="tlModalMarcoLegalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+                                            <div class="modal-content">
+                                                <div class="modal-header border-0 pb-0 justify-content-end">
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                                </div>
+                                                <div class="modal-body tl-panel">
+                                                    <span class="tl-panel-bignum"></span>
+                                                    <p class="tl-panel-era"></p>
+                                                    <h4 class="tl-panel-title" id="tlModalMarcoLegalLabel"></h4>
+                                                    <div class="tl-panel-desc"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="my-5 alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light mb-4"
+                                        role="alert" data-copy-id="box-saiba-mais">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <h4 class="fw-bold text-primary mt-2 mb-2"><i
+                                                        class="bi-info-circle-fill fs-4 text-info me-3 ms-3"></i>Saiba mais</h4>
+                                                <p class="lead text-muted ms-3 mb-3">Você sabia que as resoluções do CONAMA, a Política Nacional de Meio Ambiente (Lei 6.938/81) e a Política Nacional de Recursos Hídricos (Lei 9.433/97) tratam de temas que impactam diretamente a saúde: água, solo, resíduos, poluição, uso do território?</p>
+                                                <p class="lead text-muted ms-3 mb-0">Essas normativas reforçam que os riscos à saúde muitas vezes se originam em processos regulados pelo setor ambiental.</p>
+                                            </div>
+                                        </div>
+                                    </div>                                  
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Síntese conceitual deste tópico</h4>
+                                    <p class="lead text-muted">Ao observar o conjunto normativo apresentado, é possível
+                                        perceber algo fundamental:</p>
+
+                                    <div class="container my-5" data-copy-id="carrossel-texto">
+                                        <div id="carouselSinteseConceitual"
+                                            class="carousel slide shadow-md rounded-4 overflow-hidden border-0 max-w-4xl mx-auto max-w-content">
+
+                                            <div class="carousel-indicators mb-3">
+                                                <button type="button" data-bs-target="#carouselSinteseConceitual"
+                                                    data-bs-slide-to="0" class="active" aria-current="true"
+                                                    aria-label="Slide 1"></button>
+                                                <button type="button" data-bs-target="#carouselSinteseConceitual"
+                                                    data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                                <button type="button" data-bs-target="#carouselSinteseConceitual"
+                                                    data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                                <button type="button" data-bs-target="#carouselSinteseConceitual"
+                                                    data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                                <button type="button" data-bs-target="#carouselSinteseConceitual"
+                                                    data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                                <button type="button" data-bs-target="#carouselSinteseConceitual"
+                                                    data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                            </div>
+
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <div class="p-4 p-md-5 text-white position-relative principle-card principle-card--a">
+                                                        <p class="lead text-muted-white leading-relaxed mb-0 pe-2">A Vigilância Cooperativa já está prevista no ordenamento jurídico brasileiro, ainda que não use esse nome.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="p-4 p-md-5 text-white position-relative principle-card principle-card--b">
+                                                        <p class="lead text-muted-white leading-relaxed mb-0 pe-2">O que a Saúde Única faz é oferecer a lente conceitual que permite ler essa estrutura de forma integrada.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="p-4 p-md-5 text-white position-relative principle-card principle-card--a">
+                                                        <p class="lead text-muted-white leading-relaxed mb-0 pe-2">A Constituição conecta saúde e ambiente.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="p-4 p-md-5 text-white position-relative principle-card principle-card--b">
+                                                        <p class="lead text-muted-white leading-relaxed mb-0 pe-2">A Lei 8.080/90 conecta saúde aos determinantes.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="p-4 p-md-5 text-white position-relative principle-card principle-card--a">
+                                                        <p class="lead text-muted-white leading-relaxed mb-0 pe-2">A PNVS conecta as vigilâncias e o território.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="p-4 p-md-5 text-white position-relative principle-card principle-card--b">
+                                                        <p class="lead text-muted-white leading-relaxed mb-0 pe-2">As normativas ambientais e agropecuárias conectam os processos que produzem risco.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselSinteseConceitual" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon p-3 bg-dark bg-opacity-50 rounded-circle"
+                                                    aria-hidden="true"></span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselSinteseConceitual" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon p-3 bg-dark bg-opacity-50 rounded-circle"
+                                                    aria-hidden="true"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted fw-bold text-center my-5">Tudo já está posto, falta conectar!
+                                    </p>
+
+                                    <div class="my-5 alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light mb-4"
+                                        role="alert" data-copy-id="box-reflexao">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <h4 class="fw-bold text-primary mt-2 mb-2"><i class="bi bi-chat-right-dots-fill fs-4 text-info me-3 ms-3"></i>Reflexão</h4>
+                                                <p class="lead text-muted ms-3 mb-0">Quantas dessas normativas são
+                                                    consideradas quando um agravo é investigado no seu território?</p>
+                                            </div>
+                                        </div>
+                                    </div>                                   
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Situações Práticas Aplicadas ao
+                                        Território</h3>
+                                    <p class="lead text-muted">Até aqui, discutimos conceitos, fundamentos, marcos
+                                        legais e arranjos institucionais. Agora, é importante que você faça um exercício
+                                        essencial: olhar para o território e reconhecer que a Vigilância Cooperativa já
+                                        é uma necessidade concreta do cotidiano, ainda que muitas vezes não seja nomeada
+                                        dessa forma.</p>
+                                    <p class="lead text-muted">Os eventos de saúde que chegam aos serviços raramente têm
+                                        uma causa única. Eles são resultados de processos territoriais complexos, que
+                                        envolvem ambiente, formas de ocupação do solo, produção de alimentos, presença
+                                        de animais, saneamento, condições de moradia, mudanças climáticas e organização
+                                        social.</p>
+                                    <p class="lead text-muted">A Vigilância Cooperativa se materializa quando esses
+                                        processos passam a ser analisados conjuntamente. A seguir, observe algumas
+                                        situações típicas do território brasileiro sob essa lente.</p>
+
+                                    <div class="container my-5" data-copy-id="accordion">
+										<div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionExemplo3">
+
+											<div class="accordion-item border-0 border-bottom">
+												<h4 class="accordion-header" id="headingExemplo3-1">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo3-1"
+														aria-expanded="false" aria-controls="collapseExemplo3-1">
+														<span class="fs-5 text-primary fw-bold">Situação 1: Enchentes e aumento de leptospirose</span>
+													</button>
+												</h4>
+												<div id="collapseExemplo3-1" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo3-1" data-bs-parent="#accordionExemplo3">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted">Após eventos extremos de chuva, é comum observar aumento de casos de leptospirose. Na lógica tradicional, a resposta se concentra em:</p>
+														<ul class="ms-5 lead text-muted">
+															<li class="my-3 mt-4">Notificação dos casos.</li>
+															<li class="my-3">Assistência aos doentes.</li>
+															<li class="my-3">Orientações à população.</li>
+														</ul>
+														<p class="lead text-muted mt-4">Já na Vigilância Cooperativa, a análise se amplia, veja:</p>
+														<div class="table-responsive rounded-3 my-4">
+															<table class="table table-aula mb-0">
+																<thead>
+																	<tr>
+																		<th scope="col">Setor</th>
+																		<th scope="col">Contribuição para a análise e ação</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td class="fw-semibold text-dark">Vigilância Epidemiológica</td>
+																		<td>Identificação de casos (humanos e animais) e áreas afetadas.</td>
+																	</tr>
+																	<tr>
+																		<td class="fw-semibold text-dark">Defesa Sanitária Animal</td>
+																		<td>Identificação de casos em animais de produção.</td>
+																	</tr>
+																	<tr>
+																		<td class="fw-semibold text-dark">Vigilância Ambiental</td>
+																		<td>Avaliação da qualidade da água, resíduos, drenagem.</td>
+																	</tr>
+																	<tr>
+																		<td class="fw-semibold text-dark">Meio Ambiente</td>
+																		<td>Manejo dos ecossistemas.</td>
+																	</tr>
+																	<tr>
+																		<td class="fw-semibold text-dark">Limpeza Urbana</td>
+																		<td>Manejo de resíduos e controle de roedores.</td>
+																	</tr>
+																	<tr>
+																		<td class="fw-semibold text-dark">Defesa Civil</td>
+																		<td>Mapeamento de áreas de risco e população exposta.</td>
+																	</tr>
+																	<tr>
+																		<td class="fw-semibold text-dark">Planejamento Urbano</td>
+																		<td>Ocupação irregular de áreas alagáveis.</td>
+																	</tr>
+																	<tr>
+																		<td class="fw-semibold text-dark">Educação</td>
+																		<td>Mobilização comunitária preventiva.</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<p class="lead text-muted mb-0 fw-bold text-center">Perceba que o agravo humano é apenas a manifestação final de um problema territorial já conhecido.</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-item border-0 border-bottom">
+												<h4 class="accordion-header" id="headingExemplo3-2">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo3-2"
+														aria-expanded="false" aria-controls="collapseExemplo3-2">
+														<span class="fs-5 text-primary fw-bold">Situação 2: Aumento de casos de leishmaniose</span>
+													</button>
+												</h4>
+												<div id="collapseExemplo3-2" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo3-2" data-bs-parent="#accordionExemplo3">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted">A leishmaniose envolve vetor, ambiente, animais reservatórios e humanos. Se analisada apenas pela saúde, a resposta tende a ser focal e limitada. Quando compartilhada:</p>
+														<ul class="ms-5 lead text-muted">
+															<li class="my-3 mt-4">Meio ambiente analisa áreas com acúmulo de matéria orgânica.</li>
+															<li class="my-3">Urbanismo observa a expansão desordenada.</li>
+															<li class="my-3">Educação atua na sensibilização comunitária.</li>
+														</ul>
+														<p class="lead text-muted mb-0 fw-bold text-center mt-4">A doença revela um modo de ocupação do território.</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-item border-0 border-bottom">
+												<h4 class="accordion-header" id="headingExemplo3-3">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo3-3"
+														aria-expanded="false" aria-controls="collapseExemplo3-3">
+														<span class="fs-5 text-primary fw-bold">Situação 3: Contaminação da água para consumo humano</span>
+													</button>
+												</h4>
+												<div id="collapseExemplo3-3" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo3-3" data-bs-parent="#accordionExemplo3">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted">Casos de diarreia ou doenças de veiculação hídrica frequentemente indicam falhas no abastecimento, saneamento ou manejo ambiental. A Vigilância Cooperativa envolve:</p>
+														<ul class="ms-5 lead text-muted">
+															<li class="my-3 mt-4">Vigilância da qualidade da água (Vigiagua).</li>
+															<li class="my-3">Saneamento básico.</li>
+															<li class="my-3">Gestão de recursos hídricos.</li>
+															<li class="my-3">Meio ambiente.</li>
+															<li class="my-3">Vigilância Sanitária.</li>
+														</ul>
+														<p class="lead text-muted mb-0 fw-bold text-center mt-4">O problema não é apenas clínico. É estrutural e ambiental.</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-item border-0 border-bottom">
+												<h4 class="accordion-header" id="headingExemplo3-4">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo3-4"
+														aria-expanded="false" aria-controls="collapseExemplo3-4">
+														<span class="fs-5 text-primary fw-bold">Situação 4: Intoxicações por agrotóxicos</span>
+													</button>
+												</h4>
+												<div id="collapseExemplo3-4" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo3-4" data-bs-parent="#accordionExemplo3">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted">Casos de intoxicação revelam:</p>
+														<ul class="ms-5 lead text-muted">
+															<li class="my-3 mt-4">Uso inadequado de insumos agrícolas.</li>
+															<li class="my-3">Falta de orientação técnica.</li>
+															<li class="my-3">Fragilidade na fiscalização.</li>
+															<li class="my-3">Impacto ambiental.</li>
+														</ul>
+														<p class="lead text-muted mt-4">A resposta exige a presença de:</p>
+														<ul class="ms-5 lead text-muted">
+															<li class="my-3 mt-4">Saúde.</li>
+															<li class="my-3">Agricultura.</li>
+															<li class="my-3">Meio ambiente.</li>
+															<li class="my-3">Vigilância Sanitária.</li>
+															<li class="my-3">Assistência técnica rural.</li>
+														</ul>
+														<p class="lead text-muted mb-0 fw-bold text-center mt-4">Aqui, a interface humano-animal-ambiente é evidente.</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-item border-0">
+												<h4 class="accordion-header" id="headingExemplo3-5">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo3-5"
+														aria-expanded="false" aria-controls="collapseExemplo3-5">
+														<span class="fs-5 text-primary fw-bold">Situação 5: Resistência antimicrobiana</span>
+													</button>
+												</h4>
+												<div id="collapseExemplo3-5" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo3-5" data-bs-parent="#accordionExemplo3">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted">O uso indiscriminado de antibióticos na saúde humana e animal e seu descarte no ambiente geram um dos maiores desafios atuais. Nesse caso, a Vigilância Cooperativa articula:</p>
+														<ul class="ms-5 lead text-muted">
+															<li class="my-3 mt-4">Assistência farmacêutica.</li>
+															<li class="my-3">Saúde animal.</li>
+															<li class="my-3">Vigilância Sanitária.</li>
+															<li class="my-3">Meio ambiente.</li>
+															<li class="my-3">Segurança alimentar.</li>
+														</ul>
+                                                        <p class="lead text-muted fw-bold text-center fw-bold text-center mt-4">Esse é um exemplo clássico dos eixos
+                                                        do Plano One Health. </p>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+                                    
+                                    <p class="lead text-muted">Agora, que você já viu algumas situações típicas do
+                                        território brasileiro sob a perspectiva da Vigilância Cooperativa, veja o que
+                                        esses exemplos revelam: </p>
+
+                                    <div class="container my-5" data-copy-id="carrossel-texto">
+                                        <div id="carouselExemplosRevelam"
+                                            class="carousel slide shadow-md rounded-4 overflow-hidden border-0 max-w-4xl mx-auto max-w-content">
+
+                                            <div class="carousel-indicators mb-3">
+                                                <button type="button" data-bs-target="#carouselExemplosRevelam"
+                                                    data-bs-slide-to="0" class="active" aria-current="true"
+                                                    aria-label="Slide 1"></button>
+                                                <button type="button" data-bs-target="#carouselExemplosRevelam"
+                                                    data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                                <button type="button" data-bs-target="#carouselExemplosRevelam"
+                                                    data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                            </div>
+
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <div class="p-4 p-md-5 text-white position-relative principle-card principle-card--a">
+                                                        <p class="lead text-muted-white leading-relaxed mb-0 pe-2">O território produz os agravos antes que eles cheguem ao serviço de saúde.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="p-4 p-md-5 text-white position-relative principle-card principle-card--b">
+                                                        <p class="lead text-muted-white leading-relaxed mb-0 pe-2">Diferentes setores já possuem informações sobre o mesmo problema.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="p-4 p-md-5 text-white position-relative principle-card principle-card--a">
+                                                        <p class="lead text-muted-white leading-relaxed mb-0 pe-2">A falta de articulação faz com que as respostas sejam tardias e menos efetivas.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselExemplosRevelam" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon p-3 bg-dark bg-opacity-50 rounded-circle"
+                                                    aria-hidden="true"></span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselExemplosRevelam" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon p-3 bg-dark bg-opacity-50 rounded-circle"
+                                                    aria-hidden="true"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted">Monken e Barcellos (2005) destacam que o território é o
+                                        ponto de partida da vigilância. Santos (2006) reforça que é nele que as relações
+                                        se materializam. A Vigilância Cooperativa apenas organiza a leitura desse
+                                        território de forma coerente com a realidade. Mas, como isso se traduz na
+                                        prática profissional? </p>
+                                    <p class="lead text-muted">A Vigilância Cooperativa começa quando, diante de um
+                                        evento, o profissional se pergunta:</p>
+
+                                    <div class="row g-4 mt-3 mb-5 reflect-balloons">
+                                        <div class="col-md-4">
+                                            <div class="reflect-balloon">
+                                                <div class="reflect-balloon-icon"><i class="bi bi-question-diamond-fill"></i></div>
+                                                <p class="lead text-muted fw-bold text-primary">Quem mais olha para esse território?</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="reflect-balloon">
+                                                <div class="reflect-balloon-icon"><i class="bi bi-question-diamond-fill"></i></div>
+                                                <p class="lead text-muted fw-bold text-primary">Que informações já existem fora da saúde?</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="reflect-balloon">
+                                                <div class="reflect-balloon-icon"><i class="bi bi-question-diamond-fill"></i></div>
+                                                <p class="lead text-muted fw-bold text-primary">Com quem eu preciso conversar antes de planejar a ação?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted">No entanto, a Vigilância Cooperativa se concretiza em
+                                        ações simples, como por exemplo: </p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Reuniões intersetoriais periódicas. </li>
+                                        <li class="my-3">Compartilhamento de mapas e dados. </li>
+                                        <li class="my-3">Construção conjunta de diagnósticos locais. </li>
+                                        <li class="my-3">Participação em comitês e grupos territoriais. </li>
+                                    </ul>
+
+                                    <p class="lead text-muted mt-4">Não se trata de criar tarefas, mas de mudar a forma
+                                        de olhar para as que já existem.</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Reflexão final deste tópico</h4>
+                                    <p class="lead text-muted">Observe seu território. Pense nos últimos problemas
+                                        enfrentados pela vigilância. Agora se pergunte: </p>
+                                    <p class="lead text-muted">Se esses eventos tivessem sido analisados de forma
+                                        compartilhada desde o início, o desfecho poderia ter sido diferente? </p>
+                                    <p class="lead text-muted">Essa pergunta é o ponto de partida para transformar a
+                                        Vigilância Cooperativa de conceito em prática cotidiana.</p>                                    
+                                    
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary"><i class="bi bi-pencil-square"></i>
+                                        Atividade</h3>
+                                    <!-- VARIAÇÃO 1: QUIZ MÚLTIPLA ESCOLHA INTERATIVO (MULTI-QUESTÕES COM NAVEGAÇÃO E JS) -->
+                                    <div class="my-4" id="eduflexQuizContainer">
+                                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <span
+                                                    class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-bold"
+                                                    id="quizQuestionCounter">Questão 01 de 02</span>
+                                                <span class="badge bg-light text-dark border fw-bold"
+                                                    id="quizScoreBadge">
+                                                    <i class="bi bi-trophy-fill text-warning me-1"></i>Acertos: <span
+                                                        id="quizScoreCount">0</span>
+                                                </span>
+                                            </div>
+                                            <div class="progress mb-4 progress-thin">
+                                                <div class="progress-bar bg-primary" id="quizProgressBar"
+                                                    role="progressbar"></div>
+                                            </div>
+                                            <h4 class="fw-bold lead text-muted mb-4" id="quizQuestionText"></h4>
+                                            <div class="d-grid gap-2 mb-3" id="quizOptionsContainer"></div>
+                                            <div class="p-3 rounded-3 small mb-3 d-none" id="quizFeedbackBox"></div>
+                                            <small class="text-muted d-block mb-3">
+                                                <i class="bi bi-info-circle me-1"></i>Selecione uma opção para confirmar
+                                                sua
+                                                resposta.
+                                            </small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <button class="btn bg-primary text-white rounded-pill px-4 fw-bold"
+                                                    id="quizNextBtn" disabled>
+                                                    Próxima Questão <i class="bi bi-arrow-right ms-1"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Resumo da aula</h3>
+                                    <p class="lead text-muted">Ao longo desta aula, você percorreu um caminho que
+                                        começou com a compreensão conceitual da Saúde Única, avançou para o entendimento
+                                        da Vigilância Cooperativa como sua expressão prática na Vigilância em Saúde,
+                                        passou pela importância da intersetorialidade, governança e território, e viu os
+                                        marcos legais que sustentam essa forma integrada de atuação no Brasil. </p>
+                                    <p class="lead text-muted">Ao final dessa jornada, é possível chegar a uma
+                                        constatação fundamental: a Vigilância Cooperativa na perspectiva da Saúde Única
+                                        não é uma inovação normativa, mas uma inovação na forma de organizar o olhar e a
+                                        prática sobre o território. </p>
+                                    <p class="lead text-muted">Isso significa reconhecer que muitos dos problemas que
+                                        chegam diariamente aos serviços de saúde, como enchentes, arboviroses, zoonoses,
+                                        contaminação da água, intoxicações, insegurança alimentar e eventos climáticos
+                                        extremos, já nascem como questões intersetoriais, ainda que a resposta
+                                        institucional costume ser setorial. A Saúde Única nos convida a inverter essa
+                                        lógica. </p>
+                                    <p class="lead text-muted">Como destacam WHO, FAO, WOAH e UNEP (2022), a integração
+                                        entre saúde humana, animal e ambiental é condição para antecipar riscos e
+                                        qualificar respostas. Monken e Barcellos (2005) reforçam que o território é o
+                                        ponto de partida para a vigilância em saúde. Buss e Pellegrini Filho (2007)
+                                        lembram que os determinantes da saúde estão nas condições sociais, ambientais e
+                                        produtivas onde as pessoas vivem.</p>
+                                    <p class="lead text-muted">Essas ideias convergem para uma mesma direção: vigiar não
+                                        é apenas registrar agravos, mas compreender os processos que os produzem. E isso
+                                        muda profundamente a prática profissional.</p>
+                                    <p class="lead text-muted">A Vigilância Cooperativa propõe que, diante de um evento
+                                        em saúde, a pergunta deixe de ser apenas “Qual é o agravo?” e passe a ser
+                                        também: </p>
+                                    <p class="lead text-muted">“Quais processos socioambientais e produtivos do
+                                        território estão produzindo esse agravo nas diferentes espécies humana e
+                                        animais, e quais atores institucionais e setores precisam atuar de forma
+                                        articulada para enfrentá-los?”</p>
+                                    <p class="lead text-muted">Essa mudança de pergunta já é, por si só, uma mudança de
+                                        modelo. Perceba que, ao longo desta aula, não foi abordada a criação de setores,
+                                        novos sistemas ou novas estruturas, mas sim em conectar o que já existe:
+                                        informações, instituições, saberes e práticas que, muitas vezes, operam de forma
+                                        paralela sobre o mesmo território. </p>
+                                    <p class="lead text-muted">A Saúde Única, nesse sentido, funciona como uma lente
+                                        ampliadora que nos permite enxergar que: </p>
+
+                                        <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">O evento de saúde é apenas a ponta visível de processos
+                                            territoriais mais amplos. </li>
+                                        <li class="my-3">A Vigilância é mais potente quando é compartilhada. </li>
+                                        <li class="my-3">A intersetorialidade não é um complemento, mas uma necessidade
+                                            operacional. </li>
+                                        <li class="my-3">O marco legal brasileiro já autoriza e incentiva essa forma de
+                                            atuação.</li>
+                                    </ul>
+
+                                    <p class="lead text-muted mt-4 mb-5">E aqui reside a principal mensagem deste
+                                        encerramento: </p>
+
+                                    <div class="my-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                        <div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                                A Vigilância Cooperativa começa muito mais por uma mudança de postura
+                                                profissional do que por uma mudança estrutural. Ela se inicia quando o
+                                                profissional:
+                                            </p>
+
+                                            <div class="aula-body mt-4">
+                                                <ul class="ms-5 lead text-muted mb-0">
+                                                    <li class="my-3 mt-4 text-white fw-bold">Compartilha informações com outros setores.</li>
+                                                    <li class="my-3 text-white fw-bold">Convida outras áreas para analisar um problema.</li>
+                                                    <li class="my-3 text-white fw-bold">Participa de espaços de governança territorial.</li>
+                                                    <li class="my-3 text-white fw-bold">Reconhece que o território é o verdadeiro objeto da
+                                                        vigilância.</li>
+                                                </ul>
+                                            </div>
+
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 mt-4 leading-relaxed max-w-content">
+                                                Agora, vamos deixar uma pergunta final para sua reflexão:
+                                            </p>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 mt-3 leading-relaxed max-w-content">
+                                                Ao retornar para o seu local de trabalho, qual situação concreta você
+                                                consegue identificar que poderia ser analisada e enfrentada sob a
+                                                lógica da Vigilância Cooperativa?
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted mt-4 mb-5">Essa pergunta é o elo entre o conteúdo desta aula e a sua
+                                        prática cotidiana. </p>
+
+                                    <div class="my-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                        <div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                                A proposta da Saúde Única não se realiza apenas nos documentos
+                                                internacionais, nas políticas nacionais ou nas normativas legais. Ela se
+                                                concretiza no território, nas relações institucionais e nas escolhas
+                                                feitas diariamente pelos profissionais do SUS e dos demais setores.
+                                                Encerramos, portanto, com um convite:
+                                            </p><br/>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                                Leve este olhar ampliado para o seu território e seja um agente
+                                                articulador da vigilância cooperativa, contribuindo para respostas mais
+                                                integradas, preventivas e efetivas aos problemas de saúde.
+                                            </p><br/>
+                                            <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                                Porque, ao final, promover Saúde Única é promover territórios mais
+                                                saudáveis, resilientes e solidários.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="lead text-muted fw-bold">Você concluiu esta aula, continue se empenhando
+                                        nos seus estudos. Siga para a próxima aula! </p>
+                                </article>
+                            </div>
+                        </section>
+
+                    </div> <!-- Fim .aula-pages-wrapper -->
+                    <!-- ================= PAGINAÇÃO INTERNA DA AULA ================= -->
+                    <div class="aula-pagination-nav d-flex justify-content-between align-items-center mt-5 pt-4 border-top"
+                        id="aulaPaginationNav">
+                        <button type="button" class="btn btn-outline-primary rounded-pill px-4" id="aulaPagPrev"
+                            disabled>
+                            <i class="bi bi-arrow-left me-1"></i> Anterior
+                        </button>
+                        <span class="small text-muted fw-semibold" id="aulaPagIndicator">Página 1 de 2</span>
+                        <button type="button" class="btn btn-primary rounded-pill px-4" id="aulaPagNext">
+                            Próximo <i class="bi bi-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+
+                    <!-- ================= NAVEGAÇÃO ENTRE AULAS (exibida somente na última página) ================= -->
+                    <div class="aula-lesson-nav d-none justify-content-between align-items-center mt-5 pt-4 border-top"
+                        id="aulaLessonNav" data-prev-lesson="../modulo2/aula2.4.html" data-next-lesson="aula3.2.html">
+                        <a href="#" class="btn btn-outline-primary rounded-pill px-4" id="aulaLessonPrev">
+                            <i class="bi bi-arrow-left me-1"></i> Aula Anterior
+                        </a>
+                        <a href="#" class="btn btn-primary rounded-pill px-4" id="aulaLessonNext">
+                            Próxima Aula <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- ================= RODAPÉ DE LOGOS ================= -->
+                    <!-- ================= RODAPÉ (carregado de partials/footer.html) ================= -->
+                    <div id="site-footer"></div>
+
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <!-- ================= MODAIS (carregados de partials/modals.html) ================= -->
+    <div id="site-modals"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Seu arquivo JS unificado -->
+    <script src="js/partials-loader.js"></script>
+    <script src="js/aula3.1.js"></script>
+    <script src="js/main.js"></script>
+
+    <button type="button" class="back-to-top" id="btnBackToTop" aria-label="Voltar ao topo">
+        <i data-lucide="arrow-up" aria-hidden="true"></i>
+    </button>
+</body>
+
+</html>

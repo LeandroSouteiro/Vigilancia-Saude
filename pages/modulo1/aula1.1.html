@@ -1,0 +1,2222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Vigilância em Saúde em tempos de transformação digital</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- CSS do seu tema -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <meta name="robots" content="noindex" />
+    <meta name="author" content="Fiocruz, Campus Virtual" />
+    <meta name="description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="keywords" content="Fiocruz, Curso, Vigilância em Saúde, transformação digital, SUS" />
+
+    <!-- Facebook Open Graph -->
+    <meta property="og:url" content="https://mooc.campusvirtual.fiocruz.br/rea/introducao-analise-dados-sus" />
+    <meta property="og:title"
+        content="Campus Virtual Fiocruz | Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta property="og:description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title"
+        content="Campus Virtual Fiocruz | Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="twitter:image:src" content="" />
+
+    <!-- Favicons and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../media/icons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../../media/icons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../../media/icons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../../media/icons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../../media/icons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../../media/icons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../../media/icons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../../media/icons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="../../media/icons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../../media/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../media/icons/favicon-16x16.png" />
+    <link rel="manifest" href="../../media/icons/manifest.json" />
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="media/icons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#420b3c" />
+
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Barra de Progresso Superior -->
+    <div class="scroll-progress-top" id="scrollProgress"></div>
+
+    <script src="js/aula1.1-config.js"></script>
+    <!-- ================= CABEÇALHO (carregado de partials/header.html) ================= -->
+    <div id="site-header"></div>
+
+    <div class="page-wrapper" id="pageWrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <div id="site-sidebar"></div>
+
+        <!-- Lingueta (Botão) redesenhada: MOVIDA PARA FORA DO ASIDE PARA NÃO SUMIR -->
+        <button class="sidebar-tab" id="btnToggleSidebar" aria-label="Alternar menu" aria-expanded="true"
+            aria-controls="sidebarAula">
+            <i data-lucide="chevron-left" id="toggleIcon" aria-hidden="true"></i>
+        </button>
+
+        <!-- ================= CONTEÚDO ================= -->
+        <main class="content-aula" id="main-content">
+            <div class="main-content-inner">
+
+                <!-- Selo de navegação: flutua por cima do conteúdo -->
+                <nav aria-label="breadcrumb" class="aula-breadcrumb-pill">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../../index.html" class="text-decoration-none">Início</a></li>
+                        <li class="breadcrumb-item"><a href="aula1.1.html" class="text-decoration-none">Módulo 1</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Aula 1</li>
+                    </ol>
+                </nav>
+
+                <!-- Hero com imagem de fundo temática -->
+                <header class="aula-hero">
+                    <h1>Vigilância em Saúde e Princípios do SUS</h1>
+                </header>
+
+                <div class="main-content-body">
+                    <div class="aula-pages-wrapper" id="aulaPagesWrapper">
+
+                        <section class="aula-page active" data-page="1">
+                            <article class="aula-body">
+
+                                <h2 class="fw-bold mb-4 text-primary mt-2"><i class="bi bi-bookmark-check-fill"></i>
+                                    Apresentação do módulo</h2>
+                                <hr>
+                                <p class="lead text-muted spacer-top-lead">Neste módulo, você irá conhecer os fundamentos da <span
+                                        class="fw-bold">Vigilância em Saúde</span>
+                                    e sua importância para a promoção da saúde, a prevenção de doenças e o monitoramento
+                                    de
+                                    riscos que afetam a população.</p>
+                                <p class="lead text-muted">Ao longo do conteúdo, serão apresentados os princípios que
+                                    orientam a
+                                    vigilância em saúde no contexto do Sistema Único de Saúde (SUS), destacando sua
+                                    relação com
+                                    a universalidade, a integralidade e a equidade, além da importância da organização
+                                    das ações
+                                    de forma descentralizada, regionalizada e com participação social.</p>
+                                <p class="lead text-muted">Você também irá compreender o conceito ampliado de Vigilância
+                                    em
+                                    Saúde e suas diferentes dimensões, que incluem a vigilância epidemiológica,
+                                    sanitária,
+                                    ambiental, do trabalho e a vigilância popular.</p>
+                                <p class="lead text-muted">Nesse contexto, será discutido ainda o papel da participação
+                                    comunitária e das informações produzidas no território, que contribuem para
+                                    fortalecer a
+                                    análise da situação de saúde e apoiar o planejamento de ações mais adequadas às
+                                    realidades
+                                    locais.</p>
+                                <br />
+
+                                <h3 class="fw-bold mt-5 mb-4 text-primary"><i class="bi bi-bullseye"></i> Objetivos do
+                                    módulo
+                                </h3>
+                                <hr>
+                                <p class="lead text-muted">Ao final deste módulo, esperamos que você seja capaz de:</p>
+
+
+
+                                <ul class="ms-5 lead text-muted">
+                                    <li class="my-3 mt-4"> Compreender que a vigilância em saúde está alinhada com os
+                                        princípios
+                                        do SUS (universalidade, integralidade e equidade), considerando a garantia do
+                                        direito às
+                                        ações de vigilância, a integração com outros serviços de saúde e que a atenção
+                                        seja
+                                        direcionada com base nas necessidades, conforme a realidade local e a
+                                        desigualdade
+                                        socioambiental. </li>
+                                    <li class="my-3"> Compreender que os princípios organizativos de descentralização,
+                                        regionalização e participação popular também orientam as ações de vigilância,
+                                        distribuindo responsabilidades e promovendo o controle social. </li>
+                                    <li class="my-3"> Compreender o conceito ampliado de Vigilância em Saúde e suas
+                                        dimensões:
+                                        vigilância popular, sanitária, epidemiológica, ambiental e do trabalho.</li>
+                                    <li class="my-3"> Reconhecer a potencialidade da participação comunitária: valor e
+                                        uso das
+                                        informações do território.</li>
+                                </ul>
+
+                                <div class="text-center mt-5">
+                                    <a href="#" class="btn bg-primary rounded-pill px-4 text-white" id="aulaPagStart">Iniciar
+                                        Aula 1</a>
+                                </div>
+
+                            </article>
+                        </section>
+
+                        <section class="aula-page" data-page="2">
+
+
+                            <div class="main-content-body">
+                                <article class="aula-body">
+
+                                    <h3 class="fw-bold mb-4 text-primary mt-5"><i class="bi bi-book-half"></i> Sobre
+                                        esta
+                                        aula</h3>
+                                    <hr>
+                                    <p class="lead text-muted spacer-top-lead">Esta aula tem como objetivo aprofundar os fundamentos
+                                        conceituais,
+                                        políticos e operacionais da Vigilância em Saúde no âmbito do SUS, articulando-os
+                                        aos
+                                        princípios doutrinários e organizativos do sistema e às mudanças em curso no
+                                        campo
+                                        da saúde
+                                        digital.</p>
+                                    <p class="lead text-muted">O conteúdo foi desenvolvido para apoiar os processos
+                                        formativos,
+                                        estimular a reflexão crítica e contribuir para o fortalecimento da Vigilância em
+                                        Saúde como
+                                        política pública estruturante do SUS.</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary"><i class="bi bi-columns-gap"></i>
+                                        Objetivos
+                                        de
+                                        aprendizagem</h4>
+                                    <hr>
+                                    <p class="lead text-muted">Ao final desta aula, esperamos que você seja capaz de:
+                                    </p>
+
+                                    <ul class="ms-5">
+                                        <li class="lead text-muted my-3 mt-4"> Compreender a Vigilância em Saúde como
+                                            função
+                                            essencial e estruturante do SUS. </li>
+                                        <li class="lead text-muted my-3"> Reconhecer os princípios doutrinários e
+                                            organizativos do
+                                            SUS e sua aplicação nas práticas de Vigilância em Saúde. </li>
+                                        <li class="lead text-muted my-3"> Analisar a organização, os componentes e as
+                                            funções da
+                                            Vigilância em Saúde no Brasil. </li>
+                                        <li class="lead text-muted my-3"> Compreender os impactos da transformação
+                                            digital
+                                            sobre os
+                                            processos de vigilância, gestão e cuidado em saúde. </li>
+                                        <li class="lead text-muted my-3"> Refletir criticamente sobre os desafios
+                                            éticos,
+                                            políticos
+                                            e operacionais relacionados ao uso de tecnologias digitais no SUS. </li>
+                                        <li class="lead text-muted my-3"> Reconhecer o papel da Vigilância em Saúde na
+                                            redução das
+                                            desigualdades sociais, territoriais e sanitárias. </li>
+                                    </ul>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Introdução</h3>
+                                    <p class="lead text-muted">Iniciamos esta aula reconhecendo que a <span
+                                            class="fw-bold m-0">Vigilância em Saúde</span> é uma das funções essenciais
+                                        do
+                                        SUS e
+                                        que, nas últimas décadas, vem passando por profundas transformações que são
+                                        impulsionadas
+                                        por: </p>
+
+                                    <div class="my-5 container-fluid aula-wide-block px-lg-4">
+                                        <div class="row g-4 g-lg-5 align-items-start">
+                                            <div class="col-md-6 col-lg-6">
+                                                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                    <div class="position-relative">
+                                                        <img src="imgs/03.jpg" class="card-img-top img-cover-260"
+                                                            alt="Profissional de tecnologia trabalhando ao computador, com telas exibindo códigos de programação e elementos gráficos digitais sobrepostos, representando desenvolvimento de software, análise de dados e tecnologia."
+                                                            title="Magnific.com">
+                                                    </div>
+                                                    <div class="card-body p-4 p-lg-5 info-card-collapse-body">
+                                                        <p class="card-text lead text-muted mb-0">Digitalização dos
+                                                            sistemas
+                                                            de informação em saúde.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-6">
+                                                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                    <div class="position-relative">
+
+                                                        <img src="imgs/04.jpg" class="card-img-top img-cover-260"
+                                                            alt="Profissional de tecnologia analisando gráficos, dados e interfaces digitais em uma tela, em ambiente com iluminação azul e roxa, representando análise de dados e tecnologia." title="Magnific.com">
+
+                                                    </div>
+                                                    <div class="card-body p-4 p-lg-5 info-card-collapse-body">
+                                                        <p class="card-text lead text-muted mb-0">Dados em tempo
+                                                            real.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6 col-lg-6">
+                                                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                    <div class="position-relative">
+                                                        <img src="imgs/05.jpg" class="card-img-top img-cover-260"
+                                                            alt="Mulher observando projeção digital de um cérebro com as letras AI ao centro."
+                                                            title="Magnific.com">
+
+                                                    </div>
+                                                    <div class="card-body p-4 p-lg-5 info-card-collapse-body">
+                                                        <p class="card-text lead text-muted mb-0">Incorporação de
+                                                            novas
+                                                            tecnologias, como georreferenciamento, big data e
+                                                            inteligência
+                                                            artificial.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6 col-lg-6">
+                                                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                    <div class="position-relative">
+                                                        <img src="imgs/06.jpg" class="card-img-top img-cover-260" alt="Mãos segurando um globo terrestre iluminado em meio a uma multidão."
+                                                            title="Magnific.com">
+
+                                                    </div>
+                                                    <div class="card-body p-4 p-lg-5 info-card-collapse-body">
+                                                        <p class="card-text lead text-muted mb-0">Mudanças no perfil
+                                                            epidemiológico, ambiental e social da população
+                                                            brasileira.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Cards com Imagem -->
+
+                                    <p class="lead text-muted mt-5">A Vigilância em Saúde, hoje, não se limita à coleta
+                                        de
+                                        dados,
+                                        mas envolve análise, comunicação do risco, tomada de decisão e ação oportuna,
+                                        articulando
+                                        diferentes níveis de governo e setores da sociedade. </p>
+
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Vigilância em Saúde no Âmbito do SUS</h3>
+                                    <h4 class="fw-bold mb-4 text-primary">Conceito ampliado de Vigilância em Saúde </h4>
+                                    <p class="lead text-muted">A Vigilância em Saúde pode ser compreendida como o
+                                        conjunto
+                                        articulado e contínuo de ações destinadas ao conhecimento, à detecção, à
+                                        prevenção e
+                                        ao
+                                        enfrentamento de riscos, agravos e determinantes da saúde, com base na análise
+                                        sistemática
+                                        da situação de saúde da população. </p>
+
+                                    <!-- Box Voce sabia -->
+                                    <div class="alert  border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light my-5"
+                                        role="alert">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <h4 class="fw-bold color-primay mt-2 mb-2"><i
+                                                        class="bi-lightbulb-fill fs-4 text-info me-3 ms-3"></i>Você
+                                                    sabia?</h4>
+                                                <p class="lead text-muted ms-3 spacer-top-lead">Você sabia que no SUS, a Vigilância em
+                                                    Saúde
+                                                    assume
+                                                    caráter público, universal, integral e descentralizado, sendo
+                                                    orientada
+                                                    pelas
+                                                    necessidades de saúde dos territórios e pelos princípios
+                                                    constitucionais
+                                                    do
+                                                    sistema?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Box Voce sabia -->
+
+                                    <p class="lead text-muted">A Política Nacional de Vigilância em Saúde (PNVS) amplia
+                                        o
+                                        escopo
+                                        tradicional da vigilância ao reconhecer que os processos saúde-doença são
+                                        socialmente
+                                        determinados e atravessados por fatores econômicos, ambientais, culturais e
+                                        produtivos.
+                                        Dessa forma, a vigilância não se restringe ao controle de doenças
+                                        transmissíveis,
+                                        mas
+                                        incorpora agravos crônicos, violências, acidentes, exposições ambientais,
+                                        condições
+                                        de
+                                        trabalho e iniquidades sociais.</p>
+                                    <p class="lead text-muted">A Vigilância em Saúde, nesse sentido, constitui base
+                                        estratégica para
+                                        o planejamento, a gestão e a avaliação das ações e serviços de saúde, orientando
+                                        a
+                                        tomada de
+                                        decisão em todos os níveis do SUS.</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Evolução histórica da Vigilância em Saúde
+                                        no
+                                        Brasil
+                                    </h4>
+                                    <p class="lead text-muted">Historicamente, as ações de vigilância no Brasil
+                                        estiveram
+                                        vinculadas
+                                        a práticas de controle sanitário, fiscalização de portos, fronteiras, produtos e
+                                        serviços,
+                                        bem como ao enfrentamento de epidemias, especialmente de doenças transmissíveis.
+                                        Veja agora
+                                        os principais marcos na evolução histórica da Vigilância em Saúde no Brasil:</p>
+
+                                    <div class="tl-historico my-5" data-timeline="historico">
+
+                                        <div class="tl-track-wrapper">
+                                            <div class="tl-track">
+                                                <button class="tl-dot active" type="button" data-idx="0"
+                                                    aria-label="Ver marco 1">1</button>
+                                                <button class="tl-dot" type="button" data-idx="1"
+                                                    aria-label="Ver marco 2">2</button>
+                                                <button class="tl-dot" type="button" data-idx="2"
+                                                    aria-label="Ver marco 3">3</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="tl-panel">
+                                            <span class="tl-panel-bignum"></span>
+                                            <p class="tl-panel-era"></p>
+                                            <h4 class="tl-panel-title"></h4>
+                                            <p class="tl-panel-desc"></p>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted">Nesse novo contexto, a vigilância é ressignificada como
+                                        prática
+                                        integrada, territorializada e intersetorial, orientada não apenas pela
+                                        ocorrência de
+                                        doenças, mas também pela análise dos determinantes sociais, ambientais e
+                                        produtivos
+                                        da
+                                        saúde. O território passa a ser compreendido como espaço vivo, marcado por
+                                        desigualdades,
+                                        modos de vida, relações de trabalho e dinâmicas ambientais que influenciam
+                                        diretamente o
+                                        perfil de adoecimento e de riscos à saúde. Essa mudança amplia o escopo da
+                                        vigilância, que
+                                        passa a atuar de forma contínua e articulada com a atenção à saúde, a promoção
+                                        da
+                                        saúde e a
+                                        participação social. </p>
+                                    <p class="lead text-muted">A incorporação do conceito de Vigilância em Saúde ao SUS
+                                        representa,
+                                        portanto, uma mudança no modelo, ao articular de maneira sistêmica a vigilância
+                                        epidemiológica, sanitária, ambiental e em saúde do trabalhador. Essa articulação
+                                        busca
+                                        superar a fragmentação institucional e operacional historicamente presente nas
+                                        políticas
+                                        públicas, promovendo uma abordagem integral dos riscos e agravos à saúde. Ao
+                                        integrar
+                                        diferentes campos de saber e intervenção, a Vigilância em Saúde fortalece a
+                                        capacidade do
+                                        Estado de antecipar riscos, monitorar situações complexas e responder de forma
+                                        oportuna e
+                                        equitativa às necessidades da população. </p>
+                                    <p class="lead text-muted">Além disso, esse novo modelo reforça a responsabilidade
+                                        indelegável
+                                        do Estado na proteção da saúde coletiva, ao reconhecer que a prevenção de
+                                        doenças, a
+                                        redução
+                                        de vulnerabilidades e a promoção da saúde não podem ser tratadas como ações
+                                        pontuais
+                                        ou
+                                        emergenciais, mas como funções permanentes do SUS. A Vigilância em Saúde
+                                        consolida-se,
+                                        assim, como eixo estruturante do sistema, essencial para a garantia do direito à
+                                        saúde, para
+                                        o enfrentamento das desigualdades e para a construção de políticas públicas
+                                        orientadas pela
+                                        defesa da vida. </p>                                    
+                                </article>
+                            </div>
+
+                            <!-- Bootstrap 5: Parallax / Banner Full-Width 100% Largura (Destaque de Alta Ênfase) -->
+                            <!-- NOTA: O container-fluid px-0 garante que o fundo ocupe 100% das laterais da tela -->
+                            <div class="container-fluid px-0 my-5 aula-full-bleed">
+                                <div
+                                    class="position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+
+                                    <!-- Dark overlay suave para contraste de leitura -->
+                                    <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+
+                                    <!-- Parágrafo Secundário -->
+                                    <p class="fs-5 lead fw-bold text-white mb-0 leading-relaxed mb-4 aula-banner-lead">
+                                        A literatura da Saúde Coletiva e os marcos normativos do SUS evidenciam que a
+                                        Vigilância em
+                                        Saúde, ao longo de sua trajetória histórica, deixou de ser uma prática centrada
+                                        no
+                                        controle
+                                        sanitário e no enfrentamento episódico de epidemias para se consolidar como
+                                        estratégia
+                                        estruturante do sistema de saúde, orientada pelo território, pelos determinantes
+                                        sociais e
+                                        pelo direito à saúde (BRASIL, 1988; BRASIL, 1990; PAIM, 2009; BRASIL, 2018).
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="main-content-body">
+                                <article class="aula-body mb-0">
+                                    <p class="lead text-muted mt-0">Agora que você já viu a evolução histórica da Vigilância
+                                        em
+                                        Saúde,
+                                        vamos ver alguns exemplos atuais e um comparativo do modelo tradicional e
+                                        contemporâneo?</p>
+                                    <p class="lead text-muted fw-bold">Enfrentamento da dengue e das emergências
+                                        climáticas
+                                        no
+                                        Brasil (2023–2025) </p>
+                                    <p class="lead text-muted">Durante as recentes epidemias de dengue, agravadas por
+                                        eventos
+                                        climáticos extremos (ondas de calor, chuvas intensas e enchentes), é possível
+                                        observar, na
+                                        prática, a evolução histórica da Vigilância em Saúde no Brasil.</p>
+
+                                    <!-- Accordion Acadêmico -->
+                                    <div class="container my-5">
+                                        <div class="accordion shadow-sm rounded-3 overflow-hidden"
+                                            id="accordionSusUnidades">
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h4 class="accordion-header" id="headingOne">
+                                                    <button
+                                                        class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseOne" aria-expanded="false"
+                                                        aria-controls="collapseOne">
+                                                        <span class="fs-5 text-primary fw-bold">Modelo histórico
+                                                            tradicional</span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapseOne" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingOne" data-bs-parent="#accordionSusUnidades">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted spacer-top-lead">No modelo mais antigo de vigilância,
+                                                            predominante
+
+                                                            até meados do século XX, a resposta estaria centrada quase
+                                                            exclusivamente em: </p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Campanhas verticais de combate ao
+                                                                vetor.
+                                                            </li>
+                                                            <li class="my-3">Ações normativas e centralizadas. </li>
+                                                            <li class="my-3">Fiscalizações pontuais, com pouca
+                                                                articulação
+                                                                local.
+                                                            </li>
+                                                            <li class="my-3">Atuação restrita ao controle sanitário
+                                                                imediato. </li>
+                                                        </ul>
+                                                        <p class="lead text-muted mt-4 fw-bold">Esse modelo tinha
+                                                            eficácia
+                                                            limitada
+                                                            e pouco
+                                                            diálogo com o território e os determinantes sociais. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h4 class="accordion-header" id="headingTwo">
+                                                    <button
+                                                        class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseTwo" aria-expanded="false"
+                                                        aria-controls="collapseTwo">
+                                                        <span class="fs-5 text-primary fw-bold">Modelo contemporâneo
+                                                        </span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapseTwo" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingTwo" data-bs-parent="#accordionSusUnidades">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted spacer-top-lead">No contexto atual, o enfrentamento da
+                                                            dengue
+                                                            demonstra a ressignificação da Vigilância em Saúde no SUS:
+                                                        </p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Integração de sistemas de informação,
+                                                                como
+                                                                SINAN,
+                                                                LIRAa, e-SUS Notifica e painéis epidemiológicos em tempo
+                                                                real.</li>
+                                                            <li class="my-3">Articulação entre vigilância
+                                                                epidemiológica,
+                                                                ambiental
+                                                                e sanitária, considerando fatores como clima,
+                                                                saneamento,
+                                                                uso do
+                                                                solo e mobilidade urbana. </li>
+                                                            <li class="my-3">Atuação territorializada, com municípios
+                                                                identificando
+                                                                áreas de maior risco e mobilizando equipes locais. </li>
+                                                            <li class="my-3">Responsabilidade do Estado, em cooperação
+                                                                federativa,
+                                                                para coordenar ações, repassar recursos, apoiar
+                                                                tecnicamente
+                                                                e
+                                                                comunicar riscos à população. </li>
+
+                                                        </ul>
+                                                        <p class="lead text-muted mt-4 fw-bold">Esse exemplo evidencia a
+                                                            mudança
+                                                            mencionada
+                                                            nesta aula: a vigilância deixa de ser apenas um instrumento
+                                                            de
+                                                            controle
+                                                            de doenças para se consolidar como estratégia estruturante
+                                                            do
+                                                            SUS,
+                                                            orientada pelo direito à saúde e pela proteção da vida. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Accordion Acadêmico -->
+
+                                </article>
+                            </div><br />
+
+                            <!-- Bootstrap 5: Parallax / Banner Full-Width 100% Largura (Destaque de Alta Ênfase) -->
+                            <!-- NOTA: O container-fluid px-0 garante que o fundo ocupe 100% das laterais da tela -->
+                            <div class="container-fluid px-0 my-3 mt-3 aula-full-bleed">
+                                <div
+                                    class="position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+
+                                    <!-- Dark overlay suave para contraste de leitura -->
+                                    <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+
+                                    <!-- Parágrafo Secundário -->
+                                    <p class="fs-5 lead fw-bold text-white mb-0 leading-relaxed mb-4 aula-banner-lead">
+                                        O enfrentamento atual da dengue no Brasil exemplifica a transição de uma
+                                        vigilância
+                                        centralizada e normativa para uma Vigilância em Saúde integrada,
+                                        territorializada e
+                                        orientada pelos princípios do SUS, articulando diferentes saberes, sistemas e
+                                        políticas
+                                        públicas.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="main-content-body">
+                                <article class="aula-body mb-0">
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Componentes da Vigilância em Saúde </h3>
+                                    <p class="lead text-muted">A Vigilância em Saúde no SUS organiza-se a partir da
+                                        integração de
+                                        diferentes componentes, que devem atuar de forma articulada, vamos conhecê-los?
+                                    </p>
+
+                                    <!-- Accordion Acadêmico -->
+                                    <div class="container my-5">
+                                        <div class="accordion shadow-sm rounded-3 overflow-hidden"
+                                            id="accordionComponentesVS">
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h4 class="accordion-header" id="headingtre">
+                                                    <button
+                                                        class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapsetre" aria-expanded="false"
+                                                        aria-controls="collapsetre">
+                                                        <span class="fs-5 text-primary fw-bold">Vigilância
+                                                            Epidemiológica</span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapsetre" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingtre"
+                                                    data-bs-parent="#accordionComponentesVS">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted spacer-top-lead">Responsável pelo monitoramento do
+                                                            perfil
+                                                            epidemiológico da população, identificação de surtos,
+                                                            epidemias
+                                                            e
+                                                            emergências em saúde pública, bem como pela recomendação de
+                                                            medidas de
+                                                            prevenção e controle.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h4 class="accordion-header" id="headingfiv">
+                                                    <button
+                                                        class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapsefiv" aria-expanded="false"
+                                                        aria-controls="collapsefiv">
+                                                        <span class="fs-5 text-primary fw-bold">Vigilância Sanitária
+                                                        </span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapsefiv" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingfiv"
+                                                    data-bs-parent="#accordionComponentesVS">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted spacer-top-lead">Atua sobre produtos, serviços,
+                                                            ambientes
+                                                            e
+                                                            processos que possam representar riscos à saúde, exercendo
+                                                            funções
+                                                            regulatórias, fiscalizatórias e educativas. </p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h4 class="accordion-header" id="headingfor">
+                                                    <button
+                                                        class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapsefor" aria-expanded="false"
+                                                        aria-controls="collapsefor">
+                                                        <span class="fs-5 text-primary fw-bold">Vigilância em Saúde
+                                                            Ambiental
+                                                        </span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapsefor" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingfor"
+                                                    data-bs-parent="#accordionComponentesVS">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted spacer-top-lead">Dedica-se à identificação e ao
+                                                            monitoramento de
+                                                            fatores ambientais que interferem na saúde, incluindo
+                                                            qualidade
+                                                            da água,
+                                                            do ar, do solo, desastres ambientais e mudanças climáticas.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h4 class="accordion-header" id="headingsix">
+                                                    <button
+                                                        class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapsesix" aria-expanded="false"
+                                                        aria-controls="collapsesix">
+                                                        <span class="fs-5 text-primary fw-bold">Vigilância em Saúde do
+                                                            Trabalhador
+                                                        </span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapsesix" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingsix"
+                                                    data-bs-parent="#accordionComponentesVS">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted spacer-top-lead">Voltada à promoção e proteção da
+                                                            saúde dos trabalhadores, considerando os riscos e agravos
+                                                            relacionados aos processos produtivos e às condições de
+                                                            trabalho.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- Accordion Acadêmico -->
+
+                                </article>
+                            </div><br />
+
+                            <!-- Bootstrap 5: Parallax / Banner Full-Width 100% Largura (Destaque de Alta Ênfase) -->
+                            <!-- NOTA: O container-fluid px-0 garante que o fundo ocupe 100% das laterais da tela -->
+                            <div class="container-fluid px-0 my-3 mt-3 aula-full-bleed">
+                                <div
+                                    class="position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+
+                                    <!-- Dark overlay suave para contraste de leitura -->
+                                    <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+
+                                    <!-- Parágrafo Secundário -->
+                                    <p class="fs-5 lead fw-bold text-white mb-0 leading-relaxed mb-4 aula-banner-lead">
+                                        A integração entre esses componentes é condição indispensável para uma resposta
+                                        eficaz aos
+                                        problemas de saúde contemporâneos.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="main-content-body">
+                                <article class="aula-body mb-0">
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Território e análise da situação de saúde
+                                        na
+                                        Vigilância em Saúde do SUS</h3>
+                                    <p class="lead text-muted spacer-top-lead">Antes de seguirmos neste tópico, vamos nivelar o
+                                        conhecimento
+                                        sobre
+                                        os conceitos de território e territorialização? </p>
+
+                                    <!-- Abas Interativas (Tabs) -->
+                                    <div class="my-5">
+                                        <div class="aula-tabs-card">
+                                            <ul class="nav aula-tabs-nav" id="pills-tab" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="pills-teoria-tab"
+                                                        data-bs-toggle="pill" data-bs-target="#pills-teoria"
+                                                        type="button" role="tab">
+                                                        <i class="bi bi-geo-alt-fill"></i> Território
+                                                    </button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-pratica-tab"
+                                                        data-bs-toggle="pill" data-bs-target="#pills-pratica"
+                                                        type="button" role="tab">
+                                                        <i class="bi bi-map-fill"></i> Territorialização
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content aula-tabs-content" id="pills-tabContent">
+                                                <div class="tab-pane fade show active" id="pills-teoria"
+                                                    role="tabpanel">
+                                                    <p class="lead text-muted spacer-top-lead">O território é uma categoria central e
+                                                        estruturante da
+                                                        Vigilância em Saúde no âmbito do SUS, superando a compreensão
+                                                        restrita de espaço
+                                                        físico ou delimitação administrativa. Trata-se de um espaço
+                                                        socialmente
+                                                        produzido, no qual se expressam relações históricas, econômicas,
+                                                        culturais,
+                                                        políticas e ambientais que moldam as condições de vida, trabalho
+                                                        e
+                                                        saúde das
+                                                        populações. Nesse sentido, o território é simultaneamente espaço
+                                                        de
+                                                        produção de
+                                                        riscos, de vulnerabilidades e de potencialidades, exigindo uma
+                                                        abordagem
+                                                        analítica que considere a complexidade das dinâmicas sociais que
+                                                        nele se
+                                                        desenvolvem.</p>
+                                                </div>
+                                                <div class="tab-pane fade" id="pills-pratica" role="tabpanel">
+                                                    <p class="lead text-muted spacer-top-lead">A territorialização das ações de
+                                                        Vigilância
+                                                        em Saúde
+                                                        permite identificar padrões diferenciados de adoecimento,
+                                                        exposição
+                                                        a riscos e
+                                                        acesso aos serviços de saúde, revelando desigualdades
+                                                        estruturais
+                                                        frequentemente
+                                                        invisibilizadas por análises agregadas. Ao reconhecer os fluxos
+                                                        populacionais,
+                                                        como migração, mobilidade urbana, deslocamentos para trabalho ou
+                                                        estudo, a
+                                                        vigilância amplia sua capacidade de compreender a circulação de
+                                                        agravos e a
+                                                        disseminação de riscos sanitários. Do mesmo modo, a análise das
+                                                        condições de
+                                                        vida e trabalho, incluindo habitação, saneamento, informalidade
+                                                        laboral e
+                                                        exposição a agentes ambientais e ocupacionais, torna-se
+                                                        fundamental
+                                                        para
+                                                        explicar o processo saúde-doença para além de seus determinantes
+                                                        biológicos.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Abas Interativas (Tabs) -->
+
+                                    <p class="lead text-muted">Nesse contexto, a análise da situação de saúde
+                                        configura-se
+                                        como
+                                        instrumento estratégico da Vigilância em Saúde, ao articular dados
+                                        epidemiológicos,
+                                        demográficos, socioeconômicos e ambientais para subsidiar o planejamento, a
+                                        priorização e a
+                                        avaliação das ações de saúde. Essa análise não se limita à descrição de
+                                        indicadores,
+                                        mas
+                                        envolve a interpretação crítica das informações à luz do território, permitindo:
+                                    </p>
+
+                                    <div class="my-5 container-fluid aula-wide-block px-lg-4">
+                                        <div class="row g-4 g-lg-5 align-items-start">
+                                            <div class="col-md-6 col-lg-4">
+                                                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                    <div class="position-relative">
+                                                        <img src="imgs/07.jpg" class="card-img-top img-cover-260" alt="Homem idoso de cabelos e barba brancos, sentado em primeiro plano, com expressão solene, olhando para a câmera. Ele usa uma camisa azul-acinzentada desgastada. Atrás dele, uma multidão desfocada de pessoas espera em fila, com algumas olhando para ele." title="Magnific.com">
+
+                                                    </div>
+                                                    <div
+                                                        class="card-body bg-light p-4 p-lg-5 info-card-collapse-body-lg">
+                                                        <p class="card-text lead text-muted mb-0">Identificar grupos
+                                                            populacionais mais
+                                                            vulneráveis. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-4">
+                                                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                    <div class="position-relative">
+                                                        <img src="imgs/08.jpg" class="card-img-top img-cover-260"
+                                                            alt="Uma mão interrompendo a queda de uma fileira de dominós de madeira." title="Magnific.com">
+
+                                                    </div>
+                                                    <div
+                                                        class="card-body bg-light p-4 p-lg-5 info-card-collapse-body-lg">
+                                                        <p class="card-text lead text-muted mb-0">Antecipar riscos.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6 col-lg-4">
+                                                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                    <div class="position-relative">
+                                                        <img src="imgs/09.jpg" class="card-img-top img-cover-260" alt="Três pessoas de diferentes origens e alturas estão em pé lado a lado, cada uma em cima de um bloco diferente, em um fundo neutro." title="Criado por IA (Gemini)">
+
+                                                    </div>
+                                                    <div
+                                                        class="card-body bg-light p-4 p-lg-5 info-card-collapse-body-lg">
+                                                        <p class="card-text lead text-muted mb-0">Orientar
+                                                            intervenções
+                                                            mais
+                                                            equitativas
+                                                            e resolutivas. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Cards com Imagem -->
+
+                                    <p class="lead text-muted">Trata-se, portanto, de um processo contínuo, que sustenta
+                                        a
+                                        tomada de
+                                        decisão nos diferentes níveis de gestão do SUS. </p>
+                                    <p class="lead text-muted">Em tempos de transformação digital, a análise da situação
+                                        de
+                                        saúde
+                                        passa a incorporar novas fontes de dados, tecnologias e metodologias analíticas,
+                                        ampliando
+                                        significativamente o potencial de intervenção do SUS.</p>
+                                    <p class="lead text-muted">O uso de sistemas de informação integrados,
+                                        georreferenciamento de
+                                        eventos, painéis interativos e dados ambientais e climáticos em tempo quase real
+                                        possibilita
+                                        análises mais refinadas em escala local, favorecendo a identificação de
+                                        microterritórios de
+                                        risco. Contudo, essa ampliação exige capacidade técnica, infraestrutura adequada
+                                        e
+                                        formação
+                                        crítica dos trabalhadores, de modo que o uso das tecnologias esteja orientado
+                                        pelos
+                                        princípios da equidade, da integralidade e do direito à saúde.</p>
+                                    <p class="lead text-muted">Assim, o território e a análise da situação de saúde
+                                        consolidam-se
+                                        como eixos articuladores da Vigilância em Saúde, permitindo que o SUS atue de
+                                        forma
+                                        antecipatória, territorialmente sensível e socialmente comprometida,
+                                        fortalecendo
+                                        sua função
+                                        de proteção da saúde coletiva em contextos cada vez mais complexos e desiguais.
+                                    </p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Território como espaço vivo: epidemias de
+                                        dengue e
+                                        arboviroses</h4>
+                                    <p class="lead text-muted">Nas epidemias recentes de dengue, chikungunya e zika, o
+                                        território é
+                                        compreendido para além do mapa físico, conforme já citamos nesta aula. As
+                                        equipes de
+                                        Vigilância em Saúde identificam: </p>
+
+                                    <!-- CARROSSEL APENAS IMAGEM (GALERIA VISUAL, TEXTO SEPARADO ABAIXO) -->
+                                    <div class="my-5" data-infographic="territorioDengue">
+                                        <div class="text-center mb-2 mt-5">
+                                            <span class="badge-recurso-interativo">
+                                                <i class="bi bi-cursor-fill me-1"></i> Recurso Interativo
+                                            </span>
+                                            <!--<p class="text-muted mb-0 mt-2">Clique nos cards abaixo para saber mais</p>-->
+                                        </div>
+                                        <div class="ig-hotspot-card">
+                                            <div class="ig-hotspot-wrapper ig-hotspot-wrapper--wide">
+                                                <img src="imgs/infografico-territorio.jpg"
+                                                    alt="Infográfico com 4 painéis numerados, representando fatores territoriais que influenciam epidemias de dengue e arboviroses"
+                                                    class="ig-hotspot-img">
+                                                <button class="ig-dot active" type="button" data-idx="0"
+                                                    aria-label="Ver item 1" data-left="13.94" data-top="26.57"></button>
+                                                <button class="ig-dot" type="button" data-idx="1"
+                                                    aria-label="Ver item 2" data-left="37.83" data-top="26.64"></button>
+                                                <button class="ig-dot" type="button" data-idx="2"
+                                                    aria-label="Ver item 3" data-left="61.97" data-top="27.27"></button>
+                                                <button class="ig-dot" type="button" data-idx="3"
+                                                    aria-label="Ver item 4" data-left="86.06" data-top="27.27"></button>
+                                            </div>
+
+                                            <div class="ig-panel" id="igPanel3">
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="ig-panel-icon" id="igPanel3Icon"><i
+                                                            class="bi bi-trash3-fill" id="igPanel3IconI"></i></div>
+                                                    <h4 class="ig-panel-title d-none" id="igPanel3Title"></h4>
+                                                    <p class="ig-panel-desc mb-0" id="igPanel3Desc"></p>
+                                                </div>
+                                                <p class="ig-actions-label">Ações estratégicas</p>
+                                                <ul class="ig-actions-list mb-0" id="igPanel3ActionsList"></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- CARROSSEL APENAS IMAGEM (GALERIA VISUAL, TEXTO SEPARADO ABAIXO) -->
+
+                                    <p class="lead text-muted">Esses fatores territoriais explicam por que a incidência
+                                        da
+                                        dengue
+                                        não se distribui de forma homogênea, reforçando a noção de território como
+                                        espaço
+                                        socialmente produzido.</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Território, trabalho e vulnerabilidades:
+                                        saúde do
+                                        trabalhador</h4>
+                                    <p class="lead text-muted">Um exemplo atual ocorre em territórios com forte
+                                        atividade do
+                                        agronegócio ou da mineração, onde a Vigilância em Saúde do Trabalhador
+                                        identifica:
+                                    </p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Exposição a agrotóxicos.</li>
+                                        <li class="my-3">Condições precárias de trabalho.</li>
+                                        <li class="my-3">Migração temporária de trabalhadores.</li>
+                                        <li class="my-3">Impactos ambientais que afetam comunidades do entorno.</li>
+                                    </ul>
+
+                                    <p class="lead text-muted mt-4">Nesse caso, a análise territorial permite
+                                        correlacionar
+                                        doenças
+                                        respiratórias, intoxicações e agravos crônicos com o modelo produtivo local,
+                                        orientando
+                                        ações intersetoriais, fiscalização e vigilância ambiental.</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Análise da Situação de Saúde em contextos
+                                        de
+                                        emergência climática</h4>
+                                    <p class="lead text-muted">Em enchentes, secas e ondas de calor, cada vez mais
+                                        frequentes no
+                                        Brasil, a Vigilância em Saúde utiliza a análise da situação de saúde para:</p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Mapear territórios mais vulneráveis a desastres
+                                            ambientais.
+                                        </li>
+                                        <li class="my-3">Relacionar eventos climáticos com aumento de doenças de
+                                            veiculação
+                                            hídrica,
+                                            leptospirose, desnutrição e agravos respiratórios. </li>
+                                        <li class="my-3">Planejar ações diferenciadas para populações específicas
+                                            (crianças,
+                                            idosos,
+                                            povos tradicionais). </li>
+                                    </ul>
+
+                                </article>
+                            </div><br />
+
+                            <!-- Bootstrap 5: Parallax / Banner Full-Width 100% Largura (Destaque de Alta Ênfase) -->
+                            <!-- NOTA: O container-fluid px-0 garante que o fundo ocupe 100% das laterais da tela -->
+                            <div class="container-fluid px-0 my-3 mt-5 aula-full-bleed">
+                                <div
+                                    class="position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+
+                                    <!-- Dark overlay suave para contraste de leitura -->
+                                    <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+
+                                    <!-- Parágrafo Secundário -->
+                                    <p class="fs-5 lead fw-bold text-white mb-0 leading-relaxed mb-4 aula-banner-lead">
+                                        Aqui, o território revela desigualdades históricas e orienta respostas mais
+                                        equitativas.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="main-content-body">
+                                <article class="aula-body mb-0">
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Transformação digital e novas fontes de
+                                        dados
+                                    </h3>
+                                    <p class="lead text-muted">Em tempos de transformação digital, a análise da
+                                        situação de
+                                        saúde incorpora novas ferramentas e fontes de informação, como:</p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Painéis digitais integrando dados do SINAN, SIM, SI-PNI e
+                                            e-SUS.</li>
+                                        <li class="my-3">Georreferenciamento de casos, permitindo identificar
+                                            microterritórios de
+                                            maior risco. </li>
+                                        <li class="my-3">Dados climáticos e ambientais integrados à vigilância
+                                            epidemiológica. </li>
+                                        <li class="my-3">Notificação digital em tempo real (ex.: e-SUS Notifica). </li>
+                                        <li class="my-3">Uso experimental de modelos preditivos para antecipar surtos e
+                                            agravos.
+                                        </li>
+                                    </ul>
+
+                                    <p class="lead text-muted mt-4">Esses recursos ampliam a capacidade do SUS de
+                                        antecipar
+                                        riscos,
+                                        priorizar territórios e qualificar o planejamento das ações. </p>
+
+                                </article>
+                            </div><br />
+
+                            <!-- Bootstrap 5: Parallax / Banner Full-Width 100% Largura (Destaque de Alta Ênfase) -->
+                            <!-- NOTA: O container-fluid px-0 garante que o fundo ocupe 100% das laterais da tela -->
+                            <div class="container-fluid px-0 my-3 mt-5 aula-full-bleed">
+                                <div
+                                    class="position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+
+                                    <!-- Dark overlay suave para contraste de leitura -->
+                                    <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+
+                                    <!-- Parágrafo Secundário -->
+                                    <p class="fs-5 lead fw-bold text-white mb-0 leading-relaxed mb-4 aula-banner-lead">
+                                        Os exemplos atuais demonstram que o território é elemento estruturante da
+                                        Vigilância
+                                        em
+                                        Saúde no SUS, e que a análise da situação de saúde, fortalecida pela
+                                        transformação
+                                        digital,
+                                        permite respostas mais rápidas, integradas e orientadas pelas desigualdades
+                                        sociais.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="main-content-body">
+                                <article class="aula-body mb-0">
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Princípios do SUS e sua Aplicação na
+                                        Vigilância em
+                                        Saúde </h3>
+                                    <p class="lead text-muted spacer-top-lead">Os princípios do SUS são divididos em duas categorias:
+                                        <span class="fw-bold">doutrinários</span> e <span
+                                            class="fw-bold">organizativos</span>. Vamos conhecer cada
+                                        uma
+                                        delas com
+                                        mais detalhes?
+                                    </p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Princípios doutrinários</h4>
+                                    <p class="lead text-muted">Os princípios doutrinários do SUS são:</p>
+
+                                    <!-- CARROSSEL APENAS TEXTO (CARDS DE ESTUDO & SÍNTESE CONCEITUAL)   -->
+                                    <div class="container my-5">
+                                        <div id="carouselTextoEduFlex"
+                                            class="carousel slide shadow-md rounded-4 overflow-hidden border-0 max-w-4xl mx-auto max-w-content">
+
+                                            <div class="carousel-indicators mb-3">
+                                                <button type="button" data-bs-target="#carouselTextoEduFlex"
+                                                    data-bs-slide-to="0" class="active" aria-current="true"
+                                                    aria-label="Slide 1"></button>
+                                                <button type="button" data-bs-target="#carouselTextoEduFlex"
+                                                    data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                                <button type="button" data-bs-target="#carouselTextoEduFlex"
+                                                    data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                            </div>
+
+                                            <div class="carousel-inner">
+
+                                                <!-- SLIDE 1 (APENAS TEXTO) -->
+                                                <div class="carousel-item active">
+                                                    <div
+                                                        class="p-4 p-md-5 text-white position-relative principle-card principle-card--a">
+                                                        <h5 class=" text-white mb-3">
+                                                            Universalidade
+                                                        </h5>
+                                                        <hr class="my-2 border-light border-opacity-25">
+
+                                                        <p class="fs-6 text-light leading-relaxed mb-0 pe-2">
+                                                            A universalidade assegura que todas as pessoas tenham
+                                                            direito às
+                                                            ações e
+                                                            serviços de saúde. Na Vigilância em Saúde, esse princípio
+                                                            implica
+                                                            garantir que toda a população seja contemplada nos sistemas
+                                                            de
+                                                            informação, nos processos de monitoramento e nas respostas
+                                                            aos
+                                                            riscos,
+                                                            evitando invisibilidades epidemiológicas e exclusões
+                                                            digitais.
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <!-- SLIDE 2 (APENAS TEXTO) -->
+                                                <div class="carousel-item">
+                                                    <div
+                                                        class="p-4 p-md-5 text-white position-relative principle-card principle-card--a">
+
+                                                        <h5 class=" text-white mb-3">
+                                                            Integralidade
+                                                        </h5>
+                                                        <hr class="my-2 border-light border-opacity-25">
+
+                                                        <p class="fs-6 text-light leading-relaxed mb-0 pe-2">
+                                                            A integralidade orienta a articulação entre promoção,
+                                                            prevenção,
+                                                            vigilância e atenção à saúde. Para a Vigilância em Saúde,
+                                                            significa
+                                                            integrar informações, ações e saberes, reconhecendo a
+                                                            complexidade dos
+                                                            determinantes da saúde e a necessidade de respostas
+                                                            intersetoriais.
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <!-- SLIDE 3 (APENAS TEXTO) -->
+                                                <div class="carousel-item">
+                                                    <div
+                                                        class="p-4 p-md-5 text-white position-relative principle-card principle-card--b">
+
+                                                        <h5 class=" text-white mb-3">
+                                                            Equidade
+                                                        </h5>
+                                                        <hr class="my-2 border-light border-opacity-25">
+
+                                                        <p class="fs-6 text-light leading-relaxed mb-0 pe-2">
+                                                            A equidade reconhece que diferentes grupos e territórios
+                                                            apresentam
+                                                            necessidades distintas. A Vigilância em Saúde deve
+                                                            identificar
+                                                            desigualdades e orientar políticas públicas diferenciadas,
+                                                            contribuindo
+                                                            para a redução das iniquidades sociais e sanitárias. No
+                                                            contexto
+                                                            digital, a equidade também envolve enfrentar a exclusão
+                                                            digital
+                                                            e os
+                                                            vieses na produção e análise de dados.
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselTextoEduFlex" data-bs-slide="prev">
+                                                <span
+                                                    class="carousel-control-prev-icon p-3 bg-dark bg-opacity-50 rounded-circle"
+                                                    aria-hidden="true"></span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselTextoEduFlex" data-bs-slide="next">
+                                                <span
+                                                    class="carousel-control-next-icon p-3 bg-dark bg-opacity-50 rounded-circle"
+                                                    aria-hidden="true"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- CARROSSEL APENAS TEXTO (CARDS DE ESTUDO & SÍNTESE CONCEITUAL)   -->
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Princípios organizativos</h4>
+                                    <p class="lead text-muted">Os princípios organizativos do SUS são: </p>
+
+                                    <!-- CARROSSEL APENAS TEXTO (CARDS DE ESTUDO & SÍNTESE CONCEITUAL)   -->
+                                    <div class="container my-5">
+                                        <div id="carouselTextoEduFlex2"
+                                            class="carousel slide shadow-md rounded-4 overflow-hidden border-0 max-w-4xl mx-auto max-w-content">
+
+                                            <div class="carousel-indicators mb-3">
+                                                <button type="button" data-bs-target="#carouselTextoEduFlex2"
+                                                    data-bs-slide-to="0" class="active" aria-current="true"
+                                                    aria-label="Slide 1"></button>
+                                                <button type="button" data-bs-target="#carouselTextoEduFlex2"
+                                                    data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                                <button type="button" data-bs-target="#carouselTextoEduFlex2"
+                                                    data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                            </div>
+
+                                            <div class="carousel-inner">
+
+                                                <!-- SLIDE 1 (APENAS TEXTO) -->
+                                                <div class="carousel-item active">
+                                                    <div
+                                                        class="p-4 p-md-5 text-white position-relative principle-card principle-card--a">
+                                                        <h5 class=" text-white mb-3">
+                                                            Descentralização e regionalização
+                                                        </h5>
+                                                        <hr class="my-2 border-light border-opacity-25">
+
+                                                        <p class="fs-6 text-light leading-relaxed mb-0 pe-2">
+                                                            A Vigilância em Saúde é descentralizada, com
+                                                            responsabilidades
+                                                            compartilhadas entre União, estados e municípios. A
+                                                            transformação
+                                                            digital pode fortalecer esse princípio, desde que
+                                                            acompanhada de
+                                                            investimentos em infraestrutura, conectividade e
+                                                            qualificação
+                                                            técnica
+                                                            nos territórios.
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <!-- SLIDE 2 (APENAS TEXTO) -->
+                                                <div class="carousel-item">
+                                                    <div
+                                                        class="p-4 p-md-5 text-white position-relative principle-card principle-card--a">
+
+                                                        <h5 class=" text-white mb-3">
+                                                            Hierarquização e coordenação do cuidado
+                                                        </h5>
+                                                        <hr class="my-2 border-light border-opacity-25">
+
+                                                        <p class="fs-6 text-light leading-relaxed mb-0 pe-2">
+                                                            As informações produzidas pela vigilância devem subsidiar a
+                                                            organização
+                                                            das redes de atenção à saúde, apoiando fluxos assistenciais
+                                                            e
+                                                            respostas
+                                                            oportunas.
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <!-- SLIDE 3 (APENAS TEXTO) -->
+                                                <div class="carousel-item">
+                                                    <div
+                                                        class="p-4 p-md-5 text-white position-relative principle-card principle-card--b">
+
+                                                        <h5 class=" text-white mb-3">
+                                                            Participação social
+                                                        </h5>
+                                                        <hr class="my-2 border-light border-opacity-25">
+
+                                                        <p class="fs-6 text-light leading-relaxed mb-0 pe-2">
+                                                            A participação da sociedade é elemento estruturante do SUS.
+                                                            Na
+                                                            Vigilância em Saúde, envolve transparência, comunicação de
+                                                            riscos em
+                                                            saúde, controle social, vigilância popular e valorização dos
+                                                            saberes
+                                                            populares e territoriais, potencializados por ferramentas
+                                                            digitais.
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselTextoEduFlex2" data-bs-slide="prev">
+                                                <span
+                                                    class="carousel-control-prev-icon p-3 bg-dark bg-opacity-50 rounded-circle"
+                                                    aria-hidden="true"></span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselTextoEduFlex2" data-bs-slide="next">
+                                                <span
+                                                    class="carousel-control-next-icon p-3 bg-dark bg-opacity-50 rounded-circle"
+                                                    aria-hidden="true"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- CARROSSEL APENAS TEXTO (CARDS DE ESTUDO & SÍNTESE CONCEITUAL)   -->
+
+                                </article>
+                            </div><br />
+
+                            <!-- Bootstrap 5: Parallax / Banner Full-Width 100% Largura (Destaque de Alta Ênfase) -->
+                            <!-- NOTA: O container-fluid px-0 garante que o fundo ocupe 100% das laterais da tela -->
+                            <div class="container-fluid px-0 my-3 mt-5 aula-full-bleed">
+                                <div
+                                    class="position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+
+                                    <!-- Dark overlay suave para contraste de leitura -->
+                                    <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+
+                                    <!-- Parágrafo Secundário -->
+                                    <p class="fs-5 lead fw-bold text-white mb-0 leading-relaxed mb-4 aula-banner-lead">
+                                        Não existe Vigilância em Saúde eficaz sem território, sem escuta das comunidades
+                                        e
+                                        sem
+                                        articulação intersetorial.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="main-content-body">
+                                <article class="aula-body mb-0">
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Vigilância em Saúde em Tempos de
+                                        Transformação
+                                        Digital</h3>
+                                    <h4 class="fw-bold mb-4 text-primary">Transformação digital no SUS </h4>
+                                    <p class="lead text-muted spacer-top-lead">A transformação digital no SUS refere-se à incorporação
+                                        intensiva de
+                                        tecnologias da informação e comunicação nos processos de gestão, atenção e
+                                        vigilância em
+                                        saúde. Esse processo envolve a ampliação e integração dos sistemas de informação
+                                        em
+                                        saúde, o
+                                        uso de georreferenciamento, análise de grandes volumes de dados, inteligência
+                                        artificial e
+                                        plataformas digitais. </p>
+                                    <p class="lead text-muted">Na Vigilância em Saúde, a transformação digital amplia a
+                                        capacidade
+                                        de detecção precoce de eventos, o monitoramento em tempo oportuno e a análise
+                                        integrada de
+                                        múltiplos determinantes da saúde, fortalecendo a resposta às emergências e às
+                                        necessidades
+                                        da população. </p>
+
+                                </article>
+                            </div><br />
+
+                            <!-- Bootstrap 5: Parallax / Banner Full-Width 100% Largura (Destaque de Alta Ênfase) -->
+                            <!-- NOTA: O container-fluid px-0 garante que o fundo ocupe 100% das laterais da tela -->
+                            <div class="container-fluid px-0 my-3 mt-5 aula-full-bleed">
+                                <div
+                                    class="position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+
+                                    <!-- Dark overlay suave para contraste de leitura -->
+                                    <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+
+                                    <!-- Parágrafo Secundário -->
+                                    <p class="fs-5 lead fw-bold text-white mb-0 leading-relaxed mb-4 aula-banner-lead">
+                                        Entretanto, é importante destacar que a Vigilância em Saúde digital só contribui
+                                        para o
+                                        fortalecimento do SUS quando está a serviço do interesse público, da equidade e
+                                        do
+                                        direito à
+                                        saúde, e não apenas da eficiência tecnológica.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="main-content-body">
+                                <article class="aula-body mb-0">
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Sistemas de informação e
+                                        interoperabilidade
+                                    </h4>
+                                    <p class="lead text-muted">Os sistemas de informação em saúde constituem a base da
+                                        Vigilância em
+                                        Saúde digital. A interoperabilidade entre bases de dados é condição essencial
+                                        para a
+                                        produção de informações integradas e oportunas. No entanto, persistem desafios
+                                        relacionados
+                                        à fragmentação dos sistemas, à qualidade dos dados e à capacidade de uso das
+                                        informações
+                                        pelos gestores e trabalhadores. </p>
+                                    <p class="lead text-muted fw-bold text-center my-5">E a transformação digital na
+                                        Vigilância em
+                                        Saúde? </p>
+                                    <p class="lead text-muted">Vivemos um novo paradigma. A Vigilância em Saúde passa a
+                                        operar em um
+                                        ambiente marcado por: </p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Sistemas como e-SUS, SINAN, SIM, SIVEP-Gripe, SI-PNI.
+                                        </li>
+                                        <li class="my-3">Uso de painéis interativos (<em>dashboards</em>).</li>
+                                        <li class="my-3">Integração de bases de dados. </li>
+                                        <li class="my-3">Análise preditiva e vigilância baseada em eventos. </li>
+                                        <li class="my-3">Ampliação da transparência e do acesso público à informação.
+                                        </li>
+                                    </ul>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Potencialidades da Vigilância em Saúde
+                                        digital </h4>
+                                    <p class="lead text-muted">Entre as principais potencialidades da Vigilância em
+                                        Saúde em
+                                        tempos
+                                        de transformação digital, destacam-se:</p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Maior agilidade na detecção de surtos e emergências em
+                                            saúde
+                                            pública;
+                                        </li>
+                                        <li class="my-3">Ampliação da capacidade analítica e preditiva;</li>
+                                        <li class="my-3">Integração de dados intersetoriais; </li>
+                                        <li class="my-3">Fortalecimento do planejamento e da tomada de decisão baseada
+                                            em
+                                            evidências; </li>
+                                        <li class="my-3">Ampliação da transparência e da comunicação com a sociedade.
+                                        </li>
+                                    </ul>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Vigilância em Saúde Digital no SUS:
+                                        desafios
+                                        estruturais e exemplos atuais</h4>
+                                    <p class="lead text-muted">A incorporação intensiva de tecnologias digitais à
+                                        Vigilância
+                                        em
+                                        Saúde ampliou significativamente a capacidade de monitoramento, análise e
+                                        resposta
+                                        do SUS.
+                                        Entretanto, esse processo traz questões estruturais, éticas, políticas e
+                                        operacionais, que
+                                        exigem reflexão crítica e fortalecimento institucional. </p>
+                                    <p class="lead text-muted">Assim, apesar das potencialidades, a Vigilância em Saúde
+                                        digital
+                                        enfrenta desafios importantes, como: </p>
+
+                                    <!-- Accordion Acadêmico -->
+                                    <div class="container my-5">
+                                        <div class="accordion shadow-sm rounded-3 overflow-hidden"
+                                            id="accordionTerceiro">
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h4 class="accordion-header" id="headingzero">
+                                                    <button
+                                                        class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapsezero" aria-expanded="false"
+                                                        aria-controls="collapsezero">
+                                                        <span class="fs-5 text-primary fw-bold">Proteção de dados
+                                                            pessoais e
+                                                            garantia da privacidade</span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapsezero" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingzero" data-bs-parent="#accordionTerceiro">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted spacer-top-lead">A Vigilância em Saúde lida com dados
+                                                            sensíveis,
+                                                            como informações sobre doenças, condições de saúde, local de
+                                                            moradia,
+                                                            trabalho e pertencimento a grupos específicos. Veja um
+                                                            exemplo:
+                                                        </p>
+                                                        <p class="lead text-muted">Durante a pandemia de COVID-19 e,
+                                                            mais
+                                                            recentemente, no monitoramento de síndromes respiratórias e
+                                                            arboviroses,
+                                                            houve expansão da notificação digital em tempo real, com uso
+                                                            de
+                                                            CPF,
+                                                            endereço e dados clínicos. Em municípios com menor estrutura
+                                                            técnica,
+                                                            observou-se:</p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Armazenamento inadequado de dados.
+                                                            </li>
+                                                            <li class="my-3">Compartilhamento excessivo de planilhas.
+                                                            </li>
+                                                            <li class="my-3">Uso de dispositivos pessoais para acesso
+                                                                aos
+                                                                sistemas.
+                                                            </li>
+                                                        </ul>
+                                                        <p class="lead text-muted mt-4">Essas situações evidenciam o
+                                                            desafio
+                                                            de
+                                                            cumprir a Lei Geral de Proteção de Dados (LGPD) sem
+                                                            comprometer
+                                                            a
+                                                            resposta rápida da vigilância, exigindo protocolos claros,
+                                                            infraestrutura segura e capacitação dos profissionais. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h4 class="accordion-header" id="headingum">
+                                                    <button
+                                                        class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseum" aria-expanded="false"
+                                                        aria-controls="collapseum">
+                                                        <span class="fs-5 text-primary fw-bold">Governança e soberania
+                                                            dos
+                                                            dados
+                                                        </span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapseum" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingum" data-bs-parent="#accordionTerceiro">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted spacer-top-lead">A governança dos dados refere-se a
+                                                            quem
+                                                            controla,
+                                                            define padrões, acessa e utiliza as informações em saúde.
+                                                            Veja
+                                                            um
+                                                            exemplo:</p>
+                                                        <p class="lead text-muted">A integração de bases nacionais
+                                                            (SINAN,
+                                                            SIM,
+                                                            SI-PNI, e-SUS) com plataformas de análise e visualização,
+                                                            muitas
+                                                            vezes
+                                                            desenvolvidas por empresas privadas, levanta questões como:
+                                                        </p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Onde esses dados estão hospedados?
+                                                            </li>
+                                                            <li class="my-3">Quem define os algoritmos de análise? </li>
+                                                            <li class="my-3">O Estado mantém controle estratégico sobre
+                                                                os
+                                                                dados
+                                                                produzidos pelo SUS? </li>
+                                                        </ul>
+                                                        <p class="lead text-muted mt-4">Em um cenário de crescente uso
+                                                            de
+                                                            soluções
+                                                            terceirizadas e serviços em nuvem, a soberania dos dados
+                                                            torna-se um
+                                                            tema central para a autonomia do SUS e para a segurança
+                                                            nacional
+                                                            em
+                                                            saúde. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h4 class="accordion-header" id="headingdois">
+                                                    <button
+                                                        class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapsedois" aria-expanded="false"
+                                                        aria-controls="collapsedois">
+                                                        <span class="fs-5 text-primary fw-bold">Risco de aprofundamento
+                                                            das
+                                                            desigualdades sociais</span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapsedois" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingdois" data-bs-parent="#accordionTerceiro">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted spacer-top-lead">A Vigilância em Saúde digital pode,
+                                                            paradoxalmente, reproduzir ou ampliar desigualdades, se não
+                                                            houver
+                                                            políticas compensatórias. Veja um exemplo:</p>
+                                                        <p class="lead text-muted">Municípios de pequeno porte, áreas
+                                                            rurais,
+                                                            territórios indígenas e periferias urbanas enfrentam:</p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Conectividade limitada.</li>
+                                                            <li class="my-3">Falta de equipamentos adequados.</li>
+                                                            <li class="my-3">Rotatividade de profissionais capacitados.
+                                                            </li>
+                                                        </ul>
+                                                        <p class="lead text-muted mt-4">Enquanto grandes capitais
+                                                            conseguem
+                                                            operar
+                                                            sistemas avançados de análise e resposta rápida, territórios
+                                                            vulneráveis
+                                                            permanecem com subnotificação e baixa capacidade de análise,
+                                                            comprometendo o princípio da equidade do SUS. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h4 class="accordion-header" id="headingquatro">
+                                                    <button
+                                                        class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapsequatro" aria-expanded="false"
+                                                        aria-controls="collapsequatro">
+                                                        <span class="fs-5 text-primary fw-bold">Dependência de
+                                                            plataformas
+                                                            privadas
+                                                        </span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapsequatro" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingquatro" data-bs-parent="#accordionTerceiro">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted spacer-top-lead">A digitalização acelerada pode gerar
+                                                            dependência
+                                                            tecnológica, especialmente quando estados e municípios
+                                                            adotam
+                                                            soluções
+                                                            privadas sem capacidade interna de desenvolvimento,
+                                                            manutenção e
+                                                            auditoria. Veja um exemplo: </p>
+                                                        <p class="lead text-muted">Em alguns territórios, painéis
+                                                            epidemiológicos e
+                                                            sistemas de gestão da vigilância dependem de:</p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Licenças de <em>softwares</em>
+                                                                proprietários.
+                                                            </li>
+                                                            <li class="my-3">Contratos temporários. </li>
+                                                            <li class="my-3">Suporte técnico externo. </li>
+                                                        </ul>
+                                                        <p class="lead text-muted mt-4">Isso pode comprometer a
+                                                            continuidade
+                                                            das
+                                                            ações de vigilância, especialmente em contextos de crise
+                                                            fiscal
+                                                            ou
+                                                            mudanças contratuais, além de limitar a transparência dos
+                                                            processos
+                                                            analíticos. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h4 class="accordion-header" id="headingcinco">
+                                                    <button
+                                                        class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapsecinco" aria-expanded="false"
+                                                        aria-controls="collapsecinco">
+                                                        <span class="fs-5 text-primary fw-bold">Qualificação permanente
+                                                            dos
+                                                            trabalhadores do SUS </span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapsecinco" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingcinco" data-bs-parent="#accordionTerceiro">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted spacer-top-lead">A transformação digital não é apenas
+                                                            tecnológica,
+                                                            mas organizacional e cultural. Veja um exemplo: </p>
+                                                        <p class="lead text-muted">Profissionais da Vigilância em Saúde
+                                                            relatam
+                                                            dificuldades como: </p>
+                                                        <ul class="ms-5 lead text-muted">
+                                                            <li class="my-3 mt-4">Sistemas pouco amigáveis. </li>
+                                                            <li class="my-3">Atualizações frequentes sem treinamento
+                                                                adequado.</li>
+                                                            <li class="my-3">Pressão por resultados em tempo real sem
+                                                                suporte
+                                                                técnico suficiente. </li>
+                                                        </ul>
+                                                        <p class="lead text-muted fw-bold">Sem investimento contínuo em
+                                                            educação
+                                                            permanente, a tecnologia pode se tornar um fator de
+                                                            sobrecarga,
+                                                            em vez
+                                                            de qualificação do trabalho.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- Accordion Acadêmico -->
+
+                                </article>
+                            </div><br />
+
+                            <!-- Bootstrap 5: Parallax / Banner Full-Width 100% Largura (Destaque de Alta Ênfase) -->
+                            <!-- NOTA: O container-fluid px-0 garante que o fundo ocupe 100% das laterais da tela -->
+                            <div class="container-fluid px-0 my-3 mt-5 aula-full-bleed">
+                                <div
+                                    class="position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+
+                                    <!-- Dark overlay suave para contraste de leitura -->
+                                    <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+
+                                    <!-- Parágrafo Secundário -->
+                                    <p class="fs-5 lead fw-bold text-white mb-0 leading-relaxed mb-4 aula-banner-lead">
+                                        Os desafios da Vigilância em Saúde digital no SUS envolvem dimensões éticas,
+                                        políticas e
+                                        técnicas. Enfrentá-los exige fortalecimento da governança pública dos dados,
+                                        redução
+                                        das
+                                        desigualdades territoriais e investimento contínuo na formação crítica e a
+                                        qualificação
+                                        permanente dos trabalhadores da saúde.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="main-content-body">
+                                <article class="aula-body mb-0">
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">A formação como eixo estratégico </h4>
+                                    <p class="lead text-muted">Para enfrentar esses desafios, a formação dos
+                                        trabalhadores
+                                        do SUS
+                                        deve contemplar: </p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Ética e proteção de dados em saúde. </li>
+                                        <li class="my-3">Leitura crítica de indicadores e painéis digitais. </li>
+                                        <li class="my-3">Noções de governança e soberania de dados. </li>
+                                        <li class="my-3">Uso de tecnologias digitais orientado pelo território. </li>
+                                        <li class="my-3">Capacidade de diálogo entre vigilância, atenção à saúde e
+                                            controle
+                                            social.
+                                        </li>
+                                    </ul>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Sugestões de leitura</h3>
+                                    <p class="lead text-muted">A seguir, apresentamos algumas sugestões de leitura para
+                                        quem deseja
+                                        aprofundar os temas abordados nesta aula.</p>
+
+                                    <!-- Box Leitura Complementar -->
+
+                                    <div class="alert  border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light my-5"
+                                        role="alert">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <h4 class="fw-bold color-primay mt-2 mb-2 ms-3"><i
+                                                        class="bi bi-book"></i> Leitura
+                                                    Complementar
+                                                </h4>
+
+                                                <!-- Accordion Acadêmico -->
+                                                <div class="container my-5">
+                                                    <div class="accordion shadow-sm rounded-3 overflow-hidden"
+                                                        id="accordionQuarto">
+                                                        <div class="accordion-item border-0 border-bottom">
+                                                            <h4 class="accordion-header" id="heading0">
+                                                                <button
+                                                                    class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                                    type="button" data-bs-toggle="collapse"
+                                                                    data-bs-target="#collapse0" aria-expanded="false"
+                                                                    aria-controls="collapse0">
+                                                                    <span class="fs-5 text-primary fw-bold">Marcos
+                                                                        Normativos e
+                                                                        Institucionais do SUS e da Vigilância em
+                                                                        Saúde</span>
+                                                                </button>
+                                                            </h4>
+                                                            <div id="collapse0" class="accordion-collapse collapse" role="region"
+                                                                aria-labelledby="heading0"
+                                                                data-bs-parent="#accordionQuarto">
+                                                                <div
+                                                                    class="accordion-body text-secondary small leading-relaxed">
+                                                                    <ul class="ms-5 lead text-muted">
+                                                                        <li class="my-3">BRASIL. Lei nº 8.142, de 28 de
+                                                                            dezembro de
+                                                                            1990. Dispõe sobre a participação da
+                                                                            comunidade na
+                                                                            gestão do SUS. </li>
+                                                                        <li class="my-3">BRASIL. Ministério da Saúde.
+                                                                            Plano Nacional
+                                                                            de Saúde Digital. Brasília: MS. </li>
+                                                                        <li class="my-3">BRASIL. Ministério da Saúde.
+                                                                            Estratégia de
+                                                                            Saúde Digital para o Brasil 2020–2028.
+                                                                            Brasília: MS.
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="accordion-item border-0 border-bottom">
+                                                            <h4 class="accordion-header" id="heading1">
+                                                                <button
+                                                                    class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                                    type="button" data-bs-toggle="collapse"
+                                                                    data-bs-target="#collapse1" aria-expanded="false"
+                                                                    aria-controls="collapse1">
+                                                                    <span class="fs-5 text-primary fw-bold">Vigilância
+                                                                        em Saúde:
+                                                                        Fundamentos Teóricos e Práticas no SUS
+                                                                    </span>
+                                                                </button>
+                                                            </h4>
+                                                            <div id="collapse1" class="accordion-collapse collapse" role="region"
+                                                                aria-labelledby="heading1"
+                                                                data-bs-parent="#accordionQuarto">
+                                                                <div
+                                                                    class="accordion-body text-secondary small leading-relaxed">
+                                                                    <ul class="ms-5 lead text-muted">
+                                                                        <li class="my-3">TEIXEIRA, C. F.; PAIM, J. S.;
+                                                                            VILASBÔAS, A.
+                                                                            L. Vigilância da saúde: conceitos, práticas
+                                                                            e desafios.
+                                                                            Salvador: EDUFBA.</li>
+                                                                        <li class="my-3">PAIM, J. S. O que é o SUS. Rio
+                                                                            de Janeiro:
+                                                                            Editora Fiocruz. </li>
+                                                                        <li class="my-3">GONDIM, G. M. M. et al.
+                                                                            Território,
+                                                                            processo saúde-doença e vigilância em saúde.
+                                                                            Rio de
+                                                                            Janeiro: Fiocruz. </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="accordion-item border-0 border-bottom">
+                                                            <h4 class="accordion-header" id="heading2">
+                                                                <button
+                                                                    class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                                    type="button" data-bs-toggle="collapse"
+                                                                    data-bs-target="#collapse2" aria-expanded="false"
+                                                                    aria-controls="collapse2">
+                                                                    <span
+                                                                        class="fs-5 text-primary fw-bold">Territorialização,
+                                                                        Determinantes Sociais e Equidade </span>
+                                                                </button>
+                                                            </h4>
+                                                            <div id="collapse2" class="accordion-collapse collapse" role="region"
+                                                                aria-labelledby="heading2"
+                                                                data-bs-parent="#accordionQuarto">
+                                                                <div
+                                                                    class="accordion-body text-secondary small leading-relaxed">
+                                                                    <ul class="ms-5 lead text-muted">
+                                                                        <li class="my-3">BUSS, P. M.; PELLEGRINI FILHO,
+                                                                            A. A saúde e
+                                                                            seus determinantes sociais. Physis. </li>
+                                                                        <li class="my-3">BREILH, J. Epidemiologia
+                                                                            crítica: ciência
+                                                                            emancipadora e interculturalidade. Buenos
+                                                                            Aires: Lugar
+                                                                            Editorial. </li>
+                                                                        <li class="my-3">ROCHA, R.; SILVA, M.
+                                                                            Desigualdades em saúde
+                                                                            no Brasil. Rio de Janeiro: Fiocruz. </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="accordion-item border-0 border-bottom">
+                                                            <h4 class="accordion-header" id="heading5">
+                                                                <button
+                                                                    class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                                    type="button" data-bs-toggle="collapse"
+                                                                    data-bs-target="#collapse5" aria-expanded="false"
+                                                                    aria-controls="collapse5">
+                                                                    <span class="fs-5 text-primary fw-bold">Vigilância
+                                                                        em Saúde,
+                                                                        Democracia e Participação Social
+                                                                    </span>
+                                                                </button>
+                                                            </h4>
+                                                            <div id="collapse5" class="accordion-collapse collapse" role="region"
+                                                                aria-labelledby="heading5"
+                                                                data-bs-parent="#accordionQuarto">
+                                                                <div
+                                                                    class="accordion-body text-secondary small leading-relaxed">
+                                                                    <ul class="ms-5 lead text-muted">
+                                                                        <li class="my-3">Fiocruz. Vigilância Popular e
+                                                                            Participativa
+                                                                            em Saúde: conceitos, práticas e
+                                                                            perspectivas. Rio de
+                                                                            Janeiro: Fiocruz.
+                                                                        </li>
+                                                                        <li class="my-3">BRASIL. Conselho Nacional de
+                                                                            Saúde.
+                                                                            Participação social e controle social no
+                                                                            SUS. </li>
+                                                                        <li class="my-3">CASTELLS, M. A sociedade em
+                                                                            rede.</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="accordion-item border-0 border-bottom">
+                                                            <h4 class="accordion-header" id="heading8">
+                                                                <button
+                                                                    class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                                    type="button" data-bs-toggle="collapse"
+                                                                    data-bs-target="#collapse8" aria-expanded="false"
+                                                                    aria-controls="collapse8">
+                                                                    <span
+                                                                        class="fs-5 text-primary fw-bold">Transformação
+                                                                        Digital,
+                                                                        Sistemas de Informação e Saúde Digital </span>
+                                                                </button>
+                                                            </h4>
+                                                            <div id="collapse8" class="accordion-collapse collapse" role="region"
+                                                                aria-labelledby="heading8"
+                                                                data-bs-parent="#accordionQuarto">
+                                                                <div
+                                                                    class="accordion-body text-secondary small leading-relaxed">
+                                                                    <ul class="ms-5 lead text-muted">
+                                                                        <li class="my-3">Fiocruz. Transformação digital
+                                                                            e saúde
+                                                                            pública: desafios e perspectivas para o SUS.
+                                                                            Rio de
+                                                                            Janeiro: Fiocruz. </li>
+                                                                        <li class="my-3">OPAS. Transformação digital no
+                                                                            setor da
+                                                                            saúde. Brasília: OPAS. </li>
+                                                                        <li class="my-3">OMS. Global strategy on digital
+                                                                            health
+                                                                            2020–2025. Geneva: WHO. </li>
+                                                                        <li class="my-3">BRASIL. Ministério da Saúde.
+                                                                            Plano Diretor
+                                                                            de Tecnologia da Informação e Comunicação do
+                                                                            SUS.</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="accordion-item border-0 border-bottom">
+                                                            <h4 class="accordion-header" id="heading6">
+                                                                <button
+                                                                    class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                                    type="button" data-bs-toggle="collapse"
+                                                                    data-bs-target="#collapse6" aria-expanded="false"
+                                                                    aria-controls="collapse6">
+                                                                    <span class="fs-5 text-primary fw-bold">Ética,
+                                                                        Governança e
+                                                                        Proteção de Dados em Saúde
+                                                                    </span>
+                                                                </button>
+                                                            </h4>
+                                                            <div id="collapse6" class="accordion-collapse collapse" role="region"
+                                                                aria-labelledby="heading6"
+                                                                data-bs-parent="#accordionQuarto">
+                                                                <div
+                                                                    class="accordion-body text-secondary small leading-relaxed">
+                                                                    <ul class="ms-5 lead text-muted">
+                                                                        <li class="my-3">BRASIL. Lei Geral de Proteção
+                                                                            de Dados
+                                                                            Pessoais (Lei nº 13.709/2018).
+                                                                        </li>
+                                                                        <li class="my-3">OPAS/OMS. Ética e governança da
+                                                                            saúde
+                                                                            digital. </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="accordion-item border-0 border-bottom">
+                                                            <h4 class="accordion-header" id="heading7">
+                                                                <button
+                                                                    class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                                    type="button" data-bs-toggle="collapse"
+                                                                    data-bs-target="#collapse7" aria-expanded="false"
+                                                                    aria-controls="collapse7">
+                                                                    <span class="fs-5 text-primary fw-bold">Vigilância,
+                                                                        Risco,
+                                                                        Biopolítica e Sociedade Contemporânea</span>
+                                                                </button>
+                                                            </h4>
+                                                            <div id="collapse7" class="accordion-collapse collapse" role="region"
+                                                                aria-labelledby="heading7"
+                                                                data-bs-parent="#accordionQuarto">
+                                                                <div
+                                                                    class="accordion-body text-secondary small leading-relaxed">
+                                                                    <ul class="ms-5 lead text-muted">
+                                                                        <li class="my-3">FOUCAULT, M. Segurança,
+                                                                            território,
+                                                                            população. São Paulo: Martins Fontes. </li>
+                                                                        <li class="my-3">BECK, U. Sociedade de risco.
+                                                                            São Paulo:
+                                                                            Editora 34. </li>
+                                                                        <li class="my-3">AGAMBEN, G. Estado de exceção.
+                                                                            São Paulo:
+                                                                            Boitempo. </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="accordion-item border-0 border-bottom">
+                                                            <h4 class="accordion-header" id="heading10">
+                                                                <button
+                                                                    class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                                    type="button" data-bs-toggle="collapse"
+                                                                    data-bs-target="#collapse10" aria-expanded="false"
+                                                                    aria-controls="collapse10">
+                                                                    <span class="fs-5 text-primary fw-bold">Mudanças
+                                                                        Climáticas,
+                                                                        Desastres e Vigilância em Saúde</span>
+                                                                </button>
+                                                            </h4>
+                                                            <div id="collapse10" class="accordion-collapse collapse" role="region"
+                                                                aria-labelledby="heading10"
+                                                                data-bs-parent="#accordionQuarto">
+                                                                <div
+                                                                    class="accordion-body text-secondary small leading-relaxed">
+                                                                    <ul class="ms-5 lead text-muted">
+                                                                        <li class="my-3">OPAS. Mudança climática e
+                                                                            saúde.</li>
+                                                                        <li class="my-3">IPCC. Climate Change and
+                                                                            Health. </li>
+                                                                        <li class="my-3">BRASIL. Ministério da Saúde.
+                                                                            Vigilância em
+                                                                            saúde ambiental associada a desastres. </li>
+                                                                        <li class="my-3">Fiocruz. Saúde, ambiente e
+                                                                            mudanças
+                                                                            climáticas. </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <!-- Accordion Acadêmico -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Box Leitura Complementar -->
+
+                                    <h3 class="fw-bold mt-5 my-3 text-primary"><i class="bi bi-pencil-square"></i>
+                                        Atividades</h3>
+
+                                    <!-- VARIAÇÃO 1: QUIZ MÚLTIPLA ESCOLHA INTERATIVO (MULTI-QUESTÕES COM NAVEGAÇÃO E JS) -->
+                                    <div class="my-4" id="eduflexQuizContainer">
+                                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                                            <!-- Contador de Questões e Pontuação -->
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <span
+                                                    class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-bold"
+                                                    id="quizQuestionCounter">Questão 01 de 02</span>
+                                                <span class="badge bg-light text-dark border fw-bold"
+                                                    id="quizScoreBadge">
+                                                    <i class="bi bi-trophy-fill text-warning me-1"></i>Acertos: <span
+                                                        id="quizScoreCount">0</span>
+                                                </span>
+                                            </div>
+
+                                            <!-- Barra de Progresso da Avaliação -->
+                                            <div class="progress mb-4 progress-thin">
+                                                <div class="progress-bar bg-primary" id="quizProgressBar"
+                                                    role="progressbar"></div>
+                                            </div>
+
+                                            <!--  AQUI ESTAVA FALTANDO! ELEMENTO ONDE O JS INJETA O TEXTO DA PERGUNTA  -->
+                                            <h4 class="fw-bold lead text-muted mb-4" id="quizQuestionText"></h4>
+
+                                            <!-- Opções de Resposta Totalmente Neutras (Estado Inicial Limpo) -->
+                                            <div class="d-grid gap-2 mb-3" id="quizOptionsContainer"></div>
+
+                                            <!-- Caixa de Feedback Pedagógico (Inicia Oculta) -->
+                                            <div class="p-3 rounded-3 small mb-3 d-none" id="quizFeedbackBox"></div>
+
+                                            <small class="text-muted d-block mb-3">
+                                                <i class="bi bi-info-circle me-1"></i>Selecione uma opção para confirmar
+                                                sua
+                                                resposta.
+                                            </small>
+
+                                            <!-- Ações de Navegação -->
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <button class="btn bg-primary text-white rounded-pill px-4 fw-bold"
+                                                    id="quizNextBtn" disabled>
+                                                    Próxima Questão <i class="bi bi-arrow-right ms-1"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Resumo da aula</h3>
+                                    <p class="lead text-muted">Nesta aula, você aprendeu que a transformação digital no
+                                        SUS
+                                        é um
+                                        processo estrutural que vai além da simples adoção de tecnologias, envolvendo
+                                        mudanças
+                                        profundas na produção e uso de informações em saúde.</p>
+                                    <p class="lead text-muted">Você também viu que, na Vigilância em Saúde, sistemas
+                                        integrados e
+                                        ferramentas digitais ajudam a detectar eventos precocemente, monitorar agravos
+                                        em
+                                        tempo
+                                        oportuno e qualificar a tomada de decisão.</p>
+                                    <p class="lead text-muted">Além disso, esperamos que você tenha compreendido que a
+                                        transformação
+                                        digital deve seguir os princípios do SUS, como equidade e direito à saúde, para
+                                        evitar
+                                        riscos de desigualdade. Isso exige o fortalecimento da governança pública,
+                                        investimento em
+                                        infraestrutura, garantia de proteção dos dados sensíveis e a formação crítica e
+                                        permanente
+                                        dos trabalhadores da saúde, reconhecendo que a tecnologia deve sempre estar a
+                                        serviço da
+                                        vida, do território e das necessidades da população.</p>
+
+                                    <p class="lead text-muted fw-bold">Você concluiu esta aula, continue se empenhando
+                                        nos seus estudos. Siga para a próxima aula! </p>
+
+                                </article>
+                            </div>
+                        </section>
+
+                    </div> <!-- Fim .aula-pages-wrapper -->
+
+                    <!-- ================= PAGINAÇÃO INTERNA DA AULA ================= -->
+                    <div class="aula-pagination-nav d-flex justify-content-between align-items-center mt-5 pt-4 border-top"
+                        id="aulaPaginationNav">
+                        <button type="button" class="btn btn-outline-primary rounded-pill px-4" id="aulaPagPrev"
+                            disabled>
+                            <i class="bi bi-arrow-left me-1"></i> Anterior
+                        </button>
+                        <span class="small text-muted fw-semibold" id="aulaPagIndicator">Página 1 de 3</span>
+                        <button type="button" class="btn btn-primary rounded-pill px-4" id="aulaPagNext">
+                            Próximo <i class="bi bi-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+
+                    <!-- ================= NAVEGAÇÃO ENTRE AULAS (exibida somente na última página) ================= -->
+                    <div class="aula-lesson-nav d-none justify-content-between align-items-center mt-5 pt-4 border-top"
+                        id="aulaLessonNav" data-prev-lesson="" data-next-lesson="aula1.2.html">
+                        <a href="#" class="btn btn-outline-primary rounded-pill px-4 disabled" id="aulaLessonPrev"
+                            aria-disabled="true" tabindex="-1">
+                            <i class="bi bi-arrow-left me-1"></i> Aula Anterior
+                        </a>
+                        <a href="#" class="btn btn-primary rounded-pill px-4" id="aulaLessonNext">
+                            Próxima Aula <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- ================= RODAPÉ DE LOGOS ================= -->
+                    <!-- ================= RODAPÉ (carregado de partials/footer.html) ================= -->
+                    <div id="site-footer"></div>
+
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <!-- ================= MODAIS (carregados de partials/modals.html) ================= -->
+    <div id="site-modals"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Seu arquivo JS unificado -->
+    <script src="js/partials-loader.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/aula1.1.js"></script>
+
+    <button type="button" class="back-to-top" id="btnBackToTop" aria-label="Voltar ao topo">
+        <i data-lucide="arrow-up" aria-hidden="true"></i>
+    </button>
+</body>
+
+</html>

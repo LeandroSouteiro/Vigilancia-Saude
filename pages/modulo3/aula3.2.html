@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Vigilância em Saúde em tempos de transformação digital</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Montserrat:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- CSS do seu tema -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Required meta tags -->
+    <meta name="robots" content="noindex" />
+    <meta name="author" content="Fiocruz, Campus Virtual" />
+    <meta name="description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="keywords" content="Fiocruz, Curso, Vigilância em Saúde, transformação digital, SUS" />
+
+    <!-- Facebook Open Graph -->
+    <meta property="og:url" content="https://mooc.campusvirtual.fiocruz.br/rea/introducao-analise-dados-sus" />
+    <meta property="og:title"
+        content="Campus Virtual Fiocruz | Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta property="og:description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title"
+        content="Campus Virtual Fiocruz | Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="twitter:image:src" content="" />
+
+    <!-- Favicons and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../media/icons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../../media/icons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../../media/icons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../../media/icons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../../media/icons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../../media/icons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../../media/icons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../../media/icons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="../../media/icons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../../media/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../media/icons/favicon-16x16.png" />
+    <link rel="manifest" href="../../media/icons/manifest.json" />
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="media/icons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#420b3c" />
+
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Barra de Progresso Superior -->
+    <div class="scroll-progress-top" id="scrollProgress"></div>
+
+    <script src="js/aula3.2-config.js"></script>
+    <!-- ================= CABEÇALHO (carregado de partials/header.html) ================= -->
+    <div id="site-header"></div>
+
+    <div class="page-wrapper" id="pageWrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <div id="site-sidebar"></div>
+
+        <!-- Lingueta (Botão) redesenhada: MOVIDA PARA FORA DO ASIDE PARA NÃO SUMIR -->
+        <button class="sidebar-tab" id="btnToggleSidebar" aria-label="Alternar menu" aria-expanded="true"
+            aria-controls="sidebarAula">
+            <i data-lucide="chevron-left" id="toggleIcon" aria-hidden="true"></i>
+        </button>
+
+        <!-- ================= CONTEÚDO ================= -->
+        <main class="content-aula" id="main-content">
+            <div class="main-content-inner">
+
+                <!-- Selo de navegação: flutua por cima do conteúdo -->
+                <nav aria-label="breadcrumb" class="aula-breadcrumb-pill">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../../index.html" class="text-decoration-none">Início</a></li>
+                        <li class="breadcrumb-item"><a href="aula3.1.html" class="text-decoration-none">Módulo 3</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Aula 2</li>
+                    </ol>
+                </nav>
+
+                <!-- Hero com imagem de fundo temática -->
+                <header class="aula-hero">
+                    <h1>Febre Amarela, Biodiversidade e Território</h1>
+                </header>
+
+                <div class="main-content-body">
+                    <div class="aula-pages-wrapper" id="aulaPagesWrapper">
+
+                        <section class="aula-page active" data-page="1">
+                            <article class="aula-body">
+                                <h2 class="fw-bold mb-4 text-primary"><i class="bi bi-book-half"></i> Sobre esta aula </h2>
+                                <hr>
+                                <p class="lead text-muted">Nesta aula, falaremos sobre a febre amarela silvestre, um evento emblemático da Vigilância em Saúde, sob a perspectiva da Saúde Única, evidenciando a necessidade de uma atuação cooperativa e intersetorial, com destaque para o papel dos primatas não humanos, especialmente os bugios, como sentinelas ambientais, e para a articulação entre saúde, meio ambiente e estratégias de comunicação de risco.</p>
+
+                                <h3 class="fw-bold text-primary mt-5 mb-4"><i class="bi bi-columns-gap"></i> Objetivos de
+                                    aprendizagem </h3>
+                                <hr>
+                                <p class="lead text-muted">Ao final desta aula, esperamos que você seja capaz de:</p>
+
+                                <ul class="ms-5 lead text-muted">
+                                    <li class="my-3 mt-4">Reconhecer as epizootias como eventos sentinela na Vigilância em Saúde. </li>
+                                    <li class="my-3">Compreender a relação entre biodiversidade, território e circulação da febre amarela. </li>
+                                    <li class="my-3">Identificar os fluxos de vigilância e resposta diante da ocorrência de epizootias. </li>
+                                    <li class="my-3">Reconhecer a importância da integração entre saúde humana, animal e ambiental. </li>
+                                    <li class="my-3">Aplicar os princípios da Saúde Única na análise de situações reais do território.</li>
+                                </ul>
+
+                                <h3 class="fw-bold mt-5 mb-4 text-primary">Introdução</h3>
+                                <p class="lead text-muted">Na aula anterior, discutimos Saúde Única como um paradigma que amplia a compreensão da Vigilância em Saúde, ao reconhecer a interdependência entre saúde humana, animal e ambiental. Você também viu que a Vigilância Cooperativa constitui a expressão prática dessa abordagem, organizando a atuação de forma compartilhada, territorializada e intersetorial. </p>
+                            <p class="lead text-muted">Agora, vamos dar mais um passo no seu aprendizado, se você entendeu o paradigma e sua tradução operacional, a questão é:</p>                            
+                            <p class="lead text-muted fw-bold text-center my-5">Como o compartilhamento de responsabilidades e a atuação cooperativa se materializam diante de um evento real no território?</p>
+                            <p class="lead text-muted">A Vigilância Cooperativa é continuamente desafiada por situações que, à primeira vista, podem parecer eventos isolados, como por exemplo:  </p>
+                            <ul class="ms-5 lead text-muted">
+                                <li class="my-3 mt-4">Óbito de um animal silvestre.</li>
+                                <li class="my-3">Aumento de casos febris.</li>
+                                <li class="my-3">Surto em ambiente escolar.</li>
+                                <li class="my-3">Alteração na qualidade da água.</li>
+                            </ul>
+                            
+                            <p class="lead text-muted mt-4">Entretanto, a experiência acumulada nos serviços de saúde demonstra que esses acontecimentos raramente são casos pontuais. Com frequência, configuram sinais precoces de processos territoriais mais amplos, que envolvem transformações ambientais, dinâmicas produtivas, circulação de agentes infecciosos, condições de moradia e organização social. Sob essa perspectiva, o evento deixa de ser apenas um fato a ser notificado e passa a ser compreendido como indicador de um contexto em movimento. É nesse ponto que a Vigilância Cooperativa se torna decisiva: não apenas para responder ao agravo já instalado, mas para interpretar os processos que o produziram.</p>
+                            <p class="lead text-muted">Nesta aula, você avançará da dimensão conceitual para a análise aplicada ao território. Para isso, você vai precisar:</p>
+                            
+                            <ul class="ms-5 lead text-muted">
+                                <li class="my-3 mt-4">Analisar um estudo de caso sob a perspectiva de Saúde Única.</li>
+                                <li class="my-3">Identificar eventos sentinela e seus significados no contexto territorial.</li>
+                                <li class="my-3">Reconhecer os fluxos intersetoriais necessários para uma atuação cooperativa.</li>
+                                <li class="my-3">Compreender como a articulação entre setores qualifica a tomada de decisão. </li>
+                                <li class="my-3">Exercitar uma leitura ampliada e antecipatória do risco.</li>
+                            </ul>
+                            </article>
+                        </section>
+
+                        <section class="aula-page" data-page="2">
+                            <div class="main-content-body">
+                                <article class="aula-body mb-0">
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Evento sentinela e vigilância antecipatória</h3>
+                            <p class="lead text-muted">A epidemiologia tradicional estrutura-se na identificação de casos humanos. No entanto, a abordagem Saúde Única amplia essa lógica ao reconhecer que eventos em animais e no ambiente podem preceder o agravo humano. </p>
+                            <p class="lead text-muted">O conceito de evento sentinela foi sistematizado por Rutstein et al. (1976) como ocorrência cuja presença indica risco ampliado ou falha sistêmica, sendo posteriormente incorporado à Vigilância Epidemiológica como instrumento de alerta precoce. Na perspectiva contemporânea da Saúde Única, eventos sentinela incluem ocorrências biológicas, ambientais ou sanitárias que funcionam como sinais precoces de ameaça à saúde coletiva, mesmo antes da consolidação de casos humanos. Essa compreensão está alinhada à Política Nacional de Vigilância em Saúde (PNVS), que orienta a atuação sobre riscos e determinantes do processo saúde-doença (BRASIL, 2018), e ao One Health Joint Plan of Action, que recomenda a detecção precoce de ameaças na interface humano-animal-ambiente como estratégia prioritária de prevenção (WHO; FAO; WOAH; UNEP, 2022).</p>
+                            <p class="lead text-muted">Na perspectiva de Saúde Única, os eventos sentinela ultrapassam a ocorrência de casos humanos e podem incluir:</p>
+                            
+                            <ul class="ms-5 lead text-muted mb-5">
+                                <li class="my-3 mt-4"><a href="javascript:void(0)" role="button" tabindex="0" class="fw-bold" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-html="true" data-bs-title="Epizootias" data-bs-content="Ocorrência de doença em número de casos acima do esperado, em determinado período e território, acometendo populações animais. Corresponde, no âmbito da saúde animal, ao conceito de epidemia na saúde humana.<br><br>As epizootias podem envolver animais domésticos, de produção ou silvestres e, quando relacionadas a zoonoses, constituem importantes eventos sentinela para a Vigilância em Saúde na perspectiva da Saúde Única, pois podem anteceder ou sinalizar risco de transmissão para humanos.">Epizootias</a> em primatas não humanos como alerta para circulação do vírus da febre amarela. </li>
+                                <li class="my-3">Mortandade de aves silvestres associada à circulação de vírus Influenza. </li>
+                                <li class="my-3">Alterações abruptas na qualidade da água indicando risco de doenças de veiculação hídrica. </li>
+                                <li class="my-3">Intoxicação animal sugerindo contaminação ambiental por substâncias químicas. </li>
+                            </ul>
+
+                            <div class="my-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                <div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                    <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                    <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                        A Organização Mundial da Saúde e parceiros da Quadripartite reforçam que a detecção precoce na interface humano-animal-ambiente é estratégia prioritária para prevenção de epidemias (WHO; FAO; WOAH; UNEP, 2022). 
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <p class="lead text-muted">Essa lógica desloca a vigilância de uma posição reativa para uma posição antecipatória. </p>
+                            
+                            <div class="my-5 alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light mb-4"
+                                role="alert" data-copy-id="box-curiosidade">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <h4 class="fw-bold text-primary mt-2 mb-2 ms-3"><i class="bi-search"></i>
+                                            Curiosidade</h4>
+                                        <p class="lead fw-bold text-dark ms-3 mb-3 mt-4">Enchentes como sinal de risco
+                                            sanitário</p>
+                                        <p class="lead text-muted ms-3">Eventos extremos de chuva com inundações e
+                                            enchentes, como os ocorridos no Rio Grande do Sul em 2024, funcionam como
+                                            sinais antecipatórios de risco sanitário. A exposição da população à água
+                                            contaminada por esgoto, resíduos e urina de roedores aumenta o risco de
+                                            leptospirose e síndromes diarreicas.</p>
+                                        <p class="lead text-muted ms-3">A leptospirose, zoonose bacteriana transmitida
+                                            pelo contato com água ou lama contaminada por <em>Leptospira spp.</em>,
+                                            apresenta aumento expressivo após alagamentos e falhas no saneamento. As
+                                            doenças de veiculação hídrica também se intensificam quando a qualidade
+                                            da água é comprometida.</p>
+                                        <p class="lead text-muted ms-3">Sob a perspectiva da Saúde Única, a presença
+                                            de água parada contaminada, acúmulo de resíduos e maior circulação de
+                                            roedores já configuram eventos sentinela, mesmo antes da confirmação de
+                                            surtos clínicos. Nesses contextos, a Vigilância em Saúde deve atuar de
+                                            forma antecipatória e cooperativa, articulando setores para reduzir riscos
+                                            antes da amplificação dos casos.</p>
+                                        <p class="lead text-muted ms-3">Estudo publicado na revista <em>Pathogens</em>
+                                            analisou o impacto da enchente catastrófica de 2024 no Rio Grande do Sul e
+                                            identificou aumento de 10,3 vezes nos casos confirmados de leptospirose no
+                                            período pós-evento, além de forte correlação entre incidência da doença e
+                                            percentual de domicílios inundados (Ranieri et al., 2024).</p>
+                                        <p class="lead text-muted ms-3 mb-2">Se quiser saber mais sobre este tema,
+                                            recomendamos a leitura das seguintes reportagens com exemplos concretos:
+                                        </p>
+                                        <ul class="ms-3 list-unstyled mb-0">
+                                            <li class="my-2 fw-bold mt-3"><i class="bi bi-newspaper text-primary me-2"></i><a
+                                                    href="https://www.cnnbrasil.com.br/nacional/especialistas-alertam-para-risco-de-doencas-apos-enchentes-no-rs/"
+                                                    target="_blank" rel="noopener">CNN Brasil – Especialistas alertam
+                                                    para risco de doenças após enchentes no RS</a></li>
+                                            <li class="my-2 fw-bold"><i class="bi bi-newspaper text-primary me-2"></i><a
+                                                    href="https://agenciabrasil.ebc.com.br/saude/noticia/2024-06/rio-grande-do-sul-confirma-20a-morte-por-leptospirose-apos-enchentes"
+                                                    target="_blank" rel="noopener">Agência Brasil – Rio Grande do Sul
+                                                    confirma 20ª morte por leptospirose após enchentes</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h3 class="fw-bold mt-5 mb-4 text-primary">Biodiversidade, território e risco sanitário: conservar é prevenir </h3>
+                            <p class="lead text-muted">Até aqui, discutimos o conceito de evento sentinela e a importância da Vigilância Antecipatória na perspectiva da Saúde Única. Antes de avançarmos para o estudo de caso da febre amarela, é necessário aprofundar o seu conhecimento sobre um elemento estruturante dessa discussão: a biodiversidade como variável central na produção e na prevenção de riscos sanitários.</p>
+                            <p class="lead text-muted">A saúde coletiva não se desenvolve em abstração. Ela emerge de sistemas ecológicos concretos, organizados territorialmente, nos quais interagem fauna, flora, vetores, microrganismos, sistemas produtivos e populações humanas. A abordagem Saúde Única reconhece que alterações nesses sistemas modificam as condições de circulação de agentes infecciosos e, consequentemente, o perfil epidemiológico das populações (WHO; FAO; WOAH; UNEP, 2022).</p>
+                            <p class="lead text-muted">Diversos estudos ecológicos e epidemiológicos indicam que a perda de biodiversidade está associada ao aumento do risco de emergência e amplificação de doenças infecciosas. Keesing et al. (2010) demonstraram que ecossistemas biologicamente diversos tendem a apresentar maior estabilidade funcional e menor probabilidade de amplificação de determinados patógenos, fenômeno conhecido como “efeito de diluição”. Segundo esse modelo, a diversidade de espécies pode reduzir a eficiência de transmissão ao distribuir a carga parasitária entre múltiplos hospedeiros, muitos dos quais não são competentes para amplificar o agente infeccioso.</p>                                                                                 
+                            <p class="lead text-muted">Posteriormente, Keesing e Ostfeld (2021) aprofundaram essa análise ao destacar que a <a href="javascript:void(0)" role="button" tabindex="0" class="fw-bold" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-html="true" data-bs-title="Simplificação ecológica" data-bs-content="É o processo de redução da diversidade biológica, estrutural e funcional de um ecossistema, geralmente decorrente de alterações antrópicas como: desmatamento, fragmentação florestal, conversão de áreas naturais em monoculturas ou expansão urbana.<br><br>Esse processo resulta na perda de espécies especializadas e no predomínio de espécies generalistas e adaptáveis, frequentemente associadas a maior capacidade de atuar como reservatórios ou amplificadores de patógenos.<br><br>Na perspectiva da Saúde Única, a simplificação ecológica altera as interações entre hospedeiros, vetores e agentes infecciosos, podendo aumentar o risco de emergência e transmissão de zoonoses.">simplificação ecológica</a> frequentemente favorece espécies generalistas, adaptáveis e, muitas vezes, mais eficientes como reservatórios de patógenos. A fragmentação florestal, a conversão de áreas naturais em monoculturas e a expansão urbana alteram a composição das comunidades biológicas e criam condições favoráveis à emergência de zoonoses.</p>
+                            <p class="lead text-muted">No contexto brasileiro, essa discussão é particularmente relevante. O país abriga elevada diversidade biológica, mas também enfrenta intensos processos de fragmentação de habitats, expansão agropecuária e pressão sobre remanescentes florestais. A Mata Atlântica, por exemplo, apresenta alto grau de fragmentação, com remanescentes isolados que modificam a dinâmica de circulação de vetores e hospedeiros.</p>
+                            <p class="lead text-muted">A <a href="https://www.planalto.gov.br/ccivil_03/decreto/1998/anexos/and2519-98.pdf" target="_blank" rel="noopener" class="fw-bold">Convenção sobre Diversidade Biológica (CDB)</a>, da qual o Brasil é signatário, reconhece que a conservação da biodiversidade é condição para o bem-estar humano. O Marco Global de Kunming-Montreal, aprovado na 15ª Conferência das Partes (COP 15), estabelece metas para deter e reverter a perda de biodiversidade até 2030, incluindo a ampliação de áreas protegidas, restauração de ecossistemas degradados e integração da biodiversidade às políticas públicas setoriais (CBD, 2022).</p>
+
+                            <div class="my-5 alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light mb-4"
+                                role="alert" data-copy-id="box-saiba-mais">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <h4 class="fw-bold text-primary mt-2 mb-2"><i class="bi bi-plus-circle-fill  fs-4 text-info me-3 ms-3"></i>Saiba mais</h4>
+                                        <p class="lead text-muted ms-3 mb-0">Se quiser saber mais sobre o Marco Global
+                                            da Biodiversidade de Kunming-Montreal e sua relação com saúde e
+                                            sustentabilidade, <a href="https://youtu.be/U6oP6Q-hVQI?si=1cJx7F5Yr4Ub0D3W"
+                                                target="_blank" rel="noopener" aria-label="Assista ao vídeo sobre o Marco Global da Biodiversidade" class="fw-bold">clique aqui</a> para assistir ao vídeo
+                                            sobre o tema.</p>
+                                    </div>
+                                </div>
+                            </div>                                                        
+                            
+                            <p class="lead text-muted mt-5">No plano nacional, a Estratégia e Plano de Ação Nacionais para a Biodiversidade (EPANB) organiza as diretrizes brasileiras para conservação e uso sustentável da biodiversidade. Embora inserida no campo ambiental, a EPANB dialoga diretamente com a perspectiva Saúde Única ao reconhecer que a integridade dos ecossistemas sustenta serviços ecossistêmicos essenciais à saúde humana, como regulação climática, provisão de água, controle biológico e manutenção da diversidade genética (BRASIL, 2017).</p>
+                            
+                            <div class="my-5 alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light mb-4"
+                                role="alert" data-copy-id="box-saiba-mais">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <h4 class="fw-bold text-primary mt-2 mb-2"><i class="bi bi-plus-circle-fill  fs-4 text-info me-3 ms-3"></i>Saiba mais</h4>
+                                        <p class="lead text-muted ms-3 mb-0">Se quiser saber mais sobre a EPANB, <a href="https://www.gov.br/mma/pt-br/composicao/sbio/departamento-de-conservacao-e-uso-sustentavel-da-biodiversidade/epanb"
+                                                target="_blank" rel="noopener" aria-label="Conheça os detalhes e metas da EPANB" class="fw-bold">clique aqui</a> e conheça os detalhes e metas relacionados a este tema.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="lead text-muted mt-5">Instrumentos como a Lei nº 9.985/2000, que institui o Sistema Nacional de Unidades de Conservação da Natureza (SNUC), e a Lei nº 12.651/2012 (Código Florestal), ao estabelecerem áreas protegidas, corredores ecológicos e proteção de Áreas de Preservação Permanente, não constituem apenas dispositivos ambientais. São mecanismos indiretos de prevenção sanitária, ao preservar processos ecológicos que influenciam a dinâmica de vetores e patógenos.</p>
+                            <p class="lead text-muted">Nesse cenário, a Vigilância em Saúde, orientada pela perspectiva de Saúde Única e operacionalizada por meio de uma atuação cooperativa, amplia seu escopo ao incorporar variáveis ecológicas como parte estruturante da análise de risco. A ocorrência de epizootias, as alterações na distribuição de vetores, a redução da conectividade florestal e as mudanças no uso do solo deixam de ser informações periféricas e passam a integrar o núcleo da tomada de decisão.</p>
+                            <p class="lead text-muted">Márcia Chame (2017) enfatiza que zoonoses como a febre amarela devem ser compreendidas a partir de uma leitura <a href="javascript:void(0)" role="button" tabindex="0" class="fw-bold" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-html="true" data-bs-title="Ecoepidemiológica" data-bs-content="Abordagem da epidemiologia que integra fatores ecológicos, biológicos e sociais na análise das doenças, reconhecendo que sua ocorrência e dinâmica resultam da interação entre humanos, animais e ambiente.<br><br>Na leitura ecoepidemiológica, a biodiversidade exerce função reguladora dos ciclos de transmissão, e eventos como a mortalidade de primatas não humanos configuram sinais sentinela de circulação viral no território.">ecoepidemiológica</a>, na qual a biodiversidade desempenha papel regulador e a mortalidade de primatas não humanos constitui sinal sentinela de circulação viral. A autora ressalta que a eliminação de primatas, além de eticamente inaceitável, compromete a própria vigilância ao eliminar o indicador biológico do risco. </p>
+                            <p class="lead text-muted">A degradação ambiental aumenta o risco de pandemias futuras (IPBES, 2020). Mudanças no uso do solo, perda de biodiversidade e intensificação das interfaces entre humanos e animais figuram entre os principais fatores associados à emergência de doenças infecciosas (CDC, 2023). Esses elementos não atuam de forma isolada, eles interagem no território, alterando padrões ecológicos, dinâmicas vetoriais e a exposição humana.</p>
+                            <p class="lead text-muted">A Vigilância Antecipatória, portanto, exige leitura territorial ampliada. O território não é apenas o local onde o caso humano se manifesta; é o espaço onde processos ecológicos, produtivos e sociais interagem continuamente. Alterações na paisagem podem anteceder surtos, e a análise integrada dessas mudanças permite antecipar intervenções.</p>
+                            <p class="lead text-muted">Conservar ambientes naturais, manter conectividade ecológica, restaurar áreas degradadas e fortalecer unidades de conservação não são ações dissociadas da saúde pública. São estratégias estruturantes de prevenção sanitária.</p>
+                            <p class="lead text-muted">Assim, ao avançarmos para o estudo de caso da febre amarela, é fundamental reconhecer que o caso humano materializa um processo ecológico previamente instalado no território. A vigilância começa antes do caso humano, no território, na fauna, na paisagem e nas dinâmicas ambientais que sustentam ou fragilizam o equilíbrio ecológico.</p>
+                            <p class="lead text-muted">Compreendidos os fundamentos ecológicos e territoriais do risco sanitário, passamos agora a observar como esses elementos se materializam em um evento concreto.</p>
+                            
+                            <div class="my-5 alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light mb-4"
+                                role="alert" data-copy-id="box-reflexao">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <h4 class="fw-bold text-primary mt-2 mb-2"><i
+                                                class="bi-chat-right-dots-fill fs-4 text-info me-3 ms-3"></i>Reflexão
+                                        </h4>
+                                        <p class="lead text-muted ms-3 mb-0">No território em que você atua, quais
+                                            alterações ambientais recentes - como desmatamento, expansão urbana ou <a
+                                                href="javascript:void(0)" role="button" tabindex="0" class="fw-bold"
+                                                data-bs-toggle="popover" data-bs-trigger="hover focus"
+                                                data-bs-placement="top" data-bs-html="true"
+                                                data-bs-title="Simplificação de paisagens"
+                                                data-bs-content="Processo de transformação territorial caracterizado pela homogeneização do espaço e redução da diversidade de habitats. Ocorre, por exemplo, com a substituição de mosaicos naturais por monoculturas extensivas, expansão urbana ou fragmentação florestal. Refere-se à configuração espacial do território e à diminuição de sua heterogeneidade ambiental.">simplificação
+                                                de paisagens</a> - podem estar modificando silenciosamente a dinâmica
+                                            de circulação de vetores e patógenos?</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="fw-bold mt-5 mb-4 text-primary">Estudo de caso: Febre amarela silvestre, mortalidade de bugios e resposta territorial integrada</h3>
+                            <p class="lead text-muted">A febre amarela silvestre constitui exemplo emblemático da Vigilância em Saúde na perspectiva da Saúde Única, pois evidencia que o evento clínico humano é precedido por processos ecológicos que se desenvolvem no território. Diferentemente de agravos cuja transmissão ocorre predominantemente em ambientes urbanos consolidados, a febre amarela silvestre mantém ciclo enzoótico em áreas florestais, envolvendo vetores específicos e primatas não humanos como hospedeiros amplificadores, o que reforça a necessidade de uma leitura ecoepidemiológica e integrada.</p>
+                            <p class="lead text-muted">Do ponto de vista clínico, a febre amarela em humanos pode variar desde formas leves até quadros graves. Veja quais são os principais sintomas em cada cenário:</p>
+                            
+                            <div class="container-fluid aula-wide-block px-lg-4 my-5" data-copy-id="cards-comparativos">
+                                <div class="row g-4 justify-content-center">
+                                    <div class="col-md-6">
+                                        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                            <div class="card-header bg-warning text-dark text-center py-3 border-0">
+                                                <h4 class="fw-bold mb-0 card-header-title-sm"><i class="bi bi-emoji-neutral-fill me-2"></i>Febre
+                                                    amarela | Caso leve</h4>
+                                            </div>
+                                            <div class="card-body p-4">
+                                                <p class="fw-semibold text-dark mb-2">Sintomas:</p>
+                                                <ul class="list-unstyled mb-0">
+                                                    <li class="d-flex align-items-start gap-2 py-2 border-bottom"><i
+                                                            class="bi bi-check-circle-fill text-warning mt-1"></i><span
+                                                            class="text-muted">Febre.</span></li>
+                                                    <li class="d-flex align-items-start gap-2 py-2 border-bottom"><i
+                                                            class="bi bi-check-circle-fill text-warning mt-1"></i><span
+                                                            class="text-muted">Cefaleia.</span></li>
+                                                    <li class="d-flex align-items-start gap-2 py-2 border-bottom"><i
+                                                            class="bi bi-check-circle-fill text-warning mt-1"></i><span
+                                                            class="text-muted">Mialgia.</span></li>
+                                                    <li class="d-flex align-items-start gap-2 py-2 border-bottom"><i
+                                                            class="bi bi-check-circle-fill text-warning mt-1"></i><span
+                                                            class="text-muted">Náuseas.</span></li>
+                                                    <li class="d-flex align-items-start gap-2 py-2"><i
+                                                            class="bi bi-check-circle-fill text-warning mt-1"></i><span
+                                                            class="text-muted">Mal-estar.</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                            <div class="card-header bg-danger text-white text-center py-3 border-0">
+                                                <h4 class="fw-bold mb-0 card-header-title-sm"><i
+                                                        class="bi bi-exclamation-triangle-fill me-2"></i>Febre amarela |
+                                                    Caso grave</h4>
+                                            </div>
+                                            <div class="card-body p-4">
+                                                <p class="fw-semibold text-dark mb-2">Sintomas:</p>
+                                                <ul class="list-unstyled mb-0">
+                                                    <li class="d-flex align-items-start gap-2 py-2 border-bottom"><i
+                                                            class="bi bi-exclamation-circle-fill text-danger mt-1"></i><span
+                                                            class="text-muted">Icterícia.</span></li>
+                                                    <li class="d-flex align-items-start gap-2 py-2 border-bottom"><i
+                                                            class="bi bi-exclamation-circle-fill text-danger mt-1"></i><span
+                                                            class="text-muted">Hemorragias.</span></li>
+                                                    <li class="d-flex align-items-start gap-2 py-2 border-bottom"><i
+                                                            class="bi bi-exclamation-circle-fill text-danger mt-1"></i><span
+                                                            class="text-muted">Insuficiência hepática e renal.</span>
+                                                    </li>
+                                                    <li class="d-flex align-items-start gap-2 py-2"><i
+                                                            class="bi bi-exclamation-circle-fill text-danger mt-1"></i><span
+                                                            class="text-muted">Pode evoluir para óbito.</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="lead text-muted">Nos primatas não humanos, especialmente nos bugios (gênero Alouatta), a infecção costuma apresentar elevada letalidade, com evolução rápida e morte em curto intervalo após o início dos sinais clínicos, que incluem apatia, prostração e comprometimento sistêmico. Essa alta suscetibilidade torna os bugios importantes sentinelas ambientais da circulação viral, antecedendo frequentemente a ocorrência de casos humanos. Nesse contexto, o caso humano representa a etapa final de uma cadeia ecoepidemiológica já estabelecida no território.</p>
+                            
+                            <h4 class="fw-bold mt-5 mb-4 text-primary">Contextualização ecológica do caso</h4>
+                            <p class="lead text-muted">No Brasil, o vírus da febre amarela circula em ciclo silvestre envolvendo mosquitos dos gêneros <span class="fw-bold"><em>Haemagogus</em></span> e <span class="fw-bold"><em>Sabethes</em></span> e primatas não humanos, especialmente espécies do gênero <em>Alouatta</em> (VASCONCELOS, 2010). O ser humano não integra o ciclo natural da doença, atuando como hospedeiro acidental quando exposto à circulação viral ativa. </p>
+                           
+                            <div class="my-5 alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light mb-4"
+                                role="alert" data-copy-id="box-saiba-mais">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <h4 class="fw-bold text-primary mt-2 mb-2"><i class="bi bi-plus-circle-fill  fs-4 text-info me-3 ms-3"></i>Saiba mais</h4>
+                                        <p class="lead text-muted ms-3 mb-2">Haemagogus</p>
+                                        <p class="lead text-muted ms-3 mb-0">Se quiser saber mais sobre esse gênero de
+                                            mosquitos, <a href="https://saude.rs.gov.br/haemagogus-leucocelaenus"
+                                                target="_blank" rel="noopener" aria-label="Veja mais conteúdo sobre o Haemagogus e algumas imagens" class="fw-bold">clique aqui</a> e veja
+                                            mais conteúdo sobre esse vetor e algumas imagens.</p>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <p class="lead text-muted mt-5">Do ponto de vista epidemiológico, o Brasil registrou entre 2016 e 2019 um dos maiores surtos de febre amarela silvestre das últimas décadas, com mais de 2.200 casos humanos confirmados e aproximadamente 750 óbitos, concentrados principalmente nas regiões Sudeste e Sul do país (BRASIL, 2019). Nesse mesmo período, milhares de epizootias em primatas não humanos foram notificadas, evidenciando que a circulação viral na fauna precedeu a ocorrência de casos humanos. A taxa de letalidade observada em casos graves ultrapassou 30%, reforçando a gravidade clínica da doença e a importância da Vigilância Antecipatória (WHO, 2023).</p>
+                            <p class="lead text-muted">Essa característica é fundamental para compreender a lógica da Vigilância Antecipatória. Quando um caso humano é confirmado, a circulação viral já estava estabelecida na fauna e nos vetores locais. O evento clínico é precedido por uma dinâmica ecológica que pode ser detectada por meio da vigilância da fauna.</p>
+                            <p class="lead text-muted">Vale destacar que o ser humano não se infecta pelo contato direto com os bugios, mas exclusivamente pela picada de mosquitos silvestres infectados, caracterizando-se como hospedeiro acidental no ciclo da doença.</p>
+                            <p class="lead text-muted">Agora, observe a imagem a seguir e compreenda como ocorre o ciclo da infecção humana por febre amarela silvestre.</p>
+                            
+                            <div class="container-fluid aula-wide-block px-lg-4 my-5">
+                                <img src="imgs/ciclo-infeccao-humana-febre-amarela-silvestre.png"
+                                    alt="Infográfico do ciclo de infecção humana por febre amarela silvestre, em 5 etapas: o vírus circula entre primatas não humanos infectados; mosquitos silvestres picam esses primatas e adquirem o vírus; pessoas não imunizadas adentram áreas de mata com circulação viral ativa; o mosquito infectado pica o ser humano e transmite o vírus; a pessoa é um hospedeiro acidental e não transmite o vírus a outros mosquitos. O infográfico também destaca que a pessoa não se infecta pelo contato direto com os bugios, e lista medidas de prevenção: evitar áreas de mata com circulação viral ativa, usar repelentes, roupas adequadas e manter a vacinação em dia."
+                                    title="Gerada por IA (Gemini)" class="img-fluid rounded-4 shadow-sm">
+                            </div>
+
+                            <div class="my-4">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6">
+                                        <p class="lead text-muted">Entre os primatas mais afetados destacam-se
+                                            <em>Alouatta guariba</em> e <em>Alouatta caraya</em>, popularmente
+                                            conhecidos como bugios.</p>
+                                        <p class="lead text-muted">Essas espécies apresentam elevada susceptibilidade
+                                            ao vírus e frequentemente evoluem para óbito em curto período após a
+                                            infecção. Por essa razão, são reconhecidas como importantes sentinelas
+                                            ambientais.</p>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="position-relative overflow-hidden rounded-3 shadow">
+                                            <img src="imgs/bugio-alouatta-guariba.jpg" class="img-fluid w-100 object-fit-cover" title="Wikimedia Commons"
+                                                alt="Bugio (Alouatta guariba) sentado sobre um galho em meio à vegetação de mata atlântica, olhando para a câmera.">
+                                        </div>
+                                        <p class="text-center small text-muted mt-2 mb-0">Legenda: <em>Alouatta
+                                                guariba</em><br>Fonte: Wikimedia Commons</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="lead text-muted">De acordo com a <span class="fw-bold">International Union for Conservation of Nature (IUCN)</span>, essas espécies constam em categorias de ameaça ou quase ameaça em diferentes regiões de sua distribuição, refletindo a vulnerabilidade de suas populações frente às alterações ambientais e aos impactos cumulativos sobre os ecossistemas. </p>
+                            
+                            <div class="my-5 alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light mb-4"
+                                role="alert" data-copy-id="box-saiba-mais">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <h4 class="fw-bold text-primary mt-2 mb-2"><i class="bi bi-plus-circle-fill  fs-4 text-info me-3 ms-3"></i>Saiba mais</h4>
+                                        <p class="lead text-muted ms-3 mb-2 fw-bold">A Lista Vermelha da IUCN: Guiando a
+                                            Conservação há 50 anos</p>
+                                        <p class="lead text-muted ms-3 mb-0">A IUCN mantém a Lista Vermelha, um
+                                            importante instrumento global que avalia o risco de extinção de espécies
+                                            animais, vegetais e outros organismos. Se quiser saber mais sobre essa
+                                            iniciativa e sua importância para a conservação da biodiversidade, <a
+                                                href="https://youtu.be/QEQmBhtiWVQ?si=muRnLh3CAPkP9jcx"
+                                                target="_blank" rel="noopener" aria-label="Assista ao vídeo sobre a Lista Vermelha da IUCN" class="fw-bold">clique aqui</a> e assista
+                                            ao vídeo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h4 class="fw-bold mt-5 mb-4 text-primary">Detecção inicial: epizootias como alerta territorial </h4>
+                            <p class="lead text-muted">O estudo de caso inicia-se com o registro de epizootias envolvendo primatas não humanos, especialmente bugios, em fragmentos florestais situados no entorno da área urbana. Esses registros não decorrem apenas de notificações ocasionais de moradores, mas também de observações realizadas por equipes de pesquisa, monitoramento de fauna, unidades de conservação, órgãos ambientais e redes institucionais que acompanham sistematicamente bandos e dinâmicas populacionais da espécie no território.</p>
+                            <p class="lead text-muted">Nesse momento inicial, não há confirmação de casos humanos suspeitos. Entretanto, a mortalidade de primatas não humanos configura evento sentinela relevante, acionando a necessidade de investigação integrada entre Vigilância Epidemiológica, Vigilância Ambiental e Saúde Animal, na perspectiva da antecipação de riscos.</p>
+                            <p class="lead text-muted">Durante o período epidêmico de 2017–2018, foram registradas mais de 3.000 epizootias confirmadas em primatas não humanos no território nacional, com ampla distribuição espacial em áreas de Mata Atlântica fragmentada (BRASIL, 2019). A análise espaço-temporal dessas ocorrências demonstrou que a confirmação laboratorial em primatas antecedeu, em diversas localidades, a identificação dos primeiros casos humanos, evidenciando a importância da vigilância da fauna como sistema de alerta precoce.</p>
+                            <p class="lead text-muted">Sob uma lógica tradicional, a ausência de casos humanos poderia retardar a mobilização institucional. No entanto, à luz da abordagem da Saúde Única, a epizootia constitui evento sentinela que exige ativação imediata dos fluxos de vigilância.</p>
+                            <p class="lead text-muted">Nesse contexto, destaca-se o papel da Vigilância Epidemiológica como ordenadora do compartilhamento de informações no território adscrito, articulando os diferentes pontos de atenção e serviços de saúde. A partir dessa mobilização, os serviços de saúde organizam e programam o atendimento à população conforme a demanda identificada, garantindo resposta oportuna, coordenada e territorialmente orientada. As etapas iniciais incluem:</p>
+                            
+                            <div class="ig-genomica mb-5" data-infographic="etapasIniciais">
+								<div class="text-center mb-2 mt-5">
+											<span class="badge-recurso-interativo">
+												<i class="bi bi-cursor-fill me-1"></i> Recurso Interativo
+											</span>
+											<!--<p class="text-muted mb-0 mt-2">Clique nos cards abaixo para saber mais</p>-->
+										</div>
+                                <div class="ig-hotspot-card">
+                                    <div class="ig-hotspot-wrapper">
+                                        <img src="imgs/etapas-iniciais-vigilancia-epizootias.jpg"
+                                            alt="Infográfico com 5 ícones numerados em sequência horizontal, representando as etapas iniciais da vigilância de epizootias em primatas não humanos: verificação in loco, identificação das espécies, coleta de amostras biológicas, georreferenciamento do local e avaliação preliminar das características ambientais"
+                                            class="ig-hotspot-img">
+                                        <button class="ig-dot active" type="button" data-idx="0" aria-label="Ver passo 1: Verificação in loco"
+                                            data-left="10.16" data-top="64.78"></button>
+                                        <button class="ig-dot" type="button" data-idx="1" aria-label="Ver passo 2: Identificação das espécies afetadas"
+                                            data-left="30.55" data-top="67.00"></button>
+                                        <button class="ig-dot" type="button" data-idx="2" aria-label="Ver passo 3: Coleta de amostras biológicas"
+                                            data-left="49.76" data-top="67.41"></button>
+                                        <button class="ig-dot" type="button" data-idx="3" aria-label="Ver passo 4: Georreferenciamento do local"
+                                            data-left="69.61" data-top="67.00"></button>
+                                        <button class="ig-dot" type="button" data-idx="4" aria-label="Ver passo 5: Avaliação preliminar das características ambientais"
+                                            data-left="89.76" data-top="67.00"></button>
+                                    </div>
+
+                                    <div class="ig-panel" id="igPanelEtapas">
+                                        <div class="ig-panel-header">
+                                            <div class="ig-panel-icon" id="igPanelEtapasIcon"><i class="bi bi-clipboard-check-fill" id="igPanelEtapasIconI"></i></div>
+                                            <h5 class="ig-panel-title" id="igPanelEtapasTitle"></h5>
+                                        </div>
+                                        <p class="ig-panel-desc" id="igPanelEtapasDesc"></p>
+                                        <ul class="ig-actions-list mb-0 d-none" id="igActionsListEtapas"></ul>
+                                    </div>
+                                </div>
+
+                                <p class="ig-caption">Fonte: Campus Virtual Fiocruz gerado com IA </p>
+                            </div>
+
+                            <p class="lead text-muted">Nesse momento, estabelecer cooperação e o compartilhamento de responsabilidades entre órgãos ambientais e saúde torna-se decisivo e estratégico. A leitura do território deve considerar:</p>
+                            
+                            <ul class="ms-5 lead text-muted">
+                                <li class="my-3 mt-4">Grau de fragmentação florestal. </li>
+                                <li class="my-3">Proximidade com áreas habitadas.</li>
+                                <li class="my-3">Presença de corredores ecológicos. </li>
+                                <li class="my-3">Densidade populacional. </li>
+                                <li class="my-3">Histórico vacinal da população local.</li>
+                            </ul>
+                            
+                            <h5 class="fw-bold mt-5 mb-4 text-primary">Vigilância em saúde: fluxos operacionais a partir da detecção de epizootias</h5>
+                            <p class="lead text-muted">A identificação de epizootias em primatas não humanos não se encerra no registro do evento, mas inaugura um conjunto estruturado de ações no âmbito da Vigilância em Saúde. No contexto brasileiro, a morte de primatas deve ser considerada evento de notificação imediata, uma vez que pode indicar circulação do vírus da febre amarela e antecipar riscos à população humana (BRASIL, 2019). </p>
+                            <p class="lead text-muted">A Vigilância em Saúde toma conhecimento da ocorrência de epizootias por diferentes vias, evidenciando o caráter territorial e participativo do sistema:</p>
+                            
+                            <ul class="ms-5 lead text-muted">
+                                <li class="my-3 mt-4">Notificação da população: moradores, agricultores, trabalhadores rurais e visitantes.</li>
+                                <li class="my-3">Comunicação por órgãos ambientais e florestais, incluindo o Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis e secretarias ambientais.</li>
+                                <li class="my-3">Informações provenientes da Defesa Civil, brigadas ambientais e polícia ambiental.</li>
+                                <li class="my-3">Relatos encaminhados por serviços de saúde a partir da escuta qualificada da comunidade. </li>
+                                <li class="my-3">Identificação direta por equipes de Vigilância Ambiental ou agentes de endemias em atividades de campo. </li>
+                                <li class="my-3">Registro em sistemas oficiais de informação, como o Sistema de Informação em Saúde Silvestre (SISS-Geo).</li>
+                            </ul>
+                            
+                            <p class="lead text-muted mt-4">Esses múltiplos canais reforçam a importância da vigilância como prática distribuída no território, articulando sociedade, serviços e instituições.</p>
+                            <p class="lead text-muted">A partir da notificação, estabelece-se uma resposta coordenada no território, fundamentada na integração entre Vigilância Epidemiológica, Ambiental e Laboratorial, com compartilhamento oportuno de informações e atuação intersetorial orientada à antecipação de riscos e à proteção da saúde coletiva.</p>
+                            <p class="lead text-muted">Uma vez notificado o evento, são desencadeadas ações integradas entre Vigilância Epidemiológica, Ambiental e Laboratorial, organizadas em etapas complementares, veja:</p>
+                            
+                            <div class="container my-5" data-copy-id="accordion">
+								<div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionExemplo1">
+
+									<div class="accordion-item border-0 border-bottom">
+										<h6 class="accordion-header" id="headingExemplo1-1">
+											<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+												data-bs-toggle="collapse" data-bs-target="#collapseExemplo1-1"
+												aria-expanded="false" aria-controls="collapseExemplo1-1">
+												<span class="fs-5 text-primary fw-bold">Investigação do evento</span>
+											</button>
+										</h6>
+										<div id="collapseExemplo1-1" class="accordion-collapse collapse" role="region"
+											aria-labelledby="headingExemplo1-1" data-bs-parent="#accordionExemplo1">
+											<div class="accordion-body text-secondary small leading-relaxed">
+												<p class="lead text-muted mb-0">Realização de visita técnica ao local, com registro georreferenciado, identificação da espécie, quantificação de animais afetados e avaliação das condições ambientais.</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="accordion-item border-0 border-bottom">
+										<h6 class="accordion-header" id="headingExemplo1-2">
+											<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+												data-bs-toggle="collapse" data-bs-target="#collapseExemplo1-2"
+												aria-expanded="false" aria-controls="collapseExemplo1-2">
+												<span class="fs-5 text-primary fw-bold">Coleta de amostras biológicas</span>
+											</button>
+										</h6>
+										<div id="collapseExemplo1-2" class="accordion-collapse collapse" role="region"
+											aria-labelledby="headingExemplo1-2" data-bs-parent="#accordionExemplo1">
+											<div class="accordion-body text-secondary small leading-relaxed">
+												<p class="lead text-muted mb-0">Quando em condições adequadas, coleta de tecidos ou sangue para análise laboratorial, seguindo protocolos de biossegurança e envio a laboratórios de referência, incluindo a rede da Fundação Oswaldo Cruz e os Laboratórios Centrais de Saúde Pública.</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="accordion-item border-0 border-bottom">
+										<h6 class="accordion-header" id="headingExemplo1-3">
+											<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+												data-bs-toggle="collapse" data-bs-target="#collapseExemplo1-3"
+												aria-expanded="false" aria-controls="collapseExemplo1-3">
+												<span class="fs-5 text-primary fw-bold">Diagnóstico laboratorial</span>
+											</button>
+										</h6>
+										<div id="collapseExemplo1-3" class="accordion-collapse collapse" role="region"
+											aria-labelledby="headingExemplo1-3" data-bs-parent="#accordionExemplo1">
+											<div class="accordion-body text-secondary small leading-relaxed">
+												<p class="lead text-muted mb-0">Realização de exames para detecção de agentes etiológicos, especialmente o vírus da febre amarela, com a finalidade de confirmar a circulação viral no território.</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="accordion-item border-0 border-bottom">
+										<h6 class="accordion-header" id="headingExemplo1-4">
+											<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+												data-bs-toggle="collapse" data-bs-target="#collapseExemplo1-4"
+												aria-expanded="false" aria-controls="collapseExemplo1-4">
+												<span class="fs-5 text-primary fw-bold">Análise integrada do risco</span>
+											</button>
+										</h6>
+										<div id="collapseExemplo1-4" class="accordion-collapse collapse" role="region"
+											aria-labelledby="headingExemplo1-4" data-bs-parent="#accordionExemplo1">
+											<div class="accordion-body text-secondary small leading-relaxed">
+												<p class="lead text-muted mb-0">Interpretação conjunta dos dados epidemiológicos, ambientais e laboratoriais, subsidiando a tomada de decisão.</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="accordion-item border-0 border-bottom">
+										<h6 class="accordion-header" id="headingExemplo1-5">
+											<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+												data-bs-toggle="collapse" data-bs-target="#collapseExemplo1-5"
+												aria-expanded="false" aria-controls="collapseExemplo1-5">
+												<span class="fs-5 text-primary fw-bold">Intensificação das medidas de controle</span>
+											</button>
+										</h6>
+										<div id="collapseExemplo1-5" class="accordion-collapse collapse" role="region"
+											aria-labelledby="headingExemplo1-5" data-bs-parent="#accordionExemplo1">
+											<div class="accordion-body text-secondary small leading-relaxed">
+												<p class="lead text-muted mb-0">Ampliação da cobertura vacinal humana, realização de busca ativa de indivíduos não vacinados e, quando necessário, implementação de bloqueios vacinais em áreas de risco.</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="accordion-item border-0 border-bottom">
+										<h6 class="accordion-header" id="headingExemplo1-6">
+											<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+												data-bs-toggle="collapse" data-bs-target="#collapseExemplo1-6"
+												aria-expanded="false" aria-controls="collapseExemplo1-6">
+												<span class="fs-5 text-primary fw-bold">Intensificação da vacinação</span>
+											</button>
+										</h6>
+										<div id="collapseExemplo1-6" class="accordion-collapse collapse" role="region"
+											aria-labelledby="headingExemplo1-6" data-bs-parent="#accordionExemplo1">
+											<div class="accordion-body text-secondary small leading-relaxed">
+												<p class="lead text-muted mb-0">A vacinação constitui a principal medida de prevenção da febre amarela. A partir da identificação de áreas com risco potencial ou circulação viral, a vigilância organiza a ampliação da cobertura vacinal, incluindo busca ativa de indivíduos não vacinados e, quando necessário, estratégias de bloqueio vacinal em áreas próximas.</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="accordion-item border-0 border-bottom">
+										<h6 class="accordion-header" id="headingExemplo1-7">
+											<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+												data-bs-toggle="collapse" data-bs-target="#collapseExemplo1-7"
+												aria-expanded="false" aria-controls="collapseExemplo1-7">
+												<span class="fs-5 text-primary fw-bold">Investigação entomológica</span>
+											</button>
+										</h6>
+										<div id="collapseExemplo1-7" class="accordion-collapse collapse" role="region"
+											aria-labelledby="headingExemplo1-7" data-bs-parent="#accordionExemplo1">
+											<div class="accordion-body text-secondary small leading-relaxed">
+												<p class="lead text-muted mb-0">Avaliação da presença, densidade e distribuição de mosquitos vetores, com ênfase nos gêneros <em>Haemagogus</em> e <em>Sabethes</em>, reconhecidos como principais responsáveis pela transmissão do vírus no ciclo silvestre. Essa etapa permite qualificar a análise de risco e subsidiar medidas de prevenção.</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="accordion-item border-0">
+										<h6 class="accordion-header" id="headingExemplo1-8">
+											<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+												data-bs-toggle="collapse" data-bs-target="#collapseExemplo1-8"
+												aria-expanded="false" aria-controls="collapseExemplo1-8">
+												<span class="fs-5 text-primary fw-bold">Comunicação de risco</span>
+											</button>
+										</h6>
+										<div id="collapseExemplo1-8" class="accordion-collapse collapse" role="region"
+											aria-labelledby="headingExemplo1-8" data-bs-parent="#accordionExemplo1">
+											<div class="accordion-body text-secondary small leading-relaxed">
+												<p class="lead text-muted">Elaboração e disseminação de informações qualificadas para diferentes públicos, incluindo serviços de saúde, gestores municipais e população residente no território. As orientações priorizam:</p>
+												<ul class="ms-5 lead text-muted mb-0">
+													<li class="my-3 mt-4">A importância da vacinação como medida preventiva.</li>
+													<li class="my-3">A não manipulação de primatas mortos ou doentes.</li>
+													<li class="my-3">A notificação imediata de novas ocorrências de epizootias.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+                            <p class="lead text-muted mt-4">Paralelamente às ações de campo e laboratório, a Vigilância Epidemiológica exerce papel central na organização da resposta no território, atuando como ordenadora do compartilhamento de informações entre os serviços de saúde. A partir dessa articulação, a rede assistencial organiza e programa o atendimento à população conforme a demanda identificada, garantindo resposta oportuna, coordenada e territorialmente orientada. </p>
+                            
+                            <div class="container-fluid aula-wide-block px-lg-4 my-5">
+                                <img src="imgs/vigilancia-cooperativa-febre-amarela-ciclo-silvestre.png"
+                                    alt="Diagrama 'Vigilância Cooperativa da Febre Amarela no Ciclo Silvestre', dividido em quatro colunas: Sentinela Ambiental (primatas mortos ou doentes), Detecção no Território (moradores, trabalhadores, órgãos ambientais), Investigação Integrada (análise e coleta de amostras, vetores Haemagogus e Sabethes) e Resposta em Saúde Pública (vacinação, controle de vetores, alerta epidemiológico). Abaixo, uma cadeia de setas liga Notificação Local, Alerta à Vigilância, Diagnóstico Laboratorial e Prevenção de Casos Humanos, convergindo para o centro 'Uma Só Saúde: Saúde Humana - Animal - Ambiental', que por sua vez se conecta a Sociedade, Ambiente e Instituições de Saúde."
+                                    title="Gerada por IA (Gemini)" class="img-fluid rounded-4 shadow-sm">
+                                <p class="ig-caption">Fonte: Campus Virtual Fiocruz gerada com IA</p>
+                            </div>
+                            
+                            <h4 class="fw-bold mt-5 mb-4 text-primary">Interpretação ecoepidemiológica do evento</h4>
+                            <p class="lead text-muted">Confirmada laboratorialmente a presença do vírus da febre amarela em primatas não humanos, a análise precisa ultrapassar o dado biológico isolado. Quanto maior a fragmentação e a extensão de bordas ecológicas, maior tende a ser a sobreposição entre circulação viral silvestre e exposição humana. Estudos recentes indicam que surtos entre 2016 e 2019 no Sudeste e Sul do Brasil estiveram associados a áreas de intensa transformação territorial (ROMANO et al., 2021).</p>
+                            <p class="lead text-muted">Além disso, a mortalidade de bugios pode representar impacto relevante para populações já pressionadas por perda de habitat. Espécies classificadas em categorias de risco na <a href="https://www.iucnredlist.org/" target="_blank" rel="noopener" class="fw-bold">Lista Vermelha da IUCN</a> sofrem duplo impacto: ecológico e sanitário.</p>                                                        
+                            <p class="lead text-muted">A vigilância integrada, portanto, assume dupla função: (a) Proteger a saúde humana e (b) Contribuir para a conservação da biodiversidade.</p>
+                            
+                            <div class="my-5 alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light mb-4"
+                                role="alert" data-copy-id="box-reflexao">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <h4 class="fw-bold text-primary mt-2 mb-2"><i
+                                                class="bi bi-chat-right-dots-fill fs-4 text-info me-3 ms-3"></i>Reflexão
+                                        </h4>
+                                        <p class="lead text-muted ms-3 mb-0">Ao analisar um surto ou aumento de casos
+                                            no seu território, as características da paisagem e do uso do solo são
+                                            consideradas na investigação, ou a análise permanece restrita aos dados
+                                            clínicos e laboratoriais?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h4 class="fw-bold mt-5 mb-4 text-primary">Ativação da Vigilância Epidemiológica humana</h4>
+                            <p class="lead text-muted">Com base nas informações provenientes da Vigilância Ambiental, a Vigilância Epidemiológica humana deve atuar de forma antecipatória. As ações incluem:</p>
+                            
+                            <ul class="ms-5 lead text-muted mb-5">
+                                <li class="my-3 mt-4">Revisão da cobertura vacinal. </li>
+                                <li class="my-3">Intensificação da vacinação em áreas de risco. </li>
+                                <li class="my-3">Sensibilização da atenção primária para identificação precoce de sintomas.</li>
+                                <li class="my-3">Comunicação de risco à população.</li>
+                            </ul>
+
+                            <div class="my-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                <div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                    <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                    <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                       Conforme mencionamos anteriormente nesta aula, é importante ressaltar que os primatas não transmitem diretamente a febre amarela aos humanos. A infecção ocorre por meio da picada de mosquitos infectados. A comunicação inadequada pode gerar estigmatização da fauna e comprometer a vigilância ao reduzir notificações de novas epizootias. 
+                                    </p><br/>
+                                     <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                       Márcia Chame enfatiza que a morte de bugios deve ser compreendida como alerta ecológico e não como causa da doença, reforçando a necessidade de comunicação qualificada e integrada. 
+                                    </p>
+                                </div>
+                            </div>
+
+                            <h4 class="fw-bold mt-5 mb-4 text-primary">Governança e fluxo de informação</h4>
+                            <p class="lead text-muted">A efetividade da resposta depende da institucionalização de fluxos formais de informação entre:</p>
+                            
+                            <div data-copy-id="cards">
+                                <div class="container-fluid aula-wide-block px-lg-4 my-5">
+                                    <div class="row g-4 g-lg-5 justify-content-center">
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                <div class="position-relative">
+                                                    <img src="imgs/11.jpg" class="card-img-top img-cover-260" alt="Um macaco filhote pendurado em um cipó no meio de uma floresta tropical ensolarada." title="Magnific.com">
+                                                </div>
+                                                    <div class="card-body bg-light p-4 info-card-collapse-body-lg">
+                                                        <p class="card-text lead text-muted mb-0">Órgão gestor de fauna.</p>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                <div class="position-relative">
+                                                    <img src="imgs/12.jpg" class="card-img-top img-cover-260" alt="Dois pesquisadores ambientais em uma floresta: um homem negro de chapéu segura o tronco de uma árvore enquanto uma mulher branca com boné anota dados em um tablet." title="Magnific.com">
+                                                </div>
+                                                                                                    <div class="card-body bg-light p-4 info-card-collapse-body-lg">
+                                                        <p class="card-text lead text-muted mb-0">Vigilância Ambiental.</p>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                <div class="position-relative">
+                                                    <img src="imgs/13.jpg" class="card-img-top img-cover-260" alt="Pessoa agachada ao ar livre segura um pequeno frasco de plástico transparente com amostra de água próxima a um riacho." title="Magnific.com">
+                                                </div>
+                                                    <div class="card-body bg-light p-4 info-card-collapse-body-lg">
+                                                        <p class="card-text lead text-muted mb-0">Vigilância Epidemiológica.</p>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                <div class="position-relative">
+                                                    <img src="imgs/14.jpg" class="card-img-top img-cover-260" alt="Tubos de ensaio com líquidos coloridos em destaque em um suporte, com um cientista desfocado ao fundo trabalhando no laboratório." title="Magnific.com">
+                                                </div>
+                                                    <div class="card-body bg-light p-4 info-card-collapse-body-lg">
+                                                        <p class="card-text lead text-muted mb-0">Laboratórios de referência.</p>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                <div class="position-relative">
+                                                    <img src="imgs/15.jpg" class="card-img-top img-cover-260" alt="Fachada de um prédio público municipal bege com colunas e três bandeiras hasteadas à frente, em uma praça urbana com pessoas caminhando." title="Gerada por IA (Gemini)">
+                                                </div>
+                                                    <div class="card-body bg-light p-4 info-card-collapse-body-lg">
+                                                        <p class="card-text lead text-muted mb-0">Prefeitura e demais órgãos públicos municipais.</p>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="lead text-muted">Falhas na comunicação intersetorial podem atrasar, no caso da febre amarela, campanhas de vacinação e ampliar a exposição da população ao risco. A experiência brasileira durante os surtos de febre amarela entre 2016 e 2019 demonstrou que a identificação precoce de epizootias em primatas não humanos permitiu a antecipação de estratégias de vacinação em áreas sob risco iminente, contribuindo para a redução de casos humanos graves nas localidades onde a resposta foi implementada de forma tempestiva (BRASIL, 2019; ROMANO et al., 2021).</p>
+                            <p class="lead text-muted">Os boletins epidemiológicos da Secretaria de Vigilância em Saúde indicam que a intensificação da vacinação em municípios com confirmação de circulação viral silvestre esteve associada à contenção da expansão de casos humanos em determinadas regiões, especialmente quando acompanhada de comunicação de risco adequada e articulação entre vigilância ambiental e epidemiológica (BRASIL, 2019; BRASIL, 2024).</p>
+                            <p class="lead text-muted">Esses achados reforçam que a vigilância da fauna não é apenas instrumento complementar, mas componente estratégico da prevenção. A integração tempestiva de dados ambientais e laboratoriais qualifica a tomada de decisão e reduz o intervalo entre a detecção do risco e a adoção de medidas protetivas.</p>
+                            <p class="lead text-muted mb-5">Ferramentas digitais e plataformas como o Sistema de Informação em Saúde Silvestre – SISS-Geo fortalecem a governança da vigilância integrada ao estruturarem fluxos formais de registro, validação e compartilhamento de dados georreferenciados sobre fauna silvestre e eventos sanitários associados. Desenvolvido no âmbito da Fundação Oswaldo Cruz, sob coordenação da pesquisadora Márcia Chame, o SISS-Geo constitui um sistema que integra ciência cidadã, Vigilância Epidemiológica e monitoramento ambiental, permitindo que registros de animais mortos, doentes ou com alterações comportamentais sejam inseridos em base de dados nacional com localização espacial precisa (CHAME et al., 2017).</p>
+                            
+                            <div class="my-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                <div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                    <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                    <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                        A georreferenciação das ocorrências possibilita análises espaço-temporais da circulação de patógenos, identificação de áreas de maior concentração de epizootias e detecção de padrões de dispersão viral. Esse componente espacial é estratégico para a Vigilância em Saúde, pois permite correlacionar dados de fauna com informações sobre cobertura vacinal, densidade populacional, fragmentação da paisagem, presença de vetores e histórico epidemiológico regional. 
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <p class="lead text-muted">Além da coleta de dados, o sistema opera como mecanismo de governança colaborativa. Ao permitir a participação de cidadãos, gestores de unidades de conservação, pesquisadores, agentes ambientais e profissionais da saúde, amplia-se a capilaridade do monitoramento territorial. Essa característica é particularmente relevante em países de grande extensão territorial e elevada biodiversidade, onde a vigilância exclusivamente institucional pode enfrentar limitações operacionais.</p>
+                            <p class="lead text-muted">Outro aspecto relevante é a padronização dos registros. A inserção de dados em plataforma estruturada reduz a dependência de fluxos informais de comunicação e favorece a institucionalização da informação. A interoperabilidade entre sistemas ambientais e sanitários fortalece a articulação intersetorial e contribui para a transparência e rastreabilidade das decisões.</p>
+                            <p class="lead text-muted">Do ponto de vista estratégico, a incorporação de ferramentas digitais como o SISS-Geo responde a uma das recomendações centrais do One Health Joint Plan of Action (WHO; FAO; WOAH; UNEP, 2022), que enfatiza a necessidade de sistemas integrados de informação capazes de articular dados humanos, animais e ambientais. Essa integração tecnológica, quando acompanhada de protocolos institucionais claros, reduz o tempo entre a detecção de um evento sentinela e a adoção de medidas preventivas.</p>
+                            <p class="lead text-muted">No contexto da febre amarela, a utilização de registros georreferenciados de epizootias permite antecipar a intensificação da vacinação humana, orientar campanhas de comunicação de risco e direcionar esforços de vigilância vetorial. A análise espacial dos dados também contribui para identificar corredores ecológicos, áreas de fragmentação crítica e zonas de interface rural-urbana onde a exposição humana pode ser maior.</p>
+                            <p class="lead text-muted">Vale lembrar que a tecnologia, isoladamente, não garante integração. Sistemas digitais são instrumentos; a integração depende de protocolos institucionais, definição clara de responsabilidades e cultura de cooperação entre setores. A efetividade dessas plataformas depende da capacitação das equipes, da definição de fluxos formais de comunicação e da incorporação institucional dos dados na tomada de decisão. Quando adequadamente utilizada, a ciência cidadã apoiada por sistemas digitais transforma o território em espaço ativo de monitoramento, fortalecendo a vigilância antecipatória e consolidando a abordagem Saúde Única como prática de governança pública.</p>
+                            
+                            <div class="my-5 alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light mb-4"
+                                role="alert" data-copy-id="box-reflexao">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <h4 class="fw-bold text-primary mt-2 mb-2"><i
+                                                class="bi bi-chat-right-dots-fill fs-4 text-info me-3 ms-3"></i>Reflexão
+                                        </h4>
+                                        <p class="lead text-muted ms-3 mb-0">No seu território, existem protocolos
+                                            formais que garantam o compartilhamento imediato de informações entre
+                                            saúde, meio ambiente e gestão da fauna diante de um evento sentinela? Ou a
+                                            comunicação ainda depende de iniciativas individuais?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h4 class="fw-bold mt-5 mb-4 text-primary">Comunicação de risco e corresponsabilização social</h4>
+                            <p class="lead text-muted mb-5">A comunicação assume papel estratégico no estudo de caso. Nesse contexto, é necessário:</p>
+
+                            <div class="container mb-5" data-copy-id="slider">
+                                <div id="carouselComunicacaoRisco" class="carousel slide shadow-md rounded-4 overflow-hidden border-0 max-w-4xl mx-auto max-w-content">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="position-relative carousel-slide-media">
+                                                <img src="imgs/16.jpg" class="w-100 h-100 object-fit-cover opacity-15" alt="Foto em macrofoco de um mosquito posado sobre a pele humana, prestes a picar." title="Magnific.com">
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselComunicacaoRisco" data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#carouselComunicacaoRisco" data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                </button>
+                                            </div>
+                                            <div class="p-4 bg-white carousel-caption-box">
+                                                <p class="lead text-muted">Esclarecer que os primatas não são responsáveis pela transmissão direta.</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="position-relative carousel-slide-media">
+                                                <img src="imgs/17.jpg" class="w-100 h-100 object-fit-cover opacity-15" alt="Mulher sorridente de paletó preto segurando um megafone branco e vermelho em direção ao lado direito, sobre fundo cinza-claro." title="Magnific.com">
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselComunicacaoRisco" data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#carouselComunicacaoRisco" data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                </button>
+                                            </div>
+                                            <div class="p-4 bg-white carousel-caption-box">
+                                                <p class="lead text-muted">Incentivar a notificação de novos eventos.</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="position-relative carousel-slide-media">
+                                                <img src="imgs/18.jpg" class="w-100 h-100 object-fit-cover opacity-15" alt="Teclado com várias teclas pretas exibindo ícones de perfil de usuário, destacando uma única tecla vermelha iluminada com um ícone de perfil e um sinal de alerta de exclamação." title="Magnific.com">
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselComunicacaoRisco" data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#carouselComunicacaoRisco" data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                </button>
+                                            </div>
+                                            <div class="p-4 bg-white carousel-caption-box">
+                                                <p class="lead text-muted">Combater desinformação.</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="position-relative carousel-slide-media">
+                                                <img src="imgs/19.jpg" class="w-100 h-100 object-fit-cover opacity-15" alt="Profissional de saúde usando luvas azuis prepara uma seringa com líquido de um frasco para aplicar uma vacina no braço de um paciente." title="Magnific.com">
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselComunicacaoRisco" data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#carouselComunicacaoRisco" data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon p-3 bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+                                                </button>
+                                            </div>
+                                            <div class="p-4 bg-white carousel-caption-box">
+                                                <p class="lead text-muted">Promover adesão à vacinação.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="my-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                <div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                    <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                    <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                        A ausência de comunicação integrada baseada em evidências pode produzir
+                                        consequências que ultrapassam a dimensão sanitária imediata. A desinformação
+                                        tende a gerar estigmatização da fauna silvestre, especialmente dos primatas
+                                        não humanos, indevidamente responsabilizados pela transmissão da doença. Esse
+                                        processo pode desencadear perseguição ou eliminação de animais, o que, além de
+                                        comprometer a biodiversidade, fragiliza a própria vigilância ao suprimir o
+                                        principal indicador sentinela da circulação viral.
+                                    </p>
+                                </div>
+                            </div>                            
+
+                            <p class="lead text-muted">Do ponto de vista jurídico, a agressão ou morte de fauna silvestre configura crime ambiental, nos termos do art. 29 da Lei nº 9.605/1998. A Constituição Federal, em seu art. 225, estabelece o dever do Poder Público e da coletividade de proteger a fauna e o meio ambiente, reforçando que respostas motivadas por medo ou desinformação não encontram respaldo legal. </p>
+                            <p class="lead text-muted">Sob a perspectiva da justiça ambiental, a circulação desigual de informação qualificada amplia vulnerabilidades territoriais, especialmente em comunidades com menor acesso a canais institucionais. A fragilidade comunicacional reduz a confiança nas instituições, diminui a notificação de epizootias e compromete a antecipação de medidas preventivas.</p>
+                            <p class="lead text-muted">A comunicação integrada entre saúde e meio ambiente constitui, portanto, instrumento de equidade e corresponsabilização social, conforme os princípios do SUS previstos na Lei nº 8.080/1990. Na abordagem Saúde Única, proteger a fauna e informar adequadamente a população são dimensões inseparáveis da prevenção em saúde pública.</p>                           
+                            
+                            <h4 class="fw-bold mt-5 mb-4 text-primary">Síntese analítica do caso</h4>
+                            <p class="lead text-muted">O estudo de caso da febre amarela silvestre evidencia que:</p>
+
+                            <ul class="ms-5 lead text-muted">
+                                <li class="my-3 mt-4">O evento humano é precedido por processo ecológico detectável. </li>
+                                <li class="my-3">A biodiversidade funciona como sistema de alerta precoce. </li>
+                                <li class="my-3">A fragmentação ambiental amplia vulnerabilidades.</li>
+                                <li class="my-3">A governança intersetorial qualifica a resposta.</li>
+                                <li class="my-3">A vacinação é medida central, mas depende de leitura territorial integrada.</li>
+                            </ul>
+
+                            <p class="lead text-muted mt-4 mb-5">Assim, a febre amarela materializa de forma concreta a lógica da <span class="fw-bold">Vigilância em Saúde orientada pela abordagem Saúde Única</span>. O território deixa de ser apenas cenário e passa a ser elemento analítico central. </p>
+                            
+                            <div class="my-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+                                <div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                    <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+                                    <p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                        Conservar, monitorar e integrar informações não são ações paralelas à saúde pública. São partes constitutivas da prevenção. 
+                                    </p>
+                                </div>
+                            </div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary"><i class="bi bi-pencil-square"></i> Atividade</h3>
+                                    <p class="lead text-muted">As situações a seguir convidam você a aplicar essa leitura ampliada, integrando variáveis ecológicas, institucionais e territoriais na tomada de decisão. </p>
+
+                                    <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 my-4" data-situacao="1">
+                                        <h4 class="fw-bold text-primary mb-3">Situação 1 – Detecção precoce e resposta
+                                            institucional</h4>
+                                        <p class="lead text-muted">Em um município com fragmentos florestais próximos
+                                            à área urbana, moradores relatam a morte recente de bugios em uma trilha
+                                            ecológica bastante frequentada. A equipe local de saúde ainda não
+                                            registrou casos suspeitos de febre amarela em humanos. A informação chega
+                                            de forma informal à Secretaria Municipal de Saúde, sem notificação
+                                            oficial.</p>
+                                        <p class="lead text-muted fw-bold">Considerando a abordagem Saúde Única,
+                                            selecione as respostas que considerar relevantes para cada questão:</p>
+
+                                        <p class="fw-bold text-dark mt-4 mb-2">a) Quais setores devem ser
+                                            imediatamente acionados diante dessa situação?</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1a1" data-correct="true"><label class="form-check-label" for="s1a1">Vigilância Epidemiológica Municipal.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1a2" data-correct="true"><label class="form-check-label" for="s1a2">Vigilância Ambiental.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1a3" data-correct="true"><label class="form-check-label" for="s1a3">Órgão gestor de fauna silvestre.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1a4"><label class="form-check-label" for="s1a4">Secretaria Municipal de Meio Ambiente.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1a5"><label class="form-check-label" for="s1a5">Atenção Primária à Saúde.</label></div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1a6" data-correct="true"><label class="form-check-label" for="s1a6">Secretaria Estadual da Saúde.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1a7"><label class="form-check-label" for="s1a7">Defesa Civil.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1a8"><label class="form-check-label" for="s1a8">Coordenação de Zoonoses.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1a9" data-correct="true"><label class="form-check-label" for="s1a9">Laboratório de Referência em Saúde Pública.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1a10"><label class="form-check-label" for="s1a10">Gestão de Unidade de Conservação da região.</label></div>
+                                            </div>
+                                        </div>
+
+                                        <p class="fw-bold text-dark mt-4 mb-2">b) Quais informações precisam ser
+                                            coletadas e compartilhadas para avaliar o risco sanitário?</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1b1" data-correct="true"><label class="form-check-label" for="s1b1">Localização georreferenciada das ocorrências.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1b2" data-correct="true"><label class="form-check-label" for="s1b2">Número de primatas afetados e espécies envolvidas.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1b3"><label class="form-check-label" for="s1b3">Data e evolução temporal dos óbitos.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1b4" data-correct="true"><label class="form-check-label" for="s1b4">Resultados laboratoriais das amostras biológicas.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1b5" data-correct="true"><label class="form-check-label" for="s1b5">Histórico vacinal da população local.</label></div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1b6"><label class="form-check-label" for="s1b6">Características ambientais da área afetada.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1b7" data-correct="true"><label class="form-check-label" for="s1b7">Presença e densidade de vetores.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1b8"><label class="form-check-label" for="s1b8">Fluxo de pessoas na área de risco.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1b9"><label class="form-check-label" for="s1b9">Registros anteriores de epizootias na região.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1b10"><label class="form-check-label" for="s1b10">Condições climáticas recentes.</label></div>
+                                            </div>
+                                        </div>
+
+                                        <p class="fw-bold text-dark mt-4 mb-2">c) Quais são os riscos para a
+                                            população caso essa informação não seja integrada aos sistemas de
+                                            vigilância?</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1c1" data-correct="true"><label class="form-check-label" for="s1c1">Atraso na identificação da circulação viral.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1c2" data-correct="true"><label class="form-check-label" for="s1c2">Retardo na intensificação da vacinação.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1c3" data-correct="true"><label class="form-check-label" for="s1c3">Maior ocorrência de casos graves e óbitos.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1c4"><label class="form-check-label" for="s1c4">Subnotificação de eventos ambientais relevantes.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1c5" data-correct="true"><label class="form-check-label" for="s1c5">Tomada de decisão baseada em dados incompletos.</label></div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1c6"><label class="form-check-label" for="s1c6">Fragilização da comunicação de risco.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1c7" data-correct="true"><label class="form-check-label" for="s1c7">Perda da oportunidade de prevenção precoce.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1c8"><label class="form-check-label" for="s1c8">Ampliação da vulnerabilidade territorial.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1c9"><label class="form-check-label" for="s1c9">Desarticulação entre os serviços de saúde e ambiente.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s1c10"><label class="form-check-label" for="s1c10">Redução da confiança da população nas instituições.</label></div>
+                                            </div>
+                                        </div>
+
+                                        <button type="button" class="btn bg-primary text-white rounded-pill px-4 mt-4 caso-confirmar-btn" data-target="#feedbackSituacao1">
+                                            <i class="bi bi-check2-circle me-1"></i> Confirmar respostas
+                                        </button>
+
+                                        <div class="alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-4 bg-light mt-4 d-none" id="feedbackSituacao1">
+                                            <h5 class="fw-bold text-primary mb-3"><i class="bi bi-check-circle-fill me-2"></i>Análise da situação</h5>
+                                            <p class="lead text-muted fw-bold feedback-positivo d-none"><i class="bi bi-emoji-smile-fill text-success me-1"></i>Parabéns, você acertou!</p>
+                                            <p class="lead text-muted fw-bold feedback-negativo d-none"><i class="bi bi-emoji-neutral-fill text-warning me-1"></i>Você não selecionou todas as respostas corretas.</p>
+                                            <p class="lead text-muted">A situação apresentada indica um possível risco
+                                                sanitário antes da ocorrência de casos humanos, o que exige atuação
+                                                antecipatória da Vigilância em Saúde.</p>
+                                            <p class="lead text-muted"><strong>a)</strong> O comportamento mais
+                                                adequado consiste no acionamento imediato e articulado dos setores de
+                                                saúde, meio ambiente, gestão da fauna e laboratório, reconhecendo os
+                                                primatas como sentinelas ambientais e evitando respostas isoladas.</p>
+                                            <p class="lead text-muted"><strong>b)</strong> A coleta e o
+                                                compartilhamento integrado de informações epidemiológicas, ambientais,
+                                                territoriais e laboratoriais são essenciais para delimitar áreas de
+                                                risco, orientar a vacinação e subsidiar decisões oportunas.</p>
+                                            <p class="lead text-muted"><strong>c)</strong> A não integração dessas
+                                                informações pode gerar atraso na prevenção, aumento da exposição da
+                                                população e fragilização da resposta institucional.</p>
+                                            <p class="lead text-muted mt-3">De forma integrada, a Situação 1
+                                                demonstra que o comportamento institucional mais adequado deve estar
+                                                orientado por três princípios centrais:</p>
+                                            <ul class="ms-4 lead text-muted mb-0">
+                                                <li class="my-2"><strong>Antecipação:</strong> reconhecer sinais
+                                                    precoces no ambiente e na fauna.</li>
+                                                <li class="my-2"><strong>Articulação:</strong> promover cooperação
+                                                    entre setores desde o início.</li>
+                                                <li class="my-2"><strong>Integração:</strong> utilizar a informação
+                                                    como instrumento estratégico de decisão.</li>
+                                            </ul>
+                                            <button type="button" class="btn bg-primary text-white rounded-pill px-4 mt-4 proxima-situacao-btn" data-next="2">
+                                                Próxima Situação <i class="bi bi-arrow-right ms-1"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 my-4 d-none" data-situacao="2">
+                                        <h4 class="fw-bold text-primary mb-3">Situação 2 – Fragmentação territorial e
+                                            ampliação do risco</h4>
+                                        <p class="lead text-muted">Em uma região marcada por intensa fragmentação
+                                            florestal, expansão imobiliária e atividades agrícolas, foram confirmadas
+                                            epizootias em bugios em diferentes pontos do território. Parte da
+                                            população local acredita que os animais são responsáveis pela transmissão
+                                            da doença e passa a hostilizá-los.</p>
+
+                                        <p class="fw-bold text-dark mt-4 mb-2">a) Como as alterações no uso do solo e
+                                            na biodiversidade influenciam a circulação do vírus?</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2a1" data-correct="true"><label class="form-check-label" for="s2a1">Redução da diversidade biológica.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2a2" data-correct="true"><label class="form-check-label" for="s2a2">Aumento da fragmentação dos habitats.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2a3" data-correct="true"><label class="form-check-label" for="s2a3">Ampliação do contato entre humanos, vetores e primatas.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2a4" data-correct="true"><label class="form-check-label" for="s2a4">Simplificação dos ecossistemas.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2a5" data-correct="true"><label class="form-check-label" for="s2a5">Perda do efeito de diluição.</label></div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2a6"><label class="form-check-label" for="s2a6">Maior concentração de vetores em áreas degradadas.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2a7"><label class="form-check-label" for="s2a7">Expansão de áreas periurbanas vulneráveis.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2a8"><label class="form-check-label" for="s2a8">Redução de áreas de refúgio da fauna.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2a9"><label class="form-check-label" for="s2a9">Intensificação de atividades antrópicas.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2a10"><label class="form-check-label" for="s2a10">Aumento da pressão sobre fragmentos florestais remanescentes.</label></div>
+                                            </div>
+                                        </div>
+
+                                        <p class="fw-bold text-dark mt-4 mb-2">b) Quais estratégias intersetoriais
+                                            devem ser adotadas para enfrentar simultaneamente o risco sanitário e a
+                                            desinformação?</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2b1" data-correct="true"><label class="form-check-label" for="s2b1">Campanha integrada de comunicação em saúde e meio ambiente.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2b2" data-correct="true"><label class="form-check-label" for="s2b2">Ações educativas em escolas e comunidades.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2b3" data-correct="true"><label class="form-check-label" for="s2b3">Produção de material informativo oficial.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2b4" data-correct="true"><label class="form-check-label" for="s2b4">Atuação conjunta entre saúde, educação e comunicação social.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2b5"><label class="form-check-label" for="s2b5">Reuniões comunitárias com técnicos locais.</label></div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2b6" data-correct="true"><label class="form-check-label" for="s2b6">Parceria com lideranças comunitárias.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2b7"><label class="form-check-label" for="s2b7">Monitoramento de <em>fake news</em> em redes sociais.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2b8"><label class="form-check-label" for="s2b8">Capacitação de agentes comunitários.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2b9"><label class="form-check-label" for="s2b9">Articulação com imprensa local.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2b10"><label class="form-check-label" for="s2b10">Criação de canal institucional de esclarecimento à população.</label></div>
+                                            </div>
+                                        </div>
+
+                                        <p class="fw-bold text-dark mt-4 mb-2">c) Quais consequências podem decorrer
+                                            da ausência de uma política integrada de comunicação de risco?</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2c1" data-correct="true"><label class="form-check-label" for="s2c1">Estigmatização da fauna silvestre.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2c2"><label class="form-check-label" for="s2c2">Violência contra primatas não humanos.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2c3" data-correct="true"><label class="form-check-label" for="s2c3">Redução da notificação de epizootias.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2c4" data-correct="true"><label class="form-check-label" for="s2c4">Disseminação de informações falsas.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2c5" data-correct="true"><label class="form-check-label" for="s2c5">Baixa adesão à vacinação.</label></div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2c6"><label class="form-check-label" for="s2c6">Desconfiança nas instituições públicas.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2c7"><label class="form-check-label" for="s2c7">Aumento da vulnerabilidade sanitária.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2c8"><label class="form-check-label" for="s2c8">Dificuldade na mobilização comunitária.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2c9"><label class="form-check-label" for="s2c9">Comprometimento das ações preventivas.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s2c10" data-correct="true"><label class="form-check-label" for="s2c10">Fragilização da vigilância territorial.</label></div>
+                                            </div>
+                                        </div>
+
+                                        <button type="button" class="btn bg-primary text-white rounded-pill px-4 mt-4 caso-confirmar-btn" data-target="#feedbackSituacao2">
+                                            <i class="bi bi-check2-circle me-1"></i> Confirmar respostas
+                                        </button>
+
+                                        <div class="alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-4 bg-light mt-4 d-none" id="feedbackSituacao2">
+                                            <h5 class="fw-bold text-primary mb-3"><i class="bi bi-check-circle-fill me-2"></i>Análise da situação</h5>
+                                            <p class="lead text-muted fw-bold feedback-positivo d-none"><i class="bi bi-emoji-smile-fill text-success me-1"></i>Parabéns, você acertou!</p>
+                                            <p class="lead text-muted fw-bold feedback-negativo d-none"><i class="bi bi-emoji-neutral-fill text-warning me-1"></i>Você não selecionou todas as respostas corretas.</p>
+                                            <p class="lead text-muted">A situação 2 evidencia um contexto de
+                                                intensificação do risco sanitário associado à fragmentação ambiental,
+                                                à perda de biodiversidade e à circulação de informações inadequadas no
+                                                território.</p>
+                                            <p class="lead text-muted"><strong>a)</strong> O comportamento mais
+                                                adequado consiste no reconhecimento de que as alterações no uso do
+                                                solo e a simplificação dos ecossistemas ampliam o contato entre
+                                                humanos, vetores e primatas, favorecendo a circulação viral e exigindo
+                                                análise territorial integrada.</p>
+                                            <p class="lead text-muted"><strong>b)</strong> A atuação intersetorial,
+                                                envolvendo saúde, meio ambiente, educação e comunicação, é essencial
+                                                para enfrentar simultaneamente o risco sanitário e a desinformação,
+                                                promovendo ações educativas, comunicação qualificada e fortalecimento
+                                                do vínculo com a comunidade.</p>
+                                            <p class="lead text-muted"><strong>c)</strong> A ausência de uma política
+                                                integrada de comunicação de risco tende a gerar estigmatização da
+                                                fauna, redução das notificações, baixa adesão às medidas preventivas e
+                                                fragilização da vigilância.</p>
+                                            <p class="lead text-muted mt-3">De forma integrada, a Situação 2
+                                                demonstra que o comportamento institucional mais adequado deve estar
+                                                orientado por três princípios centrais:</p>
+                                            <ul class="ms-4 lead text-muted mb-0">
+                                                <li class="my-2"><strong>Compreensão ecológica:</strong> reconhecer o
+                                                    papel da biodiversidade na regulação dos riscos.</li>
+                                                <li class="my-2"><strong>Comunicação responsável:</strong> garantir
+                                                    informação clara, baseada em evidências.</li>
+                                                <li class="my-2"><strong>Corresponsabilização social:</strong>
+                                                    envolver a comunidade na proteção da saúde e do ambiente.</li>
+                                            </ul>
+                                            <button type="button" class="btn bg-primary text-white rounded-pill px-4 mt-4 proxima-situacao-btn" data-next="3">
+                                                Próxima Situação <i class="bi bi-arrow-right ms-1"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 my-4 d-none" data-situacao="3">
+                                        <h4 class="fw-bold text-primary mb-3">Situação 3 – Governança, dados e tomada
+                                            de decisão</h4>
+                                        <p class="lead text-muted">Após a confirmação laboratorial da presença do
+                                            vírus da febre amarela em primatas não humanos, os dados permanecem
+                                            restritos ao órgão ambiental por falhas nos fluxos institucionais de
+                                            informação. A Vigilância Epidemiológica humana só toma conhecimento da
+                                            situação semanas depois, quando surgem os primeiros casos graves.</p>
+
+                                        <p class="fw-bold text-dark mt-4 mb-2">a) Quais falhas de governança e
+                                            comunicação podem ser identificadas nesse processo?</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3a1" data-correct="true"><label class="form-check-label" for="s3a1">Ausência de protocolo intersetorial formal.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3a2" data-correct="true"><label class="form-check-label" for="s3a2">Falta de integração entre sistemas de informação.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3a3" data-correct="true"><label class="form-check-label" for="s3a3">Comunicação tardia entre órgãos.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3a4"><label class="form-check-label" for="s3a4">Centralização excessiva dos dados.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3a5" data-correct="true"><label class="form-check-label" for="s3a5">Inexistência de fluxo institucional padronizado.</label></div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3a6"><label class="form-check-label" for="s3a6">Fragilidade na articulação entre níveis de governo.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3a7"><label class="form-check-label" for="s3a7">Dependência de contatos informais.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3a8" data-correct="true"><label class="form-check-label" for="s3a8">Falta de definição clara de responsabilidades.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3a9"><label class="form-check-label" for="s3a9">Baixa interoperabilidade entre plataformas.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3a10"><label class="form-check-label" for="s3a10">Insuficiência de espaços permanentes de coordenação.</label></div>
+                                            </div>
+                                        </div>
+
+                                        <p class="fw-bold text-dark mt-4 mb-2">b) Quais tipos de dados deveriam ter
+                                            sido integrados desde o início da ocorrência?</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3b1" data-correct="true"><label class="form-check-label" for="s3b1">Resultados laboratoriais oficiais.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3b2" data-correct="true"><label class="form-check-label" for="s3b2">Localização georreferenciada das epizootias.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3b3"><label class="form-check-label" for="s3b3">Datas e evolução temporal dos eventos.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3b4"><label class="form-check-label" for="s3b4">Informações sobre espécies afetadas.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3b5" data-correct="true"><label class="form-check-label" for="s3b5">Dados ambientais e territoriais.</label></div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3b6" data-correct="true"><label class="form-check-label" for="s3b6">Situação vacinal da população.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3b7"><label class="form-check-label" for="s3b7">Registros de circulação vetorial.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3b8" data-correct="true"><label class="form-check-label" for="s3b8">Histórico regional de surtos.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3b9"><label class="form-check-label" for="s3b9">Alertas emitidos por órgãos ambientais.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3b10"><label class="form-check-label" for="s3b10">Informações da atenção básica em saúde.</label></div>
+                                            </div>
+                                        </div>
+
+                                        <p class="fw-bold text-dark mt-4 mb-2">c) De que forma a ausência de
+                                            articulação intersetorial comprometeu a prevenção e a resposta em saúde
+                                            pública?</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3c1" data-correct="true"><label class="form-check-label" for="s3c1">Atraso na intensificação da vacinação.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3c2"><label class="form-check-label" for="s3c2">Falta de preparação dos serviços de saúde.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3c3" data-correct="true"><label class="form-check-label" for="s3c3">Ampliação da exposição da população.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3c4" data-correct="true"><label class="form-check-label" for="s3c4">Redução da capacidade de resposta rápida.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3c5"><label class="form-check-label" for="s3c5">Tomada de decisão baseada em dados incompletos.</label></div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3c6"><label class="form-check-label" for="s3c6">Fragilização da vigilância territorial.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3c7"><label class="form-check-label" for="s3c7">Perda da oportunidade de prevenção precoce.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3c8" data-correct="true"><label class="form-check-label" for="s3c8">Aumento da gravidade dos casos.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3c9"><label class="form-check-label" for="s3c9">Desorganização dos fluxos assistenciais.</label></div>
+                                                <div class="form-check my-2"><input class="form-check-input" type="checkbox" id="s3c10" data-correct="true"><label class="form-check-label" for="s3c10">Elevação do risco de óbitos evitáveis.</label></div>
+                                            </div>
+                                        </div>
+
+                                        <button type="button" class="btn bg-primary text-white rounded-pill px-4 mt-4 caso-confirmar-btn" data-target="#feedbackSituacao3">
+                                            <i class="bi bi-check2-circle me-1"></i> Confirmar respostas
+                                        </button>
+
+                                        <div class="alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-4 bg-light mt-4 d-none" id="feedbackSituacao3">
+                                            <h5 class="fw-bold text-primary mb-3"><i class="bi bi-check-circle-fill me-2"></i>Análise da situação</h5>
+                                            <p class="lead text-muted fw-bold feedback-positivo d-none"><i class="bi bi-emoji-smile-fill text-success me-1"></i>Parabéns, você acertou!</p>
+                                            <p class="lead text-muted fw-bold feedback-negativo d-none"><i class="bi bi-emoji-neutral-fill text-warning me-1"></i>Você não selecionou todas as respostas corretas.</p>
+                                            <p class="lead text-muted">A situação 3 apresentada evidencia falhas nos
+                                                fluxos de informação e na governança intersetorial, comprometendo a
+                                                capacidade de antecipação e resposta da Vigilância em Saúde.</p>
+                                            <p class="lead text-muted"><strong>a)</strong> O comportamento mais
+                                                adequado consiste na adoção de protocolos institucionais claros, com
+                                                definição de responsabilidades e canais formais de comunicação entre
+                                                os setores envolvidos, evitando a centralização e o uso de fluxos
+                                                informais.</p>
+                                            <p class="lead text-muted"><strong>b)</strong> A integração tempestiva de
+                                                dados laboratoriais, ambientais, territoriais, epidemiológicos e
+                                                assistenciais é essencial para subsidiar análises qualificadas e
+                                                orientar decisões oportunas.</p>
+                                            <p class="lead text-muted"><strong>c)</strong> A ausência de articulação
+                                                intersetorial resultou em atraso nas ações preventivas, fragilização
+                                                da preparação dos serviços e aumento da exposição da população ao
+                                                risco.</p>
+                                            <p class="lead text-muted mt-3">De forma integrada, a Situação 3
+                                                demonstra que o comportamento institucional mais adequado deve estar
+                                                orientado por três princípios centrais:</p>
+                                            <ul class="ms-4 lead text-muted mb-0">
+                                                <li class="my-2"><strong>Institucionalização:</strong> formalizar
+                                                    fluxos e protocolos de informação.</li>
+                                                <li class="my-2"><strong>Transparência:</strong> garantir circulação
+                                                    tempestiva dos dados relevantes.</li>
+                                                <li class="my-2"><strong>Coordenação:</strong> promover decisões
+                                                    compartilhadas entre os setores.</li>
+                                            </ul>
+                                            <p class="fw-bold text-primary mt-4 mb-0"><i class="bi bi-trophy-fill me-2"></i>Você concluiu as três situações desta atividade!</p>
+                                        </div>
+                                    </div>                                    
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Resumo da aula</h3>
+                                    <p class="lead text-muted">Nesta aula, você compreendeu como a febre amarela silvestre constitui um exemplo emblemático da Vigilância em Saúde na perspectiva da Saúde Única. A partir do estudo de caso envolvendo a mortalidade de bugios, foi possível observar que os agravos à saúde humana são frequentemente precedidos por processos ecológicos que se desenvolvem no território, reforçando a importância da vigilância antecipatória e da identificação de eventos sentinela.</p>
+                                    <p class="lead text-muted">Você também analisou a relação entre biodiversidade, uso do solo e risco sanitário, reconhecendo que alterações ambientais, fragmentação de habitats e perda de biodiversidade podem influenciar a circulação de vetores e patógenos. Nesse contexto, a conservação da biodiversidade e o monitoramento da fauna deixam de ser apenas ações ambientais e passam a integrar estratégias de prevenção em saúde pública.</p>
+                                    <p class="lead text-muted">Por fim, você conheceu os fluxos operacionais desencadeados a partir da detecção de epizootias, compreendendo a importância da integração entre vigilância epidemiológica, vigilância ambiental, saúde animal, laboratórios, gestores e sociedade. A atuação cooperativa, o compartilhamento de informações e a comunicação de risco qualificada mostraram-se elementos essenciais para a tomada de decisão, a proteção da população e a construção de respostas mais efetivas diante dos desafios sanitários contemporâneos.</p>
+                                    <p class="lead text-muted fw-bold">Você concluiu esta aula, continue se empenhando nos seus estudos. Siga para a próxima aula!</p>
+                                </article>
+                            </div>
+                        </section>
+
+                    </div> <!-- Fim .aula-pages-wrapper -->
+                    <!-- ================= PAGINAÇÃO INTERNA DA AULA ================= -->
+                    <div class="aula-pagination-nav d-flex justify-content-between align-items-center mt-5 pt-4 border-top"
+                        id="aulaPaginationNav">
+                        <button type="button" class="btn btn-outline-primary rounded-pill px-4" id="aulaPagPrev" disabled>
+                            <i class="bi bi-arrow-left me-1"></i> Anterior
+                        </button>
+                        <span class="small text-muted fw-semibold" id="aulaPagIndicator">Página 1 de 2</span>
+                        <button type="button" class="btn btn-primary rounded-pill px-4" id="aulaPagNext">
+                            Próximo <i class="bi bi-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+
+                    <!-- ================= NAVEGAÇÃO ENTRE AULAS (exibida somente na última página) ================= -->
+                    <div class="aula-lesson-nav d-none justify-content-between align-items-center mt-5 pt-4 border-top"
+                        id="aulaLessonNav" data-prev-lesson="aula3.1.html" data-next-lesson="aula3.3.html">
+                        <a href="#" class="btn btn-outline-primary rounded-pill px-4" id="aulaLessonPrev">
+                            <i class="bi bi-arrow-left me-1"></i> Aula Anterior
+                        </a>
+                        <a href="#" class="btn btn-primary rounded-pill px-4" id="aulaLessonNext">
+                            Próxima Aula <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- ================= RODAPÉ DE LOGOS ================= -->
+                    <!-- ================= RODAPÉ (carregado de partials/footer.html) ================= -->
+                    <div id="site-footer"></div>
+
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <!-- ================= MODAIS (carregados de partials/modals.html) ================= -->
+    <div id="site-modals"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Seu arquivo JS unificado -->
+    <script src="js/partials-loader.js"></script>
+    <script src="js/aula3.2.js"></script>
+    <script src="js/main.js"></script>
+
+    <button type="button" class="back-to-top" id="btnBackToTop" aria-label="Voltar ao topo">
+        <i data-lucide="arrow-up" aria-hidden="true"></i>
+    </button>
+</body>
+
+</html>

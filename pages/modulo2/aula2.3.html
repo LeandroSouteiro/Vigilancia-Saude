@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Vigilância em Saúde em tempos de transformação digital</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- CSS do seu tema -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Required meta tags -->
+    <meta name="robots" content="noindex" />
+    <meta name="author" content="Fiocruz, Campus Virtual" />
+    <meta name="description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="keywords" content="Fiocruz, Curso, Vigilância em Saúde, transformação digital, SUS" />
+
+    <!-- Facebook Open Graph -->
+    <meta property="og:url" content="https://mooc.campusvirtual.fiocruz.br/rea/introducao-analise-dados-sus" />
+    <meta property="og:title"
+        content="Campus Virtual Fiocruz | Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta property="og:description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title"
+        content="Campus Virtual Fiocruz | Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="twitter:image:src" content="" />
+
+    <!-- Favicons and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../media/icons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../../media/icons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../../media/icons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../../media/icons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../../media/icons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../../media/icons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../../media/icons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../../media/icons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="../../media/icons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../../media/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../media/icons/favicon-16x16.png" />
+    <link rel="manifest" href="../../media/icons/manifest.json" />
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="media/icons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#420b3c" />
+
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Barra de Progresso Superior -->
+    <div class="scroll-progress-top" id="scrollProgress"></div>
+
+    <script src="js/aula2.3-config.js"></script>
+    <!-- ================= CABEÇALHO (carregado de partials/header.html) ================= -->
+    <div id="site-header"></div>
+
+    <div class="page-wrapper" id="pageWrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <div id="site-sidebar"></div>
+
+        <!-- Lingueta (Botão) redesenhada: MOVIDA PARA FORA DO ASIDE PARA NÃO SUMIR -->
+        <button class="sidebar-tab" id="btnToggleSidebar" aria-label="Alternar menu" aria-expanded="true"
+            aria-controls="sidebarAula">
+            <i data-lucide="chevron-left" id="toggleIcon" aria-hidden="true"></i>
+        </button>
+
+        <!-- ================= CONTEÚDO ================= -->
+        <main class="content-aula" id="main-content">
+            <div class="main-content-inner">
+
+                <!-- Selo de navegação: flutua por cima do conteúdo -->
+                <nav aria-label="breadcrumb" class="aula-breadcrumb-pill">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../../index.html" class="text-decoration-none">Início</a></li>
+                        <li class="breadcrumb-item"><a href="aula2.1.html" class="text-decoration-none">Módulo 2</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Aula 3</li>
+                    </ol>
+                </nav>
+
+                <!-- Hero com imagem de fundo temática -->
+                <header class="aula-hero">
+                    <h1>Introdução ao sensoriamento remoto e dados geoespaciais</h1>
+                </header>
+
+                <div class="main-content-body">
+                    <div class="aula-pages-wrapper" id="aulaPagesWrapper">
+
+                        <section class="aula-page active" data-page="1">
+                            <article class="aula-body">
+                                <h2 class="fw-bold mb-4 text-primary"><i class="bi bi-book-half"></i> Sobre esta aula
+                                </h2>
+                                <hr>
+                                <p class="lead text-muted">Nesta aula daremos início à abordagem dos dados geoespaciais
+                                    e do sensoriamento remoto como fundamentos para a análise territorial em saúde
+                                    pública, no contexto da vigilância em saúde e do planejamento orientado por
+                                    evidências espaciais, objetivando a compreensão dos fundamentos e a aplicabilidade
+                                    desta ferramenta para a localização de eventos e a tomada de decisão, reconhecendo o
+                                    território como elemento central para a análise, o monitoramento de riscos e o
+                                    planejamento de ações em saúde.</p>
+
+                                <h3 class="fw-bold text-primary mt-5 mb-4"><i class="bi bi-columns-gap"></i> Objetivos
+                                    de
+                                    aprendizagem </h3>
+                                <hr>
+                                <p class="lead text-muted">Ao final desta aula, esperamos que você seja capaz de:</p>
+
+                                <ul class="ms-5 lead text-muted">
+                                    <li class="my-3 mt-4">Compreender a importância do território como dimensão
+                                        analítica da Vigilância em Saúde, reconhecendo sua influência na distribuição de
+                                        eventos de saúde, vulnerabilidades sociais, riscos ambientais e na organização
+                                        da oferta de serviços.</li>
+                                    <li class="my-3">Identificar os fundamentos do geoprocessamento, dos Sistemas de
+                                        Informação Geográfica (SIG) e do sensoriamento remoto, reconhecendo os
+
+                                        principais modelos de representação espacial, tipos de dados geográficos e suas
+                                        aplicações na análise territorial.</li>
+                                    <li class="my-3">Analisar o potencial da integração de dados epidemiológicos,
+                                        ambientais, climáticos, demográficos e geoespaciais, utilizando conceitos de
+                                        geotecnologias para apoiar o diagnóstico territorial, o monitoramento de riscos
+                                        e a tomada de decisão baseada em evidências na vigilância em saúde.</li>
+                                </ul>
+
+
+                                <h3 class="fw-bold mt-5 mb-4 text-primary">Introdução</h3>
+                                <p class="lead text-muted">A incorporação da dimensão espacial na análise de fenômenos
+                                    sociais, ambientais e de saúde constitui um dos pilares da produção contemporânea do
+                                    conhecimento científico. Em especial, o avanço das tecnologias digitais, a ampliação
+                                    da disponibilidade de bases cartográficas e o desenvolvimento de sistemas
+                                    computacionais especializados transformaram profundamente a forma como o território
+                                    é observado, representado e analisado.</p>
+                                <p class="lead text-muted">Neste contexto, a geografia, os dados geoespaciais e o
+                                    sensoriamento remoto são instrumentos de grande valia como instrumentos centrais
+                                    para a compreensão de processos complexos que se manifestam de forma desigual no
+                                    espaço, permitindo identificar padrões, tendências e relações territoriais que não
+                                    seriam perceptíveis por abordagens exclusivamente tabulares ou estatísticas.</p>
+                                <p class="lead text-muted">Nesta aula, vamos apresentar os fundamentos conceituais e
+                                    técnicos dos dados geoespaciais, introduzindo os princípios da Geografia Temática,
+                                    do geoprocessamento, dos Sistemas de Informação Geográfica (SIG) e das estruturas de
+                                    dados utilizadas na edição e análise de mapas digitais, estabelecendo as bases
+                                    necessárias para o entendimento do sensoriamento remoto e de suas aplicações.</p>
+                            </article>
+                        </section>
+
+                        <section class="aula-page" data-page="2">
+                            <div class="main-content-body">
+                                <article class="aula-body mb-0">
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">A Geografia Temática </h3>
+                                    <p class="lead text-muted">Neste tópico, vamos discutir a relação dos fenômenos
+                                        específicos a partir de sua expressão no espaço geográfico, permitindo
+                                        compreender como processos sociais, ambientais e de saúde se distribuem e se
+                                        articulam no território. </p>
+                                    <p class="lead text-muted">No campo da saúde, essa abordagem possibilita identificar
+                                        padrões de adoecimento, desigualdades e vulnerabilidades territoriais. Ao
+                                        integrar diferentes dimensões do espaço, a Geografia Temática fornece uma base
+                                        analítica essencial para a vigilância em saúde e o planejamento de ações
+                                        orientadas pelo território.</p>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Geografia, Espaço e Território: Bases
+                                        Conceituais</h3>
+                                    <p class="lead text-muted mb-5">A geografia constitui um campo do conhecimento dedicado à
+                                        compreensão das relações entre sociedade e espaço territorial, analisando como
+                                        os fenômenos naturais, sociais, econômicos e ambientais se distribuem e
+                                        interagem no território.</p>
+
+                                    <div class=" my-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+										<div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+											<div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+											<p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+												Historicamente, a dimensão espacial sempre esteve presente na explicação dos processos de saúde e doença, desde os estudos clássicos da Geografia Médica até as abordagens contemporâneas da Geografia da Saúde. 
+											</p><br/>
+											<p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+												Essa perspectiva é fundamental para compreender que a distribuição de doenças, riscos e serviços não ocorre de forma aleatória, mas reflete a organização do território, as condições de vida da população e os modelos de desenvolvimento adotados. 
+											</p>
+										</div>
+									</div>
+
+                                    <p class="lead text-muted">Assim, o espaço geográfico tem sido reconhecido como um
+                                        determinante central dos processos saúde–doença. Afinal, entender as relações
+                                        sociais e ecológicas no território, incorporando dimensões simbólicas, sociais e
+                                        políticas, no qual se expressam desigualdades, vulnerabilidades e
+                                        potencialidades, constitui um instrumento de ação de grande importância no campo
+                                        da saúde, devido à possibilidade de identificação de padrões espaciais de
+                                        ocorrência de agravos, áreas de risco, gradientes territoriais e desigualdades
+                                        socioespaciais, fornecendo subsídios fundamentais para o planejamento, a
+                                        vigilância e a tomada de decisão em saúde pública.</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Geografia Temática e a Análise dos
+                                        Fenômenos</h4>
+                                    <p class="lead text-muted">A Geografia Temática é uma área da Geografia geral,
+                                        voltada à investigação de fenômenos específicos — como saúde, ambiente, clima,
+                                        urbanização ou desigualdades sociais — a partir de sua expressão espacial. Nessa
+                                        perspectiva, o espaço deixa de ser apenas um suporte físico e passa a ser
+                                        compreendido como um componente ativo dos processos sociais, incorporando
+                                        dimensões históricas, políticas e econômicas. No campo da saúde, a Geografia
+                                        Temática possibilita:</p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Identificar padrões espaciais de ocorrência de agravos.
+                                        </li>
+                                        <li class="my-3">Analisar gradientes de risco.</li>
+                                        <li class="my-3">Reconhecer áreas de maior vulnerabilidade.</li>
+                                        <li class="my-3">Subsidiar o planejamento territorializado de políticas
+                                            públicas.</li>
+                                    </ul>
+
+                                    <p class="lead text-muted mt-4">A análise temática do espaço apoia-se fortemente na
+                                        visualização cartográfica e na análise espacial, permitindo que o mapa deixe de
+                                        ser apenas um produto ilustrativo e passe a atuar como instrumento analítico e
+                                        exploratório, capaz de gerar hipóteses e orientar decisões.</p>
+                                    <p class="lead text-muted">Neste campo, é reconhecida as contribuições de Milton
+                                        Santos para a compreensão contemporânea da Geografia Temática. Para o autor, o
+                                        espaço geográfico não pode ser entendido apenas como um conjunto de objetos
+                                        materiais, mas como o resultado indissociável da interação entre fixos e fluxos.
+                                        Entenda melhor esses conceitos:</p>
+
+                                    <div data-copy-id="slider">
+										<div class="text-center mb-2 mt-5">
+											<span class="badge-recurso-interativo">
+												<i class="bi bi-cursor-fill me-1"></i> Recurso Interativo
+											</span>
+											<!--<p class="text-muted mb-0 mt-2">Clique nos cards abaixo para saber mais</p>-->
+										</div>
+									<div class="aula-toggle-card mb-5">
+										
+										<input type="radio" name="aulaToggleFixosFluxos" id="aulaToggleFixos" class="aula-toggle-radio aula-toggle-radio-fixos" checked>
+										<input type="radio" name="aulaToggleFixosFluxos" id="aulaToggleFluxos" class="aula-toggle-radio aula-toggle-radio-fluxos">
+
+										<div class="aula-toggle-switch" aria-hidden="true">
+											<span class="aula-toggle-indicator"></span>
+											<label for="aulaToggleFixos" class="aula-toggle-btn aula-toggle-btn-fixos">Fixos</label>
+											<label for="aulaToggleFluxos" class="aula-toggle-btn aula-toggle-btn-fluxos">Fluxos</label>
+										</div>
+										<div class="visually-hidden">
+											<label for="aulaToggleFixos">Mostrar Fixos</label>
+											<label for="aulaToggleFluxos">Mostrar Fluxos</label>
+										</div>
+
+										<div class="aula-toggle-visual" aria-hidden="true">
+											<div class="aula-toggle-grid">
+												<span></span><span></span><span></span><span></span><span></span><span></span>
+												<span></span><span></span><span></span><span></span><span></span><span></span>
+											</div>
+											<div class="aula-toggle-flow">
+												<span class="aula-toggle-flow-line"></span>
+												<span class="aula-toggle-dot"></span>
+												<span class="aula-toggle-dot"></span>
+												<span class="aula-toggle-dot"></span>
+											</div>
+										</div>
+
+										<div class="aula-toggle-panel aula-toggle-panel-fixos">
+											<div class="aula-toggle-icon"><i class="bi bi-building" aria-hidden="true"></i></div>
+											<h5 class="aula-toggle-title">Fixos</h5>
+											<p class="aula-toggle-desc lead text-muted">Os fixos correspondem aos elementos materializados no território, como por exemplo: edificações, equipamentos urbanos, infraestrutura de saúde, redes viárias e serviço.</p>
+										</div>
+										<div class="aula-toggle-panel aula-toggle-panel-fluxos">
+											<div class="aula-toggle-icon"><i class="bi bi-arrow-left-right" aria-hidden="true"></i></div>
+											<h5 class="aula-toggle-title">Fluxos</h5>
+											<p class="aula-toggle-desc lead text-muted">Os fluxos são os movimentos que atravessam e dão vida aos fixos, incluindo pessoas, mercadorias, informações, capitais e práticas sociais.</p>
+										</div>
+									</div>
+                                    </div>
+
+                                    <p class="lead text-muted">Sob esta perspectiva, a Geografia Temática, ao incorporar
+                                        a noção de fixos e fluxos, amplia a capacidade de análise das representações
+                                        espaciais, permitindo compreender não apenas onde os fenômenos ocorrem, mas como
+                                        e por que eles se manifestam de determinada forma no território. Essa abordagem
+                                        fortalece o uso dos dados geoespaciais, do geoprocessamento e do sensoriamento
+                                        remoto como instrumentos fundamentais para a análise integrada do espaço,
+                                        especialmente em contextos de desigualdade social e vulnerabilidade em saúde.
+                                    </p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Geoprocessamento: como representar os
+                                        fenômenos da Geografia</h4>
+                                    <p class="lead text-muted">Você em algum momento já refletiu sobre como representar
+                                        os fenômenos da Geografia? Como traduzir, em um mapa, a complexidade dos
+                                        territórios, dos lugares vividos, das desigualdades e das dinâmicas sociais que
+                                        se transformam ao longo do tempo?</p>
+
+                                    <div class="my-4">
+										<div class="row align-items-center">
+											<div class="col-lg-6">                                    
+												<p class="lead text-muted">
+													Durante muito tempo, a principal forma de representação do espaço geográfico foi a cartografia tradicional, baseada em mapas impressos, desenhos e registros analógicos. Esses mapas permitiam localizar objetos, delimitar áreas e representar fenômenos estáticos. No entanto, à medida que os processos sociais, ambientais e de saúde se tornaram mais complexos e dinâmicos, ficou evidente que essas representações eram insuficientes para explicar a realidade em sua totalidade.
+												</p>
+											</div>
+											<div class="col-lg-6">
+												<div class="position-relative overflow-hidden rounded-3 shadow">
+													<img src="imgs/21.jpg" class="img-fluid w-100 object-fit-cover"
+														alt="Lupa preta descansando sobre um mapa geográfico impresso com tons quentes." title="Magnific.com">                                       
+												</div>
+												<p class="text-center small text-muted mt-2 mb-0">Fonte: Magnific.com</p>
+											</div>
+
+										</div>
+									</div>
+
+                                    <p class="lead text-muted">Para atender a essas necessidades, foi criado o
+                                        geoprocessamento, um conjunto de técnicas computacionais destinadas ao
+                                        tratamento de dados georreferenciados, isto é, informações associadas a uma
+                                        localização no espaço geográfico. O geoprocessamento amplia a capacidade de
+                                        representação da Geografia ao permitir que o espaço deixe de ser apenas
+                                        desenhado e passe a ser analisado, cruzado e interpretado a partir de múltiplas
+                                        fontes de dados, e em ambiente computacional.</p>
+                                    <p class="lead text-muted">No contexto da saúde, o geoprocessamento possibilita
+                                        integrar informações epidemiológicas, ambientais, socioeconômicas e
+                                        demográficas, revelando padrões espaciais de adoecimento, acesso aos serviços e
+                                        exposição a riscos. Dessa forma, o mapa deixa de ser apenas uma representação
+                                        visual e passa a funcionar como uma ferramenta analítica, capaz de apoiar
+                                        diagnósticos situacionais, monitoramento de eventos e definição de prioridades
+                                        de intervenção.</p>
+                                    <p class="lead text-muted">Assim, o geoprocessamento pode ser compreendido como uma
+                                        evolução natural da forma como a Geografia representa e analisa o espaço,
+                                        incorporando tecnologia, dados e métodos computacionais para compreender
+                                        territórios cada vez mais complexos e dinâmicos, e inclui:</p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Cartografia digital.</li>
+                                        <li class="my-3">Sensoriamento remoto.</li>
+                                        <li class="my-3">Sistema de Informação Geográfica (SIG).</li>
+                                        <li class="my-3">Sistemas de posicionamento global (GPS).</li>
+                                        <li class="my-3">Bancos de dados espaciais.</li>
+                                        <li class="my-3">Análise espacial e modelagem territorial.</li>
+                                    </ul>
+
+                                    <p class="lead text-muted mt-4">A difusão dessas tecnologias foi impulsionada pela
+                                        ampliação da capacidade de armazenamento, pelo desenvolvimento de
+                                        <em>softwares</em> com interfaces mais intuitivas e pela crescente demanda
+                                        institucional por análises espaciais, especialmente nas áreas de planejamento
+                                        urbano, meio ambiente e saúde pública. A seguir vamos aprofundar os conceitos de
+                                        SIG e de Sensoriamento Remoto.</p>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Dados Geoespaciais</h3>
+                                    <p class="lead text-muted">O uso de computadores para a construção de mapas
+                                        representa uma mudança profunda na forma como a Geografia passou a representar,
+                                        analisar e interpretar o espaço. O apoio de <em>softwares</em> especializados,
+                                        tornou possível integrar diferentes tipos de dados, atualizar informações em
+                                        tempo quase real, cruzar variáveis e explorar relações espaciais complexas,
+                                        ampliando o papel do mapa de simples instrumento de representação para uma
+                                        ferramenta estratégica de análise territorial e tomada de decisão. Neste tópico,
+                                        vamos falar sobre os <em>softwares</em> para a construção de mapas e os seus
+                                        requisitos.</p>
+
+                                    <h4 class="fw-bold my-5 mb-4 text-primary">SIG</h4>
+                                    <p class="lead text-muted">O SIG constitui o principal ambiente operacional do
+                                        geoprocessamento. Um SIG é um sistema integrado formado por:</p>
+
+                                    <div data-copy-id="cards">
+										<div class="container-fluid aula-wide-block px-lg-4">
+											<div class="row g-4 g-lg-5 justify-content-center align-items-start">
+												<div class="col-md-6 col-lg-4">
+													<div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+														<div class="position-relative">
+															<img src="imgs/22.jpg" class="card-img-top img-cover-260"
+																alt="Placa de circuito impresso verde em macro com um microchip preto centralizado e diversos componentes eletrônicos." title="Magnific.com">
+														</div>
+														<div class="card-body bg-light p-4 info-card-collapse-body-lg">
+															<p class="card-text lead text-muted mb-0"><em>Hardware</em> (equipamentos físicos).</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-lg-4">
+													<div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+														<div class="position-relative">
+															<img src="imgs/23.jpg" class="card-img-top img-cover-260"
+																alt="Um laptop aberto em uma mesa de escritório desfocada exibe um painel de análise de dados com vários gráficos coloridos e o teclado retroiluminado em roxo." title="Magnific.com">
+														</div>
+														<div class="card-body bg-light p-4 info-card-collapse-body-lg">
+															<p class="card-text lead text-muted mb-0"><em>Software</em> (programas computacionais).</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-lg-4">
+													<div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+														<div class="position-relative">
+															<img src="imgs/24.jpg" class="card-img-top img-cover-260"
+																alt="Visão aérea de um laptop ao lado de relatórios financeiros com vários gráficos coloridos, uma caneta prateada e material de escritório sobre uma mesa de madeira." title="Magnific.com">
+														</div>
+														<div class="card-body bg-light p-4 info-card-collapse-body-lg">
+															<p class="card-text lead text-muted mb-0">Dados (cartográficos e alfanuméricos).</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-lg-4">
+													<div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+														<div class="position-relative">
+															<img src="imgs/25.jpg" class="card-img-top img-cover-260"
+																alt="Dois colegas de trabalho, um homem negro e uma mulher branca, analisam gráficos de dados em um monitor e em notebooks em um escritório moderno." title="Magnific.com">
+														</div>
+														<div class="card-body bg-light p-4 info-card-collapse-body-lg">
+															<p class="card-text lead text-muted mb-0"><em>Peopleware</em> (usuários, analistas e gestores).</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-lg-4">
+													<div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+														<div class="position-relative">
+															<img src="imgs/26.jpg" class="card-img-top img-cover-260"
+																alt="Homem de camisa social branca segurando uma prancheta escura em frente a um quadro branco com notas adesivas coloridas." title="Magnific.com">
+														</div>
+														<div class="card-body bg-light p-4 info-card-collapse-body-lg">
+															<p class="card-text lead text-muted mb-0">Procedimentos (protocolos e rotinas operacionais).</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+                                    <p class="lead text-muted mt-5">O diferencial do SIG reside na sua capacidade de integrar
+                                        dados gráficos (pontos, linhas e polígonos) com dados não gráficos (tabelas de
+                                        atributos), permitindo análises espaciais complexas e a geração de novos
+                                        conhecimentos a partir da relação entre informações diversas. As funções básicas
+                                        de um SIG podem ser organizadas em quatro eixos:</p>
+
+                                   <div class="container my-5" data-copy-id="accordion">
+										<div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionExemplo1">
+
+											<div class="accordion-item border-0 border-bottom">
+												<h5 class="accordion-header" id="headingExemplo1-1">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo1-1"
+														aria-expanded="false" aria-controls="collapseExemplo1-1">
+														<span class="fs-5 text-primary fw-bold">Aquisição de dados</span>
+													</button>
+												</h5>
+												<div id="collapseExemplo1-1" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo1-1" data-bs-parent="#accordionExemplo1">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted mb-0">Conjunto de procedimentos utilizados para obter informações georreferenciadas. Envolve a captura de dados a partir de diferentes fontes, como imagens de satélite, bases cartográficas oficiais, levantamentos de campo e registros administrativos. Inclui também a digitalização de mapas analógicos, a importação de arquivos digitais de diferentes formatos e a validação das informações, garantindo que os dados estejam corretos, atualizados e compatíveis com o sistema de referência espacial adotado.</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-item border-0 border-bottom">
+												<h5 class="accordion-header" id="headingExemplo1-2">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo1-2"
+														aria-expanded="false" aria-controls="collapseExemplo1-2">
+														<span class="fs-5 text-primary fw-bold">Gerenciamento de bancos de dados espaciais </span>
+													</button>
+												</h5>
+												<div id="collapseExemplo1-2" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo1-2" data-bs-parent="#accordionExemplo1">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted mb-0">É a organização e o armazenamento estruturado das informações geográficas e de seus atributos. Nesse processo, os dados são mantidos em bases relacionais que permitem associar objetos espaciais (pontos, linhas e polígonos) a tabelas de informações descritivas. Um bom gerenciamento garante integridade, padronização, segurança e possibilidade de atualização contínua dos dados, sendo fundamental para análises consistentes e para o uso compartilhado das informações.</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-item border-0 border-bottom">
+												<h5 class="accordion-header" id="headingExemplo1-3">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo1-3"
+														aria-expanded="false" aria-controls="collapseExemplo1-3">
+														<span class="fs-5 text-primary fw-bold">Visualização cartográfica </span>
+													</button>
+												</h5>
+												<div id="collapseExemplo1-3" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo1-3" data-bs-parent="#accordionExemplo1">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted mb-0">Essa etapa envolve a elaboração de mapas temáticos e produtos gráficos, escolha adequada de símbolos, cores, escalas e legendas, de modo a comunicar informações de forma clara e inteligível. Na saúde pública, a visualização cartográfica facilita a compreensão de padrões territoriais, a identificação de áreas prioritárias e a comunicação dos resultados para gestores, profissionais de saúde e a população.</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-item border-0">
+												<h5 class="accordion-header" id="headingExemplo1-4">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo1-4"
+														aria-expanded="false" aria-controls="collapseExemplo1-4">
+														<span class="fs-5 text-primary fw-bold">Consulta e análise espacial</span>
+													</button>
+												</h5>
+												<div id="collapseExemplo1-4" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo1-4" data-bs-parent="#accordionExemplo1">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted mb-0">Operações para exploração, cruzamento e interpretação dos dados geográficos. Incluem desde consultas simples, como seleção de áreas ou eventos específicos, até análises mais complexas, envolvendo métodos estatísticos, modelagem espacial e identificação de padrões, tendências e associações no território.</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+                                    <p class="lead text-muted">Na saúde coletiva, os SIG são amplamente utilizados para
+                                        análise de situação de saúde, identificação de vazios assistenciais, estudos de
+                                        acessibilidade, vigilância epidemiológica e apoio à tomada de decisão.</p>
+                                    <p class="lead text-muted">A disponibilidade de <em>softwares</em> de SIG gratuitos
+                                        e de código aberto tem desempenhado um papel fundamental na democratização do
+                                        acesso às tecnologias geoespaciais. Esses <em>softwares</em> permitem que
+                                        instituições públicas, universidades, serviços de saúde e comunidades utilizem
+                                        ferramentas avançadas de análise espacial. Abaixo estão alguns que têm a sua
+                                        relevância na área da saúde:</p>
+
+                                    <div data-copy-id="accordion">
+										<div class="accordion my-5 shadow-sm rounded-3 overflow-hidden" id="accordionSoftwareSIG">
+											<div class="accordion-item border-0 border-bottom">
+												<h5 class="accordion-header" id="headingSIGQgis">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseSIGQgis"
+														aria-expanded="false" aria-controls="collapseSIGQgis">
+														<span class="fs-5 text-primary fw-bold">Quantum GIS (QGIS)</span>
+													</button>
+												</h5>
+												<div id="collapseSIGQgis" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingSIGQgis" data-bs-parent="#accordionSoftwareSIG">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted">Um dos SIG livres mais populares do mundo, com
+															interface gráfica completa, suporte a dados vetoriais e <em>raster</em>, conexão
+															nativa com bancos de dados espaciais e uma grande biblioteca de <em>plugins</em> que
+															estendem suas funcionalidades.</p>
+														<a href="https://qgis.org/download/" target="_blank" rel="noopener"
+															aria-label="Download oficial do QGIS"
+															class="btn btn-outline-primary rounded-pill px-4 mb-0">
+															<i class="bi bi-download me-1"></i> Download oficial
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="accordion-item border-0 border-bottom">
+												<h5 class="accordion-header" id="headingSIGGrass">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseSIGGrass"
+														aria-expanded="false" aria-controls="collapseSIGGrass">
+														<span class="fs-5 text-primary fw-bold">Geographic Resources Analysis Support System (GRASS GIS)</span>
+													</button>
+												</h5>
+												<div id="collapseSIGGrass" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingSIGGrass" data-bs-parent="#accordionSoftwareSIG">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted"><em>Software</em> robusto voltado para análise espacial
+															avançada, modelagem, processamento <em>raster</em> e vetorial. É especialmente
+															indicado para projetos em que há necessidade de manipulação intensiva de
+															dados geoespaciais e modelagem ambiental.</p>
+														<a href="https://grass.osgeo.org/download/" target="_blank" rel="noopener"
+															aria-label="Download oficial do GRASS GIS"
+															class="btn btn-outline-primary rounded-pill px-4 mb-0">
+															<i class="bi bi-download me-1"></i> Download oficial
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="accordion-item border-0 border-bottom">
+												<h5 class="accordion-header" id="headingSIGIlwis">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseSIGIlwis"
+														aria-expanded="false" aria-controls="collapseSIGIlwis">
+														<span class="fs-5 text-primary fw-bold">Integrated Land and Water Information System (ILWIS)</span>
+													</button>
+												</h5>
+												<div id="collapseSIGIlwis" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingSIGIlwis" data-bs-parent="#accordionSoftwareSIG">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted">SIG e <em>software</em> de sensoriamento remoto com
+															ferramentas para edição, visualização de dados vetoriais e <em>raster</em> e
+															operações básicas de análise espacial, originalmente desenvolvido para uso
+															acadêmico.</p>
+														<a href="https://www.itc.nl/ilwis/download/" target="_blank" rel="noopener"
+															aria-label="Download oficial do ILWIS"
+															class="btn btn-outline-primary rounded-pill px-4 mb-0">
+															<i class="bi bi-download me-1"></i> Download oficial
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="accordion-item border-0">
+												<h5 class="accordion-header" id="headingSIGTerraview">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseSIGTerraview"
+														aria-expanded="false" aria-controls="collapseSIGTerraview">
+														<span class="fs-5 text-primary fw-bold">TerraView</span>
+													</button>
+												</h5>
+												<div id="collapseSIGTerraview" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingSIGTerraview" data-bs-parent="#accordionSoftwareSIG">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted">SIG brasileiro desenvolvido pelo Instituto Nacional
+															de Pesquisas Espaciais (INPE), construído sobre a biblioteca TerraLib.
+															Permite a manipulação de dados vetoriais e matriciais armazenados em bancos
+															de dados relacionais, a criação de mapas temáticos e consultas espaciais,
+															sendo útil para análise territorial e produção cartográfica de fenômenos
+															sociais e ambientais.</p>
+														<a href="https://www.dpi.inpe.br/terralib5/wiki/doku.php?id=wiki:downloads:previous_releases"
+															aria-label="Download oficial do TerraView"
+															target="_blank" rel="noopener" class="btn btn-outline-primary rounded-pill px-4 mb-0">
+															<i class="bi bi-download me-1"></i> Download oficial
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Estrutura de Dados para Edição e Análise
+                                        de Mapas</h4>
+                                    <p class="lead text-muted">A representação da realidade geográfica em ambiente
+                                        computacional exige modelos de dados capazes de simplificar o mundo real sem
+                                        comprometer sua capacidade analítica. No SIG, essa representação baseia-se em
+                                        três elementos fundamentais: modelo de representação espacial, feições
+                                        geográficas, atributos e camadas de informação. Vamos conhecer cada um deles?
+                                    </p>
+
+                                    <h5 class="fw-bold mt-5 mb-4 text-primary">Modelos de Representação Espacial</h5>
+                                    <p class="lead text-muted">Para analisar e representar os fenômenos que ocorrem no
+                                        espaço geográfico, é necessário adotar modelos que permitam traduzir a realidade
+                                        em estruturas compreensíveis e operacionais em ambiente computacional. </p>
+                                    <p class="lead text-muted">Esses modelos de representação espacial buscam
+                                        simplificar o mundo real sem perder sua capacidade analítica, possibilitando o
+                                        armazenamento, a visualização e a análise de informações georreferenciadas.
+                                        Destacam-se dois modelos fundamentais que estruturam a forma como os dados
+                                        espaciais são organizados e utilizados nos SIG.</p>
+
+                                    <div class="container my-5" data-copy-id="accordion">
+										<div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionExemplo3">
+
+											<div class="accordion-item border-0 border-bottom">
+												<h6 class="accordion-header" id="headingExemplo3-1">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo3-1"
+														aria-expanded="false" aria-controls="collapseExemplo3-1">
+														<span class="fs-5 text-primary fw-bold">Modelo vetorial</span>
+													</button>
+												</h6>
+												<div id="collapseExemplo3-1" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo3-1" data-bs-parent="#accordionExemplo3">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted mb-0">Os fenômenos são representados de forma discreta por meio de pontos, linhas e polígonos, com geometrias bem definidas, sendo especialmente adequado para a representação de objetos como limites administrativos, redes viárias, equipamentos de saúde e eventos pontuais.</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-item border-0">
+												<h6 class="accordion-header" id="headingExemplo3-2">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo3-2"
+														aria-expanded="false" aria-controls="collapseExemplo3-2">
+														<span class="fs-5 text-primary fw-bold">Modelo matricial (<em>raster</em>)</span>
+													</button>
+												</h6>
+												<div id="collapseExemplo3-2" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo3-2" data-bs-parent="#accordionExemplo3">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted mb-0">A superfície é representada por uma matriz contínua de células (<em>pixels</em>), típica de imagens de satélite e produtos de sensoriamento remoto. </p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+                                    <h5 class="fw-bold mt-5 mb-4 text-primary">Feições Geográficas</h5>
+                                    <p class="lead text-muted">As feições geográficas correspondem às representações
+                                        simplificadas dos objetos do mundo real e são expressas por formas gráficas
+                                        básicas, ou seja, o desenho propriamente dito, e são utilizados os seguintes
+                                        elementos:</p>
+
+                                    <div data-copy-id="cards">
+										<div class="text-center mb-3 mt-5">
+											<span class="badge-recurso-interativo">
+												<i class="bi bi-cursor-fill me-1"></i> Recurso Interativo
+											</span>
+											<!--<p class="text-muted mb-0 mt-2">Clique nos cards abaixo para saber mais</p>-->
+										</div>
+										<div class="container-fluid aula-wide-block px-lg-4 mt-0 mb-5">
+											<div class="row g-4 g-lg-5 justify-content-center align-items-start">
+												<div class="col-md-6 col-lg-4">
+													<div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden card-expandable collapsed"
+														role="button" tabindex="0" data-bs-toggle="collapse" data-bs-target="#cardGeometriaPontos"
+														aria-expanded="false" aria-controls="cardGeometriaPontos">
+														<div class="position-relative">
+															<img src="imgs/27.jpg" class="card-img-top img-cover-260"
+																alt="Três círculos brancos em linha horizontal sobre fundo gradiente roxo e azul com padrão de ondas de pontos.">
+															<span class="card-expand-icon-wrap">
+																<i data-lucide="plus" class="card-expand-icon"></i>
+															</span>
+														</div>
+														<p class="text-center fw-bold text-primary mb-0 py-2">Pontos</p>
+														<div class="collapse" id="cardGeometriaPontos">
+															<div class="card-body bg-light p-4 info-card-collapse-body">
+																<p class="card-text lead text-muted mb-0">Os pontos são utilizados para
+																	representar eventos ou objetos localizados no território. Na saúde
+																	pública, podem indicar a localização de casos notificados de
+																	doenças, óbitos, unidades de saúde, postos de vacinação,
+																	laboratórios, focos de vetores ou ocorrências ambientais
+																	específicas, como um ponto de alagamento associado ao aumento de
+																	casos de leptospirose.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-lg-4">
+													<div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden card-expandable collapsed"
+														role="button" tabindex="0" data-bs-toggle="collapse" data-bs-target="#cardGeometriaLinhas"
+														aria-expanded="false" aria-controls="cardGeometriaLinhas">
+														<div class="position-relative">
+															<img src="imgs/28.jpg" class="card-img-top img-cover-260"
+																alt="Três linhas horizontais paralelas, centralizado sobre fundo gradiente roxo e azul com padrão de ondas de pontos.">
+															<span class="card-expand-icon-wrap">
+																<i data-lucide="plus" class="card-expand-icon"></i>
+															</span>
+														</div>
+														<p class="text-center fw-bold text-primary mb-0 py-2">Linhas</p>
+														<div class="collapse" id="cardGeometriaLinhas">
+															<div class="card-body bg-light p-4 info-card-collapse-body">
+																<p class="card-text lead text-muted mb-0">As linhas representam
+																	elementos lineares e fluxos no espaço. Em saúde, são empregadas
+																	para mapear redes viárias utilizadas para acesso aos serviços,
+																	rotas de deslocamento de pacientes, trajetos de visitas dos Agentes
+																	Comunitários de Saúde (ACS), redes de saneamento, cursos d'água
+																	associados à transmissão de doenças ou linhas de mobilidade
+																	cotidiana que influenciam a circulação de agravos.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-lg-4">
+													<div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden card-expandable collapsed"
+														role="button" tabindex="0" data-bs-toggle="collapse" data-bs-target="#cardGeometriaPoligonos"
+														aria-expanded="false" aria-controls="cardGeometriaPoligonos">
+														<div class="position-relative">
+															<img src="imgs/29.jpg" class="card-img-top img-cover-260"
+																alt="Três pentágonos concêntricos e vértices marcados por pontos, centralizado sobre fundo gradiente roxo e azul com padrão de ondas de pontos.">
+															<span class="card-expand-icon-wrap">
+																<i data-lucide="plus" class="card-expand-icon"></i>
+															</span>
+														</div>
+														<p class="text-center fw-bold text-primary mb-0 py-2">Polígonos</p>
+														<div class="collapse" id="cardGeometriaPoligonos">
+															<div class="card-body bg-light p-4 info-card-collapse-body">
+																<p class="card-text lead text-muted mb-0">Os polígonos são usados para
+																	representar áreas contínuas e delimitadas. Exemplos incluem áreas
+																	de abrangência de Unidades de Saúde da Família, bairros e
+																	municípios para cálculo de indicadores, zonas de risco
+																	epidemiológico, áreas com maior vulnerabilidade socioambiental,
+																	regiões com transmissão ativa de determinadas doenças ou
+																	territórios prioritários para ações de vigilância e controle.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+                                    <h5 class="fw-bold mt-5 mb-4 text-primary">Atributos e Bancos de Dados Espaciais
+                                    </h5>
+                                    <p class="lead text-muted mb-5">Os atributos correspondem às informações descritivas
+                                        associadas às feições geográficas, organizadas em tabelas compostas por
+                                        registros, variáveis e chaves primárias. Essa estrutura permite o vínculo claro
+                                        entre o objeto espacial e seus dados analíticos, viabilizando consultas,
+                                        cruzamentos e análises estatísticas, ou seja, cada uma das feições no mapa,
+                                        precisa ter uma tabela com conjunto de dados representados nos atributos, que
+                                        pode ser a sua identificação única como um código, o nome, casos ou indicadores
+                                        de um agravo etc.</p>
+
+                                    <div class="container-fluid px-0 aula-full-bleed aula-full-bleed--tight my-5" data-copy-id="banner">
+										<div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+											<div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+											<p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+												A integração entre geometrias e atributos é um dos elementos centrais do SIG, possibilitando análises multivariadas e a incorporação de dados provenientes de diferentes fontes institucionais.
+											</p>
+										</div>
+									</div>
+
+                                    <h5 class="fw-bold mt-5 mb-4 text-primary">Camadas de Informação e Sobreposição
+                                        Espacial</h5>
+                                    <p class="lead text-muted">As informações em um SIG são organizadas em camadas ou
+                                        planos de informação, que agrupam objetos geográficos com características
+                                        comuns. Exemplos incluem:</p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Casos de uma determinada doença.</li>
+                                        <li class="my-3">Rede viária.</li>
+                                        <li class="my-3">Limites administrativos.</li>
+                                        <li class="my-3">Uso e cobertura do solo.</li>
+                                    </ul>
+
+                                    <p class="lead text-muted mt-4 mb-5">A sobreposição dessas camadas permite análises
+                                        integradas e a construção de mapas sintéticos, nos quais diferentes dimensões do
+                                        território são analisadas simultaneamente, ampliando a capacidade interpretativa
+                                        do analista. Por meio dessa operação, é possível, por exemplo, sobrepor a camada
+                                        de casos de uma doença com a camada de áreas de vulnerabilidade social, ou ainda
+                                        cruzar a localização de unidades de saúde com a rede viária e a distribuição da
+                                        população. </p>
+
+                                    <div class="container-fluid px-0 aula-full-bleed aula-full-bleed--tight my-5" data-copy-id="banner">
+										<div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+											<div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+											<p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+												Essa capacidade de integrar informações distintas é um dos principais diferenciais do SIG, pois permite identificar padrões, áreas prioritárias, desigualdades territoriais e possíveis associações espaciais relevantes para a vigilância em saúde e o planejamento de ações.
+											</p>
+										</div>
+									</div>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Mapas digitais</h4>
+                                    <p class="lead text-muted">Diversas instituições e empresas produzem e armazenam
+                                        mapas digitais, que possuem especificidades importantes. Eles devem armazenar os
+                                        desenhos geográficos, os atributos, bem como as informações técnicas
+                                        cartográficas, referentes a latitudes e longitudes de cada uma das feições.
+                                        Assim, esses mapas são organizados em formatos de arquivos geoespaciais, com
+                                        diversos formatos, que podem ser facilmente convertidos por um técnico
+                                        especializado.</p>
+                                    <p class="lead text-muted">Um dos formatos mais difundidos é o <em>shapefile</em>,
+                                        amplamente utilizado e aceito por diferentes <em>softwares</em> de SIG, o que
+                                        facilita o intercâmbio de dados entre instituições. </p>
+
+                                    <div class="my-5 alert border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light mb-0" role="alert" data-copy-id="box-curiosidade">
+										<div class="d-flex align-items-center">
+											<div>
+												<h4 class="fw-bold text-primary mt-2 mb-2 ms-3"><i class="bi-search"></i> Curiosidade
+												</h4>
+												<p class="lead text-muted ms-3 mb-0">Apesar do nome, o <em>shapefile</em> não é um único arquivo, mas um conjunto de arquivos que trabalham de forma integrada, sendo os essenciais, descritos abaixo, e há uma curiosidade: para que funcione, o nome do arquivo precisa ser igual para todas as extensões abaixo:</p>
+												<ul class="ms-5 lead text-muted">
+													<li class="my-3 mt-4">O arquivo .shp, que armazena a geometria dos objetos. </li>
+													<li class="my-3">O arquivo .dbf, que contém a tabela de atributos. </li>
+													<li class="my-3">O arquivo .shx, responsável pela indexação espacial.  </li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+                                    <p class="lead text-muted mt-5">Além do <em>shapefile</em>, existem outros formatos
+                                        digitais importantes, que tem como conceito, formato de bancos de dados, como os
+                                        GeoPackage, que permitem armazenar múltiplas camadas em um único arquivo; os
+                                        GeoJSON, bastante utilizados em aplicações web e mapas interativos; e os
+                                        formatos <em>raster</em>, como GeoTIFF, empregados principalmente para imagens
+                                        de satélite e dados de sensoriamento remoto. A escolha do formato depende do
+                                        tipo de dado, do objetivo da análise e do ambiente de uso.</p>
+                                    <p class="lead text-muted">No Brasil, mapas podem ser baixados das seguintes
+                                        instituições:</p>
+
+                                    <div class="my-5">
+										<div class="aula-tabs-card">
+											<ul class="nav aula-tabs-nav" id="orgaosGeoTab" role="tablist">
+										<li class="nav-item" role="presentation">
+											<button class="nav-link active" id="ibge-tab" data-bs-toggle="pill"
+												data-bs-target="#ibgePane" type="button" role="tab">
+												IBGE
+											</button>
+										</li>
+										<li class="nav-item" role="presentation">
+											<button class="nav-link" id="inpe-tab" data-bs-toggle="pill"
+												data-bs-target="#inpePane" type="button" role="tab">
+												INPE
+											</button>
+										</li>
+										<li class="nav-item" role="presentation">
+											<button class="nav-link" id="incra-tab" data-bs-toggle="pill"
+												data-bs-target="#incraPane" type="button" role="tab">
+												INCRA
+											</button>
+										</li>
+										<li class="nav-item" role="presentation">
+											<button class="nav-link" id="icmbio-tab" data-bs-toggle="pill"
+												data-bs-target="#icmbioPane" type="button" role="tab">
+												ICMBio
+											</button>
+										</li>
+										<li class="nav-item" role="presentation">
+											<button class="nav-link" id="datasus-tab" data-bs-toggle="pill"
+												data-bs-target="#datasusPane" type="button" role="tab">
+												DATASUS
+											</button>
+										</li>
+										<li class="nav-item" role="presentation">
+											<button class="nav-link" id="geosus-tab" data-bs-toggle="pill"
+												data-bs-target="#geosusPane" type="button" role="tab">
+												GeoSUS
+											</button>
+										</li>
+										<li class="nav-item" role="presentation">
+											<button class="nav-link" id="ipea-tab" data-bs-toggle="pill"
+												data-bs-target="#ipeaPane" type="button" role="tab">
+												IPEA
+											</button>
+										</li>
+											</ul>
+											<div class="tab-content aula-tabs-content" id="orgaosGeoTabContent">
+										<div class="tab-pane fade show active" id="ibgePane" role="tabpanel">
+											<h5 class="fw-bold text-primary mb-2">Instituto Brasileiro de Geografia e Estatística – IBGE</h5>
+											<a href="https://www.ibge.gov.br" target="_blank" rel="noopener" aria-label="Portal do IBGE" class="d-inline-block mb-3 fw-bold text-decoration-none">
+												<i class="bi bi-globe me-1"></i> Portal
+											</a>
+											<p class="lead text-muted mb-0">Responsável por grande parte das bases cartográficas oficiais do país, incluindo limites municipais, setores censitários, malhas territoriais, rede hidrográfica e grades populacionais. Principais produtos:</p>
+												<ul class="ms-4 lead text-muted">
+													<li class="my-2">Malha municipal, microrregional, estadual e nacional.</li>
+													<li class="my-2">Setores censitários.</li>
+													<li class="my-2">Mapas de áreas de preservação e de cursos d’água.</li>
+													<li class="my-2">Cartas topográficas.</li>
+												</ul>
+										</div>
+										<div class="tab-pane fade" id="inpePane" role="tabpanel">
+											<h5 class="fw-bold text-primary mb-2">Instituto Nacional de Pesquisas Espaciais – INPE</h5>
+											<a href="https://www.inpe.br" target="_blank" rel="noopener" aria-label="Portal do INPE" class="d-inline-block mb-3 fw-bold text-decoration-none">
+												<i class="bi bi-globe me-1"></i> Portal
+											</a>
+											<p class="lead text-muted mb-0">Fornece imagens de sensoriamento remoto, bases geoespaciais e ferramentas para análises territoriais. Principais produtos:</p>
+												<ul class="ms-4 lead text-muted">
+													<li class="my-2">Imagens de satélite (LANDSAT, CBERS).</li>
+													<li class="my-2">Mapas de uso e cobertura do solo (PROBIO, MapBiomas).</li>
+													<li class="my-2">Dados geoespaciais em diferentes formatos.</li>
+												</ul>
+										</div>
+										<div class="tab-pane fade" id="incraPane" role="tabpanel">
+											<h5 class="fw-bold text-primary mb-2">Instituto Nacional de Colonização e Reforma Agrária – INCRA</h5>
+											<a href="https://www.gov.br/incra/pt-br" target="_blank" rel="noopener" aria-label="Portal do INCRA" class="d-inline-block mb-3 fw-bold text-decoration-none">
+												<i class="bi bi-globe me-1"></i> Portal
+											</a>
+											<p class="lead text-muted mb-0">Disponibiliza bases geoespaciais relativas a assentamentos rurais e à estrutura fundiária, úteis em análises de saúde ambiental e de vulnerabilidade rural.</p>
+										</div>
+										<div class="tab-pane fade" id="icmbioPane" role="tabpanel">
+											<h5 class="fw-bold text-primary mb-2">Instituto Chico Mendes de Conservação da Biodiversidade – ICMBio</h5>
+											<a href="https://www.icmbio.gov.br" target="_blank" rel="noopener" aria-label="Portal do ICMBio" class="d-inline-block mb-3 fw-bold text-decoration-none">
+												<i class="bi bi-globe me-1"></i> Portal
+											</a>
+											<p class="lead text-muted mb-0">Oferece dados sobre unidades de conservação (UCs) e áreas protegidas, relevantes para análises ambientais e saúde ambiental.</p>
+										</div>
+										<div class="tab-pane fade" id="datasusPane" role="tabpanel">
+											<h5 class="fw-bold text-primary mb-2">Ministério da Saúde – Departamento de Informática do SUS (DATASUS)</h5>
+											<a href="https://datasus.saude.gov.br/" target="_blank" rel="noopener" aria-label="Portal do DATASUS" class="d-inline-block mb-3 fw-bold text-decoration-none">
+												<i class="bi bi-globe me-1"></i> Portal
+											</a>
+											<p class="lead text-muted mb-0">Disponibiliza mapas geoespaciais integrados com dados de saúde. Principais produtos:</p>
+												<ul class="ms-4 lead text-muted">
+													<li class="my-2">Malhas municipais e estaduais.</li>
+													<li class="my-2">Bases territorializadas por municípios e outras divisões.</li>
+													<li class="my-2">GeoSaúde DataCube (estatísticas espaciais).</li>
+												</ul>
+										</div>
+										<div class="tab-pane fade" id="geosusPane" role="tabpanel">
+											<h5 class="fw-bold text-primary mb-2">Regionalização no SUS</h5>
+											<a href="https://infoms.saude.gov.br/extensions/SEIDIGI_DEMAS_MACRORREGIOES/SEIDIGI_DEMAS_MACRORREGIOES.html" target="_blank" rel="noopener" aria-label="Portal da Regionalização no SUS" class="d-inline-block mb-3 fw-bold text-decoration-none">
+												<i class="bi bi-globe me-1"></i> Portal
+											</a>
+											<p class="lead text-muted mb-0">Painel do Ministério da Saúde que apresenta a organização territorial do SUS, com mapas, dados e informações sobre as Regiões e Macrorregiões de Saúde. </p>
+										</div>
+										<div class="tab-pane fade" id="ipeaPane" role="tabpanel">
+											<h5 class="fw-bold text-primary mb-2">Instituto de Pesquisa Econômica Aplicada – IPEA</h5>
+											<a href="https://www.ipea.gov.br" target="_blank" rel="noopener" aria-label="Portal do IPEA" class="d-inline-block mb-3 fw-bold text-decoration-none">
+												<i class="bi bi-globe me-1"></i> Portal
+											</a>
+											<p class="lead text-muted mb-0">Disponibiliza indicadores espaciais e mapas temáticos socioeconômicos.</p>
+										</div>
+											</div>
+										</div>
+									</div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Introdução ao Sensoriamento Remoto</h3>
+                                    <p class="lead text-muted">O sensoriamento remoto constitui uma das principais
+                                        fontes contemporâneas de dados geoespaciais, permitindo a observação sistemática
+                                        da superfície terrestre sem contato direto com os fenômenos analisados. Por meio
+                                        de sensores instalados em satélites, aeronaves ou outras plataformas como os
+                                        drones, é possível obter informações ambientais, climáticas e territoriais em
+                                        diferentes escalas espaciais e temporais. </p>
+                                    <p class="lead text-muted">Neste tópico, vamos abordar aplicações práticas desta
+                                        tecnologia cada vez mais presentes nas análises em saúde.</p>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Sensoriamento Remoto: Conceito e
+                                        Relevância para a Saúde Pública</h4>
+                                    <p class="lead text-muted">Sensoriamento Remoto é a técnica de coletar informações
+                                        sobre a Terra ou outros objetos à distância, sem contato físico direto,
+                                        utilizando sensores em satélites, aviões ou drones para medir a radiação (luz,
+                                        calor) refletida ou emitida por eles, gerando imagens e dados para monitorar e
+                                        analisar desde o desmatamento e agricultura até a previsão do tempo e
+                                        cartografia.</p>
+                                    <p class="lead text-muted">Os sensores utilizados registram a radiação
+                                        eletromagnética refletida ou emitida pelos alvos na superfície terrestre em
+                                        diferentes faixas do espectro eletromagnético. Essas faixas são organizadas em
+                                        bandas espectrais, que podem estar localizadas tanto na região do visível quanto
+                                        em regiões invisíveis ao olho humano, como o infravermelho e as micro-ondas.
+                                        Cada banda responde de forma distinta às características físicas, químicas e
+                                        biológicas dos objetos, permitindo identificar e diferenciar elementos do
+                                        território. Observe a imagem a seguir.</p>
+
+                                    <div class="container-fluid aula-wide-block px-lg-4 my-5">
+                                        <img src="imgs/espectro-eletromagnetico-bandas-sensoriamento-.jpg"
+                                            alt="Diagrama do espectro eletromagnético mostrando, da esquerda para a direita, as faixas de ultravioleta, luz visível, infravermelho e micro-ondas (radar). Abaixo, cinco bandas são detalhadas com ícone e aplicação: infravermelho próximo (NIR) para vegetação, infravermelho médio (SWIR) para umidade do solo, infravermelho termal para temperatura da superfície, e micro-ondas (radar) para monitoramento por satélite. Uma segunda faixa lista outras aplicações do sensoriamento remoto: agricultura (monitoramento de culturas), florestas (desmatamento e queimadas), recursos hídricos (corpos d'água e secas), áreas urbanas (expansão urbana), desastres naturais (inundações e emergências) e atmosfera (clima e qualidade do ar)."
+                                            title="Gerada por IA (Gemini)" class="img-fluid rounded-4 shadow-sm">
+										<p class="text-center small text-muted mt-2 mb-0">Legenda: Espectro eletromagnético e bandas do sensoriamento<br/>Fonte: Campus Virtual Fiocruz criado com IA</p>
+                                    </div>
+									
+
+                                    <p class="lead text-muted">Agora veja o uso prático das bandas no contexto da saúde
+                                        pública:</p>
+
+                                    <div class="container" data-copy-id="accordion">
+										<div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionExemplo4">
+
+											<div class="accordion-item border-0 border-bottom">
+												<h5 class="accordion-header" id="headingExemplo4-1">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo4-1"
+														aria-expanded="false" aria-controls="collapseExemplo4-1">
+														<span class="fs-5 text-primary fw-bold">Azul, verde e vermelho (visível) </span>
+													</button>
+												</h5>
+												<div id="collapseExemplo4-1" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo4-1" data-bs-parent="#accordionExemplo4">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted mb-0">Correspondem às cores que o olho humano percebe e produzem imagens semelhantes a fotografias aéreas. São importantes para discriminar superfícies urbanas, corpos d’água, solo exposto e vegetação em condições normais de iluminação, que mostram o território como nós o enxergamos, portanto promovem o reconhecimento visual, mapeamento urbano e comunicação dos resultados para públicos.</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-item border-0 border-bottom">
+												<h5 class="accordion-header" id="headingExemplo4-2">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo4-2"
+														aria-expanded="false" aria-controls="collapseExemplo4-2">
+														<span class="fs-5 text-primary fw-bold">Infravermelho próximo (NIR)</span>
+													</button>
+												</h5>
+												<div id="collapseExemplo4-2" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo4-2" data-bs-parent="#accordionExemplo4">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted mb-0">Não são visíveis ao olho humano, mas funciona como um “detector de vegetação viva”, sendo amplamente utilizado para identificar áreas verdes, monitorar cobertura vegetal e apoiar estudos relacionados a ambientes favoráveis à presença de vetores de doenças, e útil para estudos de vetores e ambientes naturais.</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-item border-0 border-bottom">
+												<h5 class="accordion-header" id="headingExemplo4-3">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo4-3"
+														aria-expanded="false" aria-controls="collapseExemplo4-3">
+														<span class="fs-5 text-primary fw-bold">Infravermelho médio (SWIR)</span>
+													</button>
+												</h5>
+												<div id="collapseExemplo4-3" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo4-3" data-bs-parent="#accordionExemplo4">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted mb-0">Sensível ao teor de umidade da vegetação e do solo. Tecnicamente, essa banda permite diferenciar áreas secas e úmidas, identificar estresse hídrico e mapear queimadas.</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-item border-0 border-bottom">
+												<h5 class="accordion-header" id="headingExemplo4-4">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo4-4"
+														aria-expanded="false" aria-controls="collapseExemplo4-4">
+														<span class="fs-5 text-primary fw-bold">Infravermelho termal</span>
+													</button>
+												</h5>
+												<div id="collapseExemplo4-4" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo4-4" data-bs-parent="#accordionExemplo4">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted mb-0">Permite identificar superfícies mais quentes, usadas para “enxergar o calor”, sendo fundamentais para estudos de ilhas de calor urbano, ondas de calor e seus impactos sobre a saúde da população.</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-item border-0">
+												<h5 class="accordion-header" id="headingExemplo4-5">
+													<button class="accordion-button collapsed fw-semibold text-dark bg-white" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseExemplo4-5"
+														aria-expanded="false" aria-controls="collapseExemplo4-5">
+														<span class="fs-5 text-primary fw-bold">Micro-ondas (radar)</span>
+													</button>
+												</h5>
+												<div id="collapseExemplo4-5" class="accordion-collapse collapse" role="region"
+													aria-labelledby="headingExemplo4-5" data-bs-parent="#accordionExemplo4">
+													<div class="accordion-body text-secondary small leading-relaxed">
+														<p class="lead text-muted mb-0">Como os radares, emitem sua própria energia e registram o sinal de retorno. Essas bandas têm a vantagem técnica de atravessar nuvens e funcionar independentemente das condições de iluminação, úteis para mapear alagamentos e áreas de risco.</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Integração entre Sensoriamento Remoto,
+                                        SIG e Vigilância em Saúde</h4>
+                                    <p class="lead text-muted">O grande potencial do sensoriamento remoto para a saúde
+                                        pública é a integração com os SIG e os bancos de dados de saúde. Essa integração
+                                        possibilita a análise conjunta de variáveis ambientais, sociais e
+                                        epidemiológicas, superando abordagens fragmentadas. No contexto da vigilância em
+                                        saúde, essa articulação permite, entre outros pontos:</p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Territorializar indicadores de risco.</li>
+                                        <li class="my-3">Identificar áreas prioritárias para intervenção, observar a
+                                            cobertura vegetal relacionada a vetores e reservatórios.</li>
+                                        <li class="my-3">Apoiar ações de prevenção e controle, e identificar corpos
+                                            d’água e áreas alagadas associadas à transmissão de arboviroses.</li>
+                                        <li class="my-3">Caracterizar ilhas de calor urbano e seus impactos sobre
+                                            morbimortalidade.</li>
+                                        <li class="my-3">Monitorar alterações ambientais associadas a desastres ou
+                                            mudanças climáticas etc.</li>
+                                    </ul>
+
+                                    <p class="lead text-muted mt-4 mb-5">Além disso, o uso de dados de sensoriamento remoto
+                                        contribui para qualificar e corrigir a interpretação dos dados de saúde à luz do
+                                        contexto ambiental, permitindo verificar incoerências, lacunas ou sub-registros
+                                        a partir da observação direta do território. </p>
+
+                                    <div class="my-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight" data-copy-id="banner">
+										<div class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+											<div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+											<p class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+												Ao possibilitar a descrição espacializada dos fenômenos de saúde e o cruzamento de informações provenientes de múltiplas fontes (ambientais, climáticas, demográficas e epidemiológicas), o sensoriamento remoto fortalece estratégias de vigilância antecipatória, capazes de identificar tendências e mudanças ambientais relevantes antes da manifestação plena de eventos de saúde, ampliando a capacidade de resposta oportuna dos sistemas de vigilância.
+											</p>
+										</div>
+									</div>
+
+                                    <h4 class="fw-bold mt-5 mb-4 text-primary">Usos e apps </h4>
+                                    <p class="lead text-muted">O uso de <em>softwares</em> e aplicativos geoespaciais
+                                        tem se tornado cada vez mais presente na rotina de profissionais que atuam no
+                                        planejamento territorial, na vigilância em saúde e na gestão de serviços
+                                        públicos. Plataformas de visualização e análise espacial, permitem que o
+                                        território seja explorado de forma dinâmica, acessível e integrada, aproximando
+                                        a tecnologia do cotidiano das equipes técnicas e dos gestores. Diferentemente
+                                        dos SIG tradicionais, que muitas vezes exigem maior capacitação técnica, esses
+                                        aplicativos oferecem interfaces intuitivas, favorecendo sua incorporação em
+                                        atividades rotineiras de análise e tomada de decisão.</p>
+                                    <p class="lead text-muted">Na prática, essas ferramentas possibilitam carregar mapas
+                                        e bases geográficas próprias, como arquivos de limites territoriais, áreas de
+                                        abrangência de serviços ou setores de atuação de equipes, permitindo que
+                                        informações institucionais sejam visualizadas diretamente sobre imagens de
+                                        satélite. Também permitem a marcação de locais estratégicos no território, como
+                                        unidades de saúde, pontos de risco ambiental, áreas com recorrência de eventos
+                                        de saúde ou locais prioritários para ações de campo, por meio da criação de
+                                        pontos, linhas e polígonos. Esses registros podem ser acompanhados de
+                                        descrições, datas e observações, funcionando como um apoio visual e
+                                        organizacional para o trabalho das equipes.</p>
+                                    <p class="lead text-muted">Outro aspecto relevante é a possibilidade de
+                                        compartilhamento dos resultados gerados a partir dessas ferramentas. Mapas,
+                                        marcações e análises podem ser exportados em formatos digitais e compartilhados
+                                        com outras equipes, setores ou níveis de gestão, favorecendo o trabalho
+                                        colaborativo e a articulação intersetorial. No contexto da vigilância em saúde,
+                                        essa prática contribui para alinhar a leitura do território entre diferentes
+                                        atores, apoiar reuniões técnicas, planejar ações integradas e fortalecer
+                                        estratégias de vigilância territorial orientadas por evidências espaciais.</p>
+                                    <p class="lead text-muted">Assim, o uso de <em>softwares</em> e aplicativos geoespaciais no
+                                        cotidiano de trabalho representa um avanço importante na operacionalização do
+                                        território como base para a análise, o monitoramento e a intervenção em saúde,
+                                        ampliando a capacidade de resposta e a integração entre informação, espaço e
+                                        decisão. A seguir, veja alguns aplicativos online:</p>
+
+                                    <div class="my-5">
+										<div class="aula-tabs-card">
+											<ul class="nav aula-tabs-nav" id="ferramentasVisTab" role="tablist">
+										<li class="nav-item" role="presentation">
+											<button class="nav-link active" id="googleearth-tab" data-bs-toggle="pill"
+												data-bs-target="#googleearthPane" type="button" role="tab">
+												Google Earth
+											</button>
+										</li>
+										<li class="nav-item" role="presentation">
+											<button class="nav-link" id="worldview-tab" data-bs-toggle="pill"
+												data-bs-target="#worldviewPane" type="button" role="tab">
+												NASA Worldview
+											</button>
+										</li>
+										<li class="nav-item" role="presentation">
+											<button class="nav-link" id="sentinelhub-tab" data-bs-toggle="pill"
+												data-bs-target="#sentinelhubPane" type="button" role="tab">
+												Sentinel Hub
+											</button>
+										</li>
+										<li class="nav-item" role="presentation">
+											<button class="nav-link" id="qgiscloud-tab" data-bs-toggle="pill"
+												data-bs-target="#qgiscloudPane" type="button" role="tab">
+												QGIS Cloud
+											</button>
+										</li>
+										<li class="nav-item" role="presentation">
+											<button class="nav-link" id="osm-tab" data-bs-toggle="pill"
+												data-bs-target="#osmPane" type="button" role="tab">
+												OpenStreetMap
+											</button>
+										</li>
+											</ul>
+											<div class="tab-content aula-tabs-content" id="ferramentasVisTabContent">
+										<div class="tab-pane fade show active" id="googleearthPane" role="tabpanel">
+											<h5 class="fw-bold text-primary mb-2">Google Earth</h5>
+											<a href="https://earth.google.com/web/" target="_blank" rel="noopener" aria-label="Portal do Google Earth" class="d-inline-block mb-3 fw-bold text-decoration-none">
+												<i class="bi bi-globe me-1"></i> Portal
+											</a>
+											<p class="lead text-muted mb-0">Uma versão completa do Google Earth, gratuita e com recursos adicionais como impressão em alta resolução, criação de vídeos, medição de áreas 3D, importação de dados vetoriais e integração com dados tabulares.</p>
+										</div>
+										<div class="tab-pane fade" id="worldviewPane" role="tabpanel">
+											<h5 class="fw-bold text-primary mb-2">NASA Worldview</h5>
+											<a href="https://worldview.earthdata.nasa.gov" target="_blank" rel="noopener" aria-label="Portal do NASA Worldview" class="d-inline-block mb-3 fw-bold text-decoration-none">
+												<i class="bi bi-globe me-1"></i> Portal
+											</a>
+											<p class="lead text-muted mb-0">Interface web da NASA que permite visualizar imagens de satélite em tempo quase real (e séries históricas), especialmente de sensores de observação global (MODIS, VIIRS) — útil para monitorar eventos ambientais como incêndios, desmatamento, inundações e clima.</p>
+										</div>
+										<div class="tab-pane fade" id="sentinelhubPane" role="tabpanel">
+											<h5 class="fw-bold text-primary mb-2">Sentinel Hub / EO Browser</h5>
+											<a href="https://browser.dataspace.copernicus.eu/" target="_blank" rel="noopener" aria-label="Portal do Sentinel Hub / EO Browser" class="d-inline-block mb-3 fw-bold text-decoration-none">
+												<i class="bi bi-globe me-1"></i> Portal
+											</a>
+											<p class="lead text-muted mb-0">Plataforma online que permite visualizar e baixar imagens de satélites da série Sentinel (ESA) e Landsat (NASA/USGS) com várias combinações de bandas e índices (NDVI, NDWI, etc.). Possui interface intuitiva que facilita explorar áreas e datas distintas.</p>
+										</div>
+										<div class="tab-pane fade" id="qgiscloudPane" role="tabpanel">
+											<h5 class="fw-bold text-primary mb-2">QGIS Cloud</h5>
+											<a href="https://qgiscloud.com" target="_blank" rel="noopener" aria-label="Portal do QGIS Cloud" class="d-inline-block mb-3 fw-bold text-decoration-none">
+												<i class="bi bi-globe me-1"></i> Portal
+											</a>
+											<p class="lead text-muted mb-0">Versão online do QGIS que permite publicar mapas e dados geoespaciais na web e acessá-los via navegador. É útil para compartilhar produtos de análise com equipes ou gestores sem necessidade de <em>software</em> instalado.</p>
+										</div>
+										<div class="tab-pane fade" id="osmPane" role="tabpanel">
+											<h5 class="fw-bold text-primary mb-2">OpenStreetMap (OSM)</h5>
+											<a href="https://www.openstreetmap.org" target="_blank" rel="noopener" aria-label="Portal do OpenStreetMap (OSM)" class="d-inline-block mb-3 fw-bold text-decoration-none">
+												<i class="bi bi-globe me-1"></i> Portal
+											</a>
+											<p class="lead text-muted mb-0">Projeto colaborativo de mapeamento mundial que fornece mapas abertos com informações detalhadas de ruas, localidades e pontos de interesse, podendo ser integrado a SIG para análises de acessibilidade e localização de serviços.</p>
+										</div>
+											</div>
+										</div>
+									</div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary"><i class="bi bi-pencil-square"></i>
+                                        Atividade</h3>
+                                    <!-- VARIAÇÃO 1: QUIZ MÚLTIPLA ESCOLHA INTERATIVO (MULTI-QUESTÕES COM NAVEGAÇÃO E JS) -->
+                                    <div class="my-4" id="eduflexQuizContainer">
+                                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <span
+                                                    class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-bold"
+                                                    id="quizQuestionCounter">Questão 01 de 02</span>
+                                                <span class="badge bg-light text-dark border fw-bold"
+                                                    id="quizScoreBadge">
+                                                    <i class="bi bi-trophy-fill text-warning me-1"></i>Acertos: <span
+                                                        id="quizScoreCount">0</span>
+                                                </span>
+                                            </div>
+                                            <div class="progress mb-4 progress-thin">
+                                                <div class="progress-bar bg-primary" id="quizProgressBar"
+                                                    role="progressbar"></div>
+                                            </div>
+                                            <h4 class="fw-bold lead text-muted mb-4" id="quizQuestionText"></h4>
+                                            <div class="d-grid gap-2 mb-3" id="quizOptionsContainer"></div>
+                                            <div class="p-3 rounded-3 small mb-3 d-none" id="quizFeedbackBox"></div>
+                                            <small class="text-muted d-block mb-3">
+                                                <i class="bi bi-info-circle me-1"></i>Selecione uma opção para confirmar
+                                                sua
+                                                resposta.
+                                            </small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <button class="btn bg-primary text-white rounded-pill px-4 fw-bold"
+                                                    id="quizNextBtn" disabled>
+                                                    Próxima Questão <i class="bi bi-arrow-right ms-1"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Resumo da aula</h3>
+                                    <p class="lead text-muted">Nesta aula, você aprendeu que o território é um elemento
+                                        fundamental para compreender a distribuição dos eventos de saúde, das
+                                        vulnerabilidades sociais, dos riscos ambientais e da oferta de serviços. A
+                                        Geografia Temática permite analisar como diferentes fenômenos se manifestam e se
+                                        relacionam no espaço, contribuindo para a identificação de padrões,
+                                        desigualdades e áreas prioritárias para intervenção.</p>
+                                    <p class="lead text-muted">Você também conheceu os fundamentos do geoprocessamento e
+                                        dos Sistemas de Informação Geográfica — SIG, ferramentas que possibilitam
+                                        organizar, integrar, visualizar e analisar dados associados a uma localização
+                                        geográfica. Foram apresentados os principais modelos de representação espacial,
+                                        como os dados vetoriais e matriciais, bem como as feições geográficas
+                                        representadas por pontos, linhas e polígonos, seus atributos e a organização das
+                                        informações em diferentes camadas.</p>
+                                    <p class="lead text-muted">Além disso, você conheceu os conceitos básicos do
+                                        sensoriamento remoto, que permite obter informações sobre a superfície terrestre
+                                        por meio de sensores instalados em satélites, aeronaves e drones. As diferentes
+                                        bandas do espectro eletromagnético possibilitam observar características como
+                                        vegetação, umidade, temperatura da superfície, áreas alagadas e alterações
+                                        ambientais.</p>
+                                    <p class="lead text-muted">Por fim, você compreendeu que a integração entre dados
+                                        epidemiológicos, ambientais, climáticos, demográficos e geoespaciais amplia a
+                                        capacidade de análise da vigilância em saúde. Os SIG, as imagens de satélite e
+                                        os aplicativos de mapeamento não substituem os dados produzidos pelos sistemas
+                                        de informação ou pelas atividades de campo, mas complementam essas fontes,
+                                        qualificando o diagnóstico territorial, o monitoramento de riscos, o
+                                        planejamento das ações e a tomada de decisão orientada por evidências.</p>
+                                    <p class="lead text-muted fw-bold">Você concluiu esta aula, continue se empenhando
+                                        nos seus estudos. Siga para a próxima aula!</p>                                    
+
+                                </article>
+                            </div>
+                        </section>
+
+                    </div> <!-- Fim .aula-pages-wrapper -->
+                    <!-- ================= PAGINAÇÃO INTERNA DA AULA ================= -->
+                    <div class="aula-pagination-nav d-flex justify-content-between align-items-center mt-5 pt-4 border-top"
+                        id="aulaPaginationNav">
+                        <button type="button" class="btn btn-outline-primary rounded-pill px-4" id="aulaPagPrev"
+                            disabled>
+                            <i class="bi bi-arrow-left me-1"></i> Anterior
+                        </button>
+                        <span class="small text-muted fw-semibold" id="aulaPagIndicator">Página 1 de 2</span>
+                        <button type="button" class="btn btn-primary rounded-pill px-4" id="aulaPagNext">
+                            Próximo <i class="bi bi-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+
+                    <!-- ================= NAVEGAÇÃO ENTRE AULAS (exibida somente na última página) ================= -->
+                    <div class="aula-lesson-nav d-none justify-content-between align-items-center mt-5 pt-4 border-top"
+                        id="aulaLessonNav" data-prev-lesson="aula2.2.html" data-next-lesson="aula2.4.html">
+                        <a href="#" class="btn btn-outline-primary rounded-pill px-4" id="aulaLessonPrev">
+                            <i class="bi bi-arrow-left me-1"></i> Aula Anterior
+                        </a>
+                        <a href="#" class="btn btn-primary rounded-pill px-4" id="aulaLessonNext">
+                            Próxima Aula <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- ================= RODAPÉ DE LOGOS ================= -->
+                    <!-- ================= RODAPÉ (carregado de partials/footer.html) ================= -->
+                    <div id="site-footer"></div>
+
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <!-- ================= MODAIS (carregados de partials/modals.html) ================= -->
+    <div id="site-modals"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Seu arquivo JS unificado -->
+    <script src="js/partials-loader.js"></script>
+    <script src="js/aula2.3.js"></script>
+    <script src="js/main.js"></script>
+
+    <button type="button" class="back-to-top" id="btnBackToTop" aria-label="Voltar ao topo">
+        <i data-lucide="arrow-up" aria-hidden="true"></i>
+    </button>
+</body>
+
+</html>

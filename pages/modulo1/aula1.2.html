@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Vigilância em Saúde em tempos de transformação digital</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- CSS do seu tema -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+
+
+    <!-- Required meta tags -->
+    <meta name="robots" content="noindex" />
+    <meta name="author" content="Fiocruz, Campus Virtual" />
+    <meta name="description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="keywords" content="Fiocruz, Curso, Vigilância em Saúde, transformação digital, SUS" />
+
+    <!-- Facebook Open Graph -->
+    <meta property="og:url" content="https://mooc.campusvirtual.fiocruz.br/rea/introducao-analise-dados-sus" />
+    <meta property="og:title"
+        content="Campus Virtual Fiocruz | Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta property="og:description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title"
+        content="Campus Virtual Fiocruz | Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="twitter:image:src" content="" />
+
+    <!-- Favicons and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../media/icons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../../media/icons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../../media/icons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../../media/icons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../../media/icons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../../media/icons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../../media/icons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../../media/icons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="../../media/icons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../../media/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../media/icons/favicon-16x16.png" />
+    <link rel="manifest" href="../../media/icons/manifest.json" />
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="media/icons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#420b3c" />
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Barra de Progresso Superior -->
+    <div class="scroll-progress-top" id="scrollProgress"></div>
+
+    <script src="js/aula1.2-config.js"></script>
+    <!-- ================= CABEÇALHO (carregado de partials/header.html) ================= -->
+    <div id="site-header"></div>
+
+    <div class="page-wrapper" id="pageWrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <div id="site-sidebar"></div>
+
+        <!-- Lingueta (Botão) redesenhada: MOVIDA PARA FORA DO ASIDE PARA NÃO SUMIR -->
+        <button class="sidebar-tab" id="btnToggleSidebar" aria-label="Alternar menu" aria-expanded="true"
+            aria-controls="sidebarAula">
+            <i data-lucide="chevron-left" id="toggleIcon" aria-hidden="true"></i>
+        </button>
+
+        <!-- ================= CONTEÚDO ================= -->
+        <main class="content-aula" id="main-content">
+            <div class="main-content-inner">
+
+                <!-- Selo de navegação: flutua por cima do conteúdo -->
+                <nav aria-label="breadcrumb" class="aula-breadcrumb-pill">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../../index.html" class="text-decoration-none">Início</a></li>
+                        <li class="breadcrumb-item"><a href="aula1.1.html" class="text-decoration-none">Módulo 1</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Aula 2</li>
+                    </ol>
+                </nav>
+
+                <!-- Hero com imagem de fundo temática -->
+                <header class="aula-hero">
+                    <h1>Vigilância Epidemiológica, Sanitária, Ambiental e do Trabalho </h1>
+                </header>
+
+                <div class="main-content-body">
+                    <div class="aula-pages-wrapper" id="aulaPagesWrapper">
+
+                        <section class="aula-page active" data-page="1">
+                            <article class="aula-body">
+                                <h2 class="fw-bold mb-4 text-primary"><i class="bi bi-book-half"></i> Sobre esta aula
+                                </h2>
+                                <hr>
+                                <p class="lead text-muted spacer-top-lead">Esta aula tem como objetivo apresentar o conceito ampliado de
+                                    Vigilância em Saúde e suas diferentes dimensões no contexto do Sistema Único de
+                                    Saúde (SUS),
+                                    considerando os desafios e as possibilidades que emergem em tempos de transformação
+                                    digital.
+                                </p>
+                                <p class="lead text-muted">Ao longo do conteúdo, serão abordadas as dimensões sanitária,
+                                    epidemiológica, ambiental e da saúde do trabalhador, destacando como essas áreas se
+                                    articulam para fortalecer as ações de promoção da saúde. </p>
+
+                                <h3 class="fw-bold text-primary mt-5 mb-4"><i class="bi bi-columns-gap"></i> Objetivos
+                                    de
+                                    aprendizagem </h3>
+                                <hr>
+                                <p class="lead text-muted">Ao final desta aula, esperamos que você seja capaz de:</p>
+
+                                <ul class="ms-5 lead text-muted">
+                                    <li class="my-3 mt-4">Compreender o conceito ampliado de Vigilância em Saúde e suas
+                                        dimensões: sanitária, epidemiológica, ambiental e do trabalho. </li>
+                                </ul>
+
+                                <h3 class="fw-bold mt-5 mb-4 text-primary">Introdução</h3>
+                                <p class="lead text-muted">Você já parou para pensar em como o Sistema Único de Saúde
+                                    (SUS)
+                                    identifica surtos de doenças, controla a qualidade dos alimentos que consumimos ou
+                                    monitora
+                                    riscos à saúde nos ambientes de trabalho? Essas ações fazem parte da Vigilância em
+                                    Saúde, um
+                                    conjunto integrado de práticas que vai muito além do atendimento clínico individual.
+                                </p>
+                                <p class="lead text-muted">A Vigilância em Saúde representa uma mudança importante no
+                                    modo de
+                                    pensar a saúde pública. O foco deixa de ser apenas o cuidado com a pessoa doente
+                                    para
+                                    abranger a proteção de toda a coletividade. Essa abordagem preventiva busca
+                                    identificar
+                                    riscos antes que se transformem em doenças e agravos.</p>
+
+                                <!-- Box Voce sabia -->
+                                <div class="alert  border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light my-5"
+                                    role="alert">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <h4 class="fw-bold color-primay mt-2 mb-2"><i
+                                                    class="bi bi-lightbulb-fill fs-4 text-info me-3 ms-5"></i>Você
+                                                sabia?</h4>
+                                            <p class="lead text-muted ms-5 spacer-top-lead">A Constituição Federal de 1988 estabeleceu
+                                                que
+                                                compete ao SUS executar as ações de vigilância em saúde. Desde então, o
+                                                Brasil
+                                                vem construindo políticas e estruturas para organizar essas práticas de
+                                                forma
+                                                integrada nos territórios.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Box Voce sabia -->
+
+                            </article>
+                        </section>
+
+                        <section class="aula-page" data-page="2">
+                            <article class="aula-body">
+                                <h3 class="fw-bold mt-5 mb-4 text-primary">Conceito Ampliado de Vigilância em Saúde</h3>
+                                <p class="lead text-muted">Na aula 1 deste módulo, falamos brevemente sobre o <a
+                                        href="javascript:void(0)" class="fw-bold text-primary" role="button"
+                                        tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus"
+                                        data-bs-placement="top" data-bs-title="Conceito ampliado de Vigilância em Saúde"
+                                        data-bs-content="A Vigilância em Saúde pode ser compreendida como o conjunto articulado e contínuo de ações destinadas ao conhecimento, à detecção, à prevenção e ao enfrentamento de riscos, agravos e determinantes da saúde, com base na análise sistemática da situação de saúde da população.  "><span
+                                            class="lead text-muted-primary fw-bold">conceito ampliado de Vigilância em
+                                            Saúde</span></a>. Agora, vamos abordar o tema com mais detalhes. Vamos lá?
+                                </p>
+
+                                <h4 class="fw-bold mt-5 mb-4 text-primary">A Construção da Política Nacional de
+                                    Vigilância em
+                                    Saúde</h4>
+                                <p class="lead text-muted">Após amplo debate realizado na 1ª Conferência Nacional de
+                                    Vigilância
+                                    em Saúde, o Brasil instituiu a Política Nacional de Vigilância em Saúde (PNVS) por
+                                    meio da
+                                    <a href="https://www.gov.br/conselho-nacional-de-saude/pt-br/acesso-a-informacao/atos-normativos/resolucoes/2018/resolucao-no-588.pdf"
+                                        target="_blank" class="fw-bold">Resolução nº 588, de 12 de julho de 2018</a>. A
+                                    conferência propôs diretrizes para fortalecer as ações de promoção e proteção à
+                                    saúde em
+                                    todo o país.
+                                </p>
+                                <p class="lead text-muted">Clique e veja abaixo as <span class="fw-bold">principais características da
+                                        PNVS</span> em destaque no infográfico e o detalhamento de cada uma delas a seguir:</p>
+
+                                <!-- CARROSSEL APENAS IMAGEM (GALERIA VISUAL, TEXTO SEPARADO ABAIXO) -->
+                                <div class="my-5" data-infographic="caracteristicasPnvs">
+									<div class="text-center mb-2 mt-5">
+											<span class="badge-recurso-interativo">
+												<i class="bi bi-cursor-fill me-1"></i> Recurso Interativo
+											</span>
+											<!--<p class="text-muted mb-0 mt-2">Clique nos cards abaixo para saber mais</p>-->
+										</div>
+                                    <div class="ig-hotspot-card">
+                                        <div class="ig-hotspot-wrapper ig-hotspot-wrapper--wide">
+                                            <img src="imgs/infografico-pnvs.jpg"
+                                                alt="Infográfico com 4 círculos com ícones nos cantos, representando as características da Política Nacional de Vigilância em Saúde"
+                                                class="ig-hotspot-img">
+                                            <button class="ig-dot active" type="button" data-idx="0" aria-label="Ver Política de Estado"
+                                                data-left="9.18" data-top="12.89"></button>
+                                            <button class="ig-dot" type="button" data-idx="1" aria-label="Ver Universal"
+                                                data-left="57.19" data-top="12.94"></button>
+                                            <button class="ig-dot" type="button" data-idx="2" aria-label="Ver Transversal"
+                                                data-left="8.17" data-top="57.08"></button>
+                                            <button class="ig-dot" type="button" data-idx="3" aria-label="Ver Gestão pública"
+                                                data-left="67.81" data-top="56.74"></button>
+                                        </div>
+
+                                        <div class="ig-panel" id="igPanel2">
+                                            <div class="ig-panel-header">
+                                                <div class="ig-panel-icon" id="igPanel2Icon"><i class="bi bi-bank" id="igPanel2IconI"></i></div>
+                                                <h4 class="ig-panel-title" id="igPanel2Title"></h4>
+                                            </div>
+                                            <p class="ig-panel-desc" id="igPanel2Desc"></p>
+                                            <p class="ig-actions-label">Ações estratégicas</p>
+                                            <ul class="ig-actions-list mb-0" id="igPanel2ActionsList"></ul>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <p class="lead text-muted">Mas o que isso significa na prática? A PNVS funciona como um
+                                    guia que
+                                    orienta as ações de vigilância em todo o Brasil. Ela ajuda a planejar e coordenar
+                                    atividades
+                                    que monitoram a saúde da população, identificam riscos e buscam evitar o surgimento
+                                    de
+                                    doenças e outros problemas de saúde. Essas ações acontecem desde pequenas cidades
+                                    até
+                                    grandes metrópoles, garantindo que todos recebam cuidados adequados (Brasil, s.d).
+                                </p>
+
+                                <h4 class="fw-bold mt-5 mb-4 text-primary">Definindo Vigilância em Saúde </h4>
+                                <p class="lead text-muted">A PNVS apresenta uma definição clara e abrangente. Vigilância
+                                    em
+                                    Saúde é o processo contínuo e sistemático de coleta, consolidação, análise de dados
+                                    e
+                                    disseminação de informações sobre eventos relacionados à saúde, visando o
+                                    planejamento e a
+                                    implementação de medidas de saúde pública, incluindo a regulação, intervenção e
+                                    atuação em
+                                    condicionantes e determinantes da saúde, para a proteção e promoção da saúde da
+                                    população,
+                                    prevenção e controle de riscos, agravos e doenças (Brasil, 2018).</p>
+                                <p class="lead text-muted">Agora que você já viu a definição da Vigilância em Saúde no
+                                    contexto
+                                    da PNVS, assista ao vídeo a seguir sobre o serviço de vigilância em saúde e sua
+                                    importância
+                                    no planejamento das ações executadas pelo SUS.</p>
+                            </article>
+                            <!-- Bootstrap 5: Parallax / Banner Full-Width 100% Largura (Destaque de Alta Ênfase) -->
+                            <div class="container-fluid px-0 my-5 aula-full-bleed">
+                                <div
+                                    class="position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+
+                                    <!-- Dark overlay suave para contraste de leitura -->
+                                    <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+
+                                    <!-- Parágrafo Secundário -->
+                                    <p
+                                        class="fs-3 lead fw-bold text-muted-white aula-body main-content-body text-white mb-0 leading-relaxed mb-4 max-w-content">
+                                        <i class="bi bi-collection-play-fill color-white"></i> Vídeo
+                                    </p>
+                                    <!-- Bootstrap 5: Video Player com Capítulos -->
+                                    <div class="container my-4 max-w-content-sm mx-auto">
+                                        <div
+                                            class="card border-0 shadow-sm rounded-4 overflow-hidden bg-black text-white">
+                                            <div class="ratio ratio-16x9">
+                                                <iframe
+                                                    src="https://www.youtube.com/embed/TOW_ij0zjh8?si=y_MnUtgc1UI0SbGJ"
+                                                    title="Vigilância em Saúde" allowfullscreen></iframe>
+                                            </div>
+                                            <div
+                                                class="p-3 bg-dark d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                                <span class="small text-white-50"><i
+                                                        class="bi bi-play-circle-fill text-danger me-2"></i>Aula 1.2 •
+                                                    Duração: 4:28
+                                                    min</span>
+                                                <!--<a href="#" class="btn btn-sm btn-outline-light rounded-pill">Baixar Transcrição
+                                        PDF</a>-->
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <p class="text-center small text-white">Legenda: Vigilância em Saúde <br />
+                                        Fonte: Conexão SUS – YouTube </p>
+                                </div>
+                            </div>
+                            <article class="aula-body mb-0">
+                                <p class="lead text-muted spacer-top-lead">A partir das informações que você viu até aqui, ficou claro
+                                    que o
+                                    objetivo final da PNVS é proteger e promover a saúde da população, prevenir e
+                                    controlar
+                                    riscos, agravos e doenças? </p>
+                                <p class="lead text-muted">Isso mesmo! A Vigilância em Saúde é um trabalho preventivo e
+                                    contínuo
+                                    que busca atuar antes que os problemas de saúde se instalem ou se agravem. De acordo
+                                    com a
+                                    OPAS (2010), ela tem dois componentes práticos essenciais:</p>
+
+                                <ul class="ms-5 lead text-muted">
+                                    <li class="my-3 mt-4">A mensuração sistemática de problemas prioritários de saúde na
+                                        população, incluindo o registro e a transmissão de dados.</li>
+                                    <li class="my-3">A comparação e interpretação de dados com o objetivo de detectar
+                                        possíveis
+                                        mudanças no estado de saúde da população e seu ambiente.</li>
+                                </ul>
+
+                                <p class="lead text-muted mt-4">Ainda sob a perspectiva da OPAS (2010), a vigilância é
+                                    fundamental para as atividades de prevenção e controle de doenças, funcionando como
+                                    uma
+                                    ferramenta na alocação de recursos do sistema de saúde e na avaliação do impacto de
+                                    programas e serviços. O enfoque da vigilância requer equilíbrio entre as
+                                    necessidades de
+                                    informação e as limitações para a coleta de dados.</p>
+                                <p class="lead text-muted">A análise e interpretação dos dados de vigilância deve
+                                    respeitar
+                                    limites de tempo, cobertura geográfica e número de indivíduos necessários para que
+                                    sejam
+                                    úteis na tomada de decisão.</p>
+
+                                <!-- Box Curiosidade -->
+                                <div class="alert  border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light my-5"
+                                    role="alert">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <h4 class="fw-bold color-primay mt-2 mb-2 ms-3"><i class="bi bi-search"></i>
+                                                Curiosidade</h4>
+                                            <p class="lead text-muted fw-bold ms-3 spacer-top-lead">Vigilância é o mesmo que
+                                                monitoramento? </p>
+                                            <p class="lead text-muted ms-3">Embora os termos sejam usados de forma
+                                                intercambiável em muitos serviços, vigilância e monitoramento são
+                                                diferentes. A
+                                                vigilância relaciona-se com populações, enquanto o monitoramento
+                                                aplica-se a
+                                                grupos específicos ou indivíduos. O monitoramento avalia uma ação e
+                                                implica
+                                                ajuste constante com relação aos resultados. Ambos os processos
+                                                compartilham
+                                                rotinas contínuas de medida e coleta de dados, empregando métodos que
+                                                tendem a
+                                                ser rápidos e práticos (OPAS, 2010). </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Box Curiosidade -->
+
+                                <h4 class="fw-bold mt-5 mb-4 text-primary">Princípios que orientam a Vigilância em Saúde
+                                </h4>
+                                <p class="lead text-muted">A PNVS está fundamentada nos mesmos princípios do SUS,
+                                    adaptados para
+                                    as especificidades da vigilância (Brasil, 2018):</p>
+
+                                <ol type="I" class="ms-5 lead text-muted">
+                                    <li class="my-3 mt-4"><span class="fw-bold">Conhecimento do território</span>:
+                                        utilização da
+                                        epidemiologia e da avaliação de risco para a definição de prioridades nos
+                                        processos de
+                                        planejamento, alocação de recursos e orientação programática. </li>
+                                    <li class="my-3"><span class="fw-bold">Integralidade</span>: Articulação das ações
+                                        de
+                                        vigilância em saúde com as demais ações e serviços desenvolvidos e ofertados no
+                                        SUS para
+                                        garantir a integralidade da atenção à saúde da população.</li>
+                                    <li class="my-3"><span class="fw-bold">Descentralização
+                                            político-administrativa</span>, com
+                                        direção única em cada esfera de governo.</li>
+                                    <li class="my-3"><span class="fw-bold">Inserção da vigilância em saúde</span> no
+                                        processo de
+                                        regionalização das ações e serviços de saúde.</li>
+                                    <li class="my-3"><span class="fw-bold">Equidade</span>: Identificação dos
+                                        condicionantes e
+                                        determinantes de saúde no território, atuando de forma compartilhada com outros
+                                        setores
+                                        envolvidos.</li>
+                                    <li class="my-3"><span class="fw-bold">Universalidade</span>: Acesso universal e
+                                        contínuo a
+                                        ações e serviços de vigilância em saúde, integrados à rede de atenção à saúde,
+                                        promovendo a corresponsabilização pela atenção às necessidades de saúde dos
+                                        usuários e
+                                        da coletividade.</li>
+                                    <li class="my-3"><span class="fw-bold">Participação da comunidade</span> de forma a
+                                        ampliar
+                                        sua autonomia, emancipação e envolvimento na construção da consciência
+                                        sanitária, na
+                                        organização e orientação dos serviços de saúde e no exercício do controle
+                                        social. </li>
+                                    <li class="my-3"><span class="fw-bold">Cooperação e articulação intra e
+                                            intersetorial</span>
+                                        para ampliar a atuação sobre determinantes e condicionantes da saúde.</li>
+                                    <li class="my-3"><span class="fw-bold">Garantia do direito</span> das pessoas e da
+                                        sociedade
+                                        às informações geradas pela Vigilância em Saúde, respeitadas as limitações
+                                        éticas e
+                                        legais.</li>
+                                </ol>
+
+                                <h4 class="fw-bold mt-5 mb-4 text-primary">Diretrizes para a ação</h4>
+                                <p class="lead text-muted mt-4">Para que esses princípios sejam colocados em prática, a
+                                    PNVS
+                                    estabelece diretrizes operacionais: </p>
+
+                                <ol type="I" class="ms-5 lead text-muted">
+                                    <li class="my-3 mt-4">Articular e pactuar responsabilidades das três esferas de
+                                        governo,
+                                        consonante com os princípios do SUS, respeitando a diversidade e especificidade
+                                        loco
+                                        regional.</li>
+                                    <li class="my-3">Abranger ações voltadas à saúde pública, com intervenções
+                                        individuais ou
+                                        coletivas, prestadas por serviços de vigilância sanitária, epidemiológica, em
+                                        saúde
+                                        ambiental e em saúde do trabalhador, em todos os pontos de atenção.</li>
+                                    <li class="my-3">Construir práticas de gestão e de trabalho que assegurem a
+                                        integralidade do
+                                        cuidado, com a inserção das ações de vigilância em saúde em toda a Rede de
+                                        Atenção à
+                                        Saúde e em especial na Atenção Primária, como coordenadora do cuidado. </li>
+                                    <li class="my-3">Integrar as práticas e processos de trabalho das vigilâncias
+                                        epidemiológica, sanitária, em saúde ambiental e em saúde do trabalhador e da
+                                        trabalhadora e dos laboratórios de saúde pública, preservando suas
+                                        especificidades,
+                                        compartilhando saberes e tecnologias, promovendo o trabalho multiprofissional e
+                                        interdisciplinar.</li>
+                                    <li class="my-3">Promover a cooperação e o intercâmbio técnico-científico no âmbito
+                                        nacional
+                                        e internacional.</li>
+                                    <li class="my-3">Atuar na gestão de risco por meio de estratégias para
+                                        identificação,
+                                        planejamento, intervenção, regulação, comunicação, monitoramento de riscos,
+                                        doenças e
+                                        agravos.</li>
+                                    <li class="my-3">Detectar, monitorar e responder às emergências em saúde pública,
+                                        observando
+                                        o Regulamento Sanitário Internacional, e promover estratégias para
+                                        implementação,
+                                        manutenção e fortalecimento das capacidades básicas de vigilância em saúde.</li>
+                                    <li class="my-3">Produzir evidências a partir da análise da situação da saúde da
+                                        população
+                                        de forma a fortalecer a gestão e as práticas em saúde coletiva.</li>
+                                    <li class="my-3">Avaliar o impacto de novas tecnologias e serviços relacionados à
+                                        saúde de
+                                        forma a prevenir riscos e eventos adversos.</li>
+                                </ol>
+
+                                <!-- Box Curiosidade -->
+                                <div class="alert  border-0 border-start border-4 border-primary shadow-sm rounded-3 p-3 bg-light my-5"
+                                    role="alert">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <h4 class="fw-bold color-primay mt-2 mb-2 ms-3"><i
+                                                    class="bi bi-lightbulb-fill"></i> Saiba Mais</h4>
+                                            <h4 class="lead text-muted fw-bold ms-3 mt-4 mb-3">Regulamento Sanitário
+                                                Internacional</h4>
+                                            <p class="lead text-muted ms-3 spacer-top-lead">O Regulamento Sanitário Internacional (RSI)
+                                                representa um acordo entre países para prevenir e controlar a propagação
+                                                de
+                                                doenças. A versão de 1969 aplicava-se apenas a três doenças: cólera,
+                                                peste e
+                                                febre amarela. Com as transformações mundiais, uma nova versão foi
+                                                proposta em
+                                                2005, baseada no fortalecimento da vigilância e resposta às emergências.
+                                            </p>
+                                            <p class="lead text-muted ms-3">O RSI 2005 estabelece quatro critérios para
+                                                definir
+                                                um evento como emergência de saúde pública de relevância internacional:
+                                                gravidade e repercussão; evento inesperado ou raro; risco de propagação
+                                                internacional; risco de restrição a viagens ou comércio. O Brasil, como
+                                                país-membro, comprometeu-se com o fortalecimento da vigilância em saúde
+                                                (OPAS,
+                                                2010). </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Box Curiosidade -->
+
+                                <h4 class="fw-bold mt-5 mb-4 text-primary">Abrangência e campo de atuação</h4>
+                                <p class="lead text-muted">A PNVS tem abrangência ampla. Ela incide sobre todos os
+                                    níveis e
+                                    formas de atenção à saúde, com responsabilidade compartilhada entre as esferas de
+                                    governo.
+                                    Engloba serviços públicos e privados, além de estabelecimentos relacionados à
+                                    produção e
+                                    circulação de bens de consumo e tecnologias que, direta ou indiretamente, impactam a
+                                    saúde
+                                    (Brasil, 2018). </p>
+
+                            </article>
+
+                            <!-- Bootstrap 5: Parallax / Banner Full-Width 100% Largura (Destaque de Alta Ênfase) -->
+                            <!-- NOTA: O container-fluid px-0 garante que o fundo ocupe 100% das laterais da tela -->
+                            <div class="container-fluid px-0 my-5 aula-full-bleed">
+                                <div
+                                    class="position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+
+                                    <!-- Dark overlay suave para contraste de leitura -->
+                                    <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill"></div>
+
+                                    <!-- Parágrafo Secundário -->
+                                    <p
+                                        class="fs-5 lead fw-bold text-muted1 aula-body main-content-body text-white mb-0 leading-relaxed mb-4 max-w-content">
+                                        Isso significa que a Vigilância em Saúde atua desde Unidades Básicas de Saúde
+                                        (UBS) até
+                                        indústrias farmacêuticas, restaurantes, fábricas, ambientes de trabalho e
+                                        espaços públicos.
+                                        Onde existe risco potencial à saúde, a vigilância deve estar presente.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <article class="aula-body mb-0">
+
+                                <h4 class="fw-bold mt-5 mb-4 text-primary">As quatro dimensões da Vigilância em Saúde
+                                </h4>
+                                <p class="lead text-muted">A PNVS articula conhecimentos, processos e práticas
+                                    relacionados a
+                                    quatro dimensões complementares: </p>
+
+                                <!-- CARROSSEL APENAS TEXTO (CARDS DE ESTUDO & SÍNTESE CONCEITUAL) -->
+                                <div class="container my-5">
+                                    <div id="carouselTextoId"
+                                        class="carousel slide shadow-md rounded-4 overflow-hidden border-0 mx-auto max-w-content-sm">
+
+                                        <!-- Indicadores (Ajustado para os 4 slides: 0, 1, 2 e 3) -->
+                                        <div class="carousel-indicators mb-3">
+                                            <button type="button" data-bs-target="#carouselTextoId" data-bs-slide-to="0"
+                                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#carouselTextoId" data-bs-slide-to="1"
+                                                aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#carouselTextoId" data-bs-slide-to="2"
+                                                aria-label="Slide 3"></button>
+                                            <button type="button" data-bs-target="#carouselTextoId" data-bs-slide-to="3"
+                                                aria-label="Slide 4"></button>
+                                        </div>
+
+                                        <!-- Conteúdo dos Slides -->
+                                        <div class="carousel-inner">
+                                            <!-- Slide 1 -->
+                                            <div class="carousel-item active">
+                                                <div
+                                                    class="p-4 p-md-5 text-white position-relative principle-card principle-card--a">
+                                                    <h5 class="lead text-muted-white mb-3 fw-bold">Vigilância Epidemiológica</h5>
+                                                    <hr class="my-2 border-light border-opacity-25">
+                                                    <p class="lead text-muted-white leading-relaxed mb-2 pe-2">Monitora
+                                                        doenças que
+                                                        podem afetar a população, como dengue, gripe e COVID-19,
+                                                        ajudando a
+                                                        prevenir e controlar surtos.</p>
+                                                    <p class="lead text-muted-white leading-relaxed mb-2 pe-2">Assista a esse
+                                                        vídeo e aprofunde sua compreensão sobre este tema.</p>
+                                                    <div class="text-center mt-3">
+                                                        <a href="https://www.youtube.com/watch?v=ml2z6jwrPkw"
+                                                            target="_blank" class="btn-watch-video"
+                                                            aria-label="Assistir vídeo sobre Vigilância Epidemiológica">
+                                                            <i class="bi bi-play-circle-fill"></i> Assistir vídeo
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Slide 2 -->
+                                            <div class="carousel-item">
+                                                <div
+                                                    class="p-4 p-md-5 text-white position-relative principle-card principle-card--a">
+                                                    <h5 class="lead text-muted-white mb-3 fw-bold">Vigilância Sanitária</h5>
+                                                    <hr class="my-2 border-light border-opacity-25">
+                                                    <p class="lead text-muted-white leading-relaxed mb-2 pe-2">Cuida da
+                                                        segurança de
+                                                        alimentos, medicamentos e produtos que usamos no dia a dia,
+                                                        garantindo
+                                                        que eles não façam mal à nossa saúde.</p>
+                                                    <p class="lead text-muted-white leading-relaxed mb-2 pe-2">Assista a esse
+                                                        vídeo e aprofunde sua compreensão sobre este tema.</p>
+                                                    <div class="text-center mt-3">
+                                                        <a href="https://www.youtube.com/watch?v=mHqEcokB2hI"
+                                                            target="_blank" class="btn-watch-video"
+                                                            aria-label="Assistir vídeo sobre Vigilância Sanitária">
+                                                            <i class="bi bi-play-circle-fill"></i> Assistir vídeo
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Slide 3 -->
+                                            <div class="carousel-item">
+                                                <div
+                                                    class="p-4 p-md-5 text-white position-relative principle-card principle-card--a">
+                                                    <h5 class="lead text-muted-white mb-3 fw-bold">Vigilância Ambiental</h5>
+                                                    <hr class="my-2 border-light border-opacity-25">
+                                                    <p class="lead text-muted-white leading-relaxed mb-2 pe-2">Atua na área
+                                                        ambiental
+                                                        acompanhando o impacto do meio ambiente na nossa saúde, como a
+                                                        qualidade
+                                                        da água e do ar.</p>
+                                                    <p class="lead text-muted-white leading-relaxed mb-2 pe-2">Leia este
+                                                        conteúdo e aprofunde sua compreensão sobre este tema.</p>
+                                                    <div class="text-center mt-3">
+                                                        <a href="https://www.gov.br/saude/pt-br/composicao/svsa/saude-ambiental#:~:text=A%20Vigil%C3%A2ncia%20em%20Sa%C3%BAde%20Ambiental%20(VSA)%20%C3%A9,atividade%20humana%2C%20t%C3%AAm%20sobre%20a%20sa%C3%BAde%20humana."
+                                                            target="_blank" class="btn-watch-video">
+                                                            <i class="bi bi-book"></i> Leia este conteúdo
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Slide 4 -->
+                                            <div class="carousel-item">
+                                                <div
+                                                    class="p-4 p-md-5 text-white position-relative principle-card principle-card--a">
+                                                    <h5 class="lead text-muted-white mb-3 fw-bold">Vigilância em Saúde do Trabalhador</h5>
+                                                    <hr class="my-2 border-light border-opacity-25">
+                                                    <p class="lead text-muted-white leading-relaxed mb-2 pe-2">Protege a saúde
+                                                        de quem
+                                                        trabalha, prevenindo acidentes e doenças causadas pelo ambiente
+                                                        de
+                                                        trabalho.</p>
+                                                    <p class="lead text-muted-white leading-relaxed mb-2 pe-2">Assista a esse
+                                                        vídeo e aprofunde sua compreensão sobre este tema.</p>
+                                                    <div class="text-center mt-3">
+                                                        <a href="https://www.youtube.com/watch?v=n1xqN4gZd_g"
+                                                            target="_blank" class="btn-watch-video"
+                                                            aria-label="Assistir vídeo sobre Vigilância em Saúde do Trabalhador">
+                                                            <i class="bi bi-play-circle-fill"></i> Assistir vídeo
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Botões de Controle (Anterior / Próximo) -->
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselTextoId" data-bs-slide="prev">
+                                            <span
+                                                class="carousel-control-prev-icon p-3 bg-dark bg-opacity-50 rounded-circle"
+                                                aria-hidden="true"></span>
+                                            <span class="visually-hidden">Anterior</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselTextoId" data-bs-slide="next">
+                                            <span
+                                                class="carousel-control-next-icon p-3 bg-dark bg-opacity-50 rounded-circle"
+                                                aria-hidden="true"></span>
+                                            <span class="visually-hidden">Próximo</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <p class="lead text-muted">Essas dimensões não funcionam isoladamente. Elas se articulam
+                                    e se
+                                    complementam, reconhecendo que a saúde é determinada por múltiplos fatores que
+                                    interagem nos
+                                    territórios. Essa visão integrada permite atuação mais efetiva sobre os
+                                    condicionantes e
+                                    determinantes do processo saúde-doença.</p>
+                                <p class="lead text-muted">Nos próximos tópicos, vamos explorar cada uma dessas
+                                    dimensões,
+                                    compreendendo suas especificidades, ferramentas e como a transformação digital tem
+                                    potencializado suas ações.</p>
+
+                                <h3 class="fw-bold mt-5 mb-4 text-primary">Objetivos da Vigilância em Saúde Pública</h3>
+                                <p class="lead text-muted">Agora que você já conhece as principais orientações da PNVS,
+                                    vamos
+                                    aprofundar nos objetivos práticos da Vigilância em Saúde. A Organização
+                                    Pan-Americana de
+                                    Saúde (OPAS) sistematizou esses objetivos de forma clara e operacional.</p>
+                                <p class="lead text-muted">Os objetivos da vigilância são:</p>
+
+                                <ul class="ms-5 lead text-muted">
+                                    <li class="my-3 mt-4">Detectar mudanças agudas na ocorrência e distribuição das
+                                        doenças.
+                                    </li>
+                                    <li class="my-3">Identificar, quantificar e monitorar as tendências e padrões do
+                                        processo
+                                        saúde-doença nas populações.</li>
+                                    <li class="my-3">Observar as mudanças nos padrões de ocorrência dos agentes e
+                                        hospedeiros.
+                                    </li>
+                                    <li class="my-3">Detectar mudanças nas práticas de saúde. Investigar e controlar as
+                                        doenças.
+                                    </li>
+                                    <li class="my-3">Planejar os programas de saúde.</li>
+                                    <li class="my-3">Avaliar as medidas de prevenção e controle.</li>
+                                </ul>
+
+                                <p class="lead text-muted mt-4">O uso da vigilância pode ser classificado em três tipos:
+                                </p>
+
+                                <!-- Accordion Acadêmico -->
+                                <div class="container my-5">
+                                    <div class="accordion shadow-sm rounded-3 overflow-hidden" id="accordionId">
+                                        <div class="accordion-item border-0 border-bottom">
+                                            <h4 class="accordion-header" id="headingOne">
+                                                <button
+                                                    class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne" aria-expanded="false"
+                                                    aria-controls="collapseOne">
+                                                    <span class="fs-5 text-primary fw-bold">Acompanhamento de eventos de
+                                                        saúde
+                                                    </span>
+                                                </button>
+                                            </h4>
+                                            <div id="collapseOne" class="accordion-collapse collapse" role="region"
+                                                aria-labelledby="headingOne" data-bs-parent="#accordionId">
+                                                <div class="accordion-body text-secondary small leading-relaxed">
+                                                    <p class="lead text-muted spacer-top-lead">Esses objetivos descrevem os padrões de
+                                                        ocorrência das doenças:</p>
+                                                    <ul class="ms-5 lead text-muted">
+                                                        <li class="my-3 mt-4">Estimar a magnitude dos eventos (quão
+                                                            frequente é
+                                                            determinada doença na população). </li>
+                                                        <li class="my-3">Detectar mudanças agudas (surtos, epidemias e
+                                                            problemas
+                                                            emergentes). </li>
+                                                        <li class="my-3">Identificar e analisar tendências (por exemplo,
+                                                            aumento
+                                                            de doenças de transmissão sexual). </li>
+                                                        <li class="my-3">Observar mudanças nos agentes e hospedeiros
+                                                            (por
+                                                            exemplo, vigilância do vírus da influenza).</li>
+                                                        <li class="my-3">Detectar mudanças nas práticas de saúde (por
+                                                            exemplo,
+                                                            aumento da taxa de cesariana). </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item border-0 border-bottom">
+                                            <h4 class="accordion-header" id="headingTwo">
+                                                <button
+                                                    class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseTwo" aria-expanded="false"
+                                                    aria-controls="collapseTwo">
+                                                    <span class="fs-5 text-primary fw-bold">Ações de saúde pública
+                                                    </span>
+                                                </button>
+                                            </h4>
+                                            <div id="collapseTwo" class="accordion-collapse collapse" role="region"
+                                                aria-labelledby="headingTwo" data-bs-parent="#accordionId">
+                                                <div class="accordion-body text-secondary small leading-relaxed">
+                                                    <p class="lead text-muted spacer-top-lead">Usar os dados coletados para facilitar
+                                                        avaliação
+                                                        e investigação: </p>
+                                                    <ul class="ms-5 lead text-muted">
+                                                        <li class="my-3 mt-4">Investigar e controlar doenças: a
+                                                            notificação
+                                                            estimula investigação da fonte de infecção e ações rápidas
+                                                            como
+                                                            retirada de produtos do mercado ou alertas à população.
+                                                        </li>
+                                                        <li class="my-3">Planejar programas de saúde: analisar mudanças
+                                                            no
+                                                            tempo, lugar e pessoa permite antecipar recursos necessários
+                                                            e
+                                                            elaborar planos efetivos. </li>
+                                                        <li class="my-3">Avaliar medidas de prevenção e controle:
+                                                            verificar se
+                                                            estratégias estão funcionando e fazer ajustes necessários.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item border-0 border-bottom">
+                                            <h4 class="accordion-header" id="headingtre">
+                                                <button
+                                                    class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapsetre" aria-expanded="false"
+                                                    aria-controls="collapsetre">
+                                                    <span class="fs-5 text-primary fw-bold">Outros usos </span>
+                                                </button>
+                                            </h4>
+                                            <div id="collapsetre" class="accordion-collapse collapse" role="region"
+                                                aria-labelledby="headingtre" data-bs-parent="#accordionId">
+                                                <div class="accordion-body text-secondary small leading-relaxed">
+                                                    <ul class="ms-5 lead text-muted spacer-top-lead">
+                                                        <li class="my-3 mt-4">Testar hipóteses geradas pela análise dos
+                                                            dados de
+                                                            vigilância. </li>
+                                                        <li class="my-3">Construir séries históricas para desenvolver
+                                                            modelos
+                                                            estatísticos e prever a viabilidade de políticas propostas.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Accordion Acadêmico -->
+
+                                <h3 class="fw-bold mt-5 mb-4 text-primary">Tipos de Vigilância em Saúde Pública </h3>
+                                <p class="lead text-muted">Existem algumas formas de fazer vigilância no que diz
+                                    respeito ao
+                                    método utilizado para coleta de dados. A escolha depende das características da
+                                    doença ou
+                                    agravo, dos objetivos do sistema, dos recursos disponíveis e das fontes de
+                                    informação (OPAS,
+                                    2010). </p>
+
+                                <!-- Abas Interativas (Tabs) -->
+                                <div class="my-5">
+                                    <div class="aula-tabs-card">
+                                        <ul class="nav aula-tabs-nav" id="pills-tab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="pills-teoria-tab"
+                                                    data-bs-toggle="pill" data-bs-target="#pills-teoria" type="button"
+                                                    role="tab">
+                                                    <i class="bi bi-broadcast"></i> Vigilância passiva
+                                                </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="pills-pratica-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-pratica" type="button" role="tab">
+                                                    <i class="bi bi-search"></i> Vigilância ativa
+                                                </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="pills-zero-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-zero" type="button" role="tab">
+                                                    <i class="bi bi-geo"></i> Vigilância sentinela
+                                                </button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content aula-tabs-content" id="pills-tabContent">
+                                            <div class="tab-pane fade show active" id="pills-teoria" role="tabpanel">
+                                                <p class="lead text-muted spacer-top-lead">Caracteriza-se pela notificação espontânea
+                                                    dos casos pela fonte de informação. É o tipo mais utilizado na
+                                                    análise sistemática de eventos adversos à saúde. Apresenta menor
+                                                    custo e maior simplicidade, mas tem como desvantagem a
+                                                    subnotificação, menor representatividade e dificuldade para
+                                                    padronização da definição de caso (Brasil, 2022).</p>
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-pratica" role="tabpanel">
+                                                <p class="lead text-muted spacer-top-lead">A equipe de vigilância estabelece contato
+                                                    direto, em intervalos regulares, com as fontes de informação
+                                                    (clínicas, laboratórios e hospitais). É aplicada a doenças raras ou
+                                                    em programas de erradicação. Permite melhor conhecimento do
+                                                    comportamento das doenças, mas é mais dispendiosa e necessita de
+                                                    melhor infraestrutura (Brasil, 2022).
+                                                </p>
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-zero" role="tabpanel">
+                                                <p class="lead text-muted spacer-top-lead">Observa-se o comportamento de casos em
+                                                    populações específicas em determinadas unidades de saúde (unidades
+                                                    sentinela). Permite estudar tendências de eventos de interesse e
+                                                    conhecer o comportamento de doenças reemergentes. Pode ser aplicada
+                                                    onde não é viável implantar vigilância universal. Os Núcleos
+                                                    Hospitalares de Epidemiologia (NHE) são exemplos desta vigilância,
+                                                    operando como unidades sentinela no território (Brasil, 2022).
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Abas Interativas (Tabs) -->
+
+                                <h3 class="fw-bold mt-5 mb-4 text-primary">Etapas da Vigilância em Saúde Pública</h3>
+                                <p class="lead text-muted">A vigilância é um processo cíclico, iniciado a partir da
+                                    suspeita,
+                                    detecção, identificação, ou diagnóstico de um doente com uma doença notificável ou
+                                    de
+                                    interesse em saúde pública, em qualquer serviço de saúde, público ou privado
+                                    (hospital,
+                                    posto de saúde, laboratório, farmácia etc.). (Brasil, 2022).</p>
+                                <p class="lead text-muted">Cada etapa do ciclo de vigilância é composta por atividades
+                                    que têm o
+                                    objetivo comum de aprimorar as informações sobre determinado evento sob vigilância.
+                                    É
+                                    importante ressaltar que tal evento deverá ser definido pelas autoridades
+                                    sanitárias,
+                                    levando em consideração as normas vigentes e as condições particulares de cada área
+                                    geográfica. Essa definição deve ficar claramente registrada em documentos que serão
+                                    divulgados amplamente, o que permitirá unificar critérios na operação do sistema de
+                                    vigilância. É fundamental que nesse documento sejam incluídas as fontes de
+                                    notificação,
+                                    instrumentos de coleta de dados, definições de caso e a periodicidade da notificação
+                                    (OPAS,
+                                    2010 apud Brasil, 2022).</p>
+                                <p class="lead text-muted">Ao longo desse processo, diferentes procedimentos se
+                                    articulam para
+                                    transformar dados em informações capazes de orientar a tomada de decisão em saúde
+                                    pública. A
+                                    seguir, vamos conhecer os principais elementos que compõem esse ciclo e compreender
+                                    como
+                                    cada um deles contribui para o funcionamento da Vigilância em Saúde.</p>
+                                <p class="lead text-muted fw-bold">Definição de caso </p>
+                                <p class="lead text-muted">Quando um indivíduo tem características clínicas ou
+                                    laboratoriais
+                                    semelhantes a outros casos já registrados de determinada doença, atende ao que
+                                    chamamos de
+                                    definição de caso. Esta é uma etapa fundamental no desenvolvimento de um sistema de
+                                    vigilância, pois ajuda a compreender se aquele caso é ou não da doença em
+                                    investigação. Uma
+                                    boa definição de caso deve ser simples e aceitável. </p>
+                                <p class="lead text-muted fw-bold">Notificação</p>
+                                <p class="lead text-muted">Após a identificação, o caso deve ser notificado nas fichas
+                                    próprias
+                                    do agravo ou doença. As secretarias municipais de saúde recolhem estas fichas para
+                                    digitação
+                                    e enviam o dado para o nível hierárquico superior. A partir da notificação, o caso
+                                    passa a
+                                    existir para a vigilância. </p>
+                                <p class="lead text-muted">A notificação é a comunicação da ocorrência de casos
+                                    individuais,
+                                    agregados ou surtos, suspeitos ou confirmados, a partir da Lista Nacional de
+                                    Notificação
+                                    Compulsória. Deve ser feita às autoridades sanitárias por profissionais de saúde ou
+                                    qualquer
+                                    cidadão, visando às medidas de controle.</p>
+                                <p class="lead text-muted fw-bold">Principais fontes de dados para vigilância </p>
+                                <ul class="ms-5 lead text-muted lista-check">
+                                    <li class="my-3 mt-4">Notificação de casos: procedimento por meio do qual os
+                                        serviços de
+                                        saúde informam de modo rotineiro e obrigatório sobre a ocorrência de eventos
+                                        sujeitos à
+                                        vigilância. </li>
+                                    <li class="my-3">Registros: procedimentos realizados por instituições para
+                                        registrar
+                                        regularmente eventos como nascimentos, óbitos, hospitalizações, imunizações,
+                                        entre
+                                        outros. </li>
+                                    <li class="my-3">Pesquisa de casos e surtos: busca ativa e exaustiva de informação
+                                        complementar sobre um ou mais casos, geralmente em resposta à suspeita de
+                                        epidemia. </li>
+                                    <li class="my-3">Pesquisas: coleta de informação em ponto específico de tempo sobre
+                                        características de interesse não disponíveis em outras fontes.</li>
+                                    <li class="my-3">Rumores: opiniões espontâneas e não confirmadas que têm origem na
+                                        comunidade, associadas ao aumento de casos ou mortes por determinada causa.</li>
+                                </ul>
+                                <p class="lead text-muted fw-bold">Análise e interpretação </p>
+                                <p class="lead text-muted">A consolidação dos casos dá lugar à análise e interpretação
+                                    dos
+                                    resultados. A análise permite compreender se foram detectados picos ou aumentos
+                                    consideráveis. Deve buscar entender diferenças e semelhanças com achados de outros
+                                    serviços
+                                    ou publicações. Assim, os dados coletados se tornam informações em saúde.</p>
+                                <p class="lead text-muted fw-bold">Disseminação</p>
+                                <p class="lead text-muted">As informações geradas devem ser compartilhadas com quem
+                                    necessita:
+                                    tomadores de decisões, profissionais que notificam, médicos, técnicos de laboratório
+                                    e a
+                                    população. Os dados são fruto dos atendimentos e serviços prestados à população, que
+                                    tem
+                                    direito de acessá-los.</p>
+                                <p class="lead text-muted fw-bold">Ação</p>
+                                <p class="lead text-muted">A vigilância é designada por "informação para a ação". A ação
+                                    pode
+                                    ser uma investigação de surto, realocação de recursos, alteração em testes
+                                    laboratoriais, ou
+                                    mudança em práticas e políticas de saúde.</p>
+                                <p class="lead text-muted fw-bold">Avaliação</p>
+                                <p class="lead text-muted">É importante que um Sistema de Vigilância seja avaliado a
+                                    partir de
+                                    diretrizes e documentos norteadores. As ações de avaliação e monitoramento
+                                    reorientam as
+                                    diretrizes do sistema e podem subsidiar ações que aprimorem a captação dos casos e o
+                                    desenvolvimento de melhorias nos serviços de saúde.</p>
+
+                                <h3 class="fw-bold mt-5 mb-4 text-primary">Vigilância em Saúde e Transformação Digital
+                                    no SUS
+                                </h3>
+                                <p class="lead text-muted">A transformação digital na saúde é um fenômeno que está
+                                    mudando
+                                    profundamente a forma como os serviços de saúde são prestados e geridos. No contexto
+                                    da
+                                    vigilância em saúde, essas mudanças são ainda mais significativas, pois ampliam a
+                                    capacidade
+                                    de detecção, análise e resposta a eventos de saúde pública.</p>
+
+                                <h4 class="fw-bold mt-5 mb-4 text-primary">O cenário da transformação digital na
+                                    vigilância</h4>
+                                <p class="lead text-muted">Lideranças nacionais da saúde debatem o uso das soluções
+                                    digitais na
+                                    proteção e prevenção de doenças e agravos. As perspectivas de aprimoramento das
+                                    estratégias
+                                    de prevenção e controle de doenças com o uso das inovações digitais são promissoras,
+                                    mas
+                                    também apresentam desafios variados para a transformação digital no Sistema Único de
+                                    Saúde
+                                    (Painel de Obesidade, 2025). </p>
+                                <p class="lead text-muted">Diversas iniciativas em saúde digital já ilustram a
+                                    incorporação e o
+                                    desenvolvimento de soluções tecnológicas na Atenção Primária à Saúde e na Vigilância
+                                    em
+                                    Saúde em diferentes regiões do Brasil. Essas experiências demonstram como a
+                                    tecnologia pode
+                                    fortalecer as práticas de vigilância e ampliar o acesso aos serviços de saúde
+                                    (Jatobá et
+                                    al.,2025).</p>
+
+                                <h4 class="fw-bold mt-5 mb-4 text-primary">Experiências internacionais e nacionais </h4>
+                                <p class="lead text-muted">A análise de experiências em diferentes países revela
+                                    abordagens
+                                    diversas para a transformação digital na saúde. Em Portugal, destacam-se o uso da
+                                    inteligência artificial para vigilância epidemiológica e consultas de triagem e
+                                    rastreamento
+                                    em teledermatologia nas unidades de cuidados primários (Rodrigues et al., 2025).</p>
+                                <p class="lead text-muted">No Brasil, marcos importantes incluem a institucionalização
+                                    da
+                                    Secretaria de Informação e Saúde Digital no Ministério da Saúde e a criação da
+                                    Unidade
+                                    Básica de Saúde Digital no contexto da Atenção Primária. A telessaúde é aplicada
+                                    especialmente em áreas rurais remotas, com ações de teleconsulta e vigilância
+                                    epidemiológica. Unidades fixas e móveis de telessaúde ampliam o acesso aos serviços
+                                    de saúde
+                                    em regiões de difícil alcance (Rodrigues et al., 2025).</p>
+                                <p class="lead text-muted">As competências digitais dos profissionais de saúde são
+                                    reforçadas
+                                    com a inclusão de informática em saúde nos cursos de formação. Conhecer o arcabouço
+                                    regulatório é de grande relevância para alinhar a formação dos atuais e futuros
+                                    profissionais, propiciando uma transformação digital democrática (Rodrigues et
+                                    al.,2025).
+                                </p>
+
+                                <h4 class="fw-bold mt-5 mb-4 text-primary">A Secretaria de Informação e Saúde Digital
+                                    (SEIDIGI)
+                                </h4>
+                                <p class="lead text-muted">Criada em 1º de janeiro de 2023, a Secretaria de Informação e
+                                    Saúde
+                                    Digital coordena a transformação digital do Sistema Único de Saúde. O objetivo é
+                                    ampliar o
+                                    acesso, promover a integralidade e a continuidade do cuidado em saúde (Brasil,
+                                    2023). </p>
+                                <p class="lead text-muted">A SEIDIGI atua em colaboração com as secretarias do
+                                    Ministério da
+                                    Saúde, com os profissionais de saúde e com os gestores do SUS na utilização de
+                                    soluções
+                                    digitais. Entre essas soluções destacam-se o prontuário eletrônico, a telessaúde, a
+                                    disseminação de informações estratégicas em saúde e a proteção de dados (Brasil,
+                                    2023). </p>
+                                <p class="lead text-muted">O objetivo central é colocar o usuário do SUS no centro do
+                                    cuidado,
+                                    garantindo atendimento integral e acessível, onde ele é o protagonista de sua
+                                    jornada de
+                                    saúde e prevenção. Para a vigilância em saúde, isso significa sistemas mais
+                                    integrados,
+                                    dados mais acessíveis e respostas mais rápidas a eventos de saúde pública (Brasil,
+                                    2023).
+                                </p>
+
+                                <h4 class="fw-bold mt-5 mb-4 text-primary">Impactos na prática da vigilância </h4>
+                                <p class="lead text-muted">A transformação digital impacta diretamente a prática da
+                                    vigilância
+                                    em saúde, veja:</p>
+
+                                <!-- Cards com Imagem -->
+                                <div class="my-5 container-fluid aula-wide-block px-lg-4">
+                                    <div class="row g-4 g-lg-5 justify-content-center align-items-start">
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                <div class="position-relative">
+                                                    <img src="imgs/28.jpg" class="card-img-top img-cover-260"
+                                                        alt="Relógio de mesa vermelho com mostrador branco e detalhes em azul, com um broche de raio dourado preso à lateral, sob uma mesa de madeira." title="Gerada por IA (Gemini)">
+                                                </div>
+                                                <div class="card-body bg-light p-4 info-card-collapse-body-icon">
+                                                    <div>
+                                                        <p class="card-text lead text-muted fw-bold mb-2">Detecção
+                                                            mais rápida</p>
+                                                        <p class="card-text lead text-muted mb-0">Sistemas digitais
+                                                            identificam eventos de saúde em tempo real, permitindo
+                                                            respostas mais ágeis. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                <div class="position-relative">
+                                                    <img src="imgs/29.jpg" class="card-img-top img-cover-260"
+                                                        alt="Corredor de um data center com fileiras de servidores iluminados por luzes LED verdes à esquerda e vermelhas à direita." title="Magnific.com">
+                                                </div>
+                                                <div class="card-body bg-light p-4 info-card-collapse-body-icon">
+                                                    <div>
+                                                        <p class="card-text lead text-muted fw-bold mb-2">Análise
+                                                            mais robusta</p>
+                                                        <p class="card-text lead text-muted mb-0">Ferramentas de
+                                                            análise de dados processam grandes volumes de
+                                                            informações, identificando padrões e tendências.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                <div class="position-relative">
+                                                    <img src="imgs/30.jpg" class="card-img-top img-cover-260"
+                                                        alt="Rede digital com ícones circulares de nuvens e setas de download interconectados sobre fundo azul." title="Magnific.com">
+                                                </div>
+                                                <div class="card-body bg-light p-4 info-card-collapse-body-icon">
+                                                    <div>
+                                                        <p class="card-text lead text-muted fw-bold mb-2">Integração
+                                                            de dados</p>
+                                                        <p class="card-text lead text-muted mb-0">Diferentes
+                                                            sistemas de informação conversam entre si, oferecendo
+                                                            uma visão mais completa da situação de saúde. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                <div class="position-relative">
+                                                    <img src="imgs/31.jpg" class="card-img-top img-cover-260"
+                                                        alt="Uma pessoa desfocada em segundo plano observa um gráfico de barras financeiro azul com uma seta ascendente, flutuando em primeiro plano." title="Magnific.com">
+                                                </div>
+                                                <div class="card-body bg-light p-4 info-card-collapse-body-icon">
+                                                    <div>
+                                                        <p class="card-text lead text-muted fw-bold mb-2">Acesso
+                                                            ampliado</p>
+                                                        <p class="card-text lead text-muted mb-0">Tecnologias como
+                                                            telessaúde levam vigilância e cuidado a áreas remotas.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                <div class="position-relative">
+                                                    <img src="imgs/32.jpg" class="card-img-top img-cover-260"
+                                                        alt="Mulher sorridente de cabelos cacheados e óculos usando um tablet contra um fundo claro." title="Magnific.com">
+                                                </div>
+                                                <div class="card-body bg-light p-4 info-card-collapse-body-icon">
+                                                    <div>
+                                                        <p class="card-text lead text-muted fw-bold mb-2">
+                                                            Empoderamento do usuário</p>
+                                                        <p class="card-text lead text-muted mb-0">Aplicativos e
+                                                            plataformas digitais permitem que cidadãos participem
+                                                            ativamente da vigilância. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Cards com Imagem -->
+
+                                <h4 class="fw-bold mt-5 mb-4 text-primary">Desafios para uma transformação digital
+                                    democrática
+                                </h4>
+                                <p class="lead text-muted">Apesar dos avanços, a transformação digital na vigilância em
+                                    saúde
+                                    enfrenta alguns desafios importantes: </p>
+
+                                <!-- INFOGRÁFICO INTERATIVO EM TRILHA (DESAFIOS PARA TRANSFORMAÇÃO DIGITAL DEMOCRÁTICA) -->
+                                <div class="my-5" data-infographic="desafiosDigitais">
+									<div class="text-center mb-2 mt-5">
+											<span class="badge-recurso-interativo">
+												<i class="bi bi-cursor-fill me-1"></i> Recurso Interativo
+											</span>
+											<!--<p class="text-muted mb-0 mt-2">Clique nos cards abaixo para saber mais</p>-->
+										</div>
+                                    <div class="ig-hotspot-card">
+                                        <div class="ig-hotspot-wrapper">
+                                            <img src="imgs/info.png"
+                                                alt="Trilha com 5 marcadores numerados de 1 a 5, representando os desafios para a transformação digital"
+                                                class="ig-hotspot-img">
+                                            <button class="ig-dot active" type="button" data-idx="0" aria-label="Ver Desigualdade digital"
+                                                data-left="20.43" data-top="22.70"></button>
+                                            <button class="ig-dot" type="button" data-idx="1" aria-label="Ver Capacitação profissional"
+                                                data-left="34.84" data-top="42.51"></button>
+                                            <button class="ig-dot" type="button" data-idx="2" aria-label="Ver Qualidade dos dados"
+                                                data-left="49.02" data-top="23.70"></button>
+                                            <button class="ig-dot" type="button" data-idx="3" aria-label="Ver Segurança e privacidade"
+                                                data-left="63.78" data-top="42.51"></button>
+                                            <button class="ig-dot" type="button" data-idx="4" aria-label="Ver Interoperabilidade"
+                                                data-left="77.87" data-top="22.70"></button>
+                                        </div>
+
+                                        <div class="ig-panel" id="igPanel">
+                                            <div class="ig-panel-header">
+                                                <div class="ig-panel-icon" id="igPanelIcon"><i class="bi bi-wifi-off" id="igPanelIconI"></i></div>
+                                                <h4 class="ig-panel-title" id="igPanelTitle"></h4>
+                                            </div>
+                                            <p class="ig-panel-desc" id="igPanelDesc"></p>
+                                            <p class="ig-actions-label">Ações estratégicas</p>
+                                            <ul class="ig-actions-list mb-0" id="igActionsList"></ul>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <!-- INFOGRÁFICO INTERATIVO EM TRILHA (DESAFIOS PARA TRANSFORMAÇÃO DIGITAL DEMOCRÁTICA) -->
+
+                                <p class="lead text-muted">Superar esses desafios é fundamental para que a transformação
+                                    digital
+                                    fortaleça a vigilância em todos os territórios, contribuindo para um SUS mais
+                                    efetivo,
+                                    democrático e inclusivo! </p>
+
+                                <h3 class="fw-bold mt-5 mb-4 text-primary"><i class="bi bi-pencil-square"></i> Atividade
+                                </h3>
+                                <!-- VARIAÇÃO 1: QUIZ MÚLTIPLA ESCOLHA INTERATIVO (MULTI-QUESTÕES COM NAVEGAÇÃO E JS) -->
+                                <div class="my-4" id="eduflexQuizContainer">
+                                    <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                                        <!-- Contador de Questões e Pontuação -->
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <span
+                                                class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-bold"
+                                                id="quizQuestionCounter">Questão 01 de 02</span>
+                                            <span class="badge bg-light text-dark border fw-bold" id="quizScoreBadge">
+                                                <i class="bi bi-trophy-fill text-warning me-1"></i>Acertos: <span
+                                                    id="quizScoreCount">0</span>
+                                            </span>
+                                        </div>
+
+                                        <!-- Barra de Progresso da Avaliação -->
+                                        <div class="progress mb-4 progress-thin">
+                                            <div class="progress-bar bg-primary" id="quizProgressBar" role="progressbar"></div>
+                                        </div>
+
+                                        <!--  AQUI ESTAVA FALTANDO! ELEMENTO ONDE O JS INJETA O TEXTO DA PERGUNTA  -->
+                                        <h4 class="fw-bold lead text-muted mb-4" id="quizQuestionText"></h4>
+
+                                        <!-- Opções de Resposta Totalmente Neutras (Estado Inicial Limpo) -->
+                                        <div class="d-grid gap-2 mb-3" id="quizOptionsContainer"></div>
+
+                                        <!-- Caixa de Feedback Pedagógico (Inicia Oculta) -->
+                                        <div class="p-3 rounded-3 small mb-3 d-none" id="quizFeedbackBox"></div>
+
+                                        <small class="text-muted d-block mb-3">
+                                            <i class="bi bi-info-circle me-1"></i>Selecione uma opção para confirmar sua
+                                            resposta.
+                                        </small>
+
+                                        <!-- Ações de Navegação -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <button class="btn bg-primary text-white rounded-pill px-4 fw-bold"
+                                                id="quizNextBtn" disabled>
+                                                Próxima Questão <i class="bi bi-arrow-right ms-1"></i>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <h3 class="fw-bold mt-5 mb-4 text-primary">Resumo da aula</h3>
+                                <p class="lead text-muted">Nesta aula, você conheceu o conceito ampliado de Vigilância
+                                    em Saúde
+                                    e suas quatro dimensões: epidemiológica, sanitária, ambiental e do trabalhador.
+                                    Compreendeu
+                                    como a Política Nacional de Vigilância em Saúde (PNVS) organiza essas práticas de
+                                    forma
+                                    integrada no território, orientada por princípios e diretrizes que buscam proteger e
+                                    promover a saúde da população.</p>
+                                <p class="lead text-muted">Você também conheceu os objetivos, tipos e etapas da
+                                    vigilância em
+                                    saúde pública, entendendo como esse processo cíclico transforma dados em informação
+                                    e
+                                    informação em ação. Além disso, você viu como a transformação digital tem
+                                    potencializado
+                                    essas práticas, ampliando a capacidade de detecção, análise e resposta a eventos de
+                                    saúde
+                                    pública no contexto do SUS.</p>
+                                <p class="lead text-muted fw-bold">Você concluiu esta aula, continue se empenhando nos
+                                    seus estudos. Siga para a próxima aula!</p>
+                            </article>
+                        </section>
+                    </div> <!-- Fim .aula-pages-wrapper -->
+
+                    <!-- ================= PAGINAÇÃO INTERNA DA AULA ================= -->
+                    <div class="aula-pagination-nav d-flex justify-content-between align-items-center mt-5 pt-4 border-top"
+                        id="aulaPaginationNav">
+                        <button type="button" class="btn btn-outline-primary rounded-pill px-4" id="aulaPagPrev"
+                            disabled>
+                            <i class="bi bi-arrow-left me-1"></i> Anterior
+                        </button>
+                        <span class="small text-muted fw-semibold" id="aulaPagIndicator">Página 1 de 3</span>
+                        <button type="button" class="btn btn-primary rounded-pill px-4" id="aulaPagNext">
+                            Próximo <i class="bi bi-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+
+                    <!-- ================= NAVEGAÇÃO ENTRE AULAS (exibida somente na última página) ================= -->
+                    <div class="aula-lesson-nav d-none justify-content-between align-items-center mt-5 pt-4 border-top"
+                        id="aulaLessonNav" data-prev-lesson="aula1.1.html" data-next-lesson="aula1.3.html">
+                        <a href="#" class="btn btn-outline-primary rounded-pill px-4 disabled" id="aulaLessonPrev"
+                            aria-disabled="true" tabindex="-1">
+                            <i class="bi bi-arrow-left me-1"></i> Aula Anterior
+                        </a>
+                        <a href="#" class="btn btn-primary rounded-pill px-4" id="aulaLessonNext">
+                            Próxima Aula <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- ================= RODAPÉ DE LOGOS ================= -->
+                    <!-- ================= RODAPÉ (carregado de partials/footer.html) ================= -->
+                    <div id="site-footer"></div>
+                </div>
+
+
+            </div>
+        </main>
+
+    </div>
+
+    <!-- ================= MODAIS (carregados de partials/modals.html) ================= -->
+    <div id="site-modals"></div>
+
+    <!-- ================= SCRIPTS ================= -->
+    <!-- Bootstrap Bundle (inclui Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Seu arquivo JS unificado -->
+    <script src="js/partials-loader.js"></script>
+    <script src="js/aula1.2.js"></script>
+    <script src="js/main.js"></script>
+
+
+    <button type="button" class="back-to-top" id="btnBackToTop" aria-label="Voltar ao topo">
+        <i data-lucide="arrow-up" aria-hidden="true"></i>
+    </button>
+</body>
+
+</html>

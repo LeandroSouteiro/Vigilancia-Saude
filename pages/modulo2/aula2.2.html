@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Vigilância em Saúde em tempos de transformação digital</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- CSS do seu tema -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Required meta tags -->
+    <meta name="robots" content="noindex" />
+    <meta name="author" content="Fiocruz, Campus Virtual" />
+    <meta name="description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="keywords" content="Fiocruz, Curso, Vigilância em Saúde, transformação digital, SUS" />
+
+    <!-- Facebook Open Graph -->
+    <meta property="og:url" content="https://mooc.campusvirtual.fiocruz.br/rea/introducao-analise-dados-sus" />
+    <meta property="og:title"
+        content="Campus Virtual Fiocruz | Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta property="og:description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title"
+        content="Campus Virtual Fiocruz | Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:description" content="Curso Vigilância em Saúde em tempos de transformação digital" />
+    <meta name="twitter:image:src" content="" />
+
+    <!-- Favicons and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../media/icons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../../media/icons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../../media/icons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../../media/icons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../../media/icons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../../media/icons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../../media/icons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../../media/icons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="../../media/icons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../../media/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../media/icons/favicon-16x16.png" />
+    <link rel="manifest" href="../../media/icons/manifest.json" />
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="media/icons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#420b3c" />
+
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Barra de Progresso Superior -->
+    <div class="scroll-progress-top" id="scrollProgress"></div>
+
+    <script src="js/aula2.2-config.js"></script>
+    <!-- ================= CABEÇALHO (carregado de partials/header.html) ================= -->
+    <div id="site-header"></div>
+
+    <div class="page-wrapper" id="pageWrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <div id="site-sidebar"></div>
+
+        <!-- Lingueta (Botão) redesenhada: MOVIDA PARA FORA DO ASIDE PARA NÃO SUMIR -->
+        <button class="sidebar-tab" id="btnToggleSidebar" aria-label="Alternar menu" aria-expanded="true"
+            aria-controls="sidebarAula">
+            <i data-lucide="chevron-left" id="toggleIcon" aria-hidden="true"></i>
+        </button>
+
+        <!-- ================= CONTEÚDO ================= -->
+        <main class="content-aula" id="main-content">
+            <div class="main-content-inner">
+
+                <!-- Selo de navegação: flutua por cima do conteúdo -->
+                <nav aria-label="breadcrumb" class="aula-breadcrumb-pill">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../../index.html" class="text-decoration-none">Início</a></li>
+                        <li class="breadcrumb-item"><a href="aula2.1.html" class="text-decoration-none">Módulo 2</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Aula 2</li>
+                    </ol>
+                </nav>
+
+                <!-- Hero com imagem de fundo temática -->
+                <header class="aula-hero">
+                    <h1><em>Linkage</em> das bases climáticas e ambientais, educacionais e sociais para Vigilância em
+                        Saúde</h1>
+                </header>
+
+                <div class="main-content-body">
+                    <div class="aula-pages-wrapper" id="aulaPagesWrapper">
+
+                        <section class="aula-page active" data-page="1">
+                            <article class="aula-body">
+                                <h2 class="fw-bold mb-4 text-primary"><i class="bi bi-book-half"></i> Sobre esta aula
+                                </h2>
+                                <hr>
+                                <p class="lead text-muted">Nesta aula, você compreenderá por que a Vigilância em Saúde
+                                    precisa integrar informações provenientes de diferentes áreas, como saúde, educação,
+                                    assistência social, clima e meio ambiente, para produzir análises mais completas e
+                                    apoiar decisões mais efetivas. Você conhecerá o conceito de <em>linkage</em> de
+                                    bases de dados, seus principais métodos, aplicações e desafios, entendendo como a
+                                    integração de informações amplia a capacidade de identificar populações vulneráveis,
+                                    antecipar riscos e fortalecer as ações de vigilância.</p>
+                                <p class="lead text-muted">Ao longo do percurso, também serão discutidos aspectos
+                                    éticos, legais e de governança relacionados ao uso integrado de dados, destacando a
+                                    importância da qualidade da informação, da proteção da privacidade e da
+                                    transparência para uma Vigilância em Saúde orientada por evidências.</p>
+
+                                <h3 class="fw-bold text-primary mt-5 mb-4"><i class="bi bi-columns-gap"></i> Objetivos
+                                    de
+                                    aprendizagem </h3>
+                                <hr>
+                                <p class="lead text-muted">Ao final desta aula, esperamos que você seja capaz de:</p>
+
+                                <ul class="ms-5 lead text-muted mb-5">
+                                    <li class="my-3 mt-4">Reconhecer porque a Vigilância em Saúde precisa incorporar
+                                        determinantes sociais, ambientais e climáticos.</li>
+                                    <li class="my-3">Explicar o que é <em>linkage</em> de bases de dados e em que
+                                        situações ele é necessário. </li>
+                                    <li class="my-3">Identificar fontes de dados relevantes (saúde, educação,
+                                        assistência social, clima/ambiente) e suas limitações.</li>
+                                    <li class="my-3">Diferenciar <em>linkage</em> determinístico e probabilístico,
+                                        descrevendo requisitos mínimos e riscos de erro. </li>
+                                    <li class="my-3">Propor um desenho simples de integração de bases para um problema
+                                        de vigilância (ex.: calor extremo, arboviroses, doenças respiratórias),
+                                        incluindo variáveis, recortes territoriais e validação.</li>
+                                    <li class="my-3">Mapear desafios éticos, legais e institucionais e sugerir soluções
+                                        de governança.</li>
+                                </ul>
+
+                                <h3 class="fw-bold mt-5 mb-4 text-primary">Introdução</h3>
+                                <p class="lead text-muted">Vigilância em Saúde não é sinônimo de contagem de casos.
+                                    Contar casos é o começo, não o fim. O valor da vigilância está em produzir
+                                    informação acionável: aquilo que permite reduzir risco, direcionar recursos e
+                                    diminuir danos antes que se consolidem. Na prática, isso exige compreender não
+                                    apenas “o que aconteceu”, mas “em quem”, “onde”, “sob quais condições” e “quais
+                                    fatores estruturais aumentam a probabilidade de repetição”.</p>
+                                <p class="lead text-muted">Os sistemas clássicos de vigilância, centrados em
+                                    notificações, internações e óbitos, são imprescindíveis para detectar surtos e
+                                    acompanhar tendências. Ainda assim, eles carregam um limite óbvio: observam o
+                                    desfecho quando a cadeia causal já se materializou. Em temas como clima e saúde,
+                                    esse atraso custa caro. O calor extremo, a piora da qualidade do ar, as enchentes e
+                                    os deslizamentos são riscos previsíveis, territorialmente localizados e socialmente
+                                    seletivos. Em geral, atingem com maior intensidade grupos com menos infraestrutura,
+                                    menos proteção social e menor capacidade de adaptação.</p>
+                                <p class="lead text-muted">A vigilância baseada em determinantes busca fechar esse “vão”
+                                    entre risco e desfecho. Ela combina informação clínica com informação social,
+                                    educacional, ambiental e territorial. O resultado é um retrato mais fiel do risco,
+                                    com capacidade de priorização e prevenção: bairros com maior vulnerabilidade ao
+                                    calor, populações com maior risco respiratório durante períodos de fumaça,
+                                    territórios com maior risco de arboviroses sob certos regimes de chuva e
+                                    temperatura.</p>
+                                <p class="lead text-muted">O <em>linkage</em> de bases de dados é o mecanismo técnico
+                                    que permite essa integração. Ele não é uma tecnologia “mágica”; é uma forma
+                                    disciplinada de vincular registros que se referem à mesma pessoa, família, escola,
+                                    serviço ou território, mesmo quando a informação está fragmentada em sistemas
+                                    distintos. A qualidade do <em>linkage</em> e a qualidade do desenho analítico são,
+                                    portanto, determinantes da utilidade da vigilância integrada.</p>
+                            </article>
+                        </section>
+
+                        <section class="aula-page" data-page="2">
+                            <div class="main-content-body">
+                                <article class="aula-body mb-0">
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Determinantes sociais, educação e saúde:
+                                        mecanismos, não <em>slogans</em></h3>
+                                    <p class="lead text-muted mb-5">Determinantes Sociais da Saúde (DSS) não são um
+                                        <em>slogan</em> normativo; são um mecanismo explicativo. A desigualdade social
+                                        altera padrões de exposição ao risco, de acesso à proteção e de capacidade de
+                                        resposta.
+                                    </p>
+
+                                    <div class="my-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight"
+                                        data-copy-id="banner">
+                                        <div
+                                            class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill">
+                                            </div>
+                                            <p
+                                                class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                                Grupos mais pobres e com menor escolaridade tendem a viver em áreas mais
+                                                expostas, com menor infraestrutura e menor capacidade de absorver
+                                                choques, e por isso, adoecem mais e morrem mais, sobretudo em situações
+                                                de crise.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted">A educação é um eixo estrutural desse mecanismo. Ela
+                                        opera como “porta de entrada” para oportunidades ao longo do ciclo de vida, como
+                                        por exemplo:</p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Renda.</li>
+                                        <li class="my-3">Ocupação.</li>
+                                        <li class="my-3">Estabilidade.</li>
+                                        <li class="my-3">Acesso à informação.</li>
+                                        <li class="my-3">Letramento em saúde.</li>
+                                    </ul>
+
+                                    <p class="lead text-muted mt-4">A escolaridade também influencia a relação com o
+                                        Estado, pois pode influenciar na capacidade de:</p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Obter benefícios. </li>
+                                        <li class="my-3">Acessar serviços. </li>
+                                        <li class="my-3">Compreender avisos sanitários. </li>
+                                        <li class="my-3">Navegar redes de proteção. </li>
+                                    </ul>
+
+                                    <p class="lead text-muted mt-4">Por isso, bases educacionais são úteis para
+                                        vigilância, não porque “educação causa doença” de modo direto, mas porque a
+                                        trajetória educacional organiza, ao longo do tempo, um conjunto de condições que
+                                        aumentam ou reduzem risco.</p>
+                                    <p class="lead text-muted">Em vigilância, a principal utilidade de bases sociais e
+                                        educacionais é permitir a estratificação de risco, que identifica com critérios
+                                        transparentes quais grupos estão mais expostos e por quê. Sem isso, a política
+                                        pública trataria todos como iguais, e na prática, conservaria desigualdades.
+                                        Essa estratificação não é apenas ética, ela é operacional, pois melhora a
+                                        alocação de equipes, orienta ações preventivas e define prioridades de
+                                        comunicação em saúde. Para isso, o desenho de integração deve evitar dois erros
+                                        comuns: </p>
+
+                                    <div data-copy-id="slider">
+                                        <div class="text-center mb-0 mt-3">
+                                            <span class="badge-recurso-interativo">
+                                                <i class="bi bi-cursor-fill me-1"></i> Recurso Interativo
+                                            </span>
+                                            <!--<p class="text-muted mb-0 mt-2">Clique nos cards abaixo para saber mais</p>-->
+                                        </div>
+                                        <div class="flip-erros-grid mt-3 mb-5">
+                                            <div class="flip-erros-card">
+                                                <input type="checkbox" id="flipErro1" class="flip-erros-checkbox">
+                                                <label for="flipErro1" class="flip-erros-hitbox">
+                                                    <span class="visually-hidden">Ver o primeiro erro comum</span>
+                                                </label>
+                                                <div class="flip-erros-inner">
+                                                    <div class="flip-erros-face flip-erros-front">
+                                                        <div>
+                                                            <div class="flip-erros-badge"><i
+                                                                    class="bi bi-exclamation-diamond"></i></div>
+                                                            <h4 class="fw-bold text-dark mb-0">Erro comum nº 1</h4>
+                                                            <p class="flip-erros-hint mb-0"><i
+                                                                    class="bi bi-hand-index-thumb"></i> Clique para
+                                                                revelar</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flip-erros-face flip-erros-back">
+                                                        <p>O primeiro é transformar determinantes em "variáveis
+                                                            decorativas" (renda, escolaridade, raça/cor) sem hipótese
+                                                            explicativa e sem tradução para decisão.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flip-erros-card">
+                                                <input type="checkbox" id="flipErro2" class="flip-erros-checkbox">
+                                                <label for="flipErro2" class="flip-erros-hitbox">
+                                                    <span class="visually-hidden">Ver o segundo erro comum</span>
+                                                </label>
+                                                <div class="flip-erros-inner">
+                                                    <div class="flip-erros-face flip-erros-front">
+                                                        <div>
+                                                            <div class="flip-erros-badge"><i
+                                                                    class="bi bi-exclamation-diamond"></i></div>
+                                                            <h4 class="fw-bold text-dark mb-0">Erro comum nº 2</h4>
+                                                            <p class="flip-erros-hint mb-0"><i
+                                                                    class="bi bi-hand-index-thumb"></i> Clique para
+                                                                revelar</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flip-erros-face flip-erros-back">
+                                                        <p>O segundo é assumir que o dado social explica tudo e, por
+                                                            isso, negligenciar o território, o ambiente e a capacidade
+                                                            dos serviços.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container-fluid px-0 aula-full-bleed aula-full-bleed--tight mt-5"
+                                        data-copy-id="banner">
+                                        <div
+                                            class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill">
+                                            </div>
+
+                                            <p
+                                                class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                                Uma vigilância robusta integra:
+                                            </p>
+
+                                            <div class="aula-body mt-4">
+                                                <ul class="ms-5 lead text-muted mb-0">
+                                                    <li class="my-3 mt-4 text-white fw-bold">Condição social.</li>
+                                                    <li class="my-3 text-white fw-bold">Exposição ambiental/climática.
+                                                    </li>
+                                                    <li class="my-3 text-white fw-bold">Acesso e resposta do sistema de
+                                                        saúde.</li>
+                                                    <li class="my-3 text-white fw-bold">Dinâmica territorial e de
+                                                        mobilidade.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Clima, ambiente e saúde: o risco é
+                                        previsível, mas a vulnerabilidade é social</h3>
+                                    <p class="lead text-muted">Do ponto de vista epidemiológico, clima e ambiente afetam
+                                        saúde por múltiplas vias:</p>
+
+                                    <div class="my-5" data-copy-id="cards">
+                                        <div class="container-fluid aula-wide-block px-lg-4">
+                                            <div class="row g-4 g-lg-5 justify-content-center align-items-start">
+                                                <div class="col-md-6 col-lg-4">
+                                                    <div
+                                                        class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                        <div class="position-relative">
+                                                            <img src="imgs/14.jpg" class="card-img-top img-cover-260"
+                                                                alt="Mosaico dividido em quatro partes ilustrando diferentes condições climáticas: calor extremo no deserto, vento forte nas montanhas, neve congelante e tempestade com raios sobre uma floresta."
+                                                                title="Gerada por IA (Gemini)">
+
+                                                        </div>
+                                                        <div class="card-body bg-light p-4 info-card-collapse-body-lg">
+                                                            <p class="card-text lead text-muted mb-0">Estresse térmico
+                                                                (ondas de calor e frio) e vetores (chuva e temperatura
+                                                                alteram ciclos de transmissão).</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-4">
+                                                    <div
+                                                        class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                        <div class="position-relative">
+                                                            <img src="imgs/15.jpg" class="card-img-top img-cover-260"
+                                                                alt="Incêndio florestal com chamas consumindo o solo e fumaça densa alaranjada entre árvores altas."
+                                                                title="Magnific.com">
+
+                                                        </div>
+                                                        <div class="card-body bg-light p-4 info-card-collapse-body-lg">
+                                                            <p class="card-text lead text-muted mb-0">Qualidade do ar
+                                                                (poluentes, fumaça de queimadas).</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-4">
+                                                    <div
+                                                        class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                        <div class="position-relative">
+                                                            <img src="imgs/16.jpg" class="card-img-top img-cover-260"
+                                                                alt="Tubo de esgoto despejando água suja e resíduos diretamente em um rio poluído, com lixo acumulado nas margens e moradias ao fundo."
+                                                                title="Magnific.com">
+
+                                                        </div>
+                                                        <div class="card-body bg-light p-4 info-card-collapse-body-lg">
+                                                            <p class="card-text lead text-muted mb-0">Água e saneamento
+                                                                (enchentes, contaminação).</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-4">
+                                                    <div
+                                                        class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                        <div class="position-relative">
+                                                            <img src="imgs/17.jpg" class="card-img-top img-cover-260"
+                                                                alt="Tigela de cerâmica quase vazia com restos de migalhas e uma colher de metal ao lado, sob uma mesa de madeira rústica, com uma mão envelhecida repousando ao fundo."
+                                                                title="Magnific.com">
+
+                                                        </div>
+                                                        <div class="card-body bg-light p-4 info-card-collapse-body-lg">
+                                                            <p class="card-text lead text-muted mb-0">Segurança
+                                                                alimentar (secas e choques na produção).</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-4">
+                                                    <div
+                                                        class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                        <div class="position-relative">
+                                                            <img src="imgs/18.jpg" class="card-img-top img-cover-260"
+                                                                alt="Cenário devastado por enchente com vários carros danificados submersos em lama e escombros sob a luz do pôr do sol."
+                                                                title="Magnific.com">
+
+                                                        </div>
+                                                        <div class="card-body bg-light p-4 info-card-collapse-body-lg">
+                                                            <p class="card-text lead text-muted mb-0">Desastres
+                                                                (deslocamento, trauma, ruptura de serviços).</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted mb-5">Como você pode perceber, há um aspecto crucial: a
+                                        exposição ambiental não é “democrática”. O mesmo evento climático pode produzir
+                                        impactos distintos dependendo de infraestrutura urbana, condições de moradia,
+                                        presença de áreas verdes, acesso à água, densidade habitacional, capacidade de
+                                        resposta do serviço de saúde e rede de proteção social.</p>
+
+                                    <div class="my-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight"
+                                        data-copy-id="banner">
+                                        <div
+                                            class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill">
+                                            </div>
+                                            <p
+                                                class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                                Em termos de vigilância, isso significa que o foco não deve ser apenas o
+                                                evento (calor, chuva, fumaça), mas a combinação evento ×
+                                                vulnerabilidade.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted">Esse raciocínio muda a prática. Em vez de monitorar
+                                        apenas internações por causas respiratórias, a vigilância integrada monitora:
+                                    </p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Piora da qualidade do ar. </li>
+                                        <li class="my-3">Territórios com maior proporção de grupos de risco (idosos,
+                                            crianças, comorbidades). </li>
+                                        <li class="my-3">Barreiras de acesso ao cuidado.</li>
+                                    </ul>
+
+                                    <p class="lead text-muted my-5 fw-bold text-center">Veja como isso pode funcionar na
+                                        prática. </p>
+                                    <p class="lead text-muted">Em vez de reagir à explosão de casos de dengue, a
+                                        vigilância integrada acompanha regimes de chuva/temperatura, acúmulo de
+                                        criadouros em territórios vulneráveis e capacidade de resposta local. Isso não
+                                        substitui a vigilância epidemiológica clássica, ela a torna mais eficiente.</p>
+                                    <p class="lead text-muted">O desafio operacional é transformar dados
+                                        ambientais/climáticos, frequentemente contínuos e georreferenciados, em
+                                        indicadores compatíveis com sistemas de decisão. Para isso, é necessário:
+                                        definir janela temporal (dias/semanas), definir unidade espacial (bairro, setor
+                                        censitário, município), definir limiares (ex.: dias consecutivos acima de
+                                        determinado percentil de temperatura) e, principalmente, integrar isso com dados
+                                        sociais e de saúde. É aqui que o <em>linkage</em> se torna indispensável.</p>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Território e vigilância: por que a
+                                        unidade de análise importa?</h3>
+                                    <p class="lead text-muted">A vigilância integrada exige uma decisão inicial que
+                                        costuma ser subestimada: Qual é a unidade de análise (pessoa, domicílio, escola,
+                                        estabelecimento de saúde, bairro, setor censitário, município)? Cada escolha
+                                        abre e fecha possibilidades. Vamos ver alguns exemplos?</p>
+                                    <p class="lead text-muted">Quando o problema de saúde é fortemente condicionado por
+                                        território (enchentes, calor urbano, qualidade do ar), unidades espaciais
+                                        menores tendem a captar melhor a heterogeneidade do risco, mas atenção: unidades
+                                        menores exigem dados mais detalhados e cuidados adicionais de privacidade. Se o
+                                        objetivo é gestão e pactuação federativa, o município pode ser a unidade mais
+                                        prática. Já quando o foco é a intervenção comunitária, o bairro pode ser mais
+                                        útil.</p>
+                                    <p class="lead text-muted">Uma aula sobre <em>linkage</em> precisa explicitar essa
+                                        decisão porque o desenho de integração depende dela. </p>
+                                    <p class="lead text-muted">Outra decisão é a janela temporal. Dados climáticos podem
+                                        ser horários ou diários; dados de saúde podem ser semanais ou mensais; dados
+                                        sociais costumam ser atualizados com menor frequência. Integrar essas bases
+                                        exige escolher janelas comparáveis e justificar o alinhamento temporal. A regra
+                                        prática é simples: alinhar a janela de exposição (clima/ambiente) com a janela
+                                        de desfecho (internações, óbitos, notificações), e usar o dado social como
+                                        estratificador mais estável, sempre deixando claro o período de referência de
+                                        cada base.</p>
+                                    <p class="lead text-muted">Por fim, a vigilância territorial precisa evitar a
+                                        armadilha da “média municipal”. Em temas de vulnerabilidade, o risco raramente é
+                                        uniforme no município. Sempre que possível, a vigilância deve buscar
+                                        granularidade suficiente para orientar ação, sem comprometer privacidade. Isso
+                                        exige governança e critérios: quais recortes são permitidos? Quais indicadores
+                                        são divulgados publicamente e quais ficam restritos?</p>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary"><em>Linkage</em>: conceito, finalidades e
+                                        riscos </h3>
+                                    <p class="lead text-muted"><em>Linkage</em> é o processo de vincular registros que
+                                        se referem à mesma entidade (pessoa, família, endereço, escola, serviço) em
+                                        bases diferentes. Ele existe porque o Estado produz informação de forma
+                                        fragmentada: saúde tem seus sistemas, educação tem os seus, assistência tem os
+                                        seus, e ambiente/clima frequentemente está em bases geoespaciais. Se o objetivo
+                                        é vigilância integrada, essa fragmentação precisa ser superada analiticamente.
+                                    </p>
+                                    <p class="lead text-muted">O <em>Linkage</em> não é um fim, ele serve a finalidades
+                                        bem concretas, são elas: </p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Completar informação.</li>
+                                        <li class="my-3">Reduzir subregistro.</li>
+                                        <li class="my-3">Criar coortes administrativas.</li>
+                                        <li class="my-3">Permitir estratificação de risco.</li>
+                                        <li class="my-3">Avaliar políticas.</li>
+                                        <li class="my-3">Produzir alertas territorializados.</li>
+                                    </ul>
+
+                                    <p class="lead text-muted mt-4">Em saúde, o <em>linkage</em> é especialmente útil
+                                        para construir trajetórias. Clique em cada período da linha do tempo para ver os
+                                        detalhes:</p>
+
+                                    <div class="my-5 container-fluid aula-wide-block px-lg-4"
+                                        data-copy-id="fluxograma-trajetorias">
+                                        <div class="text-center mb-3 mt-3">
+                                            <span class="badge-recurso-interativo">
+                                                <i class="bi bi-cursor-fill me-1"></i> Recurso Interativo
+                                            </span>
+                                            <!--<p class="text-muted mb-0 mt-2">Clique nos cards abaixo para saber mais</p>-->
+                                        </div>
+                                        <div class="flow-badc flow-badc--clickable">
+                                            <div class="flow-badc-step">
+                                                <button type="button" class="flow-badc-icon" aria-expanded="false"
+                                                    aria-controls="flowBadcText22-1">
+                                                    <i class="bi bi-search"></i>
+                                                </button>
+                                                <h4 class="flow-badc-title">Antes</h4>
+                                                <p class="flow-badc-text" id="flowBadcText22-1">O <em>linkage</em> é
+                                                    importante para mapear
+                                                    dados sobre exposição e vulnerabilidade.</p>
+                                            </div>
+                                            <div class="flow-badc-arrow" aria-hidden="true">
+                                                <i class="bi bi-arrow-right d-none d-md-block"></i>
+                                                <i class="bi bi-arrow-down d-md-none"></i>
+                                            </div>
+                                            <div class="flow-badc-step">
+                                                <button type="button" class="flow-badc-icon" aria-expanded="false"
+                                                    aria-controls="flowBadcText22-2">
+                                                    <i class="bi bi-link-45deg"></i>
+                                                </button>
+                                                <h4 class="flow-badc-title">Durante</h4>
+                                                <p class="flow-badc-text" id="flowBadcText22-2">O <em>linkage</em>
+                                                    vincula dados sobre a
+                                                    ocorrência e o acesso ao serviço.</p>
+                                            </div>
+                                            <div class="flow-badc-arrow" aria-hidden="true">
+                                                <i class="bi bi-arrow-right d-none d-md-block"></i>
+                                                <i class="bi bi-arrow-down d-md-none"></i>
+                                            </div>
+                                            <div class="flow-badc-step">
+                                                <button type="button" class="flow-badc-icon" aria-expanded="false"
+                                                    aria-controls="flowBadcText22-3">
+                                                    <i class="bi bi-graph-up-arrow"></i>
+                                                </button>
+                                                <h4 class="flow-badc-title">Depois</h4>
+                                                <p class="flow-badc-text" id="flowBadcText22-3">O <em>linkage</em> pode
+                                                    trazer dados sobre
+                                                    desfechos e consequências depois do evento.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p class="lead text-muted">Contudo, há riscos nesse processo, veja:</p>
+
+                                    <div class="my-5" data-copy-id="cards-riscos">
+                                        <div class="container-fluid aula-wide-block px-lg-4">
+                                            <div class="row g-4 g-lg-5 justify-content-center align-items-stretch">
+                                                <div class="col-md-4">
+                                                    <div
+                                                        class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                        <img src="imgs/_13_.jpg" class="card-img-top img-cover-260"
+                                                            alt="Mão segurando uma placa recortada em formato de ponto de exclamação laranja sobre fundo branco."
+                                                            title="Magnific.com">
+                                                        <div class="card-body p-4">
+                                                            <p class="lead text-muted">O primeiro é o erro de
+                                                                vinculação: unir dois registros de pessoas diferentes
+                                                                (falso positivo) ou deixar de unir registros da mesma
+                                                                pessoa (falso negativo).</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div
+                                                        class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                        <img src="imgs/_1_3_.jpg" class="card-img-top img-cover-260"
+                                                            alt="Mão segurando dois recortes de papel em formato de ponto de exclamação laranja, sobre um fundo branco."
+                                                            title="Magnific.com">
+                                                        <div class="card-body p-4">
+                                                            <p class="lead text-muted">O segundo é a reidentificação
+                                                                indevida em bases integradas.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div
+                                                        class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                                        <img src="imgs/13_.jpg" class="card-img-top img-cover-260"
+                                                            alt="Mão segurando três recortes de papel em formato de ponto de exclamação laranja, sobre um fundo branco."
+                                                            title="Magnific.com">
+                                                        <div class="card-body p-4">
+                                                            <p class="lead text-muted">O terceiro é o "linkage sem
+                                                                hipótese": vincular por vincular, produzindo grandes
+                                                                bases sem utilidade e com alto risco institucional.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-5 container-fluid px-0 aula-full-bleed aula-full-bleed--tight"
+                                        data-copy-id="banner">
+                                        <div
+                                            class="mt-5 position-relative text-white py-5 px-3 px-md-5 overflow-hidden banner-parallax">
+                                            <div class="position-absolute inset-0 bg-dark opacity-25 overlay-fill">
+                                            </div>
+                                            <p
+                                                class="fs-5 lead fw-bold aula-body text-white mb-0 leading-relaxed max-w-content">
+                                                É importante lembrar que uma vigilância madura define perguntas, define
+                                                produtos e só então define o <em>linkage</em> necessário.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Fontes de dados: o que integrar e como
+                                        ler cada base</h3>
+                                    <p class="lead text-muted">Uma vigilância integrada costuma combinar quatro famílias
+                                        de dados: saúde, assistência/social, educação e ambiente/clima. Cada família tem
+                                        “lógica de produção” própria, e ignorar essa lógica é receita para erro
+                                        interpretativo. A seguir veja mais detalhes sobre cada uma das famílias de
+                                        dados:</p>
+
+                                    <div class="container my-5" data-copy-id="accordion">
+                                        <div class="accordion shadow-sm rounded-3 overflow-hidden"
+                                            id="accordionExemplo1">
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h4 class="accordion-header" id="headingExemplo1-1">
+                                                    <button
+                                                        class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseExemplo1-1" aria-expanded="false"
+                                                        aria-controls="collapseExemplo1-1">
+                                                        <span class="fs-5 text-primary fw-bold">Saúde</span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapseExemplo1-1" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo1-1"
+                                                    data-bs-parent="#accordionExemplo1">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">Bases como mortalidade, nascidos
+                                                            vivos, internações e notificações são registradas por
+                                                            serviços, com objetivos administrativos e clínicos. Elas
+                                                            sofrem com atraso de digitação, mudanças de codificação e
+                                                            subregistro em determinados territórios. O analista precisa
+                                                            conhecer a cobertura, o atraso típico e a estabilidade das
+                                                            variáveis.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h4 class="accordion-header" id="headingExemplo1-2">
+                                                    <button
+                                                        class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseExemplo1-2" aria-expanded="false"
+                                                        aria-controls="collapseExemplo1-2">
+                                                        <span
+                                                            class="fs-5 text-primary fw-bold">Social/assistência</span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapseExemplo1-2" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo1-2"
+                                                    data-bs-parent="#accordionExemplo1">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">Bases sociais (ex.: cadastros de
+                                                            programas) são produzidas para focalização e gestão de
+                                                            benefícios. Elas trazem riqueza de informação
+                                                            socioeconômica, mas são sensíveis à atualização e à dinâmica
+                                                            de elegibilidade. Em geral, representam melhor populações
+                                                            vulneráveis, mas não “a população inteira”. Isso não é
+                                                            defeito; é característica. Para vigilância, o uso típico é
+                                                            estratificar risco e identificar bolsões de vulnerabilidade.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0 border-bottom">
+                                                <h4 class="accordion-header" id="headingExemplo1-3">
+                                                    <button
+                                                        class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseExemplo1-3" aria-expanded="false"
+                                                        aria-controls="collapseExemplo1-3">
+                                                        <span class="fs-5 text-primary fw-bold">Educação</span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapseExemplo1-3" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo1-3"
+                                                    data-bs-parent="#accordionExemplo1">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">Bases educacionais registram
+                                                            matrícula, frequência, trajetória e, em alguns sistemas,
+                                                            desempenho. Elas têm enorme valor para análise de ciclo de
+                                                            vida, principalmente para crianças e adolescentes. Para
+                                                            vigilância, são úteis em agravos com forte componente de
+                                                            vulnerabilidade social, em políticas de promoção da saúde no
+                                                            ambiente escolar e em estratégias de comunicação e busca
+                                                            ativa.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item border-0">
+                                                <h4 class="accordion-header" id="headingExemplo1-4">
+                                                    <button
+                                                        class="accordion-button collapsed fw-semibold text-dark bg-white"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseExemplo1-4" aria-expanded="false"
+                                                        aria-controls="collapseExemplo1-4">
+                                                        <span class="fs-5 text-primary fw-bold">Ambiente/clima</span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapseExemplo1-4" class="accordion-collapse collapse" role="region"
+                                                    aria-labelledby="headingExemplo1-4"
+                                                    data-bs-parent="#accordionExemplo1">
+                                                    <div class="accordion-body text-secondary small leading-relaxed">
+                                                        <p class="lead text-muted mb-0">Essas bases costumam ser
+                                                            georreferenciadas, contínuas e de alta frequência. O desafio
+                                                            é traduzi-las em indicadores acionáveis. A regra é: definir
+                                                            o indicador, definir o recorte espacial, definir a janela
+                                                            temporal e documentar a transformação. Em vigilância, o
+                                                            método importa tanto quanto o número final.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Métodos de <em>linkage</em>:
+                                        determinístico e probabilístico</h3>
+                                    <p class="lead text-muted">O <em>linkage</em> determinístico utiliza chaves exatas:
+                                        um identificador comum (CPF, CNS, número de matrícula) ou combinações de campos
+                                        com alta confiabilidade. Sua vantagem é a precisão quando a chave é correta. Sua
+                                        limitação é a dependência de completude e padronização. Em bases com alta
+                                        incompletude, o <em>linkage</em> determinístico pode “perder” muitos registros,
+                                        produzindo falso negativo em larga escala.</p>
+                                    <p class="lead text-muted">Já o <em>linkage</em> probabilístico é utilizado quando
+                                        não existe identificador único ou quando a qualidade do identificador é
+                                        insuficiente. Ele trabalha com campos como nome, data de nascimento, sexo,
+                                        município, endereço. Em vez de exigir igualdade exata, calcula probabilidade de
+                                        dois registros pertencerem à mesma pessoa. Para funcionar bem, exige
+                                        padronização de texto (remoção de acentos, normalização de abreviações),
+                                        definição de regras de bloqueio (para reduzir comparações) e calibração de
+                                        limiares. </p>
+                                    <p class="lead text-muted">Em vigilância, o método não deve ser decidido por
+                                        preferência, mas por viabilidade. Se existe identificador robusto, use
+                                        determinístico. Se não existe, use probabilístico com transparência: documente
+                                        variáveis usadas, limiares e taxas estimadas de erro. O que não é aceitável é
+                                        tratar <em>linkage</em> probabilístico como “caixa-preta”. Em decisões de
+                                        política pública, a auditabilidade é parte do rigor. </p>
+                                    <p class="lead text-muted">Um ponto prático: sempre que possível, execute validações
+                                        internas. Por exemplo, ao vincular saúde e educação, verifique consistência de
+                                        idade, município e sexo. Em bases territoriais, verifique consistência de
+                                        endereço e geocodificação. O objetivo é reduzir falso positivo e falso negativo
+                                        e produzir confiança institucional no processo.</p>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Produto Mínimo Viável para vigilância
+                                        integrada</h3>
+                                    <p class="lead text-muted">A vigilância integrada não precisa começar com um projeto
+                                        “monumental”. Ela pode começar com um Produto Mínimo Viável, disciplinado, com
+                                        entregáveis claros.</p>
+                                    <p class="lead text-muted">Um Minimum Viable Product (MVP), em português Produto
+                                        Mínimo Viável, bem desenhado reduz risco institucional e gera aprendizado
+                                        rápido. Veja agora um passo a passo para construir o fluxo de um MVP:</p>
+
+                                    <div class="ig-genomica my-5" data-infographic="mvpPassos" data-start-closed="true">
+                                        <div class="text-center mb-3 mt-3">
+                                            <span class="badge-recurso-interativo">
+                                                <i class="bi bi-cursor-fill me-1"></i> Recurso Interativo
+                                            </span>
+                                            <!--<p class="text-muted mb-0 mt-2">Clique nos cards abaixo para saber mais</p>-->
+                                        </div>
+                                        <div class="ig-hotspot-card">
+                                            <div class="ig-hotspot-wrapper">
+                                                <img src="imgs/infografico-mvp-linkage.jpg"
+                                                    alt="Fluxograma em zigue-zague com os 7 passos para construir um MVP de vigilância integrada"
+                                                    class="ig-hotspot-img">
+                                                <button class="ig-dot" type="button" data-idx="0"
+                                                    aria-label="Ver Passo 1: Pergunta e produto"
+                                                    data-left="7.87" data-top="50.00"></button>
+                                                <button class="ig-dot" type="button" data-idx="1"
+                                                    aria-label="Ver Passo 2: Dados e janela"
+                                                    data-left="28.35" data-top="75.63"></button>
+                                                <button class="ig-dot" type="button" data-idx="2"
+                                                    aria-label="Ver Passo 3: Unidade espacial"
+                                                    data-left="28.35" data-top="24.62"></button>
+                                                <button class="ig-dot" type="button" data-idx="3"
+                                                    aria-label="Ver Passo 4: Preparação e padronização"
+                                                    data-left="48.82" data-top="50.00"></button>
+                                                <button class="ig-dot" type="button" data-idx="4"
+                                                    aria-label="Ver Passo 5: Linkage e validação"
+                                                    data-left="69.29" data-top="75.63"></button>
+                                                <button class="ig-dot" type="button" data-idx="5"
+                                                    aria-label="Ver Passo 6: Indicadores e visualização"
+                                                    data-left="69.29" data-top="24.62"></button>
+                                                <button class="ig-dot" type="button" data-idx="6"
+                                                    aria-label="Ver Passo 7: Rotina e governança"
+                                                    data-left="89.76" data-top="50.00"></button>
+                                            </div>
+
+                                            <div class="ig-panel" id="igPanelMvp">
+                                                <div class="ig-panel-header">
+                                                    <div class="ig-panel-icon" id="igPanelMvpIcon"><i
+                                                            class="bi bi-patch-question-fill" id="igPanelMvpIconI"></i>
+                                                    </div>
+                                                    <h4 class="ig-panel-title" id="igPanelMvpTitle"></h4>
+                                                </div>
+                                                <p class="ig-panel-desc" id="igPanelMvpDesc"></p>
+                                                <ul class="ig-actions-list mb-0 d-none" id="igActionsListMvp"></ul>
+                                            </div>
+                                        </div>
+
+                                        <!--<p class="ig-caption">Legenda: passo a passo para construir um MVP de vigilância
+                                            integrada</p>-->
+                                    </div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Casos típicos de uso: como o
+                                        <em>linkage</em> muda a decisão
+                                    </h3>
+                                    <p class="lead text-muted">Agora, você verá alguns casos típico, e em todos eles, o
+                                        <em>linkage</em> é um meio para construir informação acionável. Ele permite que
+                                        a vigilância responda à pergunta correta: não apenas “onde há casos”, mas “onde
+                                        o risco é maior e por quê”.
+                                    </p>
+
+                                    <div class="my-5">
+                                        <div class="aula-tabs-card">
+                                            <ul class="nav aula-tabs-nav" id="casosTab" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="casoA-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#casoA" type="button" role="tab">
+                                                        <i class="bi bi-thermometer-sun"></i> Caso A
+                                                    </button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="casoB-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#casoB" type="button" role="tab">
+                                                        <i class="bi bi-droplet"></i> Caso B
+                                                    </button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="casoC-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#casoC" type="button" role="tab">
+                                                        <i class="bi bi-wind"></i> Caso C
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content aula-tabs-content" id="casosTabContent">
+                                                <div class="tab-pane fade show active" id="casoA" role="tabpanel">
+                                                    <h4 class="fw-bold text-primary mb-3">Calor extremo e
+                                                        mortalidade/atendimento</h4>
+                                                    <p class="lead text-muted mb-0">Uma rotina integrada pode combinar
+                                                        temperatura
+                                                        diária, registros de óbitos, internações por causas
+                                                        cardiovasculares e
+                                                        respiratórias, e composição demográfica por território. O
+                                                        objetivo não é
+                                                        "provar causalidade" a cada semana; é detectar aumento de risco,
+                                                        orientar
+                                                        comunicação e ajustar oferta de serviços (hidratação,
+                                                        acolhimento, triagem).</p>
+                                                </div>
+                                                <div class="tab-pane fade" id="casoB" role="tabpanel">
+                                                    <h4 class="fw-bold text-primary mb-3">Arboviroses e ambiente urbano
+                                                    </h4>
+                                                    <p class="lead text-muted mb-0">Integração entre notificações, dados
+                                                        meteorológicos (chuva/temperatura), indicadores de saneamento e
+                                                        vulnerabilidade social permite antecipar áreas de maior risco e
+                                                        orientar
+                                                        ações de controle vetorial antes do pico de casos. A vigilância
+                                                        se torna
+                                                        preventiva e territorialmente focalizada.</p>
+                                                </div>
+                                                <div class="tab-pane fade" id="casoC" role="tabpanel">
+                                                    <h4 class="fw-bold text-primary mb-3">Doenças respiratórias e
+                                                        qualidade do ar</h4>
+                                                    <p class="lead text-muted mb-0">Vincular qualidade do ar (ou proxy
+                                                        de fumaça),
+                                                        internações e condições sociais permite diferenciar "piora
+                                                        generalizada" de
+                                                        "piora seletiva", e orientar ações específicas em territórios
+                                                        com maior
+                                                        vulnerabilidade.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Ética, privacidade, LGPD e governança: o
+                                        que não pode ser improvisado</h3>
+                                    <p class="lead text-muted">Bases integradas aumentam poder analítico e aumentam
+                                        risco. O risco principal é a exposição indevida de dados pessoais e a
+                                        reidentificação, especialmente quando se combinam variáveis sensíveis e recortes
+                                        territoriais finos. A Lei Geral de Proteção de Dados (LGPD) estabelece
+                                        princípios e bases legais para tratamento de dados pessoais, incluindo no setor
+                                        público. Em vigilância, é essencial que a integração seja orientada por
+                                        finalidade pública clara, minimização de dados e segurança.</p>
+                                    <p class="lead text-muted">Na prática, isso implica:</p>
+
+                                    <ul class="ms-5 lead text-muted">
+                                        <li class="my-3 mt-4">Limitar acesso a ambientes controlados. </li>
+                                        <li class="my-3">Separar chaves de identificação e bases analíticas, quando
+                                            possível. </li>
+                                        <li class="my-3">Aplicar técnicas de anonimização/pseudonimização adequadas ao
+                                            risco.</li>
+                                        <li class="my-3">Adotar regras de divulgação com agregação mínima e supressão de
+                                            células pequenas. </li>
+                                        <li class="my-3">Registrar decisões e autorizações. Governança não é burocracia;
+                                            é condição de sustentabilidade.</li>
+                                    </ul>
+
+                                    <p class="lead text-muted mt-4">Também é necessário um acordo institucional
+                                        explícito.
+                                        Integração entre saúde, educação, assistência e ambiente não acontece “por boa
+                                        vontade”. Ela exige pactuação de papéis, responsabilidades, critérios de
+                                        compartilhamento e rotinas de auditoria. Uma vigilância integrada só se sustenta
+                                        quando o arranjo institucional é tão robusto quanto o arranjo técnico.</p>
+
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary"><i class="bi bi-pencil-square"></i>
+                                        Atividade</h3>
+                                    <!-- VARIAÇÃO 1: QUIZ MÚLTIPLA ESCOLHA INTERATIVO (MULTI-QUESTÕES COM NAVEGAÇÃO E JS) -->
+                                    <div class="my-4" id="eduflexQuizContainer">
+                                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <span
+                                                    class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-bold"
+                                                    id="quizQuestionCounter">Questão 01 de 02</span>
+                                                <span class="badge bg-light text-dark border fw-bold"
+                                                    id="quizScoreBadge">
+                                                    <i class="bi bi-trophy-fill text-warning me-1"></i>Acertos: <span
+                                                        id="quizScoreCount">0</span>
+                                                </span>
+                                            </div>
+                                            <div class="progress mb-4 progress-thin">
+                                                <div class="progress-bar bg-primary" id="quizProgressBar"
+                                                    role="progressbar"></div>
+                                            </div>
+                                            <h4 class="fw-bold lead text-muted mb-4" id="quizQuestionText"></h4>
+                                            <div class="d-grid gap-2 mb-3" id="quizOptionsContainer"></div>
+                                            <div class="p-3 rounded-3 small mb-3 d-none" id="quizFeedbackBox"></div>
+                                            <small class="text-muted d-block mb-3">
+                                                <i class="bi bi-info-circle me-1"></i>Selecione uma opção para confirmar
+                                                sua
+                                                resposta.
+                                            </small>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <button class="btn bg-primary text-white rounded-pill px-4 fw-bold"
+                                                    id="quizNextBtn" disabled>
+                                                    Próxima Questão <i class="bi bi-arrow-right ms-1"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="fw-bold mt-5 mb-4 text-primary">Resumo da aula</h3>
+                                    <p class="lead text-muted">Nesta aula, você compreendeu que a Vigilância em Saúde se
+                                        torna mais efetiva quando integra informações provenientes de diferentes
+                                        setores, como saúde, educação, assistência social, clima e meio ambiente. Você
+                                        conheceu o conceito de linkage de bases de dados, seus principais métodos,
+                                        aplicações e limitações, além de entender como essa integração permite
+                                        identificar vulnerabilidades, antecipar riscos e apoiar decisões mais
+                                        qualificadas.</p>
+                                    <p class="lead text-muted">Também refletiu sobre a importância da definição da
+                                        unidade de análise, da qualidade das bases de dados, da validação das
+                                        informações e dos princípios éticos, legais e de governança, reconhecendo que
+                                        uma vigilância integrada depende tanto de boas técnicas de análise quanto de um
+                                        uso responsável e seguro dos dados.</p>
+                                    <p class="lead text-muted fw-bold">Você concluiu esta aula, continue se empenhando
+                                        nos seus estudos. Siga para a próxima aula! </p>
+
+
+                                </article>
+                            </div>
+                        </section>
+
+                    </div> <!-- Fim .aula-pages-wrapper -->
+                    <!-- ================= PAGINAÇÃO INTERNA DA AULA ================= -->
+                    <div class="aula-pagination-nav d-flex justify-content-between align-items-center mt-5 pt-4 border-top"
+                        id="aulaPaginationNav">
+                        <button type="button" class="btn btn-outline-primary rounded-pill px-4" id="aulaPagPrev"
+                            disabled>
+                            <i class="bi bi-arrow-left me-1"></i> Anterior
+                        </button>
+                        <span class="small text-muted fw-semibold" id="aulaPagIndicator">Página 1 de 2</span>
+                        <button type="button" class="btn btn-primary rounded-pill px-4" id="aulaPagNext">
+                            Próximo <i class="bi bi-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+
+                    <!-- ================= NAVEGAÇÃO ENTRE AULAS (exibida somente na última página) ================= -->
+                    <div class="aula-lesson-nav d-none justify-content-between align-items-center mt-5 pt-4 border-top"
+                        id="aulaLessonNav" data-prev-lesson="aula2.1.html" data-next-lesson="aula2.3.html">
+                        <a href="#" class="btn btn-outline-primary rounded-pill px-4" id="aulaLessonPrev">
+                            <i class="bi bi-arrow-left me-1"></i> Aula Anterior
+                        </a>
+                        <a href="#" class="btn btn-primary rounded-pill px-4" id="aulaLessonNext">
+                            Próxima Aula <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- ================= RODAPÉ DE LOGOS ================= -->
+                    <!-- ================= RODAPÉ (carregado de partials/footer.html) ================= -->
+                    <div id="site-footer"></div>
+
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <!-- ================= MODAIS (carregados de partials/modals.html) ================= -->
+    <div id="site-modals"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Seu arquivo JS unificado -->
+    <script src="js/partials-loader.js"></script>
+    <script src="js/aula2.2.js"></script>
+    <script src="js/main.js"></script>
+
+    <button type="button" class="back-to-top" id="btnBackToTop" aria-label="Voltar ao topo">
+        <i data-lucide="arrow-up" aria-hidden="true"></i>
+    </button>
+</body>
+
+</html>

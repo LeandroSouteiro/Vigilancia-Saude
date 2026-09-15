@@ -1,0 +1,55 @@
+<!-- ================= CABEÇALHO ATUALIZADO ================= -->
+    <nav class="navbar navbar-expand-lg header" id="mainHeader">
+        <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-lg-nowrap">
+
+            <!-- Bloco de Logos e Título -->
+            <div class="d-flex align-items-center brand-wrapper">
+                <div class="brand">
+                    <img class="img-fluid" src="{{ROOT}}media/logos/header-fiocruz-campus-virtual.png"
+                        alt="Logo Campus Virtual Fiocruz" />
+                </div>
+
+                <div class="title d-none d-md-block">
+                    <p class="site-brand-title mb-0">Vigilância em Saúde em tempos de transformação digital</p>
+                </div>
+            </div>
+
+            <!-- Botão Hamburger Mobile Animado -->
+            <button class="navbar-toggler c-hamburger" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false"
+                aria-label="Alternar navegação">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <!-- Links do Menu -->
+            <div class="collapse navbar-collapse" id="navbarLinks">
+                <!-- Título exclusivo para o menu mobile -->
+                <div class="title-mobile-menu d-block d-md-none text-center my-3">
+                    <span class="h1-mobile-style">Vigilância em Saúde em tempos de transformação digital</span>
+                </div>
+
+                <ul class="navbar-nav ms-auto align-items-center gap-2">
+                    <li class="nav-item">
+                        <a href="{{ROOT}}index.html" class="nav-link">Página Inicial</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Não é navegação (não leva a nenhuma URL), então usa <button>
+                             em vez de <a href="#">, conforme o guia de acessibilidade:
+                             cada elemento HTML deve ser usado para o fim que foi criado. -->
+                        <button type="button" class="nav-link" data-bs-toggle="modal"
+                            data-bs-target="#modal-creditos">Créditos</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="nav-link" data-bs-toggle="modal"
+                            data-bs-target="#modal-bibliografia">Bibliografia</button>
+                    </li>
+                    <li class="nav-item w-100 text-center mt-2 mt-lg-0">
+                        <button type="button" class="nav-link nav-link-button d-inline-block w-100"
+                            data-bs-toggle="modal" data-bs-target="#modal-modulos">Módulos</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
